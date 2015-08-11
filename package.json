@@ -1,0 +1,38 @@
+{
+  "name": "project-starter",
+  "version": "0.3.0",
+  "description": "Project starter for web development with gulp + foundation",
+  "uri": "https://github.com/featherplain/project-starter",
+  "main": "gulpfile.js",
+  "scripts": {
+    "gulp-server": "gulp default --mode server",
+    "gulp-init": "bower install; gulp init",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Megumi Hano",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-concat": "latest",
+    "gulp-csso": "latest",
+    "gulp-data": "latest",
+    "gulp-filter": "latest",
+    "gulp-flatten": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-jade": "latest",
+    "gulp-load-plugins": "latest",
+    "gulp-plumber": "latest",
+    "gulp-prettify": "latest",
+    "gulp-rename": "latest",
+    "gulp-ruby-sass": "1.0.1",
+    "gulp-shell": "latest",
+    "gulp-svg-sprite": "latest",
+    "gulp-uglify": "latest",
+    "gulp.spritesmith": "latest",
+    "main-bower-files": "latest",
+    "run-sequence": "^1.1.0",
+    "yargs": "^3.12.0"
+  }
+}

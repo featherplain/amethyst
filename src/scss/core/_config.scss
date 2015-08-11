@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+//***********************
+// color
+//***********************
+// primary
+$colorBase          : #333333;
+$colorLink          : #999999;
+$colorLinkHover     : lighten($colorLink, 15%);
+$colorSelection     : $colorLink;
+
+//***********************
+// path
+//***********************
+$filePath           : "../images/";
+
+//***********************
+// font-family
+//***********************
+// primary
+$fontFamily         : "Helvetica Neue", "Helvetica", "游ゴシック体", "Yu Gothic,", YuGothic "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック","MS PGothic",Arial,Sans-Serif;
+// En
+$fontFamilyEn       : "Helvetica Neue", "Helvetica",Sans-Serif;
+// code
+$fontFamilyCode     : Menlo,Consolas,Courier,sans-serif;
+
+//***********************
+// block size
+//***********************
+// $containerWidth: ;
+$maxWidth           : 100%;
+
+//***********************
+// navigation size
+//***********************
+// $menuHeight        : ;
+// $menuItemWidth     : ;
+// $menuItemHeight    : ;
+// $menuPadding       : ($menuHeight - $menuItemHeight) / 2; // Calclate padding size automatically

@@ -1,0 +1,110 @@
+@charset "utf-8";
+/* default styles
+/* ---------------------------------------- */
+
+/* the root element */
+html {
+  font-size: 14px;
+}
+body {
+  background-color: #fff;
+  background-repeat: no-repeat;
+  color: $colorBase;
+  word-wrap: break-word;
+  font-family: $fontFamily;
+  font-weight: 300;
+}
+
+/* grouping content */
+iframe {
+  vertical-align: middle;
+}
+
+/* text-level semantics */
+a {
+  color: $colorLink;
+  text-decoration: none;
+  &:focus {
+    outline: thin dotted;
+  }
+  &:link,
+  &:visited {
+    color: $colorLink;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
+    color: $colorLinkHover;
+    text-decoration: none;
+  }
+}
+p {
+  margin-bottom: 1.125em;
+  color: $colorBase;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: $fontFamily;
+  &,
+  & > a {
+    color: $colorBase;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+::selection {
+  background: transparent;
+  background-color: $colorSelection;
+  color: $colorBase;
+}
+.fa {
+  display: inline-block;
+  text-decoration: none;
+}
+.fontEn {
+  font-family: $fontFamilyEn;
+}
+
+/* list items */
+ul {
+  li {
+    list-style-type: none;
+  }
+}
+
+dl {
+  margin-bottom: 2em;
+  &:last-child{
+    margin-bottom: 0;
+  }
+  dt {
+    margin-bottom: 1em;
+  }
+  dd {
+    margin-bottom: 1em;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* embedded content */
+img {
+  line-height: 1.0;
+  border: 0;
+}
+svg:not(:root){
+  overflow: hidden;
+}
+
+/* table */
+table {
+  font: 100%;
+  font-size: inherit;
+  border-spacing: 0;
+  border-collapse: collapse;
+}

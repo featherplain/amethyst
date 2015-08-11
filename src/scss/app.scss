@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* =============================================================================
+ *   project-starter
+/* =========================================================================== */
+
+// core files
+@import 'core/config';
+@import 'core/placeholder';
+@import 'core/mixins';
+@import 'core/default';
+
+// module
+@import 'module/**/*.*';
+
+// layout
+@import 'layout/*.*';

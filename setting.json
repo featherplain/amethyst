@@ -1,0 +1,12 @@
+{
+  "name": "site name",
+  "url": "https://github.com/featherplain/",
+  "page":{
+    "top":{
+      "title": "example",
+      "description": "this is an exmaple.",
+      "keywords": "exmaple, gulp, grunt, html, css",
+      "ogpimage":""
+    }
+  }
+}
