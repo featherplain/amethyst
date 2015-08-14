@@ -2,4 +2,16 @@
 
 /* footer
 /* ---------------------------------------- */
-.l-footer {}
+.l-footer {
+  margin-top: 40px;
+  background-color: $colorBase;
+  &__inner {
+    @include grid-row;
+  }
+}
+.copyright {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ffffff;
+}

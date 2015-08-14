@@ -13,12 +13,33 @@
   </head>
   <body class="home">
     <div class="l-container">
-      <header role="banner" class="l-header"></header>
+      <header role="banner" class="l-header">
+        <div class="l-header__inner">
+          <h1 class="siteLogo"><a href="">
+              <svg viewBox="0 0 100 25" role="img" area-labelledby="title desc" width="100px" height="25px">
+                <use xlink:href="../dist/images/sprite.symbol.svg#logo_node"></use>
+              </svg></a></h1>
+          <nav class="gNav">
+            <ul class="gNav__list">
+              <li class="gNav__item gNav__item--about"><a href="">ABOUT</a>
+              </li>
+              <li class="gNav__item gNav__item--blog"><a href="">BLOG</a>
+              </li>
+              <li class="gNav__item gNav__item--category"><a href="">CATEGORY</a>
+              </li>
+              <li class="gNav__item gNav__item--contact"><a href="">CONTACT</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
       <div class="l-main">
         <h1>Hello World!</h1>
       </div>
       <footer class="l-footer">
-        <p>&copy; project-starter</p>
+        <div class="l-footer__inner">
+          <p class="copyright">&copy; 2015 NODE</p>
+        </div>
       </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

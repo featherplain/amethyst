@@ -1,0 +1,29 @@
+include inc/core/_config
+include inc/core/_mixins
+extends inc/core/_base
+block title
+  title= page.top.title
+block prepend meta
+  - var sitename = name
+  - var keywords = page.top.keywords
+  - var description = page.top.description
+  - var ogpimage = page.top.ogpimage
+  - var bodyClass = 'home'
+block append meta
+block body
+  .l-container
+    include inc/layout/_l-header
+    .l-main
+      h2.pageTitle
+        .pageTitle__inner ARCHIVE
+      .postArchive
+        - for (var x = 0; x < 10; x++)
+            article
+              a.postArchive__link(href='')
+                .postArchive__thumb
+                  img(src='../dist/images/pages/img_thumbSample01.png', alt='')
+                .postArchive__meta
+                  time 2015.8.31
+                h3.postArchive__title Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    include inc/layout/_l-footer
+block append scriptFooter

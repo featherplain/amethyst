@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+/* archive
+/* ---------------------------------------- */
+/* page title */
+.pageTitle {
+  margin: 20px 0;
+  text-align: center;
+  line-height: 1;
+  &__inner {
+    @extend %fontSpace;
+    position: relative;
+    display: inline-block;
+    padding: 0.2rem 1rem;
+    z-index: 20;
+    vertical-align: middle;
+    font-size: rem-calc(18);
+    background-color: #fff;
+    border: 1px solid $colorSub;
+  }
+  &:before {
+    position: absolute;
+    display: block;
+    top: 23.5%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    margin: 0 auto;
+    background-color: $colorSub;
+    content: '';
+  }
+}
+/* post archive */
+.postArchive {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  a {
+    @extend %clearfix;
+    display: block;
+    padding: 20px 0;
+    border-bottom: 1px solid $colorSub;
+    & > * {
+      transition: 0.3s;
+    }
+    &:hover {
+      .postArchive__title {
+        color: $colorLink;
+      }
+    }
+  }
+  &__thumb {
+    float: left;
+    > img {
+      width: 100%;
+      max-width: 180px;
+      height: auto;
+    }
+  }
+  &__meta,
+  &__title {
+    margin-left: 200px;
+    color: $colorBase;
+  }
+  &__title {
+    font-size: rem-calc(22);
+  }
+}

@@ -79,7 +79,7 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-grid-classes: $include-html-classes;
 // $include-xl-html-grid-classes: false;
 
-// $row-width: rem-calc(1000);
+$row-width: $maxWidth;
 // $total-columns: 12;
 // $column-gutter: rem-calc(30);
 
@@ -87,9 +87,9 @@ $include-html-global-classes: $include-html-classes;
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to define default font stacks
-// $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-family-sans-serif: $fontFamily;
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
-// $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+$font-family-monospace: $fontFamilyCode;
 
 // We use these to define default font weights
 // $font-weight-normal: normal;
@@ -125,8 +125,8 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to control various global styles
 // $body-bg: $white;
-// $body-font-color: $jet;
-// $body-font-family: $font-family-sans-serif;
+$body-font-color: $colorBase;
+$body-font-family: $fontFamily;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 

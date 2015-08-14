@@ -1,10 +1,13 @@
 @charset "utf-8";
-/* =============================================================================
- *   project-starter
-/* =========================================================================== */
-
+/*
+ * othello
+ */
 // core files
 @import 'core/config';
+/* foundation
+/* ---------------------------------------- */
+@import 'core/foundation';
+@import 'core/settings';
 @import 'core/placeholder';
 @import 'core/mixins';
 @import 'core/default';
