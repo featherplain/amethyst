@@ -3,13 +3,12 @@
 //***********************
 // extends
 //***********************
-/* columns */
+// columns
 %baseWidth {
   width: $maxWidth;
   margin: 0 auto;
 }
-
-/* Table */
+// Table
 %table{
   display: table;
   vertical-align: middle;
@@ -22,7 +21,7 @@
     }
   }
 }
-/* clearfix */
+// clearfix
 %clearfix{
   &:after {
     display: block;
@@ -32,4 +31,8 @@
     content: ".";
     font-size: 0;
   }
+}
+// typography
+%fontSpace {
+  letter-spacing: 2px;
 }

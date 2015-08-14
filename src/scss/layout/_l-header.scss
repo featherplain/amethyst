@@ -2,3 +2,44 @@
 
 /* header
 /* ---------------------------------------- */
+.l-header {
+  @include grid-row;
+}
+/* siteLogo */
+.siteLogo {
+  float: left;
+  margin: 20px 0;
+  a {
+    display: block;
+    height: 25px;
+    line-height: 1.0;
+    svg {
+      vertical-align: top;
+    }
+  }
+}
+/* navigation */
+.gNav {
+  float: right;
+  margin: 20px 0;
+  &__list {
+    @extend %clearfix;
+    margin: 0;
+    li {
+      float: left;
+      margin-left: 1.2rem;
+      &:first-child {
+        margin-left: 0;
+      }
+      a {
+        @extend %fontSpace;
+        color: $colorBase;
+        transition: all 0.3s;
+        &:hover {
+          padding-bottom: 3px;
+          border-bottom: 1px solid $colorBase;
+        }
+      }
+    }
+  }
+}
