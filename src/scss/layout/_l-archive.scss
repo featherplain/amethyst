@@ -4,12 +4,12 @@
 /* ---------------------------------------- */
 /* page title */
 .pageTitle {
+  position: relative;
   margin: 20px 0;
   text-align: center;
   line-height: 1;
   &__inner {
     @extend %fontSpace;
-    position: relative;
     display: inline-block;
     padding: 0.2rem 1rem;
     z-index: 20;
@@ -17,11 +17,12 @@
     font-size: rem-calc(18);
     background-color: #fff;
     border: 1px solid $colorSub;
+    z-index: 20;
   }
   &:before {
     position: absolute;
     display: block;
-    top: 23.5%;
+    top: 18px;
     left: 0;
     right: 0;
     width: 100%;
@@ -29,6 +30,7 @@
     margin: 0 auto;
     background-color: $colorSub;
     content: '';
+    z-index: -10;
   }
 }
 /* post archive */
@@ -40,7 +42,7 @@
     @extend %clearfix;
     display: block;
     padding: 20px 0;
-    border-bottom: 1px solid $colorSub;
+    border-bottom: 1px dotted $colorSub;
     & > * {
       transition: 0.3s;
     }

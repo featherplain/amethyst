@@ -8027,12 +8027,12 @@ The `sprites` mixin generates identical output to the CSS template
 /* ---------------------------------------- */
 /* page title */
 .pageTitle {
+  position: relative;
   margin: 20px 0;
   text-align: center;
   line-height: 1;
 }
 .pageTitle__inner {
-  position: relative;
   display: inline-block;
   padding: 0.2rem 1rem;
   z-index: 20;
@@ -8040,11 +8040,12 @@ The `sprites` mixin generates identical output to the CSS template
   font-size: 1.125rem;
   background-color: #fff;
   border: 1px solid #dedede;
+  z-index: 20;
 }
 .pageTitle:before {
   position: absolute;
   display: block;
-  top: 23.5%;
+  top: 18px;
   left: 0;
   right: 0;
   width: 100%;
@@ -8052,6 +8053,7 @@ The `sprites` mixin generates identical output to the CSS template
   margin: 0 auto;
   background-color: #dedede;
   content: '';
+  z-index: -10;
 }
 
 /* post archive */
@@ -8063,7 +8065,7 @@ The `sprites` mixin generates identical output to the CSS template
 .postArchive a {
   display: block;
   padding: 20px 0;
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px dotted #dedede;
 }
 .postArchive a > * {
   transition: 0.3s;
