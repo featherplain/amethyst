@@ -2,3 +2,13 @@
 
 /* buttons
 /* ---------------------------------------- */
+.btn {}
+/* comments */
+.btnSubmit {
+  @include button(
+    $bg: $colorBase
+  );
+  &:hover {
+    background-color: lighten($colorBase, 20%);
+  }
+}

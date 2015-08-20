@@ -69,11 +69,6 @@
       margin: $m20;
     }
   }
-  .siteLogo {
-    a {
-      padding: 14px 0;
-    }
-  }
   .gNav {
     &__btn {
       display: none;
@@ -89,6 +84,13 @@
           color: $colorBase;
         }
       }
+    }
+  }
+}
+@media #{$large-up} {
+  .siteLogo {
+    a {
+      padding: 14px 0;
     }
   }
 }

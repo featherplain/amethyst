@@ -6707,6 +6707,39 @@ table {
 
 /* buttons
 /* ---------------------------------------- */
+/* comments */
+.btnSubmit {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  border-style: solid;
+  border-width: 0;
+  cursor: pointer;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1.25rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem 2rem 1.0625rem 2rem;
+  font-size: 1rem;
+  background-color: #333333;
+  border-color: #292929;
+  color: #FFFFFF;
+  transition: background-color 300ms ease-out;
+}
+.btnSubmit:hover, .btnSubmit:focus {
+  background-color: #292929;
+}
+.btnSubmit:hover, .btnSubmit:focus {
+  color: #FFFFFF;
+}
+.btnSubmit:hover {
+  background-color: #666666;
+}
+
 /* comments
 /* ---------------------------------------- */
 .comments {
@@ -6715,6 +6748,35 @@ table {
 }
 .comments__title {
   font-size: 1.125rem;
+}
+.comments__loginMessage {
+  font-size: 0.875rem;
+}
+.comments__allowedTags {
+  font-size: 0.75rem;
+}
+.comments__allowedTags code {
+  margin-left: 5px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  border: none;
+  color: #cc0000;
+  font-family: Menlo, Consolas, Courier, sans-serif;
+  font-size: 0.6875rem;
+}
+.comments__subscription {
+  margin: 30px 0;
+  font-size: 0.875rem;
+  line-height: 1;
+}
+.comments__subscription p {
+  margin: 0;
+}
+.comments__subscription input[type='checkbox'] {
+  margin-bottom: 0;
+}
+.comments__subscription label {
+  font-size: 0.75rem;
 }
 
 /* media */
@@ -7047,10 +7109,6 @@ The `sprites` mixin generates identical output to the CSS template
     margin: 20px 0;
   }
 
-  .siteLogo a {
-    padding: 14px 0;
-  }
-
   .gNav__btn {
     display: none;
   }
@@ -7067,6 +7125,11 @@ The `sprites` mixin generates identical output to the CSS template
     color: #333333;
   }
 }
+@media only screen and (min-width: 64.0625em) {
+  .siteLogo a {
+    padding: 14px 0;
+  }
+}
 /* post
 /* ---------------------------------------- */
 .post {
@@ -7080,6 +7143,10 @@ The `sprites` mixin generates identical output to the CSS template
 .post__meta {
   margin: 5px 0;
   padding: 0 10px;
+}
+.post__meta--footer {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dedede;
 }
 .post__meta > * {
   display: inline-block;

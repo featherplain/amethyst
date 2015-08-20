@@ -1,0 +1,16 @@
+.comments
+  form
+    h2.comments__title コメントを残す
+    p.comments__loginMessage testuser としてログインしています。ログアウトしますか?
+    label(for='comment') コメント
+    textarea(id='comment', name='comment', cols='45', rows='8',aria-describedby='form-allowed-tags', aria-required='true', required='required')
+    p.comments__allowedTags 次の HTML タグと属性が使えます:
+      code &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;s&gt; &lt;strike&gt; &lt;strong&gt;
+    .comments__subscription
+      p
+        input(type='checkbox', id='subscribe', name='subscribe', value='subscribe', tabindex='6')
+        label(id='subscribe-label', for='subscribe') 新しいコメントがついたらメールで通知
+      p
+        input(type='checkbox', id='subscribe-blog', name='subscribe-blog', value='subscribe', tabindex='6')
+        label(id='subscribe-label', for='subscribe-blog') 新しい投稿をメールで受け取る
+    input.btn.btnSubmit(name='submit', type='submit', id='submit', value='コメントを送信')

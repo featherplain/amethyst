@@ -14,6 +14,10 @@
   &__meta {
     margin: 5px 0;
     padding: 0 10px;
+    &--footer {
+      padding-bottom: 10px;
+      border-bottom: 1px solid $colorSub;
+    }
     > * {
       display: inline-block;
       font-weight: 400;
