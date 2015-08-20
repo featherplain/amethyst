@@ -8045,7 +8045,7 @@ The `sprites` mixin generates identical output to the CSS template
 .pageTitle:before {
   position: absolute;
   display: block;
-  top: 18px;
+  top: 14px;
   left: 0;
   right: 0;
   width: 100%;
@@ -8054,6 +8054,11 @@ The `sprites` mixin generates identical output to the CSS template
   background-color: #dedede;
   content: '';
   z-index: -10;
+}
+@media only screen and (min-width: 40.0625em) {
+  .pageTitle:before {
+    top: 18px;
+  }
 }
 
 /* post archive */
@@ -8064,7 +8069,7 @@ The `sprites` mixin generates identical output to the CSS template
 }
 .postArchive a {
   display: block;
-  padding: 20px 0;
+  padding: 14px 0;
   border-bottom: 1px dotted #dedede;
 }
 .postArchive a > * {
@@ -8078,17 +8083,46 @@ The `sprites` mixin generates identical output to the CSS template
 }
 .postArchive__thumb > img {
   width: 100%;
-  max-width: 180px;
+  max-width: 110px;
   height: auto;
 }
 .postArchive__meta, .postArchive__title {
-  margin-left: 200px;
+  margin-left: 120px;
   color: #333333;
 }
+.postArchive__meta time {
+  font-size: 0.75rem;
+  line-height: 1;
+}
 .postArchive__title {
-  font-size: 1.375rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 10px;
+  font-size: 1rem;
 }
 
+/* media */
+@media only screen and (min-width: 40.0625em) {
+  .postArchive a {
+    padding: 20px 0;
+  }
+  .postArchive__thumb > img {
+    max-width: 140px;
+  }
+  .postArchive__meta, .postArchive__title {
+    margin-left: 160px;
+  }
+  .postArchive__meta time {
+    font-size: 0.875rem;
+    font-weight: 300;
+  }
+  .postArchive__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-right: 10px;
+    font-size: 1.375rem;
+  }
+}
 /* common
 /* ---------------------------------------- */
 .l-main {
