@@ -8,12 +8,14 @@
 /* siteLogo */
 .siteLogo {
   float: left;
-  margin: 20px 0;
+  margin: 0;
   a {
     display: block;
+    padding: 14px;
     height: 25px;
     line-height: 1.0;
     svg {
+      display: block;
       vertical-align: top;
     }
   }
@@ -21,23 +23,59 @@
 /* navigation */
 .gNav {
   float: right;
-  margin: 20px 0;
+  &__btn {
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background-color: $colorBase;
+    color: #ffffff;
+    svg {
+      margin: 15px 0;
+    }
+  }
   &__list {
     @extend %clearfix;
+    display: none;
+    position: absolute;
+    right: 0;
+    width: 100%;
     margin: 0;
+    background-color: $colorBase;
+    z-index: 9999;
+    &--active {
+      display: block;
+    }
     li {
-      float: left;
-      margin-left: 1.2rem;
-      &:first-child {
-        margin-left: 0;
+      border-bottom: 1px dotted #dedede;
+      &:last-child {
+        border-bottom: none;
       }
       a {
         @extend %fontSpace;
-        color: $colorBase;
+        display: block;
+        padding: 10px;
+        color: #ffffff;
         transition: all 0.3s;
-        &:hover {
-          padding-bottom: 3px;
-          border-bottom: 1px solid $colorBase;
+      }
+    }
+  }
+}
+/* media */
+@media #{$medium-up} {
+  .gNav {
+    &__btn {
+      display: none;
+    }
+    &__list {
+      display: block;
+      position: static;
+      li {
+        float: left;
+        background-color: #ffffff;
+        border-bottom: none;
+        a {
+          color: $colorBase;
         }
       }
     }

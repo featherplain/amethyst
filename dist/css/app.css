@@ -8148,37 +8148,74 @@ The `sprites` mixin generates identical output to the CSS template
 /* siteLogo */
 .siteLogo {
   float: left;
-  margin: 20px 0;
+  margin: 0;
 }
 .siteLogo a {
   display: block;
+  padding: 14px;
   height: 25px;
   line-height: 1.0;
 }
 .siteLogo a svg {
+  display: block;
   vertical-align: top;
 }
 
 /* navigation */
 .gNav {
   float: right;
-  margin: 20px 0;
+}
+.gNav__btn {
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background-color: #333333;
+  color: #ffffff;
+}
+.gNav__btn svg {
+  margin: 15px 0;
 }
 .gNav__list {
+  display: none;
+  position: absolute;
+  right: 0;
+  width: 100%;
   margin: 0;
+  background-color: #333333;
+  z-index: 9999;
+}
+.gNav__list--active {
+  display: block;
 }
 .gNav__list li {
-  float: left;
-  margin-left: 1.2rem;
+  border-bottom: 1px dotted #dedede;
 }
-.gNav__list li:first-child {
-  margin-left: 0;
+.gNav__list li:last-child {
+  border-bottom: none;
 }
 .gNav__list li a {
-  color: #333333;
+  display: block;
+  padding: 10px;
+  color: #ffffff;
   transition: all 0.3s;
 }
-.gNav__list li a:hover {
-  padding-bottom: 3px;
-  border-bottom: 1px solid #333333;
+
+/* media */
+@media only screen and (min-width: 40.0625em) {
+  .gNav__btn {
+    display: none;
+  }
+  .gNav__list {
+    display: block;
+    position: static;
+  }
+  .gNav__list li {
+    float: left;
+    background-color: #ffffff;
+    border-bottom: none;
+  }
+  .gNav__list li a {
+    color: #333333;
+  }
 }
