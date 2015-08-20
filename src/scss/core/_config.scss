@@ -19,7 +19,7 @@ $filePath           : "../images/";
 // font-family
 //***********************
 // primary
-$fontFamily         : "Avenir Next", "Avenir", "Helvetica Neue", "Helvetica", "游ゴシック体", "Yu Gothic,", YuGothic "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック","MS PGothic",Arial,Sans-Serif;
+$fontFamily         : "Avenir Next", "Avenir", "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック","MS PGothic",Arial,Sans-Serif;
 // En
 $fontFamilyEn       : "Helvetica Neue", "Helvetica",Sans-Serif;
 // code
@@ -29,6 +29,12 @@ $fontFamilyCode     : Menlo,Consolas,Courier,sans-serif;
 // block size
 //***********************
 $maxWidth           : 940px;
+
+//***********************
+// base margin
+//***********************
+$m20: 20px 0;
+$m30: 30px 0;
 
 //***********************
 // navigation size

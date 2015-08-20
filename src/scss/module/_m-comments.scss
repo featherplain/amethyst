@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+/* comments
+/* ---------------------------------------- */
+.comments {
+  margin: $m20;
+  padding: 0 10px;
+  &__title {
+    font-size: rem-calc(18);
+  }
+}
+/* media */
+@media #{$large-up} {
+  .comments {
+    margin: $m30;
+    padding: 0;
+  }
+}

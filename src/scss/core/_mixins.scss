@@ -67,7 +67,7 @@
 // web font
 //***********************
 // use genericon
-@mixin genericon($content:'\f100', $fontsize: 16px, $valaign: text-bottom, $position: static, $display: inline-block, $line-height: 1em){
+@mixin genericon($content:'\f100', $fontsize: 16px, $valaign: text-bottom, $position: static, $display: inline-block, $line-height: 1){
   position: $position;
   display: $display;
   content: $content;
