@@ -7037,11 +7037,20 @@ The `sprites` mixin generates identical output to the CSS template
   display: block;
   padding: 10px;
   color: #ffffff;
+  font-weight: normal;
   transition: all 0.3s;
 }
 
 /* media */
 @media only screen and (min-width: 40.0625em) {
+  .l-header__inner {
+    margin: 20px 0;
+  }
+
+  .siteLogo a {
+    padding: 14px 0;
+  }
+
   .gNav__btn {
     display: none;
   }

@@ -56,6 +56,7 @@
         display: block;
         padding: 10px;
         color: #ffffff;
+        font-weight: normal;
         transition: all 0.3s;
       }
     }
@@ -63,6 +64,16 @@
 }
 /* media */
 @media #{$medium-up} {
+  .l-header {
+    &__inner {
+      margin: $m20;
+    }
+  }
+  .siteLogo {
+    a {
+      padding: 14px 0;
+    }
+  }
   .gNav {
     &__btn {
       display: none;
