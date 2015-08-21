@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+/* comments
+/* ---------------------------------------- */
+.comments {
+  margin: $m20;
+  padding: $padding;
+  &__title {
+    margin: 20px 0;
+    font-size: rem-calc(18);
+    font-weight: bold;
+  }
+  &__text {
+    font-size: rem-calc(14);
+    code {
+      margin-left: 5px;
+      background-color: lighten($colorSub, 8%);
+      border-radius: 4px;
+      border: none;
+      color: #cc0000;
+      font-family: $fontFamilyCode;
+      font-size: rem-calc(11);
+    }
+  }
+  &__subscription {
+    margin: 30px 0;
+    font-size: rem-calc(14);
+    line-height: 1;
+    p {
+      margin: 0;
+    }
+    input[type='checkbox'] {
+      margin-bottom: 0;
+    }
+    label {
+      font-size: rem-calc(12);
+    }
+  }
+}
+/* media */
+@media #{$large-up} {
+  .comments {
+    margin: $m30;
+    padding: 0;
+    &__form {
+      input[type='text'] {
+        width: 40%;
+      }
+    }
+  }
+}

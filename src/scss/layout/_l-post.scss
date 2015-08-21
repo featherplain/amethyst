@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+/* post
+/* ---------------------------------------- */
+.post {
+  margin: $m30;
+  &__header {
+  }
+  &__title {
+    padding: 0 14px 5px 14px;
+    font-size: rem-calc(18);
+    border-bottom: 1px solid $colorSub;
+  }
+  &__meta {
+    margin: 5px 0;
+    padding: $padding;
+    &--footer {
+      padding-bottom: 10px;
+      border-bottom: 1px solid $colorSub;
+    }
+    > * {
+      display: inline-block;
+      font-weight: 400;
+      font-size: rem-calc(12);
+      &:first-child {
+        margin-left: 0;
+      }
+      a {
+        margin-left: 2px;
+        color: $colorBase;
+        line-height: 1;
+      }
+    }
+  }
+  &__date {
+    @include hasPseudoClass(before);
+    &:before {
+      @include genericon('\f307', 1.1rem, top);
+    }
+  }
+  &__category {
+    @include hasPseudoClass(before);
+    &:before {
+      @include genericon('\f301', 1.1rem, top);
+    }
+    a {
+      &:after {
+        display: inline-block;
+        margin: 0 2px;
+        content: ',';
+      }
+      &:last-child {
+        &:after {
+          content: '';
+        }
+      }
+    }
+  }
+  &__author {
+    @include hasPseudoClass(before);
+    &:before {
+      @include genericon('\f304', 1.1rem, top);
+    }
+  }
+  &__tag {
+    @include hasPseudoClass(before);
+    &:before {
+      @include genericon('\f302', 1.1rem, top);
+    }
+    a {
+      &:after {
+        display: inline-block;
+        margin: 0 2px;
+        content: ',';
+      }
+      &:last-child {
+        &:after {
+          content: '';
+        }
+      }
+    }
+  }
+  &__comment {
+    @include hasPseudoClass(before);
+    &:before {
+      @include genericon('\f108', 1.1rem, top);
+    }
+  }
+  &__sns {
+    margin: $m20;
+    padding: $padding;
+  }
+  &__content {
+    padding: $padding;
+  }
+}
+/* media */
+@media #{$medium-up} {
+  .post {
+    &__title {
+      font-size: rem-calc(22);
+    }
+  }
+}
+@media #{$large-up} {
+  .post {
+    &__header {
+      margin: 40px 0;
+    }
+    &__title {
+      font-size: rem-calc(28);
+      padding: 0 0 5px 0;
+    }
+    &__meta {
+      padding: 0;
+    }
+    &__image {
+      margin: 40px 0;
+    }
+    &__content {
+      padding: 0;
+    }
+    &__sns {
+      $margin: $m30;
+      padding: 0;
+    }
+  }
+}

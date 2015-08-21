@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+/* sns share buttons
+/* ---------------------------------------- */
+.snsShare {
+  &__list {
+    display: flex;
+    margin: 0;
+    li {
+      margin-right: 8px;
+      padding: 0;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &__btn {
+    margin-right: 4px;
+    line-height: 1;
+    svg {
+      position: relative;
+      top: 2px;
+      left: 0;
+      margin-right: 4px;
+    }
+  }
+  &__count {
+    position: relative;
+    display: inline-block;
+    padding: 4px 6px;
+    vertical-align: top;
+    background-color: #ffffff;
+    border-radius: 3px;
+    border: 1px solid $colorSub;
+    color: $colorBase;
+    font-size: rem-calc(12);
+    font-weight: normal;
+    line-height: 1;
+    &:after {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 4px 4px 3px 0;
+      border-color: transparent #FFFFFF;
+      display: block;
+      width: 0;
+      z-index: 1;
+      left: -4px;
+      top: 6px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 4px 4px 3px 0;
+      border-color: transparent $colorSub;
+      display: block;
+      width: 0;
+      z-index: 0;
+      left: -5px;
+      top: 6px;
+    }
+  }
+}
+/* media */
+@media #{$large-up} {}
