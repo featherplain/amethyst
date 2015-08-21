@@ -6580,7 +6580,7 @@ th.hide-for-touch {
     display: none !important;
   }
 }
-.postNav:after, .postArchive a:after, .gNav__list:after {
+.postNav:after, .snsShare__list:after, .postArchive a:after, .gNav__list:after {
   display: block;
   visibility: hidden;
   clear: both;
@@ -6744,7 +6744,7 @@ table {
 /* ---------------------------------------- */
 .comments {
   margin: 20px 0;
-  padding: 0 10px;
+  padding: 0 14px;
 }
 .comments__title {
   font-size: 1.125rem;
@@ -6798,7 +6798,7 @@ table {
 /* ---------------------------------------- */
 .postNav {
   margin: 20px 0;
-  padding: 20px 10px;
+  padding: 20px 14px;
   border-top: 1px solid #dedede;
   border-bottom: 1px solid #dedede;
 }
@@ -6860,6 +6860,43 @@ table {
     padding: 0 0 0 10px;
   }
 }
+/* sns share buttons
+/* ---------------------------------------- */
+.snsShare__list {
+  margin: 0;
+}
+.snsShare__list li {
+  float: left;
+  margin-right: 1px;
+  padding: 0;
+  border: 1px solid #dedede;
+}
+.snsShare__list li:last-child {
+  margin-right: 0;
+}
+.snsShare__btn {
+  display: block;
+  width: auto;
+  height: 25px;
+  padding: 4px 10px;
+  font-weight: normal;
+  line-height: 1;
+}
+.snsShare__btn svg {
+  position: relative;
+  top: 1px;
+  left: 0;
+  margin-right: 4px;
+  width: 14px;
+  height: auto;
+}
+.snsShare__count {
+  color: #333333;
+  font-size: 0.875rem;
+  vertical-align: middle;
+}
+
+/* media */
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name
 
@@ -7136,13 +7173,13 @@ The `sprites` mixin generates identical output to the CSS template
   margin: 30px 0;
 }
 .post__title {
-  padding: 0 10px 5px 10px;
+  padding: 0 14px 5px 14px;
   font-size: 1.125rem;
   border-bottom: 1px solid #dedede;
 }
 .post__meta {
   margin: 5px 0;
-  padding: 0 10px;
+  padding: 0 14px;
 }
 .post__meta--footer {
   padding-bottom: 10px;
@@ -7262,8 +7299,12 @@ The `sprites` mixin generates identical output to the CSS template
   font-family: Genericons;
   line-height: 1;
 }
+.post__sns {
+  margin: 20px 0;
+  padding: 0 14px;
+}
 .post__content {
-  padding: 0 10px;
+  padding: 0 14px;
 }
 
 /* media */
@@ -7287,6 +7328,9 @@ The `sprites` mixin generates identical output to the CSS template
     margin: 40px 0;
   }
   .post__content {
+    padding: 0;
+  }
+  .post__sns {
     padding: 0;
   }
 }

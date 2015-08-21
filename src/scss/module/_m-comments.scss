@@ -4,7 +4,7 @@
 /* ---------------------------------------- */
 .comments {
   margin: $m20;
-  padding: 0 10px;
+  padding: $padding;
   &__title {
     font-size: rem-calc(18);
   }

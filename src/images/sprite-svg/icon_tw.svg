@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="14px" height="12px" viewBox="0 0 14 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_tw</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="single" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Desktop" sketch:type="MSArtboardGroup" transform="translate(-328.000000, -597.000000)" fill="#55ACEE">
+            <g id="btn_tw" sketch:type="MSLayerGroup" transform="translate(312.000000, 588.000000)">
+                <path d="M30,10.659 C29.485,10.888 28.932,11.042 28.351,11.111 C28.943,10.756 29.399,10.193 29.613,9.522 C29.059,9.851 28.444,10.09 27.791,10.219 C27.267,9.661 26.52,9.312 25.693,9.312 C24.107,9.312 22.821,10.598 22.821,12.184 C22.821,12.409 22.847,12.628 22.896,12.838 C20.509,12.718 18.392,11.575 16.975,9.837 C16.728,10.261 16.586,10.756 16.586,11.282 C16.586,12.278 17.092,13.157 17.863,13.672 C17.393,13.657 16.95,13.528 16.562,13.313 L16.562,13.35 C16.562,14.742 17.551,15.902 18.866,16.166 C18.625,16.231 18.372,16.266 18.11,16.266 C17.924,16.266 17.745,16.246 17.569,16.215 C17.935,17.357 18.996,18.186 20.252,18.208 C19.27,18.979 18.03,19.438 16.686,19.438 C16.454,19.438 16.225,19.424 16,19.397 C17.271,20.213 18.78,20.688 20.402,20.688 C25.686,20.688 28.576,16.311 28.576,12.516 C28.576,12.392 28.572,12.268 28.566,12.145 C29.127,11.74 29.615,11.235 30,10.659 L30,10.659 Z" id="icon_tw" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

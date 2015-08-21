@@ -7,13 +7,13 @@
   &__header {
   }
   &__title {
-    padding: 0 10px 5px 10px;
+    padding: 0 14px 5px 14px;
     font-size: rem-calc(18);
     border-bottom: 1px solid $colorSub;
   }
   &__meta {
     margin: 5px 0;
-    padding: 0 10px;
+    padding: $padding;
     &--footer {
       padding-bottom: 10px;
       border-bottom: 1px solid $colorSub;
@@ -86,8 +86,12 @@
       @include genericon('\f108', 1.1rem, top);
     }
   }
+  &__sns {
+    margin: $m20;
+    padding: $padding;
+  }
   &__content {
-    padding: 0 10px;
+    padding: $padding;
   }
 }
 /* media */
@@ -114,6 +118,10 @@
       margin: 40px 0;
     }
     &__content {
+      padding: 0;
+    }
+    &__sns {
+      $margin: $m30;
       padding: 0;
     }
   }

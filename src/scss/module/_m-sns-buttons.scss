@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+/* sns share buttons
+/* ---------------------------------------- */
+.snsShare {
+  &__list {
+    @extend %clearfix;
+    margin: 0;
+    li {
+      float: left;
+      margin-right: 1px;
+      padding: 0;
+      border: 1px solid $colorSub;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &__btn {
+    display: block;
+    width: auto;
+    height: 25px;
+    padding: 4px 10px;
+    font-weight: normal;
+    line-height: 1;
+    svg {
+      position: relative;
+      top: 1px;
+      left: 0;
+      margin-right: 4px;
+      width: 14px;
+      height: auto;
+    }
+  }
+  &__count {
+    color: $colorBase;
+    font-size: rem-calc(14);
+    vertical-align: middle;
+  }
+}
+/* media */
+@media #{$large-up} {}
