@@ -2,7 +2,14 @@
 
 /* buttons
 /* ---------------------------------------- */
-.btn {}
+.btn {
+  @include button(
+    $bg: $colorBase
+  );
+  &:hover {
+    background-color: lighten($colorBase, 20%);
+  }
+}
 /* comments */
 .btnSubmit {
   @include button(

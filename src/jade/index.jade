@@ -14,7 +14,58 @@ block body
   .l-container
     include inc/layout/_l-header
     .l-main
-      h1 Hello World!
+      section
+        h1
+          svg(viewBox='0 0 200 69', role='img', area-labelledby='title desc', width='200', height='69')
+            use(xlink:href='../dist/images/sprite.symbol.svg#logo_node_home')
+        p 東京・埼玉を拠点に活動するフリーランス Web デザイナーです。
+      section.block
+        h2.block__title WORKS
+        ul.works
+          - for (var x = 0; x < 6; x++)
+            li.works__item
+              a(href='#', title='')
+                figure.works__thumb
+                  img(src='http://placehold.jp/280x160.png', alt='')
+                figcaption.works__caption Title is here
+      section.block
+        h2.block__title WHAT I DO
+        ul.do
+          li.do__item
+            svg(viewBox='0 0 60 57', role='img', area-labelledby='title desc', width='60', height='57')
+              use(xlink:href='../dist/images/sprite.symbol.svg#icon_design')
+            h3.do__title Web Design
+            p.do__description Responsive / Sketch / Photoshop / Illustrator
+          li.do__item
+            svg(viewBox='0 0 80 62', role='img', area-labelledby='title desc', width='80', height='62')
+              use(xlink:href='../dist/images/sprite.symbol.svg#icon_code')
+            h3.do__title Front-End
+            p.do__description HTML / SCSS / Javascript
+          li.do__item
+            svg(viewBox='0 0 42 77', role='img', area-labelledby='title desc', width='42', height='77')
+              use(xlink:href='../dist/images/sprite.symbol.svg#icon_bolt')
+            h3.do__title Cutting Edge
+            p.do__description git / gulp / foundation / BrowserSync / Jade
+          li.do__item
+            svg(viewBox='0 0 60 60', role='img', area-labelledby='title desc', width='60', height='60')
+              use(xlink:href='../dist/images/sprite.symbol.svg#icon_pencil')
+            h3.do__title Writing
+            p.do__description Books / Blog
+          li.do__item
+            svg(viewBox='0 0 70 70', role='img', area-labelledby='title desc', width='70', height='70')
+              use(xlink:href='../dist/images/sprite.symbol.svg#icon_wp')
+            h3.do__title WordPress
+            p.do__description WordBench / WordCamp Tokyo
+      section.block
+        h2.block__title MY LIFE
+        ul.photos
+          - for (var x = 0; x < 6; x++)
+            li.photos__item
+              a(href='#', title='')
+                img(src='http://placehold.jp/150x150.png', alt='')
+      section.block
+        h2.block__title CONTACT
+        p INFO@ASKNODE.NET
     // /.l-main
     include inc/layout/_l-footer
   // /.l-container

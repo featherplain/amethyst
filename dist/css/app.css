@@ -6707,6 +6707,38 @@ table {
 
 /* buttons
 /* ---------------------------------------- */
+.btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  border-style: solid;
+  border-width: 0;
+  cursor: pointer;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1.25rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem 2rem 1.0625rem 2rem;
+  font-size: 1rem;
+  background-color: #333333;
+  border-color: #292929;
+  color: #FFFFFF;
+  transition: background-color 300ms ease-out;
+}
+.btn:hover, .btn:focus {
+  background-color: #292929;
+}
+.btn:hover, .btn:focus {
+  color: #FFFFFF;
+}
+.btn:hover {
+  background-color: #666666;
+}
+
 /* comments */
 .btnSubmit {
   -webkit-appearance: none;
