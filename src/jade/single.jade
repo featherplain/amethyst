@@ -45,11 +45,14 @@ block body
               a(href='#') Web
             .post__comment
               a(href='#') No Comments
-        include inc/module/_m-comments
-        nav.postNav(role='navigation')
-          .postNav__previous
-            a(href='') see the previous post
-          .postNav__next
-            a(href='') see the next post
+      // / .post
+      include inc/module/_m-comments
+      nav.postNav(role='navigation')
+        .postNav__previous
+          a(href='') see the previous post
+        .postNav__next
+          a(href='') see the next post
+    // / .l-main
     include inc/layout/_l-footer
+  // / .l-container
 block append scriptFooter

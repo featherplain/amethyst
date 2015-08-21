@@ -6747,15 +6747,14 @@ table {
   padding: 0 14px;
 }
 .comments__title {
+  margin: 20px 0;
   font-size: 1.125rem;
+  font-weight: bold;
 }
-.comments__loginMessage {
+.comments__text {
   font-size: 0.875rem;
 }
-.comments__allowedTags {
-  font-size: 0.75rem;
-}
-.comments__allowedTags code {
+.comments__text code {
   margin-left: 5px;
   background-color: #f2f2f2;
   border-radius: 4px;
@@ -6784,6 +6783,9 @@ table {
   .comments {
     margin: 30px 0;
     padding: 0;
+  }
+  .comments__form input[type='text'] {
+    width: 40%;
   }
 }
 /* editor style
