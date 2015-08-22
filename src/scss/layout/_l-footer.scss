@@ -4,14 +4,66 @@
 /* ---------------------------------------- */
 .l-footer {
   margin-top: 40px;
-  background-color: $colorBase;
+}
+/* contact */
+.contact {
+  background-color: lighten($colorBase, 4%);
   &__inner {
-    @include grid-row;
+    @include grid-row();
+    height: 100px;
+    text-align: center;
+    letter-spacing: 2.2px;
+  }
+  &__title {
+    margin: 34px 0;
+    font-size: rem-calc(28);
+    color: #ffffff;
+    a {
+      margin-left: 10px;
+    }
   }
 }
-.copyright {
-  margin-top: 20px;
-  margin-bottom: 20px;
+/* instagram */
+.instagram {
   text-align: center;
-  color: #ffffff;
+  background-color: $colorBase;
+  &__inner {
+    padding: $m40;
+  }
+  &__description {
+    margin: $m10;
+    color: #ffffff;
+    font-size: rem-calc(12);
+    letter-spacing: 2.2px;
+  }
+}
+.photos {
+  overflow: scroll;
+  &__list {
+    @extend %clearfix;
+    display: block;
+    width: 940px;
+    margin: 0 auto;
+  }
+  &__item {
+    @include grid-column(
+      $columns: 2,
+      $collapse: true
+    );
+  }
+}
+/* copyright */
+.copyright {
+  background-color: #111111;
+  &__inner {
+    @include grid-row();
+  }
+  p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-size: rem-calc(12);
+    letter-spacing: 2.2px;
+  }
 }

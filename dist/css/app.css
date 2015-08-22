@@ -6580,7 +6580,7 @@ th.hide-for-touch {
     display: none !important;
   }
 }
-.postNav:after, .postArchive a:after, .gNav__list:after {
+.postNav:after, .postArchive a:after, .photos__list:after, .mainImg .snsIcons:after, .works:after, .do:after, .gNav__list:after {
   display: block;
   visibility: hidden;
   clear: both;
@@ -6589,7 +6589,7 @@ th.hide-for-touch {
   font-size: 0;
 }
 
-.pageTitle__inner, .gNav__list li a {
+.pageTitle__inner, .block__title__inner, .gNav__list li a {
   letter-spacing: 2px;
 }
 
@@ -6603,7 +6603,7 @@ html {
 body {
   background-color: #fff;
   background-repeat: no-repeat;
-  color: #333333;
+  color: #222222;
   word-wrap: break-word;
   font-family: "Avenir Next", "Avenir", "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
   font-weight: 300;
@@ -6632,14 +6632,14 @@ a:hover, a:active, a:focus {
 }
 
 p {
-  color: #333333;
+  color: #222222;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Avenir Next", "Avenir", "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
 }
 h1, h1 > a, h2, h2 > a, h3, h3 > a, h4, h4 > a, h5, h5 > a, h6, h6 > a {
-  color: #333333;
+  color: #222222;
 }
 h1:hover, h1 > a:hover, h2:hover, h2 > a:hover, h3:hover, h3 > a:hover, h4:hover, h4 > a:hover, h5:hover, h5 > a:hover, h6:hover, h6 > a:hover {
   text-decoration: none;
@@ -6648,13 +6648,13 @@ h1:hover, h1 > a:hover, h2:hover, h2 > a:hover, h3:hover, h3 > a:hover, h4:hover
 ::-moz-selection {
   background: transparent;
   background-color: #999999;
-  color: #333333;
+  color: #222222;
 }
 
 ::selection {
   background: transparent;
   background-color: #999999;
-  color: #333333;
+  color: #222222;
 }
 
 .fa {
@@ -6688,6 +6688,10 @@ dl dd:last-child {
 }
 
 /* embedded content */
+figure {
+  margin: 0;
+}
+
 img {
   line-height: 1.0;
   border: 0;
@@ -6707,6 +6711,38 @@ table {
 
 /* buttons
 /* ---------------------------------------- */
+.btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  border-style: solid;
+  border-width: 0;
+  cursor: pointer;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1.25rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem 2rem 1.0625rem 2rem;
+  font-size: 1rem;
+  background-color: #222222;
+  border-color: #1b1b1b;
+  color: #FFFFFF;
+  transition: background-color 300ms ease-out;
+}
+.btn:hover, .btn:focus {
+  background-color: #1b1b1b;
+}
+.btn:hover, .btn:focus {
+  color: #FFFFFF;
+}
+.btn:hover {
+  background-color: #555555;
+}
+
 /* comments */
 .btnSubmit {
   -webkit-appearance: none;
@@ -6725,19 +6761,19 @@ table {
   display: inline-block;
   padding: 1rem 2rem 1.0625rem 2rem;
   font-size: 1rem;
-  background-color: #333333;
-  border-color: #292929;
+  background-color: #222222;
+  border-color: #1b1b1b;
   color: #FFFFFF;
   transition: background-color 300ms ease-out;
 }
 .btnSubmit:hover, .btnSubmit:focus {
-  background-color: #292929;
+  background-color: #1b1b1b;
 }
 .btnSubmit:hover, .btnSubmit:focus {
   color: #FFFFFF;
 }
 .btnSubmit:hover {
-  background-color: #666666;
+  background-color: #555555;
 }
 
 /* comments
@@ -6895,7 +6931,7 @@ table {
   background-color: #ffffff;
   border-radius: 3px;
   border: 1px solid #dedede;
-  color: #333333;
+  color: #222222;
   font-size: 0.75rem;
   font-weight: normal;
   line-height: 1;
@@ -6959,39 +6995,18 @@ The `sprites` mixin generates identical output to the CSS template
 /* archive
 /* ---------------------------------------- */
 /* page title */
-.pageTitle {
-  position: relative;
-  margin: 20px 0;
+.pageTitle, .block__title {
+  margin: 40px 0;
   text-align: center;
+  font-size: 1.375rem;
+  font-weight: bold;
   line-height: 1;
+  letter-spacing: 3px;
 }
-.pageTitle__inner {
+.pageTitle__inner, .block__title__inner {
   display: inline-block;
-  padding: 0.2rem 1rem;
-  z-index: 20;
-  vertical-align: middle;
-  font-size: 1.125rem;
-  background-color: #fff;
-  border: 1px solid #dedede;
-  z-index: 20;
-}
-.pageTitle:before {
-  position: absolute;
-  display: block;
-  top: 14px;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 1px;
-  margin: 0 auto;
-  background-color: #dedede;
-  content: '';
-  z-index: -10;
-}
-@media only screen and (min-width: 40.0625em) {
-  .pageTitle:before {
-    top: 18px;
-  }
+  padding-bottom: 4px;
+  border-bottom: 1px solid #dedede;
 }
 
 /* post archive */
@@ -7021,7 +7036,7 @@ The `sprites` mixin generates identical output to the CSS template
 }
 .postArchive__meta, .postArchive__title {
   margin-left: 120px;
-  color: #333333;
+  color: #222222;
 }
 .postArchive__meta time {
   font-size: 0.75rem;
@@ -7075,28 +7090,256 @@ The `sprites` mixin generates identical output to the CSS template
 /* ---------------------------------------- */
 .l-footer {
   margin-top: 40px;
-  background-color: #333333;
 }
-.l-footer__inner {
+
+/* contact */
+.contact {
+  background-color: #2c2c2c;
+}
+.contact__inner {
+  margin: 0 auto;
+  max-width: 940px;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  letter-spacing: 2.2px;
+}
+.contact__inner:before, .contact__inner:after {
+  content: " ";
+  display: table;
+}
+.contact__inner:after {
+  clear: both;
+}
+.contact__title {
+  margin: 34px 0;
+  font-size: 1.75rem;
+  color: #ffffff;
+}
+.contact__title a {
+  margin-left: 10px;
+}
+
+/* instagram */
+.instagram {
+  text-align: center;
+  background-color: #222222;
+}
+.instagram__inner {
+  padding: 40px 0;
+}
+.instagram__description {
+  margin: 10px 0;
+  color: #ffffff;
+  font-size: 0.75rem;
+  letter-spacing: 2.2px;
+}
+
+.photos {
+  overflow: scroll;
+}
+.photos__list {
+  display: block;
+  width: 940px;
+  margin: 0 auto;
+}
+.photos__item {
+  padding-left: 0;
+  padding-right: 0;
+  width: 16.66667%;
+  float: left;
+}
+
+/* copyright */
+.copyright {
+  background-color: #111111;
+}
+.copyright__inner {
   margin: 0 auto;
   max-width: 940px;
   width: 100%;
 }
-.l-footer__inner:before, .l-footer__inner:after {
+.copyright__inner:before, .copyright__inner:after {
   content: " ";
   display: table;
 }
-.l-footer__inner:after {
+.copyright__inner:after {
   clear: both;
 }
-
-.copyright {
+.copyright p {
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
   color: #ffffff;
+  font-size: 0.75rem;
+  letter-spacing: 2.2px;
 }
 
+/* front
+/* ---------------------------------------- */
+/* hidden siteLogo only .home */
+.home .siteLogo {
+  display: none;
+}
+
+/* mainImg */
+.mainImg {
+  margin: 140px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+.mainImg__logo {
+  margin: 10px 0;
+  font-size: 1.75rem;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+.mainImg__description {
+  font-size: 0.75rem;
+}
+.mainImg .snsIcons {
+  margin-left: 0;
+  margin: o auto;
+}
+.mainImg .snsIcons__item {
+  display: inline-block;
+  margin-right: 30px;
+}
+.mainImg .snsIcons__item:last-child {
+  margin-right: 0;
+}
+
+/* block */
+.block {
+  margin: 80px 0;
+}
+
+/* works */
+.works {
+  margin: 40px 0;
+}
+.works__item {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 100%;
+  float: left;
+}
+.works__link {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.works__link:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  content: '';
+  z-index: 1;
+  transition: 0.3s;
+}
+.works__link:hover:after {
+  background-color: transparent;
+}
+.works__caption {
+  margin: 10px 0;
+  text-align: center;
+  color: #222222;
+  font-weight: normal;
+}
+
+/* what i do */
+.do {
+  margin: 40px 0;
+  text-align: center;
+}
+.do__item {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 100%;
+  float: left;
+  padding: 20px 0;
+  transition: 0.3s;
+}
+.do__item:hover {
+  background-color: #f8f8f8;
+}
+.do__icon {
+  height: 80px;
+}
+.do__icon--exp {
+  padding: 22px 0;
+}
+.do__title {
+  margin: 10px 0;
+  line-height: 1;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.do__description {
+  margin: 10px 0;
+  color: #b5b5b5;
+  font-size: 0.875rem;
+  line-height: 1;
+}
+.do__description a {
+  color: #b5b5b5;
+  padding-bottom: 1px;
+  border-bottom: 1px dotted #b5b5b5;
+}
+
+/* media */
+@media only screen and (min-width: 40.0625em) {
+  .mainImg {
+    margin: 140px auto;
+  }
+  .mainImg__logo {
+    font-size: 3.125rem;
+  }
+
+  .works__item {
+    padding-left: 0;
+    padding-right: 0;
+    width: 50%;
+    float: left;
+  }
+
+  .do__item {
+    padding-left: 0;
+    padding-right: 0;
+    width: 50%;
+    float: left;
+  }
+}
+@media only screen and (min-width: 64.0625em) {
+  .mainImg {
+    margin: 240px auto;
+  }
+  .mainImg__logo {
+    font-size: 5rem;
+  }
+  .mainImg__description {
+    font-size: 1rem;
+  }
+
+  .works__item {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 33.33333%;
+    float: left;
+  }
+
+  .do__item {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 33.33333%;
+    float: left;
+  }
+}
 /* header
 /* ---------------------------------------- */
 .l-header {
@@ -7116,16 +7359,13 @@ The `sprites` mixin generates identical output to the CSS template
 .siteLogo {
   float: left;
   margin: 0;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 .siteLogo a {
   display: block;
-  padding: 14px;
-  height: 25px;
+  color: #222222;
   line-height: 1.0;
-}
-.siteLogo a svg {
-  display: block;
-  vertical-align: top;
 }
 
 /* navigation */
@@ -7137,7 +7377,7 @@ The `sprites` mixin generates identical output to the CSS template
   width: 50px;
   height: 50px;
   text-align: center;
-  background-color: #333333;
+  background-color: #222222;
   color: #ffffff;
 }
 .gNav__btn svg {
@@ -7149,7 +7389,7 @@ The `sprites` mixin generates identical output to the CSS template
   right: 0;
   width: 100%;
   margin: 0;
-  background-color: #333333;
+  background-color: #222222;
   z-index: 9999;
 }
 .gNav__list--active {
@@ -7188,7 +7428,7 @@ The `sprites` mixin generates identical output to the CSS template
     border-bottom: none;
   }
   .gNav__list li a {
-    color: #333333;
+    color: #222222;
   }
 }
 @media only screen and (min-width: 64.0625em) {
@@ -7224,7 +7464,7 @@ The `sprites` mixin generates identical output to the CSS template
 }
 .post__meta > * a {
   margin-left: 2px;
-  color: #333333;
+  color: #222222;
   line-height: 1;
 }
 .post__date {
