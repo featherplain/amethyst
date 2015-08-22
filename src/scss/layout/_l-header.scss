@@ -9,15 +9,13 @@
 .siteLogo {
   float: left;
   margin: 0;
+  font-weight: bold;
+  font-size: rem-calc(24);
   a {
     display: block;
-    padding: 14px;
-    height: 25px;
+    // padding: 14px;
+    color: $colorBase;
     line-height: 1.0;
-    svg {
-      display: block;
-      vertical-align: top;
-    }
   }
 }
 /* navigation */

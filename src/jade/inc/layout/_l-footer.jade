@@ -1,4 +1,15 @@
 footer.l-footer
   .l-footer__inner
-    p.copyright &copy; 2015 NODE
+    .instagram
+      .instagram__inner
+        .photos
+          ul.photos__list
+            - for (var x = 0; x < 6; x++)
+              li.photos__item
+                a(href='#', title='')
+                  img(src='http://placehold.jp/150x150.png', alt='')
+        p.instagram__description INSTAGRAM@FEATHERPLAIN
+    .copyright
+      .copyright__inner
+        p &copy; 2015 MEGUMI HANO
 // /.l-footer

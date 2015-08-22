@@ -4,7 +4,7 @@
 // color
 //***********************
 // primary
-$colorBase          : #333333;
+$colorBase          : #222222;
 $colorSub           : #dedede;
 $colorLink          : #999999;
 $colorLinkHover     : lighten($colorLink, 15%);
@@ -33,6 +33,7 @@ $maxWidth           : 940px;
 //***********************
 // base margin
 //***********************
+$m10                : 10px 0;
 $m20                : 20px 0;
 $m30                : 30px 0;
 $m40                : 40px 0;
