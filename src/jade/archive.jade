@@ -8,7 +8,7 @@ block prepend meta
   - var keywords = page.top.keywords
   - var description = page.top.description
   - var ogpimage = page.top.ogpimage
-  //- - var bodyClass = 'home'
+  - var bodyClass = 'archive'
 block append meta
 block body
   .l-container
@@ -16,14 +16,16 @@ block body
     #main.l-main(role='main')
       h2.pageTitle
         .pageTitle__inner ARCHIVE
-      .postArchive
-        - for (var x = 0; x < 10; x++)
-            article
-              a.postArchive__link(href='')
-                .postArchive__thumb
-                  img(src='../dist/images/pages/img_thumbSample01.png', alt='')
-                .postArchive__meta
-                  time 2015.8.31
-                h3.postArchive__title Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      .l-primary
+        .postArchive
+          - for (var x = 0; x < 10; x++)
+              article
+                a.postArchive__link(href='')
+                  .postArchive__thumb
+                    img(src='http://placehold.jp/120x90.png', alt='')
+                  .postArchive__meta
+                    time 2015.8.31
+                  h3.postArchive__title WordPress はメンテナンスが大事! 改ざんされたサイトを復活させるまでの道のり
+      include inc/layout/_l-primary-sidebar
     include inc/layout/_l-footer
 block append scriptFooter

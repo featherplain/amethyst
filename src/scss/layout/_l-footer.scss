@@ -42,7 +42,7 @@
   &__list {
     @extend %clearfix;
     display: block;
-    width: 940px;
+    width: $maxWidth;
     margin: 0 auto;
   }
   &__item {

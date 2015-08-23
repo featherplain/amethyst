@@ -3,20 +3,20 @@
 /* post
 /* ---------------------------------------- */
 .post {
-  margin: $m30;
-  &__header {
-  }
+  margin-bottom: 40px;
+  &__header {}
   &__title {
-    padding: 0 14px 5px 14px;
+    padding: 0 0 5px 0;
     font-size: rem-calc(18);
     border-bottom: 1px solid $colorSub;
   }
   &__meta {
     margin: 5px 0;
-    padding: $padding;
     &--footer {
+      margin: 0;
       padding-bottom: 10px;
       border-bottom: 1px solid $colorSub;
+      text-align: right;
     }
     > * {
       display: inline-block;
@@ -88,10 +88,6 @@
   }
   &__sns {
     margin: $m20;
-    padding: $padding;
-  }
-  &__content {
-    padding: $padding;
   }
 }
 /* media */
@@ -109,20 +105,12 @@
     }
     &__title {
       font-size: rem-calc(28);
-      padding: 0 0 5px 0;
-    }
-    &__meta {
-      padding: 0;
     }
     &__image {
       margin: 40px 0;
     }
-    &__content {
-      padding: 0;
-    }
     &__sns {
       $margin: $m30;
-      padding: 0;
     }
   }
 }

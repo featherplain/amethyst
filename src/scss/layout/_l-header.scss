@@ -9,11 +9,11 @@
 .siteLogo {
   float: left;
   margin: 0;
+  padding: 16px;
   font-weight: bold;
-  font-size: rem-calc(24);
+  font-size: rem-calc(20);
   a {
     display: block;
-    // padding: 14px;
     color: $colorBase;
     line-height: 1.0;
   }
@@ -52,7 +52,7 @@
       a {
         @extend %fontSpace;
         display: block;
-        padding: 10px;
+        padding: 16px;
         color: #ffffff;
         font-weight: normal;
         transition: all 0.3s;
@@ -62,10 +62,10 @@
 }
 /* media */
 @media #{$medium-up} {
-  .l-header {
-    &__inner {
-      margin: $m20;
-    }
+  .l-header {}
+  .siteLogo {
+    padding: 30px 16px;
+    font-size: rem-calc(24);
   }
   .gNav {
     &__btn {
@@ -74,21 +74,17 @@
     &__list {
       display: block;
       position: static;
+      padding: 30px 0;
+      background-color: #ffffff;
       li {
         float: left;
         background-color: #ffffff;
         border-bottom: none;
         a {
+          padding: 0 10px;
           color: $colorBase;
         }
       }
-    }
-  }
-}
-@media #{$large-up} {
-  .siteLogo {
-    a {
-      padding: 14px 0;
     }
   }
 }
