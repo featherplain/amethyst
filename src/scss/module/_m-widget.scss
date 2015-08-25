@@ -3,15 +3,17 @@
 /* widget
 /* ---------------------------------------- */
 // base styles on sidebar widget
-%widgetListBase {
+%widgetBase {
   margin: $m10;
-  li {
-    list-style-type: none;
-    border-bottom: 1px dotted $colorSub;
-    a {
-      padding: 8px 0;
-      &:hover {
-        background-color: #f1f1f1;
+  ul {
+    li {
+      list-style-type: none;
+      border-bottom: 1px dotted $colorSub;
+      a {
+        padding: 8px 0;
+        &:hover {
+          background-color: #f1f1f1;
+        }
       }
     }
   }
@@ -38,77 +40,81 @@
   }
 }
 /* search */
-.search {
-  &__input {}
-}
+.widget_search {}
 /* text widget */
-.widgetText {
+.widget_text {
   margin: $m10;
 }
 /* categories */
-.widgetCategories {
-  @extend %widgetListBase;
+.widget_categories {
+  @extend %widgetBase;
 }
 /* archives */
-.widgetArchives {
-  @extend %widgetListBase;
+.widget_archives {
+  @extend %widgetBase;
 }
 /* pages */
-.widgetPages {
-  @extend %widgetListBase;
+.widget_pages {
+  @extend %widgetBase;
 }
 /* custom menu */
-.widgetCustomMenu {
-  @extend %widgetListBase;
+.widget_custom_menu {
+  @extend %widgetBase;
+}
+/* recent comments */
+.widget_recent_comments {
+  @extend %widgetBase;
 }
 /* meta */
-.widgetMeta {
-  @extend %widgetListBase;
+.widget_meta {
+  @extend %widgetBase;
 }
 /* recent posts */
-.widgetRecentPosts {
+.widget_recent_entries {
   margin: $m10;
-  li {
-    padding: 8px 0;
-    list-style-type: none;
-    border-bottom: 1px dotted $colorSub;
-    a {
-      display: block;
-      margin: 4px 0;
-      &:hover {
-        color: lighten($colorBase, 30%);
+  ul {
+    li {
+      padding: 8px 0;
+      list-style-type: none;
+      border-bottom: 1px dotted $colorSub;
+      a {
+        display: block;
+        margin: 4px 0;
+        &:hover {
+          color: lighten($colorBase, 30%);
+        }
       }
-    }
-    time {
-      display: block;
-      margin: 4px 0;
-      text-align: right;
-      color: darken($colorSub, 10%);
-      font-size: rem-calc(12);
+      time {
+        display: block;
+        margin: 4px 0;
+        text-align: right;
+        color: darken($colorSub, 10%);
+        font-size: rem-calc(12);
+      }
     }
   }
 }
 /* tag cloud */
-.widgetTagCloud {
-  margin: $m10;
-  li {
-    display: inline-block;
-    margin: 0 3px 6px 0;
-    border: 1px solid $colorSub;
-    border-radius: 3px;
-    &:last-child {
-      margin-right: 0;
-    }
-    a {
-      display: block;
-      padding: 2px 8px;
-      &:hover {
-        background-color: $colorSub;
+.widget_tag_cloud {
+  ul {
+    margin: $m10;
+    li {
+      display: inline-block;
+      margin: 0 3px 6px 0;
+      border: 1px solid $colorSub;
+      border-radius: 3px;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        display: block;
+        padding: 2px 8px;
+        &:hover {
+          background-color: $colorSub;
+        }
       }
     }
   }
 }
-/* comments */
-.widgetComments {}
 /* calendar */
-.widgetCalendar {}
+.widget_calendar {}

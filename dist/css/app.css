@@ -7027,17 +7027,17 @@ The `sprites` mixin generates identical output to the CSS template
 */
 /* widget
 /* ---------------------------------------- */
-.widgetCategories, .widgetArchives, .widgetPages, .widgetCustomMenu, .widgetMeta {
+.widget_categories, .widget_archives, .widget_pages, .widget_custom_menu, .widget_recent_comments, .widget_meta {
   margin: 10px 0;
 }
-.widgetCategories li, .widgetArchives li, .widgetPages li, .widgetCustomMenu li, .widgetMeta li {
+.widget_categories ul li, .widget_archives ul li, .widget_pages ul li, .widget_custom_menu ul li, .widget_recent_comments ul li, .widget_meta ul li {
   list-style-type: none;
   border-bottom: 1px dotted #dedede;
 }
-.widgetCategories li a, .widgetArchives li a, .widgetPages li a, .widgetCustomMenu li a, .widgetMeta li a {
+.widget_categories ul li a, .widget_archives ul li a, .widget_pages ul li a, .widget_custom_menu ul li a, .widget_recent_comments ul li a, .widget_meta ul li a {
   padding: 8px 0;
 }
-.widgetCategories li a:hover, .widgetArchives li a:hover, .widgetPages li a:hover, .widgetCustomMenu li a:hover, .widgetMeta li a:hover {
+.widget_categories ul li a:hover, .widget_archives ul li a:hover, .widget_pages ul li a:hover, .widget_custom_menu ul li a:hover, .widget_recent_comments ul li a:hover, .widget_meta ul li a:hover {
   background-color: #f1f1f1;
 }
 
@@ -7062,7 +7062,7 @@ The `sprites` mixin generates identical output to the CSS template
 
 /* search */
 /* text widget */
-.widgetText {
+.widget_text {
   margin: 10px 0;
 }
 
@@ -7070,24 +7070,25 @@ The `sprites` mixin generates identical output to the CSS template
 /* archives */
 /* pages */
 /* custom menu */
+/* recent comments */
 /* meta */
 /* recent posts */
-.widgetRecentPosts {
+.widget_recent_entries {
   margin: 10px 0;
 }
-.widgetRecentPosts li {
+.widget_recent_entries ul li {
   padding: 8px 0;
   list-style-type: none;
   border-bottom: 1px dotted #dedede;
 }
-.widgetRecentPosts li a {
+.widget_recent_entries ul li a {
   display: block;
   margin: 4px 0;
 }
-.widgetRecentPosts li a:hover {
+.widget_recent_entries ul li a:hover {
   color: #6f6f6f;
 }
-.widgetRecentPosts li time {
+.widget_recent_entries ul li time {
   display: block;
   margin: 4px 0;
   text-align: right;
@@ -7096,27 +7097,26 @@ The `sprites` mixin generates identical output to the CSS template
 }
 
 /* tag cloud */
-.widgetTagCloud {
+.widget_tag_cloud ul {
   margin: 10px 0;
 }
-.widgetTagCloud li {
+.widget_tag_cloud ul li {
   display: inline-block;
   margin: 0 3px 6px 0;
   border: 1px solid #dedede;
   border-radius: 3px;
 }
-.widgetTagCloud li:last-child {
+.widget_tag_cloud ul li:last-child {
   margin-right: 0;
 }
-.widgetTagCloud li a {
+.widget_tag_cloud ul li a {
   display: block;
   padding: 2px 8px;
 }
-.widgetTagCloud li a:hover {
+.widget_tag_cloud ul li a:hover {
   background-color: #dedede;
 }
 
-/* comments */
 /* calendar */
 /* archive
 /* ---------------------------------------- */
