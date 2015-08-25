@@ -41,7 +41,7 @@
 }
 /* works */
 .works {
-  @extend %clearfix;
+  @include grid-row();
   margin: $m40;
   &__item {
     @include grid-column(

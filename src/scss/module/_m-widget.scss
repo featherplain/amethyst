@@ -2,38 +2,13 @@
 
 /* widget
 /* ---------------------------------------- */
-.widget {
-  margin: $m40;
-  &__title {
-    margin: 0;
-    padding-bottom: 4px;
-    border-bottom: 2px solid $colorSub;
-    font-size: rem-calc(16);
-    font-weight: normal;
-    letter-spacing: 3px;
-  }
-  font-weight: normal;
-  a {
-    color: $colorBase;
-    transition: 0.2s;
-    font-size: rem-calc(14);
-    line-height: 1.4;
-  }
-  &--search {}
-  &--category {}
-  &--recentPosts {}
-  &--tagCloud {}
-}
-/* search */
-.search {
-  &__input {}
-}
-/* categories */
-.categories {
+// base styles on sidebar widget
+%widgetListBase {
+  margin: $m10;
   li {
+    list-style-type: none;
     border-bottom: 1px dotted $colorSub;
     a {
-      display: block;
       padding: 8px 0;
       &:hover {
         background-color: #f1f1f1;
@@ -41,10 +16,61 @@
     }
   }
 }
+.widget {
+  &--sidebar {
+    margin: $m40;
+  }
+  &--footer {}
+  &__title {
+    margin: 0;
+    padding-bottom: 4px;
+    border-bottom: 2px solid $colorSub;
+    font-size: rem-calc(16);
+    font-weight: normal;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  a {
+    color: $colorBase;
+    transition: 0.2s;
+    font-size: rem-calc(14);
+    line-height: 1.4;
+  }
+}
+/* search */
+.search {
+  &__input {}
+}
+/* text widget */
+.widgetText {
+  margin: $m10;
+}
+/* categories */
+.widgetCategories {
+  @extend %widgetListBase;
+}
+/* archives */
+.widgetArchives {
+  @extend %widgetListBase;
+}
+/* pages */
+.widgetPages {
+  @extend %widgetListBase;
+}
+/* custom menu */
+.widgetCustomMenu {
+  @extend %widgetListBase;
+}
+/* meta */
+.widgetMeta {
+  @extend %widgetListBase;
+}
 /* recent posts */
-.recentPosts {
+.widgetRecentPosts {
+  margin: $m10;
   li {
     padding: 8px 0;
+    list-style-type: none;
     border-bottom: 1px dotted $colorSub;
     a {
       display: block;
@@ -63,8 +89,8 @@
   }
 }
 /* tag cloud */
-.tagCloud {
-  margin-top: 16px;
+.widgetTagCloud {
+  margin: $m10;
   li {
     display: inline-block;
     margin: 0 3px 6px 0;
@@ -82,3 +108,7 @@
     }
   }
 }
+/* comments */
+.widgetComments {}
+/* calendar */
+.widgetCalendar {}

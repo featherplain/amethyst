@@ -11,7 +11,7 @@
     @include grid-row();
     padding: 0;
   }
-  .l-primarySidebar {
+  .l-sidebar {
     display: none;
   }
 }
@@ -22,7 +22,7 @@
 /* l-primary and l-sidebar */
 @media #{$small-only} {
   .l-primary,
-  .l-primarySidebar {
+  .l-sidebar {
     padding: 0 16px;
   }
 }
@@ -33,14 +33,10 @@
       $collapse: false
     );
   }
-  .l-primarySidebar {
+  .l-sidebar {
     @include grid-column(
       $columns: 3,
       $collapse: false
     );
   }
-}
-/* screen reader text */
-.screenReaderText {
-  display: none;
 }

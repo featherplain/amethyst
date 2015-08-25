@@ -6580,7 +6580,7 @@ th.hide-for-touch {
     display: none !important;
   }
 }
-.postNav:after, .postArchive__link:after, .photos__list:after, .mainImg .snsIcons:after, .works:after, .do:after, .gNav__list:after {
+.photos__list:after, .postNav:after, .postArchive__link:after, .mainImg .snsIcons:after, .do:after, .gNav__list:after {
   display: block;
   visibility: hidden;
   clear: both;
@@ -6784,15 +6784,15 @@ table {
 .comments {
   margin: 40px 0;
 }
-.comments__title {
+.comments__title, .trackbacks__title {
   margin: 20px 0;
   font-size: 1.125rem;
   font-weight: bold;
 }
-.comments__text {
+.comments__text, .trackbacks__text {
   font-size: 0.875rem;
 }
-.comments__text code {
+.comments__text code, .trackbacks__text code {
   margin-left: 5px;
   background-color: #f2f2f2;
   border-radius: 4px;
@@ -6816,11 +6816,12 @@ table {
   font-size: 0.75rem;
 }
 
+.trackbacks {
+  margin: 40px 0;
+}
+
 /* media */
 @media only screen and (min-width: 64.0625em) {
-  .comments {
-    margin: 30px 0;
-  }
   .comments__form input[type='text'] {
     width: 40%;
   }
@@ -6831,6 +6832,37 @@ table {
   margin: 30px 0;
   font-size: 0.875rem;
   line-height: 1.8;
+}
+
+/* instagram
+/* ---------------------------------------- */
+.instagram {
+  text-align: center;
+  background-color: #222222;
+}
+.instagram__inner {
+  padding: 40px 0;
+}
+.instagram__description {
+  margin: 10px 0;
+  color: #ffffff;
+  font-size: 0.75rem;
+  letter-spacing: 2.2px;
+}
+
+.photos {
+  overflow: scroll;
+}
+.photos__list {
+  display: block;
+  width: 1040px;
+  margin: 0 auto;
+}
+.photos__item {
+  padding-left: 0;
+  padding-right: 0;
+  width: 16.66667%;
+  float: left;
 }
 
 /* post navigation
@@ -6885,7 +6917,7 @@ table {
 /* media */
 @media only screen and (min-width: 40.0625em) {
   .postNav {
-    margin: 30px 0;
+    margin: 40px 0;
     padding: 20px 0;
   }
   .postNav__previous {
@@ -6995,9 +7027,22 @@ The `sprites` mixin generates identical output to the CSS template
 */
 /* widget
 /* ---------------------------------------- */
-.widget {
+.widgetCategories, .widgetArchives, .widgetPages, .widgetCustomMenu, .widgetMeta {
+  margin: 10px 0;
+}
+.widgetCategories li, .widgetArchives li, .widgetPages li, .widgetCustomMenu li, .widgetMeta li {
+  list-style-type: none;
+  border-bottom: 1px dotted #dedede;
+}
+.widgetCategories li a, .widgetArchives li a, .widgetPages li a, .widgetCustomMenu li a, .widgetMeta li a {
+  padding: 8px 0;
+}
+.widgetCategories li a:hover, .widgetArchives li a:hover, .widgetPages li a:hover, .widgetCustomMenu li a:hover, .widgetMeta li a:hover {
+  background-color: #f1f1f1;
+}
+
+.widget--sidebar {
   margin: 40px 0;
-  font-weight: normal;
 }
 .widget__title {
   margin: 0;
@@ -7006,6 +7051,7 @@ The `sprites` mixin generates identical output to the CSS template
   font-size: 1rem;
   font-weight: normal;
   letter-spacing: 3px;
+  text-transform: uppercase;
 }
 .widget a {
   color: #222222;
@@ -7015,31 +7061,33 @@ The `sprites` mixin generates identical output to the CSS template
 }
 
 /* search */
-/* categories */
-.categories li {
-  border-bottom: 1px dotted #dedede;
-}
-.categories li a {
-  display: block;
-  padding: 8px 0;
-}
-.categories li a:hover {
-  background-color: #f1f1f1;
+/* text widget */
+.widgetText {
+  margin: 10px 0;
 }
 
+/* categories */
+/* archives */
+/* pages */
+/* custom menu */
+/* meta */
 /* recent posts */
-.recentPosts li {
+.widgetRecentPosts {
+  margin: 10px 0;
+}
+.widgetRecentPosts li {
   padding: 8px 0;
+  list-style-type: none;
   border-bottom: 1px dotted #dedede;
 }
-.recentPosts li a {
+.widgetRecentPosts li a {
   display: block;
   margin: 4px 0;
 }
-.recentPosts li a:hover {
+.widgetRecentPosts li a:hover {
   color: #6f6f6f;
 }
-.recentPosts li time {
+.widgetRecentPosts li time {
   display: block;
   margin: 4px 0;
   text-align: right;
@@ -7048,26 +7096,28 @@ The `sprites` mixin generates identical output to the CSS template
 }
 
 /* tag cloud */
-.tagCloud {
-  margin-top: 16px;
+.widgetTagCloud {
+  margin: 10px 0;
 }
-.tagCloud li {
+.widgetTagCloud li {
   display: inline-block;
   margin: 0 3px 6px 0;
   border: 1px solid #dedede;
   border-radius: 3px;
 }
-.tagCloud li:last-child {
+.widgetTagCloud li:last-child {
   margin-right: 0;
 }
-.tagCloud li a {
+.widgetTagCloud li a {
   display: block;
   padding: 2px 8px;
 }
-.tagCloud li a:hover {
+.widgetTagCloud li a:hover {
   background-color: #dedede;
 }
 
+/* comments */
+/* calendar */
 /* archive
 /* ---------------------------------------- */
 /* page title */
@@ -7170,7 +7220,7 @@ The `sprites` mixin generates identical output to the CSS template
 .home .l-primary:after {
   clear: both;
 }
-.home .l-primarySidebar {
+.home .l-sidebar {
   display: none;
 }
 
@@ -7191,7 +7241,7 @@ The `sprites` mixin generates identical output to the CSS template
 /* l-primary and l-sidebar */
 @media only screen and (max-width: 40em) {
   .l-primary,
-  .l-primarySidebar {
+  .l-sidebar {
     padding: 0 16px;
   }
 }
@@ -7203,80 +7253,46 @@ The `sprites` mixin generates identical output to the CSS template
     float: left;
   }
 
-  .l-primarySidebar {
+  .l-sidebar {
     padding-left: 1.125rem;
     padding-right: 1.125rem;
     width: 25%;
     float: left;
   }
 }
-/* screen reader text */
-.screenReaderText {
-  display: none;
-}
-
 /* footer
 /* ---------------------------------------- */
-.l-footer {
-  margin-top: 40px;
-}
-
-/* contact */
-.contact {
-  background-color: #2c2c2c;
-}
-.contact__inner {
-  margin: 0 auto;
-  max-width: 1040px;
-  width: 100%;
-  height: 100px;
-  text-align: center;
-  letter-spacing: 2.2px;
-}
-.contact__inner:before, .contact__inner:after {
-  content: " ";
-  display: table;
-}
-.contact__inner:after {
-  clear: both;
-}
-.contact__title {
-  margin: 34px 0;
-  font-size: 1.75rem;
-  color: #ffffff;
-}
-.contact__title a {
-  margin-left: 10px;
-}
-
-/* instagram */
-.instagram {
-  text-align: center;
-  background-color: #222222;
-}
-.instagram__inner {
+/* footer widgets */
+.footerWidgets {
   padding: 40px 0;
+  background-color: #fafafa;
 }
-.instagram__description {
-  margin: 10px 0;
-  color: #ffffff;
-  font-size: 0.75rem;
-  letter-spacing: 2.2px;
+@media only screen and (max-width: 40em) {
+  .footerWidgets__inner {
+    padding: 0 16px;
+  }
 }
-
-.photos {
-  overflow: scroll;
+@media only screen and (min-width: 40.0625em) {
+  .footerWidgets__inner {
+    margin: 0 auto;
+    max-width: 1040px;
+    width: 100%;
+  }
+  .footerWidgets__inner:before, .footerWidgets__inner:after {
+    content: " ";
+    display: table;
+  }
+  .footerWidgets__inner:after {
+    clear: both;
+  }
 }
-.photos__list {
-  display: block;
-  width: 1040px;
-  margin: 0 auto;
-}
-.photos__item {
-  padding-left: 0;
-  padding-right: 0;
-  width: 16.66667%;
-  float: left;
+@media only screen and (min-width: 40.0625em) {
+  .footerWidgets .widget--footer {
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
+    width: 33.33333%;
+    float: left;
+  }
 }
 
 /* copyright */
@@ -7340,7 +7356,17 @@ The `sprites` mixin generates identical output to the CSS template
 
 /* works */
 .works {
+  margin: 0 auto;
+  max-width: 1040px;
+  width: 100%;
   margin: 40px 0;
+}
+.works:before, .works:after {
+  content: " ";
+  display: table;
+}
+.works:after {
+  clear: both;
 }
 .works__item {
   padding-left: 1.125rem;
@@ -7716,5 +7742,3 @@ The `sprites` mixin generates identical output to the CSS template
 }
 /* sidebar
 /* ---------------------------------------- */
-/* primary sidebar */
-/* secondary sidebar */

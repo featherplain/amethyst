@@ -2,54 +2,26 @@
 
 /* footer
 /* ---------------------------------------- */
-.l-footer {
-  margin-top: 40px;
-}
-/* contact */
-.contact {
-  background-color: lighten($colorBase, 4%);
+.l-footer {}
+/* footer widgets */
+.footerWidgets {
+  padding: $m40;
+  background-color: lighten($colorSub, 11%);
   &__inner {
-    @include grid-row();
-    height: 100px;
-    text-align: center;
-    letter-spacing: 2.2px;
-  }
-  &__title {
-    margin: 34px 0;
-    font-size: rem-calc(28);
-    color: #ffffff;
-    a {
-      margin-left: 10px;
+    @media #{$small-only} {
+      padding: 0 16px;
+    }
+    @media #{$medium-up} {
+      @include grid-row();
     }
   }
-}
-/* instagram */
-.instagram {
-  text-align: center;
-  background-color: $colorBase;
-  &__inner {
-    padding: $m40;
-  }
-  &__description {
-    margin: $m10;
-    color: #ffffff;
-    font-size: rem-calc(12);
-    letter-spacing: 2.2px;
-  }
-}
-.photos {
-  overflow: scroll;
-  &__list {
-    @extend %clearfix;
-    display: block;
-    width: $maxWidth;
-    margin: 0 auto;
-  }
-  &__item {
-    @include grid-column(
-      $columns: 2,
-      $collapse: true
-    );
+  .widget--footer {
+    @media #{$medium-up} {
+      @include grid-column(
+        $columns: 4,
+        $collapse: false
+      );
+    }
   }
 }
 /* copyright */

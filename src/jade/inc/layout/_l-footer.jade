@@ -1,15 +1,34 @@
-footer.l-footer
-  .l-footer__inner
-    .instagram
-      .instagram__inner
-        .photos
-          ul.photos__list
-            - for (var x = 0; x < 6; x++)
-              li.photos__item
-                a(href='#', title='')
-                  img(src='http://placehold.jp/170x170.png', alt='')
-        p.instagram__description INSTAGRAM@FEATHERPLAIN
-    .copyright
-      .copyright__inner
-        p &copy; 2015 MEGUMI HANO
+footer.l-footer(role='contentinfo')
+  aside.footerWidgets(role='complementary')
+    .footerWidgets__inner
+      .widget.widget--footer
+        h2.widget__title RECENT POSTS
+        ul
+        - for (var x = 0; x < 3; x++)
+          li
+            a(href='#') Lorem ipsum dolor sit amet, consecteur adispiting elit.
+            time 2015.10.20
+      .widget.widget--footer
+        h2.widget__title Archive
+        ul
+        - for (var x = 0; x < 5; x++)
+          li: a(href='#') Archive Title
+      .widget.widget--footer
+        h2.widget__title About
+        ul
+        - for (var x = 0; x < 5; x++)
+          li: a(href='#') Page Title
+  // / .footerWidgets
+  .instagram
+    .instagram__inner
+      .photos
+        ul.photos__list
+          - for (var x = 0; x < 6; x++)
+            li.photos__item
+              a(href='#', title='')
+                img(src='http://placehold.jp/170x170.png', alt='')
+      p.instagram__description INSTAGRAM@FEATHERPLAIN
+  .copyright
+    .copyright__inner
+      p &copy; 2015 MEGUMI HANO
 // /.l-footer
