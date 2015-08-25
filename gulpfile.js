@@ -18,7 +18,7 @@ var paths = {
   'vhost'          : 'othello.dev',
   'port'           : 3000,
 // html
-  'htmlDest'       : 'src/html/',
+  'htmlPath'       : 'src/html/',
 // images
   'imageDest'      : 'assets/images/',
   'imagePath'      : 'src/images/',
@@ -32,7 +32,7 @@ var paths = {
 // css
   'cssDest'        : 'assets/css/',
 // php
-  'phpPath'        : './*.php'
+  'phpFiles'       : ['*.php', '**/*.php']
 };
 
 var rubySassConf = {
@@ -61,7 +61,7 @@ gulp.task('browser-sync', function() {
   var args = {};
   if (argv.mode == 'server' ) {
     args.server =  { baseDir: paths.root };
-    args.startPath = paths.htmlDest;
+    args.startPath = paths.htmlPath;
   } else {
     args.proxy =  paths.vhost;
     args.open = 'external';
@@ -122,7 +122,7 @@ gulp.task('jade', function() {
     }))
     .pipe($.plumber())
     .pipe($.jade({ pretty: true }))
-    .pipe(gulp.dest(paths.htmlDest))
+    .pipe(gulp.dest(paths.htmlPath))
     .pipe(browserSync.reload({ stream: true }));
 });
 
@@ -174,12 +174,13 @@ gulp.task('sass', function () {
 ***************************************************************************/
 
 gulp.task('watch', function() {
-  gulp.watch([paths.imageDest + 'sprite/*.png'], ['sprite']);
+  gulp.watch([paths.imageDest + 'sprite/*.png'],     ['sprite']);
   gulp.watch([paths.imagePath + 'sprite-svg/*.svg'], ['sprite-svg'])
-  gulp.watch([paths.htmlDest  + '*.html'], ['bs-reload']);
-  gulp.watch([paths.jadePath  + '**/*.jade'], ['jade']);
-  gulp.watch([paths.jsPath    + '**/*.js'], ['jsTasks']);
-  gulp.watch([paths.scssPath  + '**/*.scss'], ['sass']);
+  gulp.watch([paths.htmlPath  + '*.html'],           ['bs-reload']);
+  gulp.watch([paths.jadePath  + '**/*.jade'],        ['jade']);
+  gulp.watch([paths.jsPath    + '**/*.js'],          ['jsTasks']);
+  gulp.watch([paths.scssPath  + '**/*.scss'],        ['sass']);
+  gulp.watch([paths.phpFiles],                       ['bs-reload']);
 });
 
 gulp.task('default', [
