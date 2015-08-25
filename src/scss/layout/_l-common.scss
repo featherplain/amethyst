@@ -2,6 +2,41 @@
 
 /* common
 /* ---------------------------------------- */
+/* front page */
+.home {
+  .siteLogo {
+    display: none;
+  }
+  .l-primary {
+    @include grid-row();
+    padding: 0;
+  }
+  .l-sidebar {
+    display: none;
+  }
+}
+/* l-main */
 .l-main {
   @include grid-row();
+}
+/* l-primary and l-sidebar */
+@media #{$small-only} {
+  .l-primary,
+  .l-sidebar {
+    padding: 0 16px;
+  }
+}
+@media #{$medium-up} {
+  .l-primary {
+    @include grid-column(
+      $columns: 9,
+      $collapse: false
+    );
+  }
+  .l-sidebar {
+    @include grid-column(
+      $columns: 3,
+      $collapse: false
+    );
+  }
 }

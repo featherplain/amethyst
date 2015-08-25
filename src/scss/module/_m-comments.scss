@@ -3,8 +3,7 @@
 /* comments
 /* ---------------------------------------- */
 .comments {
-  margin: $m20;
-  padding: $padding;
+  margin: $m40;
   &__title {
     margin: 20px 0;
     font-size: rem-calc(18);
@@ -37,11 +36,19 @@
     }
   }
 }
+.trackbacks {
+  margin: $m40;
+  &__title {
+    @extend .comments__title;
+  }
+  &__text {
+    @extend .comments__text;
+  }
+  &__url {}
+}
 /* media */
 @media #{$large-up} {
   .comments {
-    margin: $m30;
-    padding: 0;
     &__form {
       input[type='text'] {
         width: 40%;

@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+/* instagram
+/* ---------------------------------------- */
+.instagram {
+  text-align: center;
+  background-color: $colorBase;
+  &__inner {
+    padding: $m40;
+  }
+  &__description {
+    margin: $m10;
+    color: #ffffff;
+    font-size: rem-calc(12);
+    letter-spacing: 2.2px;
+  }
+}
+.photos {
+  overflow: scroll;
+  &__list {
+    @extend %clearfix;
+    display: block;
+    width: $maxWidth;
+    margin: 0 auto;
+  }
+  &__item {
+    @include grid-column(
+      $columns: 2,
+      $collapse: true
+    );
+  }
+}

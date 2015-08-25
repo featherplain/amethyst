@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+/* widget
+/* ---------------------------------------- */
+// base styles on sidebar widget
+%widgetBase {
+  margin: $m10;
+  ul {
+    li {
+      list-style-type: none;
+      border-bottom: 1px dotted $colorSub;
+      a {
+        padding: 8px 0;
+        &:hover {
+          background-color: #f1f1f1;
+        }
+      }
+    }
+  }
+}
+.widget {
+  &--sidebar {
+    margin: $m40;
+  }
+  &--footer {}
+  &__title {
+    margin: 0;
+    padding-bottom: 4px;
+    border-bottom: 2px solid $colorSub;
+    font-size: rem-calc(16);
+    font-weight: normal;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  a {
+    color: $colorBase;
+    transition: 0.2s;
+    font-size: rem-calc(14);
+    line-height: 1.4;
+  }
+}
+/* search */
+.widget_search {}
+/* text widget */
+.widget_text {
+  margin: $m10;
+}
+/* categories */
+.widget_categories {
+  @extend %widgetBase;
+}
+/* archives */
+.widget_archives {
+  @extend %widgetBase;
+}
+/* pages */
+.widget_pages {
+  @extend %widgetBase;
+}
+/* custom menu */
+.widget_custom_menu {
+  @extend %widgetBase;
+}
+/* recent comments */
+.widget_recent_comments {
+  @extend %widgetBase;
+}
+/* meta */
+.widget_meta {
+  @extend %widgetBase;
+}
+/* recent posts */
+.widget_recent_entries {
+  margin: $m10;
+  ul {
+    li {
+      padding: 8px 0;
+      list-style-type: none;
+      border-bottom: 1px dotted $colorSub;
+      a {
+        display: block;
+        margin: 4px 0;
+        &:hover {
+          color: lighten($colorBase, 30%);
+        }
+      }
+      time {
+        display: block;
+        margin: 4px 0;
+        text-align: right;
+        color: darken($colorSub, 10%);
+        font-size: rem-calc(12);
+      }
+    }
+  }
+}
+/* tag cloud */
+.widget_tag_cloud {
+  ul {
+    margin: $m10;
+    li {
+      display: inline-block;
+      margin: 0 3px 6px 0;
+      border: 1px solid $colorSub;
+      border-radius: 3px;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        display: block;
+        padding: 2px 8px;
+        &:hover {
+          background-color: $colorSub;
+        }
+      }
+    }
+  }
+}
+/* calendar */
+.widget_calendar {}

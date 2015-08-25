@@ -2,12 +2,6 @@
 
 /* front
 /* ---------------------------------------- */
-/* hidden siteLogo only .home */
-.home {
-  .siteLogo {
-    display: none;
-  }
-}
 /* mainImg */
 .mainImg {
   margin: 140px auto;
@@ -47,7 +41,7 @@
 }
 /* works */
 .works {
-  @extend %clearfix;
+  @include grid-row();
   margin: $m40;
   &__item {
     @include grid-column(
@@ -128,7 +122,7 @@
 /* media */
 @media #{$medium-up} {
   .mainImg {
-    margin: 140px auto;
+    margin: 180px auto;
     &__logo {
       font-size: rem-calc(50);
     }
@@ -152,7 +146,7 @@
 }
 @media #{$large-up} {
   .mainImg {
-    margin: 240px auto;
+    margin: 200px auto;
     &__logo {
       font-size: rem-calc(80);
     }
