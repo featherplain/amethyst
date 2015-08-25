@@ -15,22 +15,24 @@ var gulp           = require('gulp'),
 
 var paths = {
   'root'           : './',
-  'vhost'          : 'example.dev',
+  'vhost'          : 'othello.dev',
   'port'           : 3000,
 // html
-  'htmlDest'       : 'dist/',
+  'htmlDest'       : 'src/html/',
 // images
-  'imageDest'      : 'dist/images/',
+  'imageDest'      : 'assets/images/',
   'imagePath'      : 'src/images/',
 // jade
   'jadePath'       : 'src/jade/',
 // JavaScript
   'jsPath'         : 'src/js/',
-  'jsDest'         : 'dist/js/',
+  'jsDest'         : 'assets/js/',
 // scss
   'scssPath'       : 'src/scss/',
 // css
-  'cssDest'        : 'dist/css/',
+  'cssDest'        : 'assets/css/',
+// php
+  'phpPath'        : './*.php'
 };
 
 var rubySassConf = {
