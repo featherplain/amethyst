@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: _s 1.1\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
+"Project-Id-Version: othello 1.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/othello\n"
 "POT-Creation-Date: 2012-11-12 01:30:16+00:00\n"
 "PO-Revision-Date: 2012-11-13 10:41+0900\n"
 "Language: JAPANESE\n"
@@ -425,29 +425,29 @@ msgid "Meta"
 msgstr "メタ"
 
 #. Theme Name of the plugin/theme
-msgid "_s"
-msgstr "_s"
+msgid "othello"
+msgstr "オセロ"
 
 #. Theme URI of the plugin/theme
-msgid "https://wpcom-themes.svn.automattic.com/_s/"
-msgstr "https://wpcom-themes.svn.automattic.com/_s/"
+msgid "http://othello.asknode.net"
+msgstr "http://othello.asknode.net"
 
 #. Description of the plugin/theme
 msgid ""
-"Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if "
+"Hi. I'm a starter theme called <code>othello</code>, or <em>underscores</em>, if "
 "you like. I'm a theme meant for hacking so don't use me as a <em>Parent "
 "Theme</em>. Instead try turning me into the next, most awesome, WordPress "
 "theme out there. That's what I'm here for."
 msgstr ""
-"<code>_s</code>（アンダースコアーズ）というスターター・テーマです。親テーマ用"
+"<code>othello</code>（オセロ）というスターター・テーマです。親テーマ用"
 "ではなく、改変のベースとなるテーマとして作られています。これをもとに変更を加"
 "えて、次世代のすばらしい WordPress テーマを作るためのコードの参考にしてくださ"
 "い。"
 
 #. Author of the plugin/theme
-msgid "Automattic"
-msgstr "Automattic"
+msgid "featherplain"
+msgstr "featherplain"
 
 #. Author URI of the plugin/theme
-msgid "http://automattic.com/"
-msgstr "http://automattic.com/"
+msgid "http://asknode.net/"
+msgstr "http://asknode.net/"
