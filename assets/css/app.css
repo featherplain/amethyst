@@ -7203,27 +7203,6 @@ The `sprites` mixin generates identical output to the CSS template
 }
 /* common
 /* ---------------------------------------- */
-/* front page */
-.home .siteLogo {
-  display: none;
-}
-.home .l-primary {
-  margin: 0 auto;
-  max-width: 1040px;
-  width: 100%;
-  padding: 0;
-}
-.home .l-primary:before, .home .l-primary:after {
-  content: " ";
-  display: table;
-}
-.home .l-primary:after {
-  clear: both;
-}
-.home .l-sidebar {
-  display: none;
-}
-
 /* l-main */
 .l-main {
   margin: 0 auto;
@@ -7260,6 +7239,11 @@ The `sprites` mixin generates identical output to the CSS template
     float: left;
   }
 }
+/* screen reader text */
+.screen-reader-text {
+  display: none;
+}
+
 /* footer
 /* ---------------------------------------- */
 /* footer widgets */
@@ -7303,6 +7287,8 @@ The `sprites` mixin generates identical output to the CSS template
   margin: 0 auto;
   max-width: 1040px;
   width: 100%;
+  padding: 20px 0;
+  text-align: center;
 }
 .copyright__inner:before, .copyright__inner:after {
   content: " ";
@@ -7311,17 +7297,36 @@ The `sprites` mixin generates identical output to the CSS template
 .copyright__inner:after {
   clear: both;
 }
-.copyright p {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-align: center;
+.copyright__text {
+  margin: 10px auto;
   color: #ffffff;
   font-size: 0.75rem;
-  letter-spacing: 2.2px;
+  letter-spacing: 1.6px;
 }
 
 /* front
 /* ---------------------------------------- */
+.home .siteLogo,
+.home .siteDescription {
+  display: none;
+}
+.home .l-primary {
+  margin: 0 auto;
+  max-width: 1040px;
+  width: 100%;
+  padding: 0;
+}
+.home .l-primary:before, .home .l-primary:after {
+  content: " ";
+  display: table;
+}
+.home .l-primary:after {
+  clear: both;
+}
+.home .l-sidebar {
+  display: none;
+}
+
 /* mainImg */
 .mainImg {
   margin: 140px auto;

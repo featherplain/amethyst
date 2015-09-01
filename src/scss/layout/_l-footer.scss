@@ -29,13 +29,13 @@
   background-color: #111111;
   &__inner {
     @include grid-row();
-  }
-  p {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding: 20px 0;
     text-align: center;
+  }
+  &__text {
+    margin: 10px auto;
     color: #ffffff;
     font-size: rem-calc(12);
-    letter-spacing: 2.2px;
+    letter-spacing: 1.6px;
   }
 }

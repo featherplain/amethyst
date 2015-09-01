@@ -2,6 +2,19 @@
 
 /* front
 /* ---------------------------------------- */
+.home {
+  .siteLogo,
+  .siteDescription {
+    display: none;
+  }
+  .l-primary {
+    @include grid-row();
+    padding: 0;
+  }
+  .l-sidebar {
+    display: none;
+  }
+}
 /* mainImg */
 .mainImg {
   margin: 140px auto;

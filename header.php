@@ -21,23 +21,33 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'othello' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'othello' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php endif; ?>
-			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
-		</div><!-- .site-branding -->
+	<div class="l-container">
+    <header role="banner" class="l-header">
+      <div class="l-header__inner">
+      	<h1 class="siteLogo">
+      		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+      	</h1>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'othello' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+        <nav class="gNav" role="navigation">
+        	<a href="#" title="MENU" role="button" class="gNav__btn">
+            <svg viewBox="0 0 16 12" role="img" area-labelledby="title desc" width="22" height="18">
+              <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.symbol.svg#icon_menu"></use>
+            </svg>
+          </a>
+        	<?php // global navigation
+        	wp_nav_menu( array(
+        		'theme_location' => 'global_nav',
+        		'container'      => false,
+        		'menu_id'        => 'menu',
+        		'menu_class'     => 'gNav__list',
+        		'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>' )
+        		);
+        	?>
+        </nav>
+      </div><!-- /.l-header__inner -->
+    </header><!-- /.l-header -->
 
-	<div id="content" class="site-content">
+		<div id="main" role="main" class="l-main">
+    	<div class="l-primary">
