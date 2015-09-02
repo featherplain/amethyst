@@ -7136,9 +7136,6 @@ The `sprites` mixin generates identical output to the CSS template
 }
 
 /* post archive */
-.postArchive {
-  margin: 40px 0;
-}
 .postArchive__link {
   display: block;
   margin-bottom: 14px;
@@ -7306,32 +7303,6 @@ The `sprites` mixin generates identical output to the CSS template
 
 /* front
 /* ---------------------------------------- */
-.home .siteLogo,
-.home .siteDescription {
-  display: none;
-}
-@media only screen and (min-width: 40.0625em) {
-  .home .gNav {
-    float: right;
-  }
-}
-.home .l-primary {
-  margin: 0 auto;
-  max-width: 1040px;
-  width: 100%;
-  padding: 0;
-}
-.home .l-primary:before, .home .l-primary:after {
-  content: " ";
-  display: table;
-}
-.home .l-primary:after {
-  clear: both;
-}
-.home .l-sidebar {
-  display: none;
-}
-
 /* mainImg */
 .mainImg {
   margin: 140px auto;

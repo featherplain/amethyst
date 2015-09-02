@@ -3,22 +3,17 @@
 /* front
 /* ---------------------------------------- */
 .home {
-  .siteLogo,
-  .siteDescription {
-    display: none;
-  }
-  .gNav {
-    @media #{$medium-up} {
-      float: right;
-    }
-  }
-  .l-primary {
-    @include grid-row();
-    padding: 0;
-  }
-  .l-sidebar {
-    display: none;
-  }
+  // .siteLogo,
+  // .siteDescription {
+  //   display: none;
+  // }
+  // .l-primary {
+  //   @include grid-row();
+  //   padding: 0;
+  // }
+  // .l-sidebar {
+  //   display: none;
+  // }
 }
 /* mainImg */
 .mainImg {

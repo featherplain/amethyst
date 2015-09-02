@@ -11,7 +11,6 @@
 
 ?>
 
-			</div><!-- /.l-primary -->
 		</div><!-- /.l-main -->
 
 		<footer role="contentinfo" class="l-footer">
