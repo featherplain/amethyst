@@ -15,21 +15,6 @@
 		</div><!-- /.l-main -->
 
 		<footer role="contentinfo" class="l-footer">
-      <div class="instagram">
-        <div class="instagram__inner">
-          <div class="photos">
-            <ul class="photos__list">
-              <li class="photos__item"><a href="#" title=""><img src="http://placehold.jp/170x170.png" alt=""></a></li>
-              <li class="photos__item"><a href="#" title=""><img src="http://placehold.jp/170x170.png" alt=""></a></li>
-              <li class="photos__item"><a href="#" title=""><img src="http://placehold.jp/170x170.png" alt=""></a></li>
-              <li class="photos__item"><a href="#" title=""><img src="http://placehold.jp/170x170.png" alt=""></a></li>
-              <li class="photos__item"><a href="#" title=""><img src="http://placehold.jp/170x170.png" alt=""></a></li>
-              <li class="photos__item"><a href="#" title=""><img src="http://placehold.jp/170x170.png" alt=""></a></li>
-            </ul>
-          </div>
-          <p class="instagram__description">INSTAGRAM@FEATHERPLAIN</p>
-        </div>
-      </div>
       <div class="copyright">
         <div class="copyright__inner">
         	<p class="copyright__text">
