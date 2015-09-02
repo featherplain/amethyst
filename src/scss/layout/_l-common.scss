@@ -2,19 +2,6 @@
 
 /* common
 /* ---------------------------------------- */
-/* front page */
-.home {
-  .siteLogo {
-    display: none;
-  }
-  .l-primary {
-    @include grid-row();
-    padding: 0;
-  }
-  .l-sidebar {
-    display: none;
-  }
-}
 /* l-main */
 .l-main {
   @include grid-row();
@@ -39,4 +26,8 @@
       $collapse: false
     );
   }
+}
+/* screen reader text */
+.screen-reader-text {
+  display: none;
 }

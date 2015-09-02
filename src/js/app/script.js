@@ -8,9 +8,9 @@
       $(document).foundation();
     }
     // *************************************************
-    // global menu for mobile
-    //*************************************************
-    var menu = {
+    // global nav for mobile
+    // *************************************************
+    var navMobile = {
       init: function() {
         var $toggleBtn   = $('.gNav__btn');
         var $toggledMenu = $('.gNav__list');
@@ -24,7 +24,23 @@
         });
       }
     };
-    menu.init();
+    navMobile.init();
+    // *************************************************
+    // global nav for pc
+    // *************************************************
+    var navPc = {
+      init: function() {
+        var $menuItem = $('#menu').find('.menu-item-has-children');
+
+        $menuItem.hover(function() {
+          $('>.sub-menu', this).fadeIn('fast');
+        },
+        function() {
+          $('>.sub-menu', this).fadeOut('fast');
+        });
+      }
+    };
+    navPc.init();
   });
 })(jQuery);
 
