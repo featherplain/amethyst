@@ -12,14 +12,14 @@
     // *************************************************
     var navMobile = {
       init: function() {
-        var $toggleBtn   = $('.gNav__btn');
-        var $toggledMenu = $('.gNav__list');
+        var $toggleBtn   = $('.global-nav__btn');
+        var $toggledMenu = $('.global-nav__list');
 
         $toggleBtn.on('click', function(e) {
           e.preventDefault();
 
-          $toggleBtn.toggleClass('gNav__list--active');
-          $toggledMenu.toggleClass('gNav__list--active');
+          $toggleBtn.toggleClass('global-nav__list--active');
+          $toggledMenu.toggleClass('global-nav__list--active');
 
         });
       }

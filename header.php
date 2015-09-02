@@ -26,12 +26,12 @@
 	<div class="l-container">
     <header role="banner" class="l-header">
       <div class="l-header__inner">
-      	<h1 class="siteLogo">
+      	<h1 class="site-title">
       		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
       	</h1>
 
-        <nav class="gNav" role="navigation">
-        	<a href="#" title="MENU" role="button" class="gNav__btn">
+        <nav class="global-nav" role="navigation">
+        	<a href="#" title="MENU" role="button" class="global-nav__btn">
             <svg viewBox="0 0 16 12" role="img" area-labelledby="title desc" width="22" height="18">
               <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.symbol.svg#icon_menu"></use>
             </svg>
@@ -41,7 +41,7 @@
         		'theme_location' => 'global_nav',
         		'container'      => false,
         		'menu_id'        => 'menu',
-        		'menu_class'     => 'gNav__list',
+        		'menu_class'     => 'global-nav__list',
         		'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>' )
         		);
         	?>

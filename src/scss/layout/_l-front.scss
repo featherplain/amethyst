@@ -3,8 +3,8 @@
 /* front
 /* ---------------------------------------- */
 .home {
-  // .siteLogo,
-  // .siteDescription {
+  // .site-title,
+  // .site-description {
   //   display: none;
   // }
   // .l-primary {
@@ -15,8 +15,8 @@
   //   display: none;
   // }
 }
-/* mainImg */
-.mainImg {
+/* main-img */
+.main-img {
   margin: 140px auto;
   padding: 0 20px;
   text-align: center;
@@ -29,7 +29,7 @@
   &__description {
     font-size: rem-calc(12);
   }
-  .snsIcons {
+  .sns-icons {
     @extend %clearfix;
     margin-left: 0;
     margin: o auto;
