@@ -6580,7 +6580,7 @@ th.hide-for-touch {
     display: none !important;
   }
 }
-.photos__list:after, .postNav:after, .postArchive__link:after, .mainImg .snsIcons:after, .do:after, .gNav__list:after {
+.photos__list:after, .postNav:after, .post-archive__link:after, .main-img .sns-icons:after, .do:after, .global-nav__list:after {
   display: block;
   visibility: hidden;
   clear: both;
@@ -6589,7 +6589,7 @@ th.hide-for-touch {
   font-size: 0;
 }
 
-.pageTitle__inner, .block__title__inner, .gNav__list li a {
+.pageTitle__inner, .block__title__inner, .global-nav__list li a {
   letter-spacing: 2px;
 }
 
@@ -6605,8 +6605,8 @@ body {
   background-repeat: no-repeat;
   color: #222222;
   word-wrap: break-word;
-  font-family: "Avenir Next", "Avenir", "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
-  font-weight: 300;
+  font-family: "Lato", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
+  font-weight: 400;
 }
 
 /* grouping content */
@@ -6636,7 +6636,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Avenir Next", "Avenir", "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
+  font-family: "Lato", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
 }
 h1, h1 > a, h2, h2 > a, h3, h3 > a, h4, h4 > a, h5, h5 > a, h6, h6 > a {
   color: #222222;
@@ -6663,7 +6663,7 @@ h1:hover, h1 > a:hover, h2:hover, h2 > a:hover, h3:hover, h3 > a:hover, h4:hover
 }
 
 .fontEn {
-  font-family: "Helvetica Neue", "Helvetica", Sans-Serif;
+  font-family: "Lato", Sans-Serif;
 }
 
 /* list items */
@@ -7136,65 +7136,60 @@ The `sprites` mixin generates identical output to the CSS template
 }
 
 /* post archive */
-.postArchive {
-  margin: 40px 0;
-}
-.postArchive__link {
+.post-archive__link {
   display: block;
   margin-bottom: 14px;
   padding-bottom: 14px;
   border-bottom: 1px dotted #dedede;
 }
-.postArchive__link > * {
+.post-archive__link > * {
   transition: 0.3s;
 }
-.postArchive__link:hover .postArchive__title {
+.post-archive__link:hover .post-archive__title {
   color: #999999;
 }
-.postArchive__thumb {
+.post-archive__thumb {
   float: left;
 }
-.postArchive__thumb > img {
+.post-archive__thumb > img {
   width: 100%;
   max-width: 90px;
   height: auto;
 }
-.postArchive__meta, .postArchive__title {
+.post-archive__meta, .post-archive__title {
   margin-left: 100px;
   color: #222222;
 }
-.postArchive__meta {
+.post-archive__meta {
   margin-bottom: 4px;
   line-height: 1;
 }
-.postArchive__meta time {
+.post-archive__meta time {
   vertical-align: top;
+  color: #555555;
   font-size: 0.75rem;
   line-height: 1;
 }
-.postArchive__title {
+.post-archive__title {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 0.8125rem;
+  line-height: 1.6;
 }
 
 /* media */
 @media only screen and (min-width: 40.0625em) {
-  .postArchive__link {
+  .post-archive__link {
     padding-bottom: 20px;
     margin-bottom: 20px;
   }
-  .postArchive__thumb img {
+  .post-archive__thumb img {
     max-width: 120px;
   }
-  .postArchive__meta, .postArchive__title {
+  .post-archive__meta, .post-archive__title {
     margin-left: 140px;
   }
-  .postArchive__meta time {
-    font-size: 0.875rem;
-    font-weight: 300;
-  }
-  .postArchive__title {
+  .post-archive__title {
     margin-top: 0;
     margin-bottom: 0;
     padding-right: 10px;
@@ -7306,56 +7301,30 @@ The `sprites` mixin generates identical output to the CSS template
 
 /* front
 /* ---------------------------------------- */
-.home .siteLogo,
-.home .siteDescription {
-  display: none;
-}
-@media only screen and (min-width: 40.0625em) {
-  .home .gNav {
-    float: right;
-  }
-}
-.home .l-primary {
-  margin: 0 auto;
-  max-width: 1040px;
-  width: 100%;
-  padding: 0;
-}
-.home .l-primary:before, .home .l-primary:after {
-  content: " ";
-  display: table;
-}
-.home .l-primary:after {
-  clear: both;
-}
-.home .l-sidebar {
-  display: none;
-}
-
-/* mainImg */
-.mainImg {
+/* main-img */
+.main-img {
   margin: 140px auto;
   padding: 0 20px;
   text-align: center;
 }
-.mainImg__logo {
+.main-img__logo {
   margin: 10px 0;
   font-size: 1.75rem;
   font-weight: bold;
   letter-spacing: 4px;
 }
-.mainImg__description {
+.main-img__description {
   font-size: 0.75rem;
 }
-.mainImg .snsIcons {
+.main-img .sns-icons {
   margin-left: 0;
   margin: o auto;
 }
-.mainImg .snsIcons__item {
+.main-img .sns-icons__item {
   display: inline-block;
   margin-right: 30px;
 }
-.mainImg .snsIcons__item:last-child {
+.main-img .sns-icons__item:last-child {
   margin-right: 0;
 }
 
@@ -7506,6 +7475,7 @@ The `sprites` mixin generates identical output to the CSS template
   margin: 0 auto;
   max-width: 1040px;
   width: 100%;
+  margin-bottom: 20px;
 }
 .l-header:before, .l-header:after {
   content: " ";
@@ -7515,8 +7485,8 @@ The `sprites` mixin generates identical output to the CSS template
   clear: both;
 }
 
-/* siteLogo */
-.siteLogo {
+/* site-title */
+.site-title {
   float: left;
   max-width: 84%;
   margin: 0;
@@ -7524,14 +7494,14 @@ The `sprites` mixin generates identical output to the CSS template
   font-weight: bold;
   font-size: 1.25rem;
 }
-.siteLogo a {
+.site-title a {
   display: block;
   color: #222222;
   line-height: 1.0;
 }
 
 /* navigation */
-.gNav__btn {
+.global-nav__btn {
   display: block;
   float: right;
   width: 50px;
@@ -7540,10 +7510,10 @@ The `sprites` mixin generates identical output to the CSS template
   background-color: #222222;
   color: #ffffff;
 }
-.gNav__btn svg {
+.global-nav__btn svg {
   margin: 15px 0;
 }
-.gNav__list {
+.global-nav__list {
   display: none;
   position: absolute;
   top: 50px;
@@ -7553,16 +7523,16 @@ The `sprites` mixin generates identical output to the CSS template
   background-color: #222222;
   z-index: 9999;
 }
-.gNav__list--active {
+.global-nav__list--active {
   display: block;
 }
-.gNav__list li {
+.global-nav__list li {
   border-bottom: 1px dotted #dedede;
 }
-.gNav__list li:last-child {
+.global-nav__list li:last-child {
   border-bottom: none;
 }
-.gNav__list li a {
+.global-nav__list li a {
   display: block;
   padding: 16px;
   color: #ffffff;
@@ -7571,7 +7541,11 @@ The `sprites` mixin generates identical output to the CSS template
 
 /* media */
 @media only screen and (min-width: 40.0625em) {
-  .siteLogo {
+  .l-header {
+    margin-bottom: 0;
+  }
+
+  .site-title {
     width: 100%;
     max-width: 100%;
     padding: 30px 16px;
@@ -7579,21 +7553,21 @@ The `sprites` mixin generates identical output to the CSS template
     font-size: 1.5rem;
   }
 
-  .gNav__btn {
+  .global-nav__btn {
     display: none;
   }
-  .gNav__list {
+  .global-nav__list {
     display: block;
     position: static;
     padding: 30px 0;
     background-color: #ffffff;
   }
-  .gNav__list li {
+  .global-nav__list li {
     position: relative;
     float: left;
     border-bottom: none;
   }
-  .gNav__list li a {
+  .global-nav__list li a {
     display: block;
     position: relative;
     padding: 10px;

@@ -113,16 +113,44 @@ function othello_widgets_init() {
 add_action( 'widgets_init', 'othello_widgets_init' );
 
 /**
+ * Register Lato Google font for othello.
+ *
+ * @return string
+ */
+function othello_font_url() {
+	$font_url = '';
+	/*
+	 * Translators: If there are characters in your language that are not supported
+	 * by Lato, translate this to 'off'. Do not translate into your own language.
+	 */
+	if ( 'off' !== _x( 'on', 'Lato font: on or off', 'othello' ) ) {
+		$query_args = array(
+			'family' => urlencode( 'Lato:300,400,700,900,300italic,400italic,700italic,900italic' ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+		$font_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+	}
+
+	return $font_url;
+}
+
+/**
  * Enqueue scripts and styles.
  */
 function othello_scripts() {
 
-	// stylesheets
-	wp_enqueue_style( 'othello-style', get_stylesheet_directory_uri() . '/assets/css/app.css' );
+	// Lato Google font for othello
+	wp_enqueue_style( 'othello-lato', othello_font_url(), array(), null );
+
+	// genericons
+	wp_enqueue_style( 'othello-genericons', get_template_directory_uri() . '/assets/genericons/genericons.css', array(), '3.0.3' );
+
+	// stylesheet
+	wp_enqueue_style( 'othello-style', get_template_directory_uri() . '/assets/css/app.css' );
 
 	// javascripts
-	wp_enqueue_script( 'othello-js-lib', get_stylesheet_directory_uri() . '/assets/js/lib.min.js', array( 'jquery' ), true );
-	wp_enqueue_script( 'othello-js-script', get_stylesheet_directory_uri() . '/assets/js/script.min.js', array( 'jquery' ), true );
+	wp_enqueue_script( 'othello-js-lib', get_template_directory_uri() . '/assets/js/lib.min.js', array( 'jquery' ), true );
+	wp_enqueue_script( 'othello-js-script', get_template_directory_uri() . '/assets/js/script.min.js', array( 'jquery' ), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

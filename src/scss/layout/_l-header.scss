@@ -4,9 +4,10 @@
 /* ---------------------------------------- */
 .l-header {
   @include grid-row;
+  margin-bottom: 20px;
 }
-/* siteLogo */
-.siteLogo {
+/* site-title */
+.site-title {
   float: left;
   max-width: 84%;
   margin: 0;
@@ -20,7 +21,7 @@
   }
 }
 /* navigation */
-.gNav {
+.global-nav {
   &__btn {
     display: block;
     float: right;
@@ -63,14 +64,17 @@
 }
 /* media */
 @media #{$medium-up} {
-  .siteLogo {
+  .l-header {
+    margin-bottom: 0;
+  }
+  .site-title {
     width: 100%;
     max-width: 100%;
     padding: 30px 16px;
     text-align: center;
     font-size: rem-calc(24);
   }
-  .gNav {
+  .global-nav {
     &__btn {
       display: none;
     }

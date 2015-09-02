@@ -3,25 +3,20 @@
 /* front
 /* ---------------------------------------- */
 .home {
-  .siteLogo,
-  .siteDescription {
-    display: none;
-  }
-  .gNav {
-    @media #{$medium-up} {
-      float: right;
-    }
-  }
-  .l-primary {
-    @include grid-row();
-    padding: 0;
-  }
-  .l-sidebar {
-    display: none;
-  }
+  // .site-title,
+  // .site-description {
+  //   display: none;
+  // }
+  // .l-primary {
+  //   @include grid-row();
+  //   padding: 0;
+  // }
+  // .l-sidebar {
+  //   display: none;
+  // }
 }
-/* mainImg */
-.mainImg {
+/* main-img */
+.main-img {
   margin: 140px auto;
   padding: 0 20px;
   text-align: center;
@@ -34,7 +29,7 @@
   &__description {
     font-size: rem-calc(12);
   }
-  .snsIcons {
+  .sns-icons {
     @extend %clearfix;
     margin-left: 0;
     margin: o auto;
