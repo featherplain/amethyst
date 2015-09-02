@@ -4,7 +4,9 @@
 /* ---------------------------------------- */
 .post {
   margin-bottom: 40px;
-  &__header {}
+  &__header {
+    margin: 0 0 20px 0;
+  }
   &__title {
     padding: 0 0 5px 0;
     font-size: rem-calc(18);
@@ -67,18 +69,6 @@
     &:before {
       @include genericon('\f302', 1.1rem, top);
     }
-    a {
-      &:after {
-        display: inline-block;
-        margin: 0 2px;
-        content: ',';
-      }
-      &:last-child {
-        &:after {
-          content: '';
-        }
-      }
-    }
   }
   &__comment {
     @include hasPseudoClass(before);
@@ -101,7 +91,7 @@
 @media #{$large-up} {
   .post {
     &__header {
-      margin: 40px 0;
+      margin: 0 0 40px 0;
     }
     &__title {
       font-size: rem-calc(28);
