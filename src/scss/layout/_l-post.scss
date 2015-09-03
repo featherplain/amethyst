@@ -4,11 +4,30 @@
 /* ---------------------------------------- */
 .post {
   margin-bottom: 40px;
-  &__header {}
+  &__header {
+    margin: 0 0 20px 0;
+  }
   &__title {
+    position: relative;
+    margin: 0;
     padding: 0 0 5px 0;
     font-size: rem-calc(18);
-    border-bottom: 1px solid $colorSub;
+    z-index: -9;
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-size: 4px 4px;
+      background-color: #ffffff;
+      background-image: linear-gradient(
+                          -45deg, #dedede 25%, transparent 25%,
+                          transparent 50%, #dedede 50%, #dedede 75%,
+                          transparent 75%, transparent);
+      content: "";
+      z-index: -10;
+    }
   }
   &__meta {
     margin: 5px 0;
@@ -43,18 +62,6 @@
     &:before {
       @include genericon('\f301', 1.1rem, top);
     }
-    a {
-      &:after {
-        display: inline-block;
-        margin: 0 2px;
-        content: ',';
-      }
-      &:last-child {
-        &:after {
-          content: '';
-        }
-      }
-    }
   }
   &__author {
     @include hasPseudoClass(before);
@@ -66,18 +73,6 @@
     @include hasPseudoClass(before);
     &:before {
       @include genericon('\f302', 1.1rem, top);
-    }
-    a {
-      &:after {
-        display: inline-block;
-        margin: 0 2px;
-        content: ',';
-      }
-      &:last-child {
-        &:after {
-          content: '';
-        }
-      }
     }
   }
   &__comment {
@@ -101,7 +96,7 @@
 @media #{$large-up} {
   .post {
     &__header {
-      margin: 40px 0;
+      margin: 0 0 40px 0;
     }
     &__title {
       font-size: rem-calc(28);
