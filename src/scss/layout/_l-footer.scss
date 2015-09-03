@@ -4,7 +4,7 @@
 /* ---------------------------------------- */
 .l-footer {}
 /* footer widgets */
-.footerWidgets {
+.footer-widgets {
   padding: $m40;
   background-color: lighten($colorSub, 11%);
   &__inner {
@@ -13,14 +13,6 @@
     }
     @media #{$medium-up} {
       @include grid-row();
-    }
-  }
-  .widget--footer {
-    @media #{$medium-up} {
-      @include grid-column(
-        $columns: 4,
-        $collapse: false
-      );
     }
   }
 }

@@ -4,7 +4,6 @@
 /* ---------------------------------------- */
 // base styles on sidebar widget
 %widgetBase {
-  margin: $m10;
   ul {
     li {
       list-style-type: none;
@@ -19,10 +18,15 @@
   }
 }
 .widget {
-  &--sidebar {
-    margin: $m40;
+  margin: $m10;
+  &--footer {
+    @media #{$medium-up} {
+      @include grid-column(
+        $columns: 4,
+        $collapse: false
+      );
+    }
   }
-  &--footer {}
   &__title {
     margin: 0;
     padding-bottom: 4px;
@@ -39,39 +43,41 @@
     line-height: 1.4;
   }
 }
-/* search */
+// search
 .widget_search {}
-/* text widget */
+// text widget
 .widget_text {
   margin: $m10;
+  .textwidget {
+    margin: $m10;
+  }
 }
-/* categories */
+// categories
 .widget_categories {
   @extend %widgetBase;
 }
-/* archives */
+// archives
 .widget_archives {
   @extend %widgetBase;
 }
-/* pages */
+// pages
 .widget_pages {
   @extend %widgetBase;
 }
-/* custom menu */
+// custom menu
 .widget_custom_menu {
   @extend %widgetBase;
 }
-/* recent comments */
+// recent comments
 .widget_recent_comments {
   @extend %widgetBase;
 }
-/* meta */
+// meta
 .widget_meta {
   @extend %widgetBase;
 }
-/* recent posts */
+// recent posts
 .widget_recent_entries {
-  margin: $m10;
   ul {
     li {
       padding: 8px 0;
@@ -94,8 +100,11 @@
     }
   }
 }
-/* tag cloud */
+// tag cloud
 .widget_tag_cloud {
+  .tagcloud {
+    margin: $m10;
+  }
   ul {
     margin: $m10;
     li {
@@ -116,5 +125,5 @@
     }
   }
 }
-/* calendar */
+// calendar
 .widget_calendar {}

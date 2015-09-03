@@ -102,11 +102,20 @@ add_action( 'after_setup_theme', 'othello_content_width', 0 );
 function othello_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'othello' ),
-		'id'            => 'sidebar-1',
+		'id'            => 'sidebar',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
+		'before_title'  => '<h2 class="widget__title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Widgets', 'othello' ),
+		'id'            => 'footer-widgets',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget widget--footer %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget__title">',
 		'after_title'   => '</h2>',
 	) );
 }

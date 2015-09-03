@@ -4690,9 +4690,6 @@ The `sprites` mixin generates identical output to the CSS template
 */
 /* widget
 /* ---------------------------------------- */
-.widget_categories, .widget_archives, .widget_pages, .widget_custom_menu, .widget_recent_comments, .widget_meta {
-  margin: 10px 0;
-}
 .widget_categories ul li, .widget_archives ul li, .widget_pages ul li, .widget_custom_menu ul li, .widget_recent_comments ul li, .widget_meta ul li, .widget_categories .editor-style ol li, .editor-style .widget_categories ol li, .widget_archives .editor-style ol li, .editor-style .widget_archives ol li, .widget_pages .editor-style ol li, .editor-style .widget_pages ol li, .widget_custom_menu .editor-style ol li, .editor-style .widget_custom_menu ol li, .widget_recent_comments .editor-style ol li, .editor-style .widget_recent_comments ol li, .widget_meta .editor-style ol li, .editor-style .widget_meta ol li,
 .widget_categories .comment-content ol li,
 .comment-content .widget_categories ol li,
@@ -4740,8 +4737,16 @@ The `sprites` mixin generates identical output to the CSS template
   background-color: #f1f1f1;
 }
 
-.widget--sidebar {
-  margin: 40px 0;
+.widget {
+  margin: 10px 0;
+}
+@media only screen and (min-width: 40.0625em) {
+  .widget--footer {
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
+    width: 33.33333%;
+    float: left;
+  }
 }
 .widget__title {
   margin: 0;
@@ -4759,22 +4764,13 @@ The `sprites` mixin generates identical output to the CSS template
   line-height: 1.4;
 }
 
-/* search */
-/* text widget */
 .widget_text {
   margin: 10px 0;
 }
-
-/* categories */
-/* archives */
-/* pages */
-/* custom menu */
-/* recent comments */
-/* meta */
-/* recent posts */
-.widget_recent_entries {
+.widget_text .textwidget {
   margin: 10px 0;
 }
+
 .widget_recent_entries ul li, .widget_recent_entries .editor-style ol li, .editor-style .widget_recent_entries ol li,
 .widget_recent_entries .comment-content ol li,
 .comment-content .widget_recent_entries ol li {
@@ -4803,7 +4799,9 @@ The `sprites` mixin generates identical output to the CSS template
   font-size: 0.75rem;
 }
 
-/* tag cloud */
+.widget_tag_cloud .tagcloud {
+  margin: 10px 0;
+}
 .widget_tag_cloud ul, .widget_tag_cloud .editor-style ol, .editor-style .widget_tag_cloud ol,
 .widget_tag_cloud .comment-content ol,
 .comment-content .widget_tag_cloud ol {
@@ -4834,7 +4832,6 @@ The `sprites` mixin generates identical output to the CSS template
   background-color: #dedede;
 }
 
-/* calendar */
 /* captions
 /* ---------------------------------------- */
 .wp-caption {
@@ -5066,35 +5063,27 @@ object {
 /* footer
 /* ---------------------------------------- */
 /* footer widgets */
-.footerWidgets {
+.footer-widgets {
   padding: 40px 0;
   background-color: #fafafa;
 }
 @media only screen and (max-width: 40em) {
-  .footerWidgets__inner {
+  .footer-widgets__inner {
     padding: 0 16px;
   }
 }
 @media only screen and (min-width: 40.0625em) {
-  .footerWidgets__inner {
+  .footer-widgets__inner {
     margin: 0 auto;
     max-width: 1040px;
     width: 100%;
   }
-  .footerWidgets__inner:before, .footerWidgets__inner:after {
+  .footer-widgets__inner:before, .footer-widgets__inner:after {
     content: " ";
     display: table;
   }
-  .footerWidgets__inner:after {
+  .footer-widgets__inner:after {
     clear: both;
-  }
-}
-@media only screen and (min-width: 40.0625em) {
-  .footerWidgets .widget--footer {
-    padding-left: 1.125rem;
-    padding-right: 1.125rem;
-    width: 33.33333%;
-    float: left;
   }
 }
 
