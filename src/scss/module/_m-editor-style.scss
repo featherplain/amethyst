@@ -11,9 +11,8 @@
   }
   h2 {
     margin: $m20;
-    padding-bottom: 4px;
     font-size: rem-calc(20);
-    border-bottom: 1px solid $colorSub;
+    border-bottom: 2px solid $colorSub;
   }
   h3 {
     margin: $m20;
@@ -36,6 +35,7 @@
     margin-left: 16px;
     li {
       margin: 8px;
+      color: $colorText;
       font-size: rem-calc(14);
       list-style-type: square;
       line-height: 1.4;
@@ -50,17 +50,20 @@
   dl {
     dt,
     dd {
+      color: $colorText;
       font-size: rem-calc(14);
     }
   }
   p {
     margin: $m20;
+    color: $colorText;
     font-size: rem-calc(14);
     line-height: 1.8;
   }
   blockquote {
     margin: $m20;
     padding: 10px;
+    color: $colorText;
     border: 1px dotted $colorSub;
     font-size: rem-calc(13);
     > * {
@@ -76,6 +79,7 @@
     margin: $m20;
     padding: 10px;
     background-color: lighten($colorSub, 10%);
+    color: $colorText;
     font-family: $fontFamilyCode;
     font-size: rem-calc(12);
     word-wrap: normal;
@@ -103,11 +107,13 @@
     box-shadow: 1px 1px 2px rgba(0,0,0,.3);
   }
   address {
+    color: $colorText;
     font-size: rem-calc(14);
     font-style: normal;
   }
   ins {
     background-color: lighten(#cc0000, 54%);
+    color: $colorText;
     text-decoration: none;
   }
 }
