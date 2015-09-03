@@ -6,7 +6,8 @@
 // primary
 $colorBase          : #222222;
 $colorSub           : #dedede;
-$colorLink          : #999999;
+$colorText          : #454545;
+$colorLink          : #666666;
 $colorLinkHover     : lighten($colorLink, 15%);
 $colorSelection     : $colorLink;
 
@@ -19,7 +20,7 @@ $filePath           : "../images/";
 // font-family
 //***********************
 // primary
-$fontFamily         : "Lato", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック","MS PGothic",Arial,Sans-Serif;
+$fontFamily         : "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
 // En
 $fontFamilyEn       : "Lato", Sans-Serif;
 // code

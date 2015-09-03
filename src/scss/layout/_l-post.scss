@@ -4,6 +4,7 @@
 /* ---------------------------------------- */
 .post {
   margin-bottom: 40px;
+  &--page {}
   &__header {
     margin: 0 0 20px 0;
   }
@@ -18,7 +19,7 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 2px;
+      height: 4px;
       background-size: 4px 4px;
       background-color: #ffffff;
       background-image: linear-gradient(

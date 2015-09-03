@@ -4137,7 +4137,7 @@ body {
   background-repeat: no-repeat;
   color: #222222;
   word-wrap: break-word;
-  font-family: "Lato", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
+  font-family: "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
   font-weight: 400;
 }
 
@@ -4148,18 +4148,19 @@ iframe {
 
 /* text-level semantics */
 a {
-  color: #999999;
+  color: #666666;
   text-decoration: none;
+  transition: 0.3s;
 }
 a:focus {
   outline: thin dotted;
 }
 a:link, a:visited {
-  color: #999999;
+  color: #666666;
 }
 a:hover, a:active, a:focus {
   outline: 0;
-  color: #bfbfbf;
+  color: #8c8c8c;
   text-decoration: none;
 }
 
@@ -4168,7 +4169,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Lato", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", Arial, Sans-Serif;
+  font-family: "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
   font-weight: normal;
 }
 h1, h1 > a, h2, h2 > a, h3, h3 > a, h4, h4 > a, h5, h5 > a, h6, h6 > a {
@@ -4180,13 +4181,13 @@ h1:hover, h1 > a:hover, h2:hover, h2 > a:hover, h3:hover, h3 > a:hover, h4:hover
 
 ::-moz-selection {
   background: transparent;
-  background-color: #999999;
+  background-color: #666666;
   color: #222222;
 }
 
 ::selection {
   background: transparent;
-  background-color: #999999;
+  background-color: #666666;
   color: #222222;
 }
 
@@ -4374,9 +4375,8 @@ table {
 .editor-style h2,
 .comment-content h2 {
   margin: 20px 0;
-  padding-bottom: 4px;
   font-size: 1.25rem;
-  border-bottom: 1px solid #dedede;
+  border-bottom: 2px solid #dedede;
 }
 .editor-style h3,
 .comment-content h3 {
@@ -4408,6 +4408,7 @@ table {
 .comment-content ul li,
 .comment-content ol li {
   margin: 8px;
+  color: #454545;
   font-size: 0.875rem;
   list-style-type: square;
   line-height: 1.4;
@@ -4420,11 +4421,13 @@ table {
 .editor-style dl dd,
 .comment-content dl dt,
 .comment-content dl dd {
+  color: #454545;
   font-size: 0.875rem;
 }
 .editor-style p,
 .comment-content p {
   margin: 20px 0;
+  color: #454545;
   font-size: 0.875rem;
   line-height: 1.8;
 }
@@ -4432,6 +4435,7 @@ table {
 .comment-content blockquote {
   margin: 20px 0;
   padding: 10px;
+  color: #454545;
   border: 1px dotted #dedede;
   font-size: 0.8125rem;
 }
@@ -4450,6 +4454,7 @@ table {
   margin: 20px 0;
   padding: 10px;
   background-color: #f8f8f8;
+  color: #454545;
   font-family: Menlo, Consolas, Courier, sans-serif;
   font-size: 0.75rem;
   word-wrap: normal;
@@ -4481,12 +4486,14 @@ table {
 }
 .editor-style address,
 .comment-content address {
+  color: #454545;
   font-size: 0.875rem;
   font-style: normal;
 }
 .editor-style ins,
 .comment-content ins {
   background-color: #ffe0e0;
+  color: #454545;
   text-decoration: none;
 }
 
@@ -4958,7 +4965,7 @@ object {
   transition: 0.3s;
 }
 .post-archive__link:hover .post-archive__title {
-  color: #999999;
+  color: #666666;
 }
 .post-archive__thumb {
   float: left;
@@ -5444,7 +5451,7 @@ object {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 4px;
   background-size: 4px 4px;
   background-color: #ffffff;
   background-image: linear-gradient(-45deg, #dedede 25%, transparent 25%, transparent 50%, #dedede 50%, #dedede 75%, transparent 75%, transparent);
