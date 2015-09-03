@@ -1,20 +1,16 @@
 @charset "UTF-8";
 
-@mixin center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /* captions
 /* ---------------------------------------- */
 .wp-caption {
-  margin-bottom: 1.5em;
+  margin-bottom: rem-calc(15);
   max-width: 100%;
   img[class*="wp-image-"] {
-    @include center-block;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .wp-caption-text {
+  &-text {
     margin: 0.8075em 0;
     text-align: center;
     font-size: rem-calc(12);
@@ -28,63 +24,35 @@
 /* galleries
 /* ---------------------------------------- */
 .gallery {
-  margin-bottom: 1.5em;
-}
-
-.gallery-item {
-  display: inline-block;
-  text-align: center;
-  vertical-align: top;
-  width: 100%;
-  dt.gallery-icon {
+  margin-bottom: rem-calc(15);
+  &-item {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+    @for $i from 2 through 9 {
+      .gallery-columns-#{$i} & {
+        max-width: percentage( 1 / $i );
+      }
+    }
+  }
+  &-icon {
     padding: 0;
     background: none;
     margin-bottom: 10px;
   }
-
-  .gallery-columns-2 & {
-    max-width: 50%;
-  }
-
-  .gallery-columns-3 & {
-    max-width: 33.33%;
-  }
-
-  .gallery-columns-4 & {
-    max-width: 25%;
-  }
-
-  .gallery-columns-5 & {
-    max-width: 20%;
-  }
-
-  .gallery-columns-6 & {
-    max-width: 16.66%;
-  }
-
-  .gallery-columns-7 & {
-    max-width: 14.28%;
-  }
-
-  .gallery-columns-8 & {
-    max-width: 12.5%;
-  }
-
-  .gallery-columns-9 & {
-    max-width: 11.11%;
+  &-caption {
+    display: block;
   }
 }
 
-.gallery-caption {
-  display: block;
-}
-
-/* media
+/* alignment
 /* ---------------------------------------- */
 .alignleft {
   display: inline;
   float: left;
-  margin-right: 1.5em;
+  margin-right: rem-calc(15);
+  margin-bottom: rem-calc(15);
 }
 .aligncenter {
   clear: both;
@@ -94,7 +62,8 @@
 .alignright {
   display: inline;
   float: left;
-  margin-right: 1.5em;
+  margin-right: rem-calc(15);
+  margin-bottom: rem-calc(15);
 }
 .page-content .wp-smiley,
 .entry-content .wp-smiley,

@@ -1,11 +1,113 @@
 @charset "utf-8";
 
-/* editor style
+/* content tags
 /* ---------------------------------------- */
-.styleEditor {
+.editor-style,
+.comment-content {
+  h1 {
+    margin: $m20;
+    font-size: rem-calc(22);
+    font-weight: bold;
+  }
+  h2 {
+    margin: $m20;
+    padding-bottom: 4px;
+    font-size: rem-calc(20);
+    border-bottom: 1px solid $colorSub;
+  }
+  h3 {
+    margin: $m20;
+    font-size: rem-calc(18);
+    border-bottom: 1px dotted $colorSub;
+  }
+  h4 {
+    margin: $m20;
+    font-size: rem-calc(16);
+  }
+  h5 {
+    margin: $m20;
+    font-size: rem-calc(15);
+  }
+  h6 {
+    margin: $m20;
+    font-size: rem-calc(14);
+  }
+  ul {
+    margin-left: 16px;
+    li {
+      margin: 8px;
+      font-size: rem-calc(14);
+      list-style-type: square;
+      line-height: 1.4;
+    }
+  }
+  ol {
+    @extend ul;
+    li {
+      list-style-type: decimal;
+    }
+  }
+  dl {
+    dt,
+    dd {
+      font-size: rem-calc(14);
+    }
+  }
   p {
-    margin: $m30;
+    margin: $m20;
     font-size: rem-calc(14);
     line-height: 1.8;
+  }
+  blockquote {
+    margin: $m20;
+    padding: 10px;
+    border: 1px dotted $colorSub;
+    font-size: rem-calc(13);
+    > * {
+      margin: 0;
+      font-size: rem-calc(13);
+    }
+  }
+  cite {
+    font-size: rem-calc(12);
+    font-style: normal;
+  }
+  pre {
+    margin: $m20;
+    padding: 10px;
+    background-color: lighten($colorSub, 10%);
+    font-family: $fontFamilyCode;
+    font-size: rem-calc(12);
+    word-wrap: normal;
+    overflow-x: auto;
+    code {
+      background-color: transparent;
+    }
+  }
+  code {
+    background-color: lighten($colorSub, 10%);
+    border: none;
+    border-radius: 3px;
+    color: #cc0000;
+    font-family: $fontFamilyCode;
+    font-size: rem-calc(12);
+  }
+  kbd {
+    padding: 2px;
+    background-color: $colorBase;
+    border: 1px solid lighten($colorBase, 30%);
+    border-radius: 3px;
+    color: #ffffff;
+    font-family: $fontFamilyCode;
+    font-size: rem-calc(12);
+    box-shadow: 1px 1px 2px rgba(0,0,0,.3);
+  }
+  address {
+    font-size: rem-calc(14);
+    font-style: normal;
+  }
+  ins {
+    background-color: lighten(#cc0000, 54%);
+    text-decoration: none;
   }
 }

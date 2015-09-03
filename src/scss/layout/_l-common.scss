@@ -7,6 +7,10 @@
   @include grid-row();
 }
 /* l-primary and l-sidebar */
+.l-primary,
+.l-sidebar {
+  margin-bottom: 40px;
+}
 @media #{$small-only} {
   .l-primary,
   .l-sidebar {
