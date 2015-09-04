@@ -44,7 +44,7 @@ p {
   color: $colorBase;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: $fontFamily;
+  font-family: $fontFamilyTitle;
   font-weight: normal;
   &,
   & > a {
@@ -57,14 +57,11 @@ h1, h2, h3, h4, h5, h6 {
 ::selection {
   background: transparent;
   background-color: $colorSelection;
-  color: $colorBase;
+  color: $colorSub;
 }
 .fa {
   display: inline-block;
   text-decoration: none;
-}
-.fontEn {
-  font-family: $fontFamilyEn;
 }
 
 /* list items */
@@ -107,8 +104,29 @@ svg:not(:root){
 
 /* table */
 table {
-  font: 100%;
+  width: 100%;
   font-size: inherit;
+  background-color: #ffffff;
   border-spacing: 0;
   border-collapse: collapse;
+  caption {
+    margin: 5px 0;
+  }
+  thead,
+  tfoot {
+    background-color: $colorBg;
+  }
+  tbody {
+    tr {
+      &:nth-child(odd) {
+        background-color: #ffffff;
+      }
+      &:nth-child(even) {
+        background-color: $colorBg;
+      }
+    }
+  }
+  td {
+    padding: 4px 2px;
+  }
 }

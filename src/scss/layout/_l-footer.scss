@@ -6,7 +6,7 @@
 /* footer widgets */
 .footer-widgets {
   padding: $m40;
-  background-color: lighten($colorSub, 11%);
+  background-color: $colorBg;
   &__inner {
     @media #{$small-only} {
       padding: 0 16px;
