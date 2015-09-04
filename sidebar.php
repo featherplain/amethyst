@@ -7,11 +7,11 @@
  * @package othello
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+if ( ! is_active_sidebar( 'sidebar' ) ) {
 	return;
 }
 ?>
 
-<div role="complementary" class="l-sidebar">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+<div class="l-sidebar" role="complementary" >
+	<?php dynamic_sidebar( 'sidebar' ); ?>
 </div><!-- l-sidebar -->

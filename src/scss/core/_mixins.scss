@@ -132,3 +132,29 @@
     border-left: $size solid transparent;
   }
 }
+//***********************
+// base styles on sidebar widget
+//***********************
+@mixin widgetBase {
+  ul {
+    li {
+      padding: 6px 0;
+      list-style-type: none;
+      border-bottom: 1px dotted $colorSub;
+      ul {
+        margin-left: 12px;
+        li {
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+      a {
+        font-size: rem-calc(13);
+        &:hover {
+          color: $colorLinkHover;
+        }
+      }
+    }
+  }
+}

@@ -3,8 +3,10 @@
 /* header
 /* ---------------------------------------- */
 .l-header {
-  @include grid-row;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  &__inner {
+    @include grid-row();
+  }
 }
 /* site-title */
 .site-title {
@@ -64,9 +66,6 @@
 }
 /* media */
 @media #{$medium-up} {
-  .l-header {
-    margin-bottom: 0;
-  }
   .site-title {
     width: 100%;
     max-width: 100%;
@@ -79,10 +78,11 @@
       display: none;
     }
     &__list {
+      @include grid-row();
       display: block;
       position: static;
       padding: 30px 0;
-      background-color: #ffffff;
+      background-color: transparent;
       li {
         position: relative;
         float: left;
@@ -96,35 +96,35 @@
         }
       }
     }
-  }
-  // child menu
-  .sub-menu {
-    display: none;
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 220px;
-    margin-left: 0;
-    background-color: $colorBase;
-    li {
-      display: block;
-      position: relative;
-      float: none;
-      border-bottom: 1px dotted #ffffff;
-      &:last-child {
-        border-bottom: none;
-      }
-      .sub-menu {
-        position: absolute;
-        top: 0;
-        left: 220px;
-      }
-      a {
-        color: #ffffff;
-        line-height: 1.4;
-        transition: 0.2s;
-        &:hover {
-          background-color: lighten($colorBase, 16%);
+    // child menu
+    .sub-menu {
+      display: none;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 220px;
+      margin-left: 0;
+      background-color: $colorBase;
+      li {
+        display: block;
+        position: relative;
+        float: none;
+        border-bottom: 1px dotted #ffffff;
+        &:last-child {
+          border-bottom: none;
+        }
+        .sub-menu {
+          position: absolute;
+          top: 0;
+          left: 220px;
+        }
+        a {
+          color: #ffffff;
+          line-height: 1.4;
+          transition: 0.2s;
+          &:hover {
+            background-color: lighten($colorBase, 16%);
+          }
         }
       }
     }

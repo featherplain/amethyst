@@ -7,6 +7,7 @@
 $colorBase          : #222222;
 $colorSub           : #dedede;
 $colorText          : #454545;
+$colorBg            : #fafafa;
 $colorLink          : #666666;
 $colorLinkHover     : lighten($colorLink, 15%);
 $colorSelection     : $colorLink;
@@ -20,9 +21,9 @@ $filePath           : "../images/";
 // font-family
 //***********************
 // primary
-$fontFamily         : "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
-// En
-$fontFamilyEn       : "Lato", Sans-Serif;
+$fontFamily         : "Avenir Next", "Avenir", "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+// title
+$fontFamilyTitle    : "Lato", Sans-Serif;
 // code
 $fontFamilyCode     : Menlo, Consolas, Courier, sans-serif;
 

@@ -2,31 +2,21 @@
 
 /* widget
 /* ---------------------------------------- */
-// base styles on sidebar widget
-%widgetBase {
-  margin: $m10;
-  ul {
-    li {
-      list-style-type: none;
-      border-bottom: 1px dotted $colorSub;
-      a {
-        padding: 8px 0;
-        &:hover {
-          background-color: #f1f1f1;
-        }
-      }
+.widget {
+  margin: $m20;
+  &--footer {
+    @media #{$medium-up} {
+      @include grid-column(
+        $columns: 4,
+        $collapse: false
+      );
     }
   }
-}
-.widget {
-  &--sidebar {
-    margin: $m40;
-  }
-  &--footer {}
   &__title {
     margin: 0;
     padding-bottom: 4px;
     border-bottom: 2px solid $colorSub;
+    font-family: $fontFamilyTitle;
     font-size: rem-calc(16);
     font-weight: normal;
     letter-spacing: 3px;
@@ -34,87 +24,87 @@
   }
   a {
     color: $colorBase;
-    transition: 0.2s;
     font-size: rem-calc(14);
     line-height: 1.4;
   }
-}
-/* search */
-.widget_search {}
-/* text widget */
-.widget_text {
-  margin: $m10;
-}
-/* categories */
-.widget_categories {
-  @extend %widgetBase;
-}
-/* archives */
-.widget_archives {
-  @extend %widgetBase;
-}
-/* pages */
-.widget_pages {
-  @extend %widgetBase;
-}
-/* custom menu */
-.widget_custom_menu {
-  @extend %widgetBase;
-}
-/* recent comments */
-.widget_recent_comments {
-  @extend %widgetBase;
-}
-/* meta */
-.widget_meta {
-  @extend %widgetBase;
-}
-/* recent posts */
-.widget_recent_entries {
-  margin: $m10;
-  ul {
-    li {
-      padding: 8px 0;
-      list-style-type: none;
-      border-bottom: 1px dotted $colorSub;
-      a {
-        display: block;
-        margin: 4px 0;
-        &:hover {
-          color: lighten($colorBase, 30%);
-        }
-      }
-      time {
-        display: block;
-        margin: 4px 0;
-        text-align: right;
-        color: darken($colorSub, 10%);
-        font-size: rem-calc(12);
-      }
+  // search
+  &_search {
+    input[type="submit"] {
+      display: none;
     }
   }
-}
-/* tag cloud */
-.widget_tag_cloud {
-  ul {
+  // text widget
+  &_text {
     margin: $m10;
-    li {
-      display: inline-block;
-      margin: 0 3px 6px 0;
-      border: 1px solid $colorSub;
-      border-radius: 3px;
-      &:last-child {
-        margin-right: 0;
-      }
+    .textwidget {
+      margin: $m10;
+    }
+  }
+  // archive
+  &_archive {
+    @include widgetBase;
+  }
+  // categories
+  &_categories {
+    @include widgetBase;
+  }
+  // archives
+  &_archives {
+    @include widgetBase;
+  }
+  // nav
+  &_nav_menu {
+    @include widgetBase;
+  }
+  // pages
+  &_pages {
+    @include widgetBase;
+  }
+  // custom menu
+  &_custom_menu {
+    @include widgetBase;
+  }
+  // recent comments
+  &_recent_comments {
+    @include widgetBase;
+  }
+  // meta
+  &_meta {
+    @include widgetBase;
+  }
+  // recent posts
+  &_recent_entries {
+    @include widgetBase;
+    time {
+      display: block;
+      margin: 4px 0;
+      text-align: right;
+      color: darken($colorSub, 10%);
+      font-size: rem-calc(12);
+    }
+  }
+  // tag cloud
+  &_tag_cloud {
+    .tagcloud {
+      margin: $m10;
       a {
-        display: block;
-        padding: 2px 8px;
+        padding: 2px;
         &:hover {
           background-color: $colorSub;
         }
       }
     }
   }
+  // calendar
+  .widget_calendar {}
 }
-/* calendar */
-.widget_calendar {}
+#calendar_wrap {
+  margin: $m10;
+  padding: 4px;
+  border: 1px solid $colorSub;
+}
+#wp-calendar {
+  td {
+    text-align: center;
+  }
+}

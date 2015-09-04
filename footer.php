@@ -9,11 +9,22 @@
  * @package othello
  */
 
+if ( ! is_active_sidebar( 'footer-widgets' ) )
+
 ?>
 
 		</div><!-- /.l-main -->
 
 		<footer role="contentinfo" class="l-footer">
+
+			<div class="footer-widgets">
+				<div class="footer-widgets__inner">
+
+						<?php dynamic_sidebar( 'footer-widgets' ); ?>
+
+				</div>
+			</div><!-- / .footer-widgets -->
+
       <div class="copyright">
         <div class="copyright__inner">
         	<p class="copyright__text">
