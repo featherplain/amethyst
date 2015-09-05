@@ -158,3 +158,13 @@
     }
   }
 }
+//***********************
+// alert box
+//***********************
+@mixin alertBox($padding, $bg, $border, $color, $fontSize) {
+  padding: $padding;
+  background-color: $bg;
+  border: 1px dotted $border;
+  color: $color;
+  font-size: rem-calc($fontSize);
+}

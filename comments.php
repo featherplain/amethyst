@@ -20,7 +20,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div class="comments">
 
 	<?php // You can start editing here -- including this comment! ?>
 
@@ -36,36 +36,34 @@ if ( post_password_required() ) {
 		</h2>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-		<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
+		<nav class="comments__nav" role="navigation">
 			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'othello' ); ?></h2>
-			<div class="nav-links">
 
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'othello' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'othello' ) ); ?></div>
+			<div class="comments__nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'othello' ) ); ?></div>
+			<div class="comments__nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'othello' ) ); ?></div>
 
-			</div><!-- .nav-links -->
-		</nav><!-- #comment-nav-above -->
+		</nav><!-- / .comments__nav -->
 		<?php endif; // Check for comment navigation. ?>
 
-		<ol class="comment-list">
+		<ul class="comments-list">
 			<?php
 				wp_list_comments( array(
-					'style'      => 'ol',
-					'short_ping' => true,
+					'avatar_size' => '48px',
+					'style'       => 'ul',
+					'short_ping'  => true,
 				) );
 			?>
 		</ol><!-- .comment-list -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-		<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
+		<nav class="comments__nav" role="navigation">
 			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'othello' ); ?></h2>
-			<div class="nav-links">
 
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'othello' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'othello' ) ); ?></div>
+				<div class="comments__nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'othello' ) ); ?></div>
+				<div class="comments__nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'othello' ) ); ?></div>
 
 			</div><!-- .nav-links -->
-		</nav><!-- #comment-nav-below -->
+		</nav><!-- / .comment__nav -->
 		<?php endif; // Check for comment navigation. ?>
 
 	<?php endif; // Check for have_comments(). ?>
@@ -74,9 +72,9 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'othello' ); ?></p>
+		<p class="comments__text"><?php esc_html_e( 'Comments are closed.', 'othello' ); ?></p>
 	<?php endif; ?>
 
 	<?php comment_form(); ?>
 
-</div><!-- #comments -->
+</div><!-- / .comments -->
