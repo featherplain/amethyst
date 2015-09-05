@@ -2,16 +2,19 @@
 
 /* buttons
 /* ---------------------------------------- */
-.btn {
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
   @include button(
     $bg: $colorBase
   );
+  font-family: $fontFamily;
   &:hover {
     background-color: lighten($colorBase, 20%);
   }
 }
-/* comments */
-.btnSubmit {
+.btn {
   @include button(
     $bg: $colorBase
   );

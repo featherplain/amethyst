@@ -11,7 +11,13 @@ $colorBg            : #fafafa;
 $colorLink          : #666666;
 $colorLinkHover     : lighten($colorLink, 15%);
 $colorSelection     : $colorLink;
-
+// others
+$colorRed           : #f04124;
+$colorRedLighten    : lighten($colorRed, 36%);
+$colorYellow        : #f0bd24;
+$colorYellowLighten : lighten($colorYellow, 36%);
+$colorGreen         : #43ac6a;
+$colorBlue          : #007095;
 //***********************
 // path
 //***********************
@@ -48,3 +54,10 @@ $padding            : 0 14px;
 // $menuItemWidth     : ;
 // $menuItemHeight    : ;
 // $menuPadding       : ($menuHeight - $menuItemHeight) / 2; // Calclate padding size automatically
+
+//***********************
+// comments
+//***********************
+$avatarSize     : 48px;
+$avatarMargin   : 10px;
+$commentMargin  : $avatarSize + $avatarMargin;
