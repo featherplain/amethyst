@@ -21,6 +21,16 @@ iframe {
 }
 
 /* text-level semantics */
+h1, h2, h3, h4, h5, h6 {
+  font-family: $fontFamilyTitle;
+  &,
+  & > a {
+    color: $colorBase;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
 a {
   color: $colorLink;
   text-decoration: none;
@@ -43,17 +53,6 @@ a {
 p {
   color: $colorBase;
 }
-h1, h2, h3, h4, h5, h6 {
-  font-family: $fontFamilyTitle;
-  font-weight: normal;
-  &,
-  & > a {
-    color: $colorBase;
-    &:hover {
-      text-decoration: none;
-    }
-  }
-}
 ::selection {
   background: transparent;
   background-color: $colorSelection;
@@ -65,14 +64,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* list items */
-ul {
+ul, ol {
   margin: 0;
   padding: 0;
-  li {
-    list-style-type: none;
-  }
+  list-style: none;
 }
-
 dl {
   margin-bottom: 2em;
   &:last-child{
@@ -105,18 +101,26 @@ svg:not(:root){
 /* table */
 table {
   width: 100%;
-  font-size: inherit;
   background-color: #ffffff;
   border-spacing: 0;
   border-collapse: collapse;
+  font-size: inherit;
   caption {
     margin: 5px 0;
   }
   thead,
   tfoot {
     background-color: $colorBg;
+    th {
+      padding: 8px;
+      font-weight: 600;
+    }
   }
   tbody {
+    th {
+      padding: 8px;
+      font-weight: 500;
+    }
     tr {
       &:nth-child(odd) {
         background-color: #ffffff;
@@ -127,6 +131,6 @@ table {
     }
   }
   td {
-    padding: 4px 2px;
+    padding: 6px;
   }
 }

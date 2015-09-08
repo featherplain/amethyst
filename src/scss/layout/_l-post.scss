@@ -12,7 +12,8 @@
     position: relative;
     margin: 0;
     padding: 0 0 5px 0;
-    font-size: rem-calc(18);
+    font-size: rem-calc(20);
+    font-weight: normal;
     z-index: -9;
     &:after {
       position: absolute;
