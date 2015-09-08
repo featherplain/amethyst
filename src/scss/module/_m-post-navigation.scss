@@ -2,45 +2,32 @@
 
 /* post navigation
 /* ---------------------------------------- */
-.postNav {
-  @extend %clearfix;
-  margin: $m20;
-  padding: 20px 14px;
-  border-top: 1px solid $colorSub;
+.post-navigation {
+  padding: 20px 0;
   border-bottom: 1px solid $colorSub;
   a {
     font-weight: 400;
   }
-  &__previous {
+}
+.nav-links {
+  > * {
     @include hasPseudoClass(before);
-    padding: 0 0 10px 0;
-    &:before {
-      @include genericon('\f430', 22px);
-    }
   }
-  &__next {
-    @include hasPseudoClass(after);
-    text-align: right;
-    padding: 10px 0 0 0;
-    &:after {
-      @include genericon('\f429', 22px);
-    }
-  }
+}
+.nav-previous {
+  text-align: left;
+}
+.nav-next {
+  text-align: right;
 }
 /* media */
 @media #{$medium-up} {
-  .postNav {
-    margin: $m40;
-    padding: 20px 0;
-    &__previous {
-      float: left;
-      width: 50%;
-      padding: 0 10px 0 0;
-    }
-    &__next {
-      float: right;
-      width: 50%;
-      padding: 0 0 0 10px;
+  .post-navigation {
+  }
+  .nav-links {
+    @include grid-row();
+    > * {
+      @include grid-column($columns: 6, $collapse: false);
     }
   }
 }

@@ -3,7 +3,6 @@
 /* post
 /* ---------------------------------------- */
 .post {
-  margin-bottom: 40px;
   &--page {}
   &__header {
     margin: 0 0 20px 0;
@@ -85,6 +84,15 @@
   }
   &__sns {
     margin: $m20;
+  }
+  /* pager */
+  &__pager {
+    padding: 10px 0;
+    text-align: center;
+    border: 1px dotted $colorSub;
+    a {
+      text-decoration: underline;
+    }
   }
 }
 /* media */

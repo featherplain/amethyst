@@ -30,12 +30,14 @@
 			<?php the_content(); ?>
 
 		</div>
+
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'othello' ),
-				'after'  => '</div>',
+				'before'					 => '<p class="post__pager">' . esc_html__( 'Pages: ', 'othello' ),
+				'after'  					 => '</p>',
 			) );
 		?>
+
 	</div><!-- .post__content -->
 	<footer class="post__footer">
 	  <div class="post__meta post__meta--footer">
@@ -54,4 +56,6 @@
 	  </div>
 	</footer>
 </article><!-- / #post-## .post -->
+
+<?php the_post_navigation(); ?>
 
