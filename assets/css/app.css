@@ -3181,7 +3181,7 @@ label.error {
   font-size: 0;
 }
 
-.pageTitle__inner, .block__title__inner, .global-nav__list li a {
+.page-title__inner, .block__title__inner, .global-nav__list li a {
   letter-spacing: 2px;
 }
 
@@ -4163,15 +4163,15 @@ object {
 /* archive
 /* ---------------------------------------- */
 /* page title */
-.pageTitle, .block__title {
-  margin: 40px 0;
-  text-align: center;
-  font-size: 1.375rem;
-  font-weight: bold;
+.page-title, .block__title {
+  margin-bottom: 30px;
+  font-size: 0.875rem;
+  font-weight: normal;
   line-height: 1;
-  letter-spacing: 3px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
 }
-.pageTitle__inner, .block__title__inner {
+.page-title__inner, .block__title__inner {
   display: inline-block;
   padding-bottom: 4px;
   border-bottom: 1px solid #dedede;

@@ -46,9 +46,9 @@
 .block {
   margin: 80px 0;
   &__title {
-    @extend .pageTitle;
+    @extend .page-title;
     &__inner {
-      @extend .pageTitle__inner;
+      @extend .page-title__inner;
     }
   }
 }
