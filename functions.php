@@ -83,6 +83,24 @@ endif; // othello_setup
 add_action( 'after_setup_theme', 'othello_setup' );
 
 /**
+ * Extend the default WordPress body classes.
+ *
+ * @param array $classes A list of existing body class values.
+ * @return array The filtered body class list.
+ */
+function othello_body_classes( $classes ) {
+
+	if ( ( ! is_active_sidebar( 'sidebar' ) )
+		|| is_page_template( 'template-parts/full-width.php' )
+		|| is_attachment() ) {
+		$classes[] = 'full-width';
+	}
+
+	return $classes;
+}
+add_filter( 'body_class', 'othello_body_classes' );
+
+/**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.

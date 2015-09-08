@@ -5,17 +5,12 @@
 /* page title */
 .page-title {
   margin-bottom: 30px;
+  padding: 0 16px;
   font-size: rem-calc(14);
   font-weight: normal;
   line-height: 1;
   letter-spacing: 1.4px;
   text-transform: uppercase;
-  &__inner {
-    @extend %fontSpace;
-    display: inline-block;
-    padding-bottom: 4px;
-    border-bottom: 1px solid $colorSub;
-  }
 }
 /* post archive */
 .post-archive {

@@ -48,7 +48,10 @@
   &__title {
     @extend .page-title;
     &__inner {
-      @extend .page-title__inner;
+      @extend %fontSpace;
+      display: inline-block;
+      padding-bottom: 4px;
+      border-bottom: 1px solid $colorSub;
     }
   }
 }

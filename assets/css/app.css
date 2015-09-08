@@ -3181,7 +3181,7 @@ label.error {
   font-size: 0;
 }
 
-.page-title__inner, .block__title__inner, .global-nav__list li a {
+.block__title__inner, .global-nav__list li a {
   letter-spacing: 2px;
 }
 
@@ -3208,7 +3208,7 @@ iframe {
 
 /* text-level semantics */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Lato", Sans-Serif;
+  font-family: "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
 }
 h1, h1 > a, h2, h2 > a, h3, h3 > a, h4, h4 > a, h5, h5 > a, h6, h6 > a {
   color: #222222;
@@ -3451,7 +3451,7 @@ input[type="reset"]:hover {
   display: inline-block;
   margin-left: 7px;
   vertical-align: top;
-  font-family: "Lato", Sans-Serif;
+  font-family: "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
   font-size: 1.125rem;
 }
 .comment-author .says {
@@ -3524,7 +3524,7 @@ input[type="reset"]:hover {
 .comment-content h4,
 .comment-content h5,
 .comment-content h6 {
-  margin: 20px 0;
+  margin: 30px 0;
 }
 .editor-style h1,
 .comment-content h1 {
@@ -3582,18 +3582,23 @@ input[type="reset"]:hover {
 }
 .editor-style dl dt,
 .comment-content dl dt {
-  font-family: "Lato", Sans-Serif;
+  margin-left: 0;
+  font-family: "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+}
+.editor-style dl dd,
+.comment-content dl dd {
+  margin-left: 14px;
 }
 .editor-style p,
 .comment-content p {
-  margin: 20px 0;
+  margin: 30px 0;
   color: #454545;
   font-size: 0.875rem;
-  line-height: 1.8;
+  line-height: 1.7;
 }
 .editor-style blockquote,
 .comment-content blockquote {
-  margin: 20px 0;
+  margin: 30px 0;
   padding: 10px;
   color: #454545;
   border: 1px dotted #dedede;
@@ -3611,7 +3616,7 @@ input[type="reset"]:hover {
 }
 .editor-style pre,
 .comment-content pre {
-  margin: 20px 0;
+  margin: 30px 0;
   padding: 10px;
   background-color: #f8f8f8;
   color: #454545;
@@ -3658,7 +3663,7 @@ input[type="reset"]:hover {
 }
 .editor-style table,
 .comment-content table {
-  margin: 20px 0;
+  margin: 30px 0;
   border: 1px solid #dedede;
   background-color: #ffffff;
   text-align: left;
@@ -3847,7 +3852,7 @@ The `sprites` mixin generates identical output to the CSS template
 /* widget
 /* ---------------------------------------- */
 .widget {
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 @media only screen and (min-width: 40.0625em) {
   .widget--footer {
@@ -3859,11 +3864,11 @@ The `sprites` mixin generates identical output to the CSS template
 }
 .widget__title {
   margin: 0;
-  padding-bottom: 4px;
+  padding: 4px 0;
+  border-top: 2px solid #dedede;
   border-bottom: 2px solid #dedede;
-  font-family: "Lato", Sans-Serif;
+  font-family: "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
   font-size: 1rem;
-  font-weight: normal;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
@@ -4050,7 +4055,6 @@ The `sprites` mixin generates identical output to the CSS template
 
 #calendar_wrap {
   margin: 10px 0;
-  padding: 4px;
   border: 1px solid #dedede;
 }
 
@@ -4165,16 +4169,12 @@ object {
 /* page title */
 .page-title, .block__title {
   margin-bottom: 30px;
+  padding: 0 16px;
   font-size: 0.875rem;
   font-weight: normal;
   line-height: 1;
   letter-spacing: 1.4px;
   text-transform: uppercase;
-}
-.page-title__inner, .block__title__inner {
-  display: inline-block;
-  padding-bottom: 4px;
-  border-bottom: 1px solid #dedede;
 }
 
 /* post archive */
@@ -4372,6 +4372,11 @@ object {
 .block {
   margin: 80px 0;
 }
+.block__title__inner {
+  display: inline-block;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #dedede;
+}
 
 /* works */
 .works {
@@ -4509,6 +4514,20 @@ object {
     float: left;
   }
 }
+/* full width
+/* ---------------------------------------- */
+.full-width .page-title, .full-width .block__title {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto 30px auto;
+}
+.full-width .l-primary {
+  width: 100%;
+  max-width: 780px;
+  margin: 0  auto 40px auto;
+  float: none;
+}
+
 /* header
 /* ---------------------------------------- */
 .l-header {
@@ -4670,20 +4689,8 @@ object {
   font-weight: normal;
   z-index: -9;
 }
-.post__title:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-size: 4px 4px;
-  background-color: #ffffff;
-  background-image: linear-gradient(-45deg, #dedede 25%, transparent 25%, transparent 50%, #dedede 50%, #dedede 75%, transparent 75%, transparent);
-  content: "";
-  z-index: -10;
-}
 .post__meta {
-  margin: 5px 0;
+  padding-bottom: 5px;
 }
 .post__meta--footer {
   margin: 0;
@@ -4804,7 +4811,11 @@ object {
 /* media */
 @media only screen and (min-width: 40.0625em) {
   .post__title {
-    font-size: 1.375rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .post__meta {
+    border-bottom: 1px solid #dedede;
   }
 }
 @media only screen and (min-width: 64.0625em) {
@@ -4812,7 +4823,7 @@ object {
     margin: 0 0 40px 0;
   }
   .post__title {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
   .post__image {
     margin: 40px 0;
