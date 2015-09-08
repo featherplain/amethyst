@@ -3,7 +3,7 @@
 /* widget
 /* ---------------------------------------- */
 .widget {
-  margin: $m20;
+  margin-bottom: 20px;
   &--footer {
     @media #{$medium-up} {
       @include grid-column(
@@ -14,11 +14,11 @@
   }
   &__title {
     margin: 0;
-    padding-bottom: 4px;
+    padding: 4px 0;
+    border-top: 2px solid $colorSub;
     border-bottom: 2px solid $colorSub;
     font-family: $fontFamilyTitle;
     font-size: rem-calc(16);
-    font-weight: normal;
     letter-spacing: 3px;
     text-transform: uppercase;
   }
@@ -99,7 +99,6 @@
 }
 #calendar_wrap {
   margin: $m10;
-  padding: 4px;
   border: 1px solid $colorSub;
 }
 #wp-calendar {

@@ -14,24 +14,9 @@
     font-size: rem-calc(20);
     font-weight: normal;
     z-index: -9;
-    &:after {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background-size: 4px 4px;
-      background-color: #ffffff;
-      background-image: linear-gradient(
-                          -45deg, #dedede 25%, transparent 25%,
-                          transparent 50%, #dedede 50%, #dedede 75%,
-                          transparent 75%, transparent);
-      content: "";
-      z-index: -10;
-    }
   }
   &__meta {
-    margin: 5px 0;
+    padding-bottom: 5px;
     &--footer {
       margin: 0;
       padding-bottom: 10px;
@@ -99,7 +84,11 @@
 @media #{$medium-up} {
   .post {
     &__title {
-      font-size: rem-calc(22);
+      font-size: rem-calc(24);
+      font-weight: bold;
+    }
+    &__meta {
+      border-bottom: 1px solid $colorSub;
     }
   }
 }
@@ -109,7 +98,7 @@
       margin: 0 0 40px 0;
     }
     &__title {
-      font-size: rem-calc(28);
+      font-size: rem-calc(32);
     }
     &__image {
       margin: 40px 0;
