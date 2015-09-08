@@ -3,13 +3,13 @@
 /* archive
 /* ---------------------------------------- */
 /* page title */
-.pageTitle {
-  margin: $m40;
-  text-align: center;
-  font-size: rem-calc(22);
-  font-weight: bold;
+.page-title {
+  margin-bottom: 30px;
+  font-size: rem-calc(14);
+  font-weight: normal;
   line-height: 1;
-  letter-spacing: 3px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
   &__inner {
     @extend %fontSpace;
     display: inline-block;
