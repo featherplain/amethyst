@@ -4,54 +4,52 @@
 /* ---------------------------------------- */
 .editor-style,
 .comment-content {
-  h1 {
+  h1, h2, h3, h4, h5, h6 {
     margin: $m20;
+  }
+  h1 {
     font-size: rem-calc(22);
-    font-weight: bold;
   }
   h2 {
-    margin: $m20;
     font-size: rem-calc(20);
     border-bottom: 2px solid $colorSub;
   }
   h3 {
-    margin: $m20;
     font-size: rem-calc(18);
     border-bottom: 1px dotted $colorSub;
   }
   h4 {
-    margin: $m20;
     font-size: rem-calc(16);
   }
   h5 {
-    margin: $m20;
     font-size: rem-calc(15);
+    font-weight: normal;
   }
   h6 {
-    margin: $m20;
     font-size: rem-calc(14);
+    font-weight: normal;
   }
   ul {
+    list-style-type: square;
+  }
+  ol {
+    list-style-type: decimal;
+  }
+  ul, ol {
     margin-left: 16px;
     li {
       margin: 8px;
-      color: $colorText;
       font-size: rem-calc(14);
-      list-style-type: square;
       line-height: 1.4;
     }
   }
-  ol {
-    @extend ul;
-    li {
-      list-style-type: decimal;
-    }
-  }
   dl {
-    dt,
-    dd {
+    dt, dd {
       color: $colorText;
       font-size: rem-calc(14);
+    }
+    dt {
+      font-family: $fontFamilyTitle;
     }
   }
   p {
@@ -117,7 +115,10 @@
     text-decoration: none;
   }
   table {
+    margin: $m20;
     border: 1px solid $colorSub;
     background-color: #ffffff;
+    text-align: left;
+    font-size: rem-calc(14);
   }
 }

@@ -3,7 +3,6 @@
 /* post
 /* ---------------------------------------- */
 .post {
-  margin-bottom: 40px;
   &--page {}
   &__header {
     margin: 0 0 20px 0;
@@ -12,7 +11,8 @@
     position: relative;
     margin: 0;
     padding: 0 0 5px 0;
-    font-size: rem-calc(18);
+    font-size: rem-calc(20);
+    font-weight: normal;
     z-index: -9;
     &:after {
       position: absolute;
@@ -84,6 +84,15 @@
   }
   &__sns {
     margin: $m20;
+  }
+  /* pager */
+  &__pager {
+    padding: 10px 0;
+    text-align: center;
+    border: 1px dotted $colorSub;
+    a {
+      text-decoration: underline;
+    }
   }
 }
 /* media */

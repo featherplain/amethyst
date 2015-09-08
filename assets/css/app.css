@@ -3172,7 +3172,7 @@ label.error {
   top: 50%;
 }
 
-.photos__list:after, .postNav:after, .post-archive__link:after, .main-img .sns-icons:after, .do:after, .global-nav__list:after {
+.photos__list:after, .post-archive__link:after, .main-img .sns-icons:after, .do:after, .global-nav__list:after {
   display: block;
   visibility: hidden;
   clear: both;
@@ -3207,6 +3207,16 @@ iframe {
 }
 
 /* text-level semantics */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", Sans-Serif;
+}
+h1, h1 > a, h2, h2 > a, h3, h3 > a, h4, h4 > a, h5, h5 > a, h6, h6 > a {
+  color: #222222;
+}
+h1:hover, h1 > a:hover, h2:hover, h2 > a:hover, h3:hover, h3 > a:hover, h4:hover, h4 > a:hover, h5:hover, h5 > a:hover, h6:hover, h6 > a:hover {
+  text-decoration: none;
+}
+
 a {
   color: #666666;
   text-decoration: none;
@@ -3228,17 +3238,6 @@ p {
   color: #222222;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Lato", Sans-Serif;
-  font-weight: normal;
-}
-h1, h1 > a, h2, h2 > a, h3, h3 > a, h4, h4 > a, h5, h5 > a, h6, h6 > a {
-  color: #222222;
-}
-h1:hover, h1 > a:hover, h2:hover, h2 > a:hover, h3:hover, h3 > a:hover, h4:hover, h4 > a:hover, h5:hover, h5 > a:hover, h6:hover, h6 > a:hover {
-  text-decoration: none;
-}
-
 ::-moz-selection {
   background: transparent;
   background-color: #666666;
@@ -3257,14 +3256,10 @@ h1:hover, h1 > a:hover, h2:hover, h2 > a:hover, h3:hover, h3 > a:hover, h4:hover
 }
 
 /* list items */
-ul, .editor-style ol,
-.comment-content ol {
+ul, ol {
   margin: 0;
   padding: 0;
-}
-ul li, .editor-style ol li,
-.comment-content ol li {
-  list-style-type: none;
+  list-style: none;
 }
 
 dl {
@@ -3301,10 +3296,10 @@ svg:not(:root) {
 /* table */
 table {
   width: 100%;
-  font-size: inherit;
   background-color: #ffffff;
   border-spacing: 0;
   border-collapse: collapse;
+  font-size: inherit;
 }
 table caption {
   margin: 5px 0;
@@ -3313,6 +3308,15 @@ table thead,
 table tfoot {
   background-color: #fafafa;
 }
+table thead th,
+table tfoot th {
+  padding: 8px;
+  font-weight: 600;
+}
+table tbody th {
+  padding: 8px;
+  font-weight: 500;
+}
 table tbody tr:nth-child(odd) {
   background-color: #ffffff;
 }
@@ -3320,7 +3324,7 @@ table tbody tr:nth-child(even) {
   background-color: #fafafa;
 }
 table td {
-  padding: 4px 2px;
+  padding: 6px;
 }
 
 /* buttons
@@ -3513,38 +3517,50 @@ input[type="reset"]:hover {
 
 /* content tags
 /* ---------------------------------------- */
+.editor-style h1, .editor-style h2, .editor-style h3, .editor-style h4, .editor-style h5, .editor-style h6,
+.comment-content h1,
+.comment-content h2,
+.comment-content h3,
+.comment-content h4,
+.comment-content h5,
+.comment-content h6 {
+  margin: 20px 0;
+}
 .editor-style h1,
 .comment-content h1 {
-  margin: 20px 0;
   font-size: 1.375rem;
-  font-weight: bold;
 }
 .editor-style h2,
 .comment-content h2 {
-  margin: 20px 0;
   font-size: 1.25rem;
   border-bottom: 2px solid #dedede;
 }
 .editor-style h3,
 .comment-content h3 {
-  margin: 20px 0;
   font-size: 1.125rem;
   border-bottom: 1px dotted #dedede;
 }
 .editor-style h4,
 .comment-content h4 {
-  margin: 20px 0;
   font-size: 1rem;
 }
 .editor-style h5,
 .comment-content h5 {
-  margin: 20px 0;
   font-size: 0.9375rem;
+  font-weight: normal;
 }
 .editor-style h6,
 .comment-content h6 {
-  margin: 20px 0;
   font-size: 0.875rem;
+  font-weight: normal;
+}
+.editor-style ul,
+.comment-content ul {
+  list-style-type: square;
+}
+.editor-style ol,
+.comment-content ol {
+  list-style-type: decimal;
 }
 .editor-style ul, .editor-style ol,
 .comment-content ul,
@@ -3555,21 +3571,18 @@ input[type="reset"]:hover {
 .comment-content ul li,
 .comment-content ol li {
   margin: 8px;
-  color: #454545;
   font-size: 0.875rem;
-  list-style-type: square;
   line-height: 1.4;
 }
-.editor-style ol li,
-.comment-content ol li {
-  list-style-type: decimal;
-}
-.editor-style dl dt,
-.editor-style dl dd,
+.editor-style dl dt, .editor-style dl dd,
 .comment-content dl dt,
 .comment-content dl dd {
   color: #454545;
   font-size: 0.875rem;
+}
+.editor-style dl dt,
+.comment-content dl dt {
+  font-family: "Lato", Sans-Serif;
 }
 .editor-style p,
 .comment-content p {
@@ -3645,8 +3658,11 @@ input[type="reset"]:hover {
 }
 .editor-style table,
 .comment-content table {
+  margin: 20px 0;
   border: 1px solid #dedede;
   background-color: #ffffff;
+  text-align: left;
+  font-size: 0.875rem;
 }
 
 /* comments
@@ -3688,68 +3704,50 @@ input[type="reset"]:hover {
 
 /* post navigation
 /* ---------------------------------------- */
-.postNav {
-  margin: 20px 0;
-  padding: 20px 14px;
-  border-top: 1px solid #dedede;
+.post-navigation {
+  padding: 20px 0;
   border-bottom: 1px solid #dedede;
 }
-.postNav a {
+.post-navigation a {
   font-weight: 400;
 }
-.postNav__previous {
+
+.nav-links > * {
   position: relative;
-  padding: 0 0 10px 0;
 }
-.postNav__previous:before {
+.nav-links > *:before {
   display: block;
   content: "";
   position: absolute;
 }
-.postNav__previous:before {
-  position: static;
-  display: inline-block;
-  content: "";
-  vertical-align: text-bottom;
-  font-size: 22px;
-  font-family: Genericons;
-  line-height: 1;
+
+.nav-previous {
+  text-align: left;
 }
-.postNav__next {
-  position: relative;
+
+.nav-next {
   text-align: right;
-  padding: 10px 0 0 0;
-}
-.postNav__next:after {
-  display: block;
-  content: "";
-  position: absolute;
-}
-.postNav__next:after {
-  position: static;
-  display: inline-block;
-  content: "";
-  vertical-align: text-bottom;
-  font-size: 22px;
-  font-family: Genericons;
-  line-height: 1;
 }
 
 /* media */
 @media only screen and (min-width: 40.0625em) {
-  .postNav {
-    margin: 40px 0;
-    padding: 20px 0;
+  .nav-links {
+    margin: 0 auto;
+    max-width: 1040px;
+    width: 100%;
   }
-  .postNav__previous {
+  .nav-links:before, .nav-links:after {
+    content: " ";
+    display: table;
+  }
+  .nav-links:after {
+    clear: both;
+  }
+  .nav-links > * {
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
+    width: 50%;
     float: left;
-    width: 50%;
-    padding: 0 10px 0 0;
-  }
-  .postNav__next {
-    float: right;
-    width: 50%;
-    padding: 0 0 0 10px;
   }
 }
 /* sns share buttons
@@ -3880,319 +3878,157 @@ The `sprites` mixin generates identical output to the CSS template
 .widget_text .textwidget {
   margin: 10px 0;
 }
-.widget_archive ul li, .widget_archive .editor-style ol li, .editor-style .widget_archive ol li,
-.widget_archive .comment-content ol li,
-.comment-content .widget_archive ol li {
+.widget_archive ul li {
   padding: 6px 0;
   list-style-type: none;
   border-bottom: 1px dotted #dedede;
 }
-.widget_archive ul li ul, .widget_archive .editor-style ol li ul, .editor-style .widget_archive ol li ul,
-.widget_archive .comment-content ol li ul,
-.comment-content .widget_archive ol li ul, .widget_archive ul li .editor-style ol, .editor-style .widget_archive ul li ol, .widget_archive .editor-style ol li ol, .editor-style .widget_archive ol li ol,
-.widget_archive ul li .comment-content ol,
-.comment-content .widget_archive ul li ol,
-.widget_archive .comment-content ol li ol,
-.comment-content .widget_archive ol li ol {
+.widget_archive ul li ul {
   margin-left: 12px;
 }
-.widget_archive ul li ul li:last-child, .widget_archive .editor-style ol li ul li:last-child, .editor-style .widget_archive ol li ul li:last-child,
-.widget_archive .comment-content ol li ul li:last-child,
-.comment-content .widget_archive ol li ul li:last-child, .widget_archive ul li .editor-style ol li:last-child, .editor-style .widget_archive ul li ol li:last-child, .widget_archive .editor-style ol li ol li:last-child, .editor-style .widget_archive ol li ol li:last-child,
-.widget_archive ul li .comment-content ol li:last-child,
-.comment-content .widget_archive ul li ol li:last-child,
-.widget_archive .comment-content ol li ol li:last-child,
-.comment-content .widget_archive ol li ol li:last-child {
+.widget_archive ul li ul li:last-child {
   border-bottom: none;
 }
-.widget_archive ul li a, .widget_archive .editor-style ol li a, .editor-style .widget_archive ol li a,
-.widget_archive .comment-content ol li a,
-.comment-content .widget_archive ol li a {
+.widget_archive ul li a {
   font-size: 0.8125rem;
 }
-.widget_archive ul li a:hover, .widget_archive .editor-style ol li a:hover, .editor-style .widget_archive ol li a:hover,
-.widget_archive .comment-content ol li a:hover,
-.comment-content .widget_archive ol li a:hover {
+.widget_archive ul li a:hover {
   color: #8c8c8c;
 }
-.widget_categories ul li, .widget_categories .editor-style ol li, .editor-style .widget_categories ol li,
-.widget_categories .comment-content ol li,
-.comment-content .widget_categories ol li {
+.widget_categories ul li {
   padding: 6px 0;
   list-style-type: none;
   border-bottom: 1px dotted #dedede;
 }
-.widget_categories ul li ul, .widget_categories .editor-style ol li ul, .editor-style .widget_categories ol li ul,
-.widget_categories .comment-content ol li ul,
-.comment-content .widget_categories ol li ul, .widget_categories ul li .editor-style ol, .editor-style .widget_categories ul li ol, .widget_categories .editor-style ol li ol, .editor-style .widget_categories ol li ol,
-.widget_categories ul li .comment-content ol,
-.comment-content .widget_categories ul li ol,
-.widget_categories .comment-content ol li ol,
-.comment-content .widget_categories ol li ol {
+.widget_categories ul li ul {
   margin-left: 12px;
 }
-.widget_categories ul li ul li:last-child, .widget_categories .editor-style ol li ul li:last-child, .editor-style .widget_categories ol li ul li:last-child,
-.widget_categories .comment-content ol li ul li:last-child,
-.comment-content .widget_categories ol li ul li:last-child, .widget_categories ul li .editor-style ol li:last-child, .editor-style .widget_categories ul li ol li:last-child, .widget_categories .editor-style ol li ol li:last-child, .editor-style .widget_categories ol li ol li:last-child,
-.widget_categories ul li .comment-content ol li:last-child,
-.comment-content .widget_categories ul li ol li:last-child,
-.widget_categories .comment-content ol li ol li:last-child,
-.comment-content .widget_categories ol li ol li:last-child {
+.widget_categories ul li ul li:last-child {
   border-bottom: none;
 }
-.widget_categories ul li a, .widget_categories .editor-style ol li a, .editor-style .widget_categories ol li a,
-.widget_categories .comment-content ol li a,
-.comment-content .widget_categories ol li a {
+.widget_categories ul li a {
   font-size: 0.8125rem;
 }
-.widget_categories ul li a:hover, .widget_categories .editor-style ol li a:hover, .editor-style .widget_categories ol li a:hover,
-.widget_categories .comment-content ol li a:hover,
-.comment-content .widget_categories ol li a:hover {
+.widget_categories ul li a:hover {
   color: #8c8c8c;
 }
-.widget_archives ul li, .widget_archives .editor-style ol li, .editor-style .widget_archives ol li,
-.widget_archives .comment-content ol li,
-.comment-content .widget_archives ol li {
+.widget_archives ul li {
   padding: 6px 0;
   list-style-type: none;
   border-bottom: 1px dotted #dedede;
 }
-.widget_archives ul li ul, .widget_archives .editor-style ol li ul, .editor-style .widget_archives ol li ul,
-.widget_archives .comment-content ol li ul,
-.comment-content .widget_archives ol li ul, .widget_archives ul li .editor-style ol, .editor-style .widget_archives ul li ol, .widget_archives .editor-style ol li ol, .editor-style .widget_archives ol li ol,
-.widget_archives ul li .comment-content ol,
-.comment-content .widget_archives ul li ol,
-.widget_archives .comment-content ol li ol,
-.comment-content .widget_archives ol li ol {
+.widget_archives ul li ul {
   margin-left: 12px;
 }
-.widget_archives ul li ul li:last-child, .widget_archives .editor-style ol li ul li:last-child, .editor-style .widget_archives ol li ul li:last-child,
-.widget_archives .comment-content ol li ul li:last-child,
-.comment-content .widget_archives ol li ul li:last-child, .widget_archives ul li .editor-style ol li:last-child, .editor-style .widget_archives ul li ol li:last-child, .widget_archives .editor-style ol li ol li:last-child, .editor-style .widget_archives ol li ol li:last-child,
-.widget_archives ul li .comment-content ol li:last-child,
-.comment-content .widget_archives ul li ol li:last-child,
-.widget_archives .comment-content ol li ol li:last-child,
-.comment-content .widget_archives ol li ol li:last-child {
+.widget_archives ul li ul li:last-child {
   border-bottom: none;
 }
-.widget_archives ul li a, .widget_archives .editor-style ol li a, .editor-style .widget_archives ol li a,
-.widget_archives .comment-content ol li a,
-.comment-content .widget_archives ol li a {
+.widget_archives ul li a {
   font-size: 0.8125rem;
 }
-.widget_archives ul li a:hover, .widget_archives .editor-style ol li a:hover, .editor-style .widget_archives ol li a:hover,
-.widget_archives .comment-content ol li a:hover,
-.comment-content .widget_archives ol li a:hover {
+.widget_archives ul li a:hover {
   color: #8c8c8c;
 }
-.widget_nav_menu ul li, .widget_nav_menu .editor-style ol li, .editor-style .widget_nav_menu ol li,
-.widget_nav_menu .comment-content ol li,
-.comment-content .widget_nav_menu ol li {
+.widget_nav_menu ul li {
   padding: 6px 0;
   list-style-type: none;
   border-bottom: 1px dotted #dedede;
 }
-.widget_nav_menu ul li ul, .widget_nav_menu .editor-style ol li ul, .editor-style .widget_nav_menu ol li ul,
-.widget_nav_menu .comment-content ol li ul,
-.comment-content .widget_nav_menu ol li ul, .widget_nav_menu ul li .editor-style ol, .editor-style .widget_nav_menu ul li ol, .widget_nav_menu .editor-style ol li ol, .editor-style .widget_nav_menu ol li ol,
-.widget_nav_menu ul li .comment-content ol,
-.comment-content .widget_nav_menu ul li ol,
-.widget_nav_menu .comment-content ol li ol,
-.comment-content .widget_nav_menu ol li ol {
+.widget_nav_menu ul li ul {
   margin-left: 12px;
 }
-.widget_nav_menu ul li ul li:last-child, .widget_nav_menu .editor-style ol li ul li:last-child, .editor-style .widget_nav_menu ol li ul li:last-child,
-.widget_nav_menu .comment-content ol li ul li:last-child,
-.comment-content .widget_nav_menu ol li ul li:last-child, .widget_nav_menu ul li .editor-style ol li:last-child, .editor-style .widget_nav_menu ul li ol li:last-child, .widget_nav_menu .editor-style ol li ol li:last-child, .editor-style .widget_nav_menu ol li ol li:last-child,
-.widget_nav_menu ul li .comment-content ol li:last-child,
-.comment-content .widget_nav_menu ul li ol li:last-child,
-.widget_nav_menu .comment-content ol li ol li:last-child,
-.comment-content .widget_nav_menu ol li ol li:last-child {
+.widget_nav_menu ul li ul li:last-child {
   border-bottom: none;
 }
-.widget_nav_menu ul li a, .widget_nav_menu .editor-style ol li a, .editor-style .widget_nav_menu ol li a,
-.widget_nav_menu .comment-content ol li a,
-.comment-content .widget_nav_menu ol li a {
+.widget_nav_menu ul li a {
   font-size: 0.8125rem;
 }
-.widget_nav_menu ul li a:hover, .widget_nav_menu .editor-style ol li a:hover, .editor-style .widget_nav_menu ol li a:hover,
-.widget_nav_menu .comment-content ol li a:hover,
-.comment-content .widget_nav_menu ol li a:hover {
+.widget_nav_menu ul li a:hover {
   color: #8c8c8c;
 }
-.widget_pages ul li, .widget_pages .editor-style ol li, .editor-style .widget_pages ol li,
-.widget_pages .comment-content ol li,
-.comment-content .widget_pages ol li {
+.widget_pages ul li {
   padding: 6px 0;
   list-style-type: none;
   border-bottom: 1px dotted #dedede;
 }
-.widget_pages ul li ul, .widget_pages .editor-style ol li ul, .editor-style .widget_pages ol li ul,
-.widget_pages .comment-content ol li ul,
-.comment-content .widget_pages ol li ul, .widget_pages ul li .editor-style ol, .editor-style .widget_pages ul li ol, .widget_pages .editor-style ol li ol, .editor-style .widget_pages ol li ol,
-.widget_pages ul li .comment-content ol,
-.comment-content .widget_pages ul li ol,
-.widget_pages .comment-content ol li ol,
-.comment-content .widget_pages ol li ol {
+.widget_pages ul li ul {
   margin-left: 12px;
 }
-.widget_pages ul li ul li:last-child, .widget_pages .editor-style ol li ul li:last-child, .editor-style .widget_pages ol li ul li:last-child,
-.widget_pages .comment-content ol li ul li:last-child,
-.comment-content .widget_pages ol li ul li:last-child, .widget_pages ul li .editor-style ol li:last-child, .editor-style .widget_pages ul li ol li:last-child, .widget_pages .editor-style ol li ol li:last-child, .editor-style .widget_pages ol li ol li:last-child,
-.widget_pages ul li .comment-content ol li:last-child,
-.comment-content .widget_pages ul li ol li:last-child,
-.widget_pages .comment-content ol li ol li:last-child,
-.comment-content .widget_pages ol li ol li:last-child {
+.widget_pages ul li ul li:last-child {
   border-bottom: none;
 }
-.widget_pages ul li a, .widget_pages .editor-style ol li a, .editor-style .widget_pages ol li a,
-.widget_pages .comment-content ol li a,
-.comment-content .widget_pages ol li a {
+.widget_pages ul li a {
   font-size: 0.8125rem;
 }
-.widget_pages ul li a:hover, .widget_pages .editor-style ol li a:hover, .editor-style .widget_pages ol li a:hover,
-.widget_pages .comment-content ol li a:hover,
-.comment-content .widget_pages ol li a:hover {
+.widget_pages ul li a:hover {
   color: #8c8c8c;
 }
-.widget_custom_menu ul li, .widget_custom_menu .editor-style ol li, .editor-style .widget_custom_menu ol li,
-.widget_custom_menu .comment-content ol li,
-.comment-content .widget_custom_menu ol li {
+.widget_custom_menu ul li {
   padding: 6px 0;
   list-style-type: none;
   border-bottom: 1px dotted #dedede;
 }
-.widget_custom_menu ul li ul, .widget_custom_menu .editor-style ol li ul, .editor-style .widget_custom_menu ol li ul,
-.widget_custom_menu .comment-content ol li ul,
-.comment-content .widget_custom_menu ol li ul, .widget_custom_menu ul li .editor-style ol, .editor-style .widget_custom_menu ul li ol, .widget_custom_menu .editor-style ol li ol, .editor-style .widget_custom_menu ol li ol,
-.widget_custom_menu ul li .comment-content ol,
-.comment-content .widget_custom_menu ul li ol,
-.widget_custom_menu .comment-content ol li ol,
-.comment-content .widget_custom_menu ol li ol {
+.widget_custom_menu ul li ul {
   margin-left: 12px;
 }
-.widget_custom_menu ul li ul li:last-child, .widget_custom_menu .editor-style ol li ul li:last-child, .editor-style .widget_custom_menu ol li ul li:last-child,
-.widget_custom_menu .comment-content ol li ul li:last-child,
-.comment-content .widget_custom_menu ol li ul li:last-child, .widget_custom_menu ul li .editor-style ol li:last-child, .editor-style .widget_custom_menu ul li ol li:last-child, .widget_custom_menu .editor-style ol li ol li:last-child, .editor-style .widget_custom_menu ol li ol li:last-child,
-.widget_custom_menu ul li .comment-content ol li:last-child,
-.comment-content .widget_custom_menu ul li ol li:last-child,
-.widget_custom_menu .comment-content ol li ol li:last-child,
-.comment-content .widget_custom_menu ol li ol li:last-child {
+.widget_custom_menu ul li ul li:last-child {
   border-bottom: none;
 }
-.widget_custom_menu ul li a, .widget_custom_menu .editor-style ol li a, .editor-style .widget_custom_menu ol li a,
-.widget_custom_menu .comment-content ol li a,
-.comment-content .widget_custom_menu ol li a {
+.widget_custom_menu ul li a {
   font-size: 0.8125rem;
 }
-.widget_custom_menu ul li a:hover, .widget_custom_menu .editor-style ol li a:hover, .editor-style .widget_custom_menu ol li a:hover,
-.widget_custom_menu .comment-content ol li a:hover,
-.comment-content .widget_custom_menu ol li a:hover {
+.widget_custom_menu ul li a:hover {
   color: #8c8c8c;
 }
-.widget_recent_comments ul li, .widget_recent_comments .editor-style ol li, .editor-style .widget_recent_comments ol li,
-.widget_recent_comments .comment-content ol li,
-.comment-content .widget_recent_comments ol li {
+.widget_recent_comments ul li {
   padding: 6px 0;
   list-style-type: none;
   border-bottom: 1px dotted #dedede;
 }
-.widget_recent_comments ul li ul, .widget_recent_comments .editor-style ol li ul, .editor-style .widget_recent_comments ol li ul,
-.widget_recent_comments .comment-content ol li ul,
-.comment-content .widget_recent_comments ol li ul, .widget_recent_comments ul li .editor-style ol, .editor-style .widget_recent_comments ul li ol, .widget_recent_comments .editor-style ol li ol, .editor-style .widget_recent_comments ol li ol,
-.widget_recent_comments ul li .comment-content ol,
-.comment-content .widget_recent_comments ul li ol,
-.widget_recent_comments .comment-content ol li ol,
-.comment-content .widget_recent_comments ol li ol {
+.widget_recent_comments ul li ul {
   margin-left: 12px;
 }
-.widget_recent_comments ul li ul li:last-child, .widget_recent_comments .editor-style ol li ul li:last-child, .editor-style .widget_recent_comments ol li ul li:last-child,
-.widget_recent_comments .comment-content ol li ul li:last-child,
-.comment-content .widget_recent_comments ol li ul li:last-child, .widget_recent_comments ul li .editor-style ol li:last-child, .editor-style .widget_recent_comments ul li ol li:last-child, .widget_recent_comments .editor-style ol li ol li:last-child, .editor-style .widget_recent_comments ol li ol li:last-child,
-.widget_recent_comments ul li .comment-content ol li:last-child,
-.comment-content .widget_recent_comments ul li ol li:last-child,
-.widget_recent_comments .comment-content ol li ol li:last-child,
-.comment-content .widget_recent_comments ol li ol li:last-child {
+.widget_recent_comments ul li ul li:last-child {
   border-bottom: none;
 }
-.widget_recent_comments ul li a, .widget_recent_comments .editor-style ol li a, .editor-style .widget_recent_comments ol li a,
-.widget_recent_comments .comment-content ol li a,
-.comment-content .widget_recent_comments ol li a {
+.widget_recent_comments ul li a {
   font-size: 0.8125rem;
 }
-.widget_recent_comments ul li a:hover, .widget_recent_comments .editor-style ol li a:hover, .editor-style .widget_recent_comments ol li a:hover,
-.widget_recent_comments .comment-content ol li a:hover,
-.comment-content .widget_recent_comments ol li a:hover {
+.widget_recent_comments ul li a:hover {
   color: #8c8c8c;
 }
-.widget_meta ul li, .widget_meta .editor-style ol li, .editor-style .widget_meta ol li,
-.widget_meta .comment-content ol li,
-.comment-content .widget_meta ol li {
+.widget_meta ul li {
   padding: 6px 0;
   list-style-type: none;
   border-bottom: 1px dotted #dedede;
 }
-.widget_meta ul li ul, .widget_meta .editor-style ol li ul, .editor-style .widget_meta ol li ul,
-.widget_meta .comment-content ol li ul,
-.comment-content .widget_meta ol li ul, .widget_meta ul li .editor-style ol, .editor-style .widget_meta ul li ol, .widget_meta .editor-style ol li ol, .editor-style .widget_meta ol li ol,
-.widget_meta ul li .comment-content ol,
-.comment-content .widget_meta ul li ol,
-.widget_meta .comment-content ol li ol,
-.comment-content .widget_meta ol li ol {
+.widget_meta ul li ul {
   margin-left: 12px;
 }
-.widget_meta ul li ul li:last-child, .widget_meta .editor-style ol li ul li:last-child, .editor-style .widget_meta ol li ul li:last-child,
-.widget_meta .comment-content ol li ul li:last-child,
-.comment-content .widget_meta ol li ul li:last-child, .widget_meta ul li .editor-style ol li:last-child, .editor-style .widget_meta ul li ol li:last-child, .widget_meta .editor-style ol li ol li:last-child, .editor-style .widget_meta ol li ol li:last-child,
-.widget_meta ul li .comment-content ol li:last-child,
-.comment-content .widget_meta ul li ol li:last-child,
-.widget_meta .comment-content ol li ol li:last-child,
-.comment-content .widget_meta ol li ol li:last-child {
+.widget_meta ul li ul li:last-child {
   border-bottom: none;
 }
-.widget_meta ul li a, .widget_meta .editor-style ol li a, .editor-style .widget_meta ol li a,
-.widget_meta .comment-content ol li a,
-.comment-content .widget_meta ol li a {
+.widget_meta ul li a {
   font-size: 0.8125rem;
 }
-.widget_meta ul li a:hover, .widget_meta .editor-style ol li a:hover, .editor-style .widget_meta ol li a:hover,
-.widget_meta .comment-content ol li a:hover,
-.comment-content .widget_meta ol li a:hover {
+.widget_meta ul li a:hover {
   color: #8c8c8c;
 }
-.widget_recent_entries ul li, .widget_recent_entries .editor-style ol li, .editor-style .widget_recent_entries ol li,
-.widget_recent_entries .comment-content ol li,
-.comment-content .widget_recent_entries ol li {
+.widget_recent_entries ul li {
   padding: 6px 0;
   list-style-type: none;
   border-bottom: 1px dotted #dedede;
 }
-.widget_recent_entries ul li ul, .widget_recent_entries .editor-style ol li ul, .editor-style .widget_recent_entries ol li ul,
-.widget_recent_entries .comment-content ol li ul,
-.comment-content .widget_recent_entries ol li ul, .widget_recent_entries ul li .editor-style ol, .editor-style .widget_recent_entries ul li ol, .widget_recent_entries .editor-style ol li ol, .editor-style .widget_recent_entries ol li ol,
-.widget_recent_entries ul li .comment-content ol,
-.comment-content .widget_recent_entries ul li ol,
-.widget_recent_entries .comment-content ol li ol,
-.comment-content .widget_recent_entries ol li ol {
+.widget_recent_entries ul li ul {
   margin-left: 12px;
 }
-.widget_recent_entries ul li ul li:last-child, .widget_recent_entries .editor-style ol li ul li:last-child, .editor-style .widget_recent_entries ol li ul li:last-child,
-.widget_recent_entries .comment-content ol li ul li:last-child,
-.comment-content .widget_recent_entries ol li ul li:last-child, .widget_recent_entries ul li .editor-style ol li:last-child, .editor-style .widget_recent_entries ul li ol li:last-child, .widget_recent_entries .editor-style ol li ol li:last-child, .editor-style .widget_recent_entries ol li ol li:last-child,
-.widget_recent_entries ul li .comment-content ol li:last-child,
-.comment-content .widget_recent_entries ul li ol li:last-child,
-.widget_recent_entries .comment-content ol li ol li:last-child,
-.comment-content .widget_recent_entries ol li ol li:last-child {
+.widget_recent_entries ul li ul li:last-child {
   border-bottom: none;
 }
-.widget_recent_entries ul li a, .widget_recent_entries .editor-style ol li a, .editor-style .widget_recent_entries ol li a,
-.widget_recent_entries .comment-content ol li a,
-.comment-content .widget_recent_entries ol li a {
+.widget_recent_entries ul li a {
   font-size: 0.8125rem;
 }
-.widget_recent_entries ul li a:hover, .widget_recent_entries .editor-style ol li a:hover, .editor-style .widget_recent_entries ol li a:hover,
-.widget_recent_entries .comment-content ol li a:hover,
-.comment-content .widget_recent_entries ol li a:hover {
+.widget_recent_entries ul li a:hover {
   color: #8c8c8c;
 }
 .widget_recent_entries time {
@@ -4380,6 +4216,7 @@ object {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 0.8125rem;
+  font-weight: normal;
   line-height: 1.6;
 }
 
@@ -4820,7 +4657,7 @@ object {
 /* post
 /* ---------------------------------------- */
 .post {
-  margin-bottom: 40px;
+  /* pager */
 }
 .post__header {
   margin: 0 0 20px 0;
@@ -4829,7 +4666,8 @@ object {
   position: relative;
   margin: 0;
   padding: 0 0 5px 0;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
+  font-weight: normal;
   z-index: -9;
 }
 .post__title:after {
@@ -4953,6 +4791,14 @@ object {
 }
 .post__sns {
   margin: 20px 0;
+}
+.post__pager {
+  padding: 10px 0;
+  text-align: center;
+  border: 1px dotted #dedede;
+}
+.post__pager a {
+  text-decoration: underline;
 }
 
 /* media */
