@@ -121,6 +121,14 @@ function othello_content_width() {
 add_action( 'after_setup_theme', 'othello_content_width', 0 );
 
 /**
+ * Register excerpt length.
+**/
+function custom_excerpt_length( $length ) {
+     return 15;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+/**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
