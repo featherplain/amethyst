@@ -2,14 +2,11 @@
 
 /* post navigation
 /* ---------------------------------------- */
-.post-navigation {
+.nav-links {
   padding: 20px 0;
-  border-bottom: 1px solid $colorSub;
   a {
     font-weight: 400;
   }
-}
-.nav-links {
   > * {
     @include hasPseudoClass(before);
   }
@@ -22,8 +19,6 @@
 }
 /* media */
 @media #{$medium-up} {
-  .post-navigation {
-  }
   .nav-links {
     @include grid-row();
     > * {

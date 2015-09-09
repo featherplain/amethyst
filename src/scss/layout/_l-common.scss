@@ -31,6 +31,16 @@
     );
   }
 }
+/* page title */
+.page-title {
+  margin-bottom: 30px;
+  padding: 0 16px;
+  font-size: rem-calc(14);
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
 /* screen reader text */
 .screen-reader-text {
   display: none;

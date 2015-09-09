@@ -3,17 +3,24 @@
 /* post
 /* ---------------------------------------- */
 .post {
-  &--page {}
+  &--search {
+    border-bottom: 1px solid $colorSub;
+    > a {
+      display: block;
+      padding: $m10;
+      color: $colorBase;
+      &:hover {
+        background-color: $colorBg;
+      }
+    }
+  }
   &__header {
     margin: 0 0 20px 0;
   }
   &__title {
-    position: relative;
     margin: 0;
     padding: 0 0 5px 0;
     font-size: rem-calc(20);
-    font-weight: normal;
-    z-index: -9;
   }
   &__meta {
     margin-bottom: 14px;
@@ -36,6 +43,9 @@
         line-height: 1;
       }
     }
+  }
+  &__summary {
+    font-size: rem-calc(14);
   }
   &__image {
     width: 100%;
