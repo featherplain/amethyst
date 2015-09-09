@@ -20,8 +20,11 @@
 			<div class="post__author">
 				<span><?php echo get_the_author_meta( 'display_name' ); ?></span>
 			</div>
-		</div><!-- .post__meta -->
-		<div class="post__image"><img src="http://placehold.jp/1500x590.png" alt=""></div>
+		</div>
+		<?php // post thumbnail
+		$size = ( wp_is_mobile() ) ? 'thumb640x400' : 'thumb744x465';
+		the_post_thumbnail( $size, array( 'class'	=> 'attachment-' . $size . ' post__image' ) );
+		?>
 	</header><!-- / .post__header -->
 
 	<div class="post__content">
