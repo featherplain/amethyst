@@ -5,7 +5,7 @@
 .editor-style,
 .comment-content {
   h1, h2, h3, h4, h5, h6 {
-    margin: $m30;
+    margin: 24px 0;
   }
   h1 {
     font-size: rem-calc(22);
@@ -57,13 +57,13 @@
     }
   }
   p {
-    margin: $m30;
+    margin: 24px 0;
     color: $colorText;
     font-size: rem-calc(14);
     line-height: 1.7;
   }
   blockquote {
-    margin: $m30;
+    margin: 24px 0;
     padding: 10px;
     color: $colorText;
     border: 1px dotted $colorSub;
@@ -78,7 +78,7 @@
     font-style: normal;
   }
   pre {
-    margin: $m30;
+    margin: 24px 0;
     padding: 10px;
     background-color: lighten($colorSub, 10%);
     color: $colorText;
@@ -119,7 +119,7 @@
     text-decoration: none;
   }
   table {
-    margin: $m30;
+    margin: 24px 0;
     border: 1px solid $colorSub;
     background-color: #ffffff;
     text-align: left;

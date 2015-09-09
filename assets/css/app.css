@@ -3524,7 +3524,7 @@ input[type="reset"]:hover {
 .comment-content h4,
 .comment-content h5,
 .comment-content h6 {
-  margin: 30px 0;
+  margin: 24px 0;
 }
 .editor-style h1,
 .comment-content h1 {
@@ -3591,14 +3591,14 @@ input[type="reset"]:hover {
 }
 .editor-style p,
 .comment-content p {
-  margin: 30px 0;
+  margin: 24px 0;
   color: #454545;
   font-size: 0.875rem;
   line-height: 1.7;
 }
 .editor-style blockquote,
 .comment-content blockquote {
-  margin: 30px 0;
+  margin: 24px 0;
   padding: 10px;
   color: #454545;
   border: 1px dotted #dedede;
@@ -3616,7 +3616,7 @@ input[type="reset"]:hover {
 }
 .editor-style pre,
 .comment-content pre {
-  margin: 30px 0;
+  margin: 24px 0;
   padding: 10px;
   background-color: #f8f8f8;
   color: #454545;
@@ -3663,7 +3663,7 @@ input[type="reset"]:hover {
 }
 .editor-style table,
 .comment-content table {
-  margin: 30px 0;
+  margin: 24px 0;
   border: 1px solid #dedede;
   background-color: #ffffff;
   text-align: left;
@@ -4192,11 +4192,8 @@ object {
 }
 .post-archive__thumb {
   float: left;
-}
-.post-archive__thumb > img {
-  width: 100%;
-  max-width: 90px;
-  height: auto;
+  width: 90px;
+  height: 56px;
 }
 .post-archive__meta, .post-archive__title {
   margin-left: 100px;
@@ -4226,8 +4223,9 @@ object {
     padding-bottom: 20px;
     margin-bottom: 20px;
   }
-  .post-archive__thumb img {
-    max-width: 120px;
+  .post-archive__thumb {
+    width: 120px;
+    height: 75px;
   }
   .post-archive__meta, .post-archive__title {
     margin-left: 140px;
@@ -4690,7 +4688,7 @@ object {
   z-index: -9;
 }
 .post__meta {
-  padding-bottom: 5px;
+  margin-bottom: 14px;
 }
 .post__meta--footer {
   margin: 0;
@@ -4710,6 +4708,9 @@ object {
   margin-left: 2px;
   color: #222222;
   line-height: 1;
+}
+.post__image {
+  width: 100%;
 }
 .post__date {
   position: relative;
@@ -4814,9 +4815,6 @@ object {
     font-size: 1.5rem;
     font-weight: bold;
   }
-  .post__meta {
-    border-bottom: 1px solid #dedede;
-  }
 }
 @media only screen and (min-width: 64.0625em) {
   .post__header {
@@ -4826,7 +4824,8 @@ object {
     font-size: 2rem;
   }
   .post__image {
-    margin: 40px 0;
+    max-width: 100%;
+    height: auto;
   }
 }
 /* sidebar

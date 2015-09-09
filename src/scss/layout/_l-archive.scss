@@ -31,11 +31,8 @@
   }
   &__thumb {
     float: left;
-    > img {
-      width: 100%;
-      max-width: 90px;
-      height: auto;
-    }
+    width: 90px;
+    height: 56px;
   }
   &__meta,
   &__title {
@@ -68,9 +65,8 @@
       margin-bottom: 20px;
     }
     &__thumb {
-      img {
-        max-width: 120px;
-      }
+      width: 120px;
+      height: 75px;
     }
     &__meta,
     &__title {

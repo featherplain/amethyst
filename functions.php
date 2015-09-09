@@ -43,6 +43,14 @@ function othello_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	/*
+	 * Extra image sizes.
+	 */
+	set_post_thumbnail_size( 744, 465, true );
+	add_image_size( 'thumb240x150', 240, 150, true );
+	add_image_size( 'thumb180x112', 180, 112, true );
+	add_image_size( 'thumb640x400', 640, 400, true );
+
+	/*
 	 * This theme uses wp_nav_menu() in one location.
 	 */
 	register_nav_menus( array(
