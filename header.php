@@ -30,21 +30,22 @@
       		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
       	</h1>
 
-        <nav class="global-nav" role="navigation">
-        	<a href="#" title="MENU" role="button" class="global-nav__btn">
-            <svg viewBox="0 0 16 12" role="img" area-labelledby="title desc" width="22" height="18">
-              <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.symbol.svg#icon_menu"></use>
-            </svg>
-          </a>
-        	<?php // global navigation
-        	wp_nav_menu( array(
-        		'theme_location' => 'global_nav',
-        		'container'      => false,
-        		'menu_id'        => 'menu',
-        		'menu_class'     => 'global-nav__list',
-        		'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>' )
-        		);
-        	?>
+        <nav class="gnav" role="navigation">
+        	<a href="#" title="menu" role="button" class="gnav__btn"></a>
+        	<div class="gnav__inner">
+        		<div class="gnav__search">
+	        		<?php get_search_form(); ?>
+        		</div>
+	        	<?php // global navigation
+	        	wp_nav_menu( array(
+	        		'theme_location' => 'global_nav',
+	        		'container'      => false,
+	        		'menu_id'        => 'menu',
+	        		'menu_class'     => 'gnav__list',
+	        		'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>' )
+	        		);
+	        	?>
+        	</div>
         </nav>
       </div><!-- /.l-header__inner -->
     </header><!-- /.l-header -->

@@ -8,9 +8,9 @@ $colorBase          : #222222;
 $colorSub           : #dedede;
 $colorText          : #454545;
 $colorBg            : #fafafa;
-$colorLink          : #666666;
-$colorLinkHover     : lighten($colorLink, 15%);
-$colorSelection     : $colorLink;
+$colorLink          : #42029a;
+$colorLinkHover     : lighten($colorLink, 18%);
+$colorSelection     : lighten($colorLink, 50%);
 // others
 $colorRed           : #f04124;
 $colorRedLighten    : lighten($colorRed, 36%);
