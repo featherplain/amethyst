@@ -3172,7 +3172,7 @@ label.error {
   top: 50%;
 }
 
-.photos__list:after, .post-archive__link:after, .main-img .sns-icons:after, .do:after, .global-nav__list:after {
+.photos__list:after, .post-archive__link:after, .main-img .sns-icons:after, .do:after, .gnav__inner:after {
   display: block;
   visibility: hidden;
   clear: both;
@@ -3181,7 +3181,7 @@ label.error {
   font-size: 0;
 }
 
-.block__title__inner, .global-nav__list li a {
+.block__title__inner, .gnav__list li a {
   letter-spacing: 2px;
 }
 
@@ -3218,7 +3218,7 @@ h1:hover, h1 > a:hover, h2:hover, h2 > a:hover, h3:hover, h3 > a:hover, h4:hover
 }
 
 a {
-  color: #666666;
+  color: #42029a;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -3226,11 +3226,11 @@ a:focus {
   outline: thin dotted;
 }
 a:link, a:visited {
-  color: #666666;
+  color: #42029a;
 }
 a:hover, a:active, a:focus {
   outline: 0;
-  color: #8c8c8c;
+  color: #6903f5;
   text-decoration: none;
 }
 
@@ -3240,13 +3240,13 @@ p {
 
 ::-moz-selection {
   background: transparent;
-  background-color: #666666;
+  background-color: #c69dfe;
   color: #dedede;
 }
 
 ::selection {
   background: transparent;
-  background-color: #666666;
+  background-color: #c69dfe;
   color: #dedede;
 }
 
@@ -3670,8 +3670,71 @@ input[type="reset"]:hover {
   font-size: 0.875rem;
 }
 
-/* comments
+/* form
 /* ---------------------------------------- */
+/* search form on header */
+.gnav__search {
+  padding: 16px;
+}
+.gnav__search .search__form {
+  margin-bottom: 0;
+}
+.gnav__search .search__field {
+  margin-bottom: 0;
+  padding-left: 28px;
+  background-color: #ffffff;
+  background-image: url("../images/icon_search.png");
+  background-position: 3px center;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+}
+.gnav__search .search__field:focus {
+  background-image: url("../images/icon_search.png");
+  background-position: 3px center;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .gnav__search .search__field {
+    background-image: url("../images/icon_search_2x.png");
+  }
+  .gnav__search .search__field:focus {
+    background-image: url("../images/icon_search_2x.png");
+  }
+}
+.gnav__search .search__submit {
+  display: none;
+}
+
+/* media */
+@media only screen and (min-width: 40.0625em) {
+  .gnav__search {
+    position: relative;
+    padding: 0;
+  }
+  .gnav__search .search__form {
+    position: absolute;
+    bottom: -40px;
+    right: 0;
+  }
+  .gnav__search .search__field {
+    width: 0;
+    height: 36px;
+    margin-bottom: 0;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition: width 400ms ease, background 400ms ease;
+  }
+  .gnav__search .search__field:focus {
+    background-color: #f0f0f0;
+    cursor: text;
+    outline: 0;
+    width: 240px;
+  }
+}
+/* required */
 .required {
   color: #f04124;
 }
@@ -3896,7 +3959,7 @@ The `sprites` mixin generates identical output to the CSS template
   font-size: 0.8125rem;
 }
 .widget_archive ul li a:hover {
-  color: #8c8c8c;
+  color: #6903f5;
 }
 .widget_categories ul li {
   padding: 6px 0;
@@ -3913,7 +3976,7 @@ The `sprites` mixin generates identical output to the CSS template
   font-size: 0.8125rem;
 }
 .widget_categories ul li a:hover {
-  color: #8c8c8c;
+  color: #6903f5;
 }
 .widget_archives ul li {
   padding: 6px 0;
@@ -3930,7 +3993,7 @@ The `sprites` mixin generates identical output to the CSS template
   font-size: 0.8125rem;
 }
 .widget_archives ul li a:hover {
-  color: #8c8c8c;
+  color: #6903f5;
 }
 .widget_nav_menu ul li {
   padding: 6px 0;
@@ -3947,7 +4010,7 @@ The `sprites` mixin generates identical output to the CSS template
   font-size: 0.8125rem;
 }
 .widget_nav_menu ul li a:hover {
-  color: #8c8c8c;
+  color: #6903f5;
 }
 .widget_pages ul li {
   padding: 6px 0;
@@ -3964,7 +4027,7 @@ The `sprites` mixin generates identical output to the CSS template
   font-size: 0.8125rem;
 }
 .widget_pages ul li a:hover {
-  color: #8c8c8c;
+  color: #6903f5;
 }
 .widget_custom_menu ul li {
   padding: 6px 0;
@@ -3981,7 +4044,7 @@ The `sprites` mixin generates identical output to the CSS template
   font-size: 0.8125rem;
 }
 .widget_custom_menu ul li a:hover {
-  color: #8c8c8c;
+  color: #6903f5;
 }
 .widget_recent_comments ul li {
   padding: 6px 0;
@@ -3998,7 +4061,7 @@ The `sprites` mixin generates identical output to the CSS template
   font-size: 0.8125rem;
 }
 .widget_recent_comments ul li a:hover {
-  color: #8c8c8c;
+  color: #6903f5;
 }
 .widget_meta ul li {
   padding: 6px 0;
@@ -4015,7 +4078,7 @@ The `sprites` mixin generates identical output to the CSS template
   font-size: 0.8125rem;
 }
 .widget_meta ul li a:hover {
-  color: #8c8c8c;
+  color: #6903f5;
 }
 .widget_recent_entries ul li {
   padding: 6px 0;
@@ -4032,7 +4095,7 @@ The `sprites` mixin generates identical output to the CSS template
   font-size: 0.8125rem;
 }
 .widget_recent_entries ul li a:hover {
-  color: #8c8c8c;
+  color: #6903f5;
 }
 .widget_recent_entries time {
   display: block;
@@ -4552,19 +4615,31 @@ object {
 }
 
 /* navigation */
-.global-nav__btn {
+.gnav__btn {
+  position: relative;
   display: block;
   float: right;
   width: 50px;
   height: 50px;
   text-align: center;
   background-color: #222222;
+}
+.gnav__btn:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: text-bottom;
+  font-size: 16px;
+  font-family: Genericons;
+  line-height: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 16px auto;
   color: #ffffff;
 }
-.global-nav__btn svg {
-  margin: 15px 0;
-}
-.global-nav__list {
+.gnav__inner {
   display: none;
   position: absolute;
   top: 50px;
@@ -4574,16 +4649,16 @@ object {
   background-color: #222222;
   z-index: 9999;
 }
-.global-nav__list--active {
+.gnav__inner--active {
   display: block;
 }
-.global-nav__list li {
+.gnav__list li {
   border-bottom: 1px dotted #dedede;
 }
-.global-nav__list li:last-child {
+.gnav__list li:last-child {
   border-bottom: none;
 }
-.global-nav__list li a {
+.gnav__list li a {
   display: block;
   padding: 16px;
   color: #ffffff;
@@ -4600,10 +4675,13 @@ object {
     font-size: 1.5rem;
   }
 
-  .global-nav__btn {
+  .gnav {
+    position: relative;
+  }
+  .gnav__btn {
     display: none;
   }
-  .global-nav__list {
+  .gnav__inner {
     margin: 0 auto;
     max-width: 1040px;
     width: 100%;
@@ -4612,26 +4690,26 @@ object {
     padding: 30px 0;
     background-color: transparent;
   }
-  .global-nav__list:before, .global-nav__list:after {
+  .gnav__inner:before, .gnav__inner:after {
     content: " ";
     display: table;
   }
-  .global-nav__list:after {
+  .gnav__inner:after {
     clear: both;
   }
-  .global-nav__list li {
+  .gnav__list li {
     position: relative;
     float: left;
     border-bottom: none;
   }
-  .global-nav__list li a {
+  .gnav__list li a {
     display: block;
     position: relative;
     padding: 10px;
     color: #222222;
     font-size: 0.875rem;
   }
-  .global-nav .sub-menu {
+  .gnav .sub-menu {
     display: none;
     position: absolute;
     top: 40px;
@@ -4640,26 +4718,26 @@ object {
     margin-left: 0;
     background-color: #222222;
   }
-  .global-nav .sub-menu li {
+  .gnav .sub-menu li {
     display: block;
     position: relative;
     float: none;
     border-bottom: 1px dotted #ffffff;
   }
-  .global-nav .sub-menu li:last-child {
+  .gnav .sub-menu li:last-child {
     border-bottom: none;
   }
-  .global-nav .sub-menu li .sub-menu {
+  .gnav .sub-menu li .sub-menu {
     position: absolute;
     top: 0;
     left: 220px;
   }
-  .global-nav .sub-menu li a {
+  .gnav .sub-menu li a {
     color: #ffffff;
     line-height: 1.4;
     transition: 0.2s;
   }
-  .global-nav .sub-menu li a:hover {
+  .gnav .sub-menu li a:hover {
     background-color: #4b4b4b;
   }
 }
