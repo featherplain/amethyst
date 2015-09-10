@@ -2,6 +2,25 @@
 
 /* form
 /* ---------------------------------------- */
+// ***************/
+// input area
+// ***************/
+// input[type="text"],
+// input[type="password"],
+// input[type="date"],
+// input[type="datetime"],
+// input[type="datetime-local"],
+// input[type="month"],
+// input[type="week"],
+// input[type="email"],
+// input[type="number"],
+// input[type="search"],
+// input[type="tel"],
+// input[type="time"],
+// input[type="url"],
+// input[type="color"],
+// textarea {}
+
 /* search form on header */
 .gnav__search {
   padding: 16px;
@@ -43,7 +62,7 @@
     .search {
       &__form {
         position: absolute;
-        bottom: -40px;
+        top: 55px;
         right: 0;
       }
       &__field {

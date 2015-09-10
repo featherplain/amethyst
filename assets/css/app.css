@@ -3714,7 +3714,7 @@ input[type="reset"]:hover {
   }
   .gnav__search .search__form {
     position: absolute;
-    bottom: -40px;
+    top: 55px;
     right: 0;
   }
   .gnav__search .search__field {
