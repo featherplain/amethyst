@@ -21,69 +21,6 @@
 // input[type="color"],
 // textarea {}
 
-/* search form on header */
-.gnav__search {
-  padding: 16px;
-  .search {
-    &__form {
-      margin-bottom: 0;
-    }
-    &__field {
-      margin-bottom: 0;
-      padding-left: 28px;
-      background-color: #ffffff;
-      background-image: url($filePath + 'icon_search.png');
-      background-position: 3px center;
-      background-repeat: no-repeat;
-      background-size: 24px 24px;
-      &:focus  {
-        background-image: url($filePath + 'icon_search.png');
-        background-position: 3px center;
-        background-repeat: no-repeat;
-        background-size: 24px 24px;
-      }
-      @media #{$retina} {
-        background-image: url($filePath + 'icon_search_2x.png');
-        &:focus {
-          background-image: url($filePath + 'icon_search_2x.png');
-        }
-      }
-    }
-    &__submit {
-      display: none;
-    }
-  }
-}
-/* media */
-@media #{$medium-up} {
-  .gnav__search {
-    position: relative;
-    padding: 0;
-    .search {
-      &__form {
-        position: absolute;
-        top: 55px;
-        right: 0;
-      }
-      &__field {
-        width: 0;
-        height: 36px;
-        margin-bottom: 0;
-        background-color: transparent;
-        border: none;
-        box-shadow: none;
-        cursor: pointer;
-        transition: width 400ms ease, background 400ms ease;
-        &:focus {
-          background-color: darken($colorBg, 4%);
-          cursor: text;
-          outline: 0;
-          width: 240px;
-        }
-      }
-    }
-  }
-}
 /* required */
 .required {
   color: $colorRed;

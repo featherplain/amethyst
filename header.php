@@ -31,21 +31,20 @@
       	</h1>
 
         <nav class="gnav" role="navigation">
-        	<a href="#" title="menu" role="button" class="gnav__btn"></a>
-        	<div class="gnav__inner">
-        		<div class="gnav__search">
-	        		<?php get_search_form(); ?>
-        		</div>
-	        	<?php // global navigation
-	        	wp_nav_menu( array(
-	        		'theme_location' => 'global_nav',
-	        		'container'      => false,
-	        		'menu_id'        => 'menu',
-	        		'menu_class'     => 'gnav__list',
-	        		'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>' )
-	        		);
-	        	?>
-        	</div>
+      		<div class="gnav__search">
+        		<?php get_search_form(); ?>
+      		</div>
+        	<button class="gnav__trigger"></button>
+        	<?php // global navigation
+        	wp_nav_menu( array(
+        		'theme_location' => 'global_nav',
+        		'container'      => false,
+        		'menu_id'        => 'gnav-list',
+        		'menu_class'     => 'gnav__list',
+        		'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>' )
+        		);
+        	?>
+        	<!-- </div> -->
         </nav>
       </div><!-- /.l-header__inner -->
     </header><!-- /.l-header -->
