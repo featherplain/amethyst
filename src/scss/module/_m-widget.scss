@@ -13,14 +13,15 @@
     }
   }
   &__title {
-    margin: 0;
+    margin: 0 0 12px 0;
     padding: 4px 0;
-    border-top: 2px solid $colorSub;
-    border-bottom: 2px solid $colorSub;
+    border-top: 1px solid $colorBase;
+    border-bottom: 1px solid $colorBase;
     font-family: $fontFamilyTitle;
     font-size: rem-calc(16);
     letter-spacing: 3px;
     text-transform: uppercase;
+    text-align: center;
   }
   a {
     color: $colorBase;
@@ -34,11 +35,7 @@
     }
   }
   // text widget
-  &_text {
-    .textwidget {
-      margin: $m10;
-    }
-  }
+  &_text {}
   // archive
   &_archive {
     @include widgetBase;
@@ -74,6 +71,11 @@
   // recent posts
   &_recent_entries {
     @include widgetBase;
+    .post-date {
+      display: block;
+      color: darken($colorSub, 10%);
+      font-size: rem-calc(12);
+    }
     time {
       display: block;
       margin: 4px 0;
@@ -85,7 +87,6 @@
   // tag cloud
   &_tag_cloud {
     .tagcloud {
-      margin: $m10;
       a {
         padding: 2px;
         &:hover {
@@ -98,7 +99,6 @@
   .widget_calendar {}
 }
 #calendar_wrap {
-  margin: $m10;
   border: 1px solid $colorSub;
 }
 #wp-calendar {

@@ -2,11 +2,16 @@
 
 /* common
 /* ---------------------------------------- */
-/* l-main */
+
+/*
+ * l-main
+ */
 .l-main {
   @include grid-row();
 }
-/* l-primary and l-sidebar */
+/*
+ * l-primary and l-sidebar
+ */
 .l-primary,
 .l-sidebar {
   margin-bottom: 40px;
@@ -31,8 +36,10 @@
     );
   }
 }
-/* page title */
-.page-title {
+/*
+ * page title
+ */
+ .page-title {
   margin-bottom: 30px;
   padding: 0 16px;
   font-size: rem-calc(14);
@@ -41,7 +48,9 @@
   letter-spacing: 1.4px;
   text-transform: uppercase;
 }
-/* screen reader text */
+/*
+ * screen reader text
+ */
 .screen-reader-text {
   display: none;
 }

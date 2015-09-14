@@ -8,8 +8,8 @@ $colorBase          : #222222;
 $colorSub           : #dedede;
 $colorText          : #454545;
 $colorBg            : #fafafa;
-$colorLink          : #42029a;
-$colorLinkHover     : lighten($colorLink, 18%);
+$colorLink          : #999999;
+$colorLinkHover     : darken($colorLink, 18%);
 $colorSelection     : lighten($colorLink, 50%);
 // others
 $colorRed           : #f04124;

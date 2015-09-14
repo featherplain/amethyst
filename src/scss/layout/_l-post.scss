@@ -20,7 +20,8 @@
   &__title {
     margin: 0;
     padding: 0 0 5px 0;
-    font-size: rem-calc(20);
+    font-size: rem-calc(22);
+    font-weight: normal;
   }
   &__meta {
     margin-bottom: 14px;
@@ -49,6 +50,7 @@
   }
   &__image {
     width: 100%;
+    margin-bottom: 10px;
   }
   &__date {
     @include hasPseudoClass(before);
@@ -99,6 +101,9 @@
     &__title {
       font-size: rem-calc(24);
       font-weight: bold;
+    }
+    &__image {
+      margin-bottom: 20px;
     }
   }
 }
