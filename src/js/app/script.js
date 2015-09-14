@@ -10,37 +10,31 @@
     // *************************************************
     // global nav for mobile
     // *************************************************
-    var navMobile = {
+    var globalNav = {
       init: function() {
-        var $toggleBtn   = $('.gnav__btn');
-        var $toggledMenu = $('.gnav__inner');
+        // toggle global navigation
+        var $toggleBtn   　　= $('.gnav__trigger');
+        var $toggledMenu 　　= $('.gnav__list');
 
         $toggleBtn.on('click', function(e) {
           e.preventDefault();
 
-          $toggleBtn.toggleClass('gnav__inner--active');
-          $toggledMenu.toggleClass('gnav__inner--active');
+          $toggleBtn.toggleClass('gnav__list--active');
+          $toggledMenu.toggleClass('gnav__list--active');
 
+        });
+        // add button that display child menu items
+        $('#gnav-list').find('.menu-item-has-children > a').after('<button class="gnav__arrowdown"></button>');
+
+        // toggle submenu items.
+        var $dropDownToggle = $('.gnav__arrowdown');
+
+        $dropDownToggle.on('click', function(e) {
+          $(this).siblings('.sub-menu').slideToggle();
         });
       }
     };
-    navMobile.init();
-    // *************************************************
-    // global nav for pc
-    // *************************************************
-    var navPc = {
-      init: function() {
-        var $menuItem = $('#menu').find('.menu-item-has-children');
-
-        $menuItem.hover(function() {
-          $('>.sub-menu', this).fadeIn('fast');
-        },
-        function() {
-          $('>.sub-menu', this).fadeOut('fast');
-        });
-      }
-    };
-    navPc.init();
+    globalNav.init();
   });
 })(jQuery);
 
