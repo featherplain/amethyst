@@ -11,6 +11,10 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'post' ); ?>>
 	<header class="post__header">
+		<?php // post thumbnail
+		$size = ( wp_is_mobile() ) ? 'thumb640x400' : 'thumb744x465';
+		the_post_thumbnail( $size, array( 'class'	=> 'attachment-' . $size . ' post__image' ) );
+		?>
 		<?php the_title( '<h1 class="post__title">', '</h1>' ); ?>
 
 		<div class="post__meta">
@@ -21,10 +25,6 @@
 				<span><?php echo get_the_author_meta( 'display_name' ); ?></span>
 			</div>
 		</div>
-		<?php // post thumbnail
-		$size = ( wp_is_mobile() ) ? 'thumb640x400' : 'thumb744x465';
-		the_post_thumbnail( $size, array( 'class'	=> 'attachment-' . $size . ' post__image' ) );
-		?>
 	</header><!-- / .post__header -->
 
 	<div class="post__content">
