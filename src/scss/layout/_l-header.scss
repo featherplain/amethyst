@@ -14,10 +14,6 @@
 /*
  * site-branding
  */
-// .site-branding {
-//   float: left;
-//   @extend %clearfix;
-//  }
 .site-title {
   float: left;
   max-width: 80%;
@@ -163,7 +159,7 @@
  */
 @media #{$medium-up} {
   .l-header {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
   .site-title {
     padding-right: 20px;

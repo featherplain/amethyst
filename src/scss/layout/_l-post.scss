@@ -3,25 +3,31 @@
 /* post
 /* ---------------------------------------- */
 .post {
-  &--search {
-    border-bottom: 1px solid $colorSub;
-    > a {
-      display: block;
-      padding: $m10;
-      color: $colorBase;
-      &:hover {
-        background-color: $colorBg;
-      }
-    }
-  }
   &__header {
     margin: 0 0 20px 0;
+  }
+  &__link {
+    display: block;
+    margin-bottom: 30px;
+    color: $colorBase;
+    &:hover {
+      .post__title--archive,
+      .label {
+        color: $colorLinkHover;
+      }
+    }
   }
   &__title {
     margin: 0;
     padding: 0 0 5px 0;
-    font-size: rem-calc(22);
-    font-weight: normal;
+    font-size: rem-calc(20);
+    font-weight: bold;
+    border-bottom: 1px dotted $colorSub;
+    &--archive {
+      font-size: rem-calc(16);
+      line-height: 1.4;
+      transition: 0.3s;
+    }
   }
   &__meta {
     margin-bottom: 14px;
@@ -31,61 +37,15 @@
       border-bottom: 1px solid $colorSub;
       text-align: right;
     }
-    > * {
-      display: inline-block;
-      font-weight: 400;
-      font-size: rem-calc(12);
-      &:first-child {
-        margin-left: 0;
-      }
-      a {
-        margin-left: 2px;
-        color: $colorBase;
-        line-height: 1;
-      }
-    }
   }
-  &__summary {
-    font-size: rem-calc(14);
+  &__excerpt {
+    font-size: rem-calc(12);
   }
   &__image {
     width: 100%;
     margin-bottom: 10px;
+    border: 2px solid darken($colorBg, 5%);
   }
-  &__date {
-    @include hasPseudoClass(before);
-    &:before {
-      @include genericon('\f307', 1.1rem, top);
-    }
-  }
-  &__category {
-    @include hasPseudoClass(before);
-    &:before {
-      @include genericon('\f301', 1.1rem, top);
-    }
-  }
-  &__author {
-    @include hasPseudoClass(before);
-    &:before {
-      @include genericon('\f304', 1.1rem, top);
-    }
-  }
-  &__tag {
-    @include hasPseudoClass(before);
-    &:before {
-      @include genericon('\f302', 1.1rem, top);
-    }
-  }
-  &__comment {
-    @include hasPseudoClass(before);
-    &:before {
-      @include genericon('\f108', 1.1rem, top);
-    }
-  }
-  &__sns {
-    margin: $m20;
-  }
-  /* pager */
   &__pager {
     padding: 10px 0;
     text-align: center;
@@ -95,15 +55,26 @@
     }
   }
 }
-/* media */
+/**
+ * media queries
+ */
 @media #{$medium-up} {
   .post {
+    &__link {
+      margin-bottom: 50px;
+    }
     &__title {
+      margin-bottom: 8px;
       font-size: rem-calc(24);
       font-weight: bold;
+      &--archive {
+        font-size: rem-calc(28);
+        line-height: 1.4;
+      }
     }
     &__image {
       margin-bottom: 20px;
+      border: 4px solid darken($colorBg, 5%);
     }
   }
 }
@@ -118,9 +89,54 @@
     &__image {
       max-width: 100%;
       height: auto;
+      border: 8px solid darken($colorBg, 5%);
     }
-    &__sns {
-      $margin: $m30;
+    &__excerpt {
+      font-size: rem-calc(14);
+    }
+  }
+}
+
+/* post meta informations
+/* ---------------------------------------- */
+.metainfo {
+  @include hasPseudoClass(before);
+  display: inline-block;
+  color: $colorBase;
+  font-size: rem-calc(12);
+  font-weight: 400;
+  transition: 0.3s;
+  &:first-child {
+    margin-left: 0;
+  }
+  a {
+    margin-left: 2px;
+    color: $colorBase;
+    line-height: 1;
+  }
+  &--date {
+    &:before {
+      @include genericon('\f307', 1.1rem, top);
+    }
+  }
+  &--category {
+    &:before {
+      @include genericon('\f301', 1.1rem, top);
+    }
+  }
+  &--author {
+    &:before {
+      @include genericon('\f304', 1.1rem, top);
+    }
+  }
+  &--tag {
+    &:before {
+      @include genericon('\f302', 1.1rem, top);
+    }
+  }
+  &--comment {
+    &:before {
+      @include genericon('\f108', 1.1rem, top);
     }
   }
 }

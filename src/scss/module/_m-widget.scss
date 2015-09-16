@@ -35,7 +35,12 @@
     }
   }
   // text widget
-  &_text {}
+  &_text {
+    .textwidget {
+      margin: $m20;
+      font-size: rem-calc(14);
+    }
+  }
   // archive
   &_archive {
     @include widgetBase;
