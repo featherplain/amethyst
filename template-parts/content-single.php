@@ -14,10 +14,10 @@
 		<?php the_title( '<h1 class="post__title">', '</h1>' ); ?>
 
 		<div class="post__meta">
-			<div class="label label--date">
+			<div class="metainfo metainfo--date">
 				<time><?php the_time( get_option( 'date_format' ) ); ?></time>
 			</div>
-			<div class="label label--author">
+			<div class="metainfo metainfo--author">
 				<span><?php echo get_the_author_meta( 'display_name' ); ?></span>
 			</div>
 		</div>
@@ -45,13 +45,13 @@
 	<footer class="post__footer">
 	  <div class="post__meta post__meta--footer">
 
-			<?php the_tags( '<div class="label label--tag">' , ',' , '</div>' ); ?>
+			<?php the_tags( '<div class="metainfo metainfo--tag">' , ',' , '</div>' ); ?>
 
 			<?php // category
 			$cats = get_the_category();
 			$cat_html = '';
 			foreach ( $cats as $cat) {
-				$cat_html = '<div class="label label--category"><a href="' . get_category_link( $cat->cat_ID ) . '">' . $cat->name . '</a></div>';
+				$cat_html = '<div class="metainfo metainfo--category"><a href="' . get_category_link( $cat->cat_ID ) . '">' . $cat->name . '</a></div>';
 			}
 			?>
 			<?php echo $cat_html; ?>

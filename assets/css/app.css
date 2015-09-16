@@ -2665,62 +2665,6 @@ input[type="reset"]:hover {
   float: left;
 }
 
-/* labels
-/* ---------------------------------------- */
-.label {
-  position: relative;
-}
-.label:before {
-  display: block;
-  content: "";
-  position: absolute;
-}
-.label--date:before {
-  position: static;
-  display: inline-block;
-  content: "";
-  vertical-align: top;
-  font-size: 1.1rem;
-  font-family: Genericons;
-  line-height: 1;
-}
-.label--category:before {
-  position: static;
-  display: inline-block;
-  content: "";
-  vertical-align: top;
-  font-size: 1.1rem;
-  font-family: Genericons;
-  line-height: 1;
-}
-.label--author:before {
-  position: static;
-  display: inline-block;
-  content: "";
-  vertical-align: top;
-  font-size: 1.1rem;
-  font-family: Genericons;
-  line-height: 1;
-}
-.label--tag:before {
-  position: static;
-  display: inline-block;
-  content: "";
-  vertical-align: top;
-  font-size: 1.1rem;
-  font-family: Genericons;
-  line-height: 1;
-}
-.label--comment:before {
-  position: static;
-  display: inline-block;
-  content: "";
-  vertical-align: top;
-  font-size: 1.1rem;
-  font-family: Genericons;
-  line-height: 1;
-}
-
 /* post navigation
 /* ---------------------------------------- */
 .nav-links {
@@ -3745,14 +3689,6 @@ body.error404 .l-primary {
 
 /* post
 /* ---------------------------------------- */
-.post--search > a {
-  display: block;
-  padding: 10px 0;
-  color: #222222;
-}
-.post--search > a:hover {
-  background-color: #fafafa;
-}
 .post__header {
   margin: 0 0 20px 0;
 }
@@ -3761,7 +3697,8 @@ body.error404 .l-primary {
   margin-bottom: 30px;
   color: #222222;
 }
-.post__link:hover .post__title--archive {
+.post__link:hover .post__title--archive,
+.post__link:hover .label {
   color: #6b6b6b;
 }
 .post__title {
@@ -3772,9 +3709,6 @@ body.error404 .l-primary {
   border-bottom: 1px dotted #dedede;
 }
 .post__title--archive {
-  margin: 0;
-  padding: 0 0 5px 0;
-  border-bottom: 1px dotted #dedede;
   font-size: 1rem;
   line-height: 1.4;
   transition: 0.3s;
@@ -3787,19 +3721,6 @@ body.error404 .l-primary {
   padding-bottom: 10px;
   border-bottom: 1px solid #dedede;
   text-align: right;
-}
-.post__meta > * {
-  display: inline-block;
-  font-weight: 400;
-  font-size: 0.75rem;
-}
-.post__meta > *:first-child {
-  margin-left: 0;
-}
-.post__meta > * a {
-  margin-left: 2px;
-  color: #222222;
-  line-height: 1;
 }
 .post__excerpt {
   font-size: 0.75rem;
@@ -3818,8 +3739,8 @@ body.error404 .l-primary {
   text-decoration: underline;
 }
 
-/*
- * media
+/**
+ * media queries
  */
 @media only screen and (min-width: 40.0625em) {
   .post__link {
@@ -3855,5 +3776,74 @@ body.error404 .l-primary {
     font-size: 0.875rem;
   }
 }
+/* post meta informations
+/* ---------------------------------------- */
+.metainfo {
+  position: relative;
+  display: inline-block;
+  color: #222222;
+  font-size: 0.75rem;
+  font-weight: 400;
+  transition: 0.3s;
+}
+.metainfo:before {
+  display: block;
+  content: "";
+  position: absolute;
+}
+.metainfo:first-child {
+  margin-left: 0;
+}
+.metainfo a {
+  margin-left: 2px;
+  color: #222222;
+  line-height: 1;
+}
+.metainfo--date:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: top;
+  font-size: 1.1rem;
+  font-family: Genericons;
+  line-height: 1;
+}
+.metainfo--category:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: top;
+  font-size: 1.1rem;
+  font-family: Genericons;
+  line-height: 1;
+}
+.metainfo--author:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: top;
+  font-size: 1.1rem;
+  font-family: Genericons;
+  line-height: 1;
+}
+.metainfo--tag:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: top;
+  font-size: 1.1rem;
+  font-family: Genericons;
+  line-height: 1;
+}
+.metainfo--comment:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: top;
+  font-size: 1.1rem;
+  font-family: Genericons;
+  line-height: 1;
+}
+
 /* sidebar
 /* ---------------------------------------- */

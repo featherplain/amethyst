@@ -11,13 +11,13 @@
 
 <article class="post">
 	<a href="<?php the_permalink(); ?>" class="post__link">
-		<?php the_title( '<h3 class="post__title--archive">', '</h3>' ); ?>
+		<?php the_title( '<h2 class="post__title post__title--archive">', '</h2>' ); ?>
 
 		<div class="post__meta">
-			<div class="label label--date">
+			<div class="metainfo metainfo--date">
 				<time><?php the_time( get_option( 'date_format' ) ); ?></time>
 			</div>
-			<div class="label label--author">
+			<div class="metainfo metainfo--author">
 				<span><?php echo get_the_author_meta( 'display_name' ); ?></span>
 			</div>
 		</div>

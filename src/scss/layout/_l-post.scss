@@ -3,16 +3,6 @@
 /* post
 /* ---------------------------------------- */
 .post {
-  &--search {
-    > a {
-      display: block;
-      padding: $m10;
-      color: $colorBase;
-      &:hover {
-        background-color: $colorBg;
-      }
-    }
-  }
   &__header {
     margin: 0 0 20px 0;
   }
@@ -21,7 +11,8 @@
     margin-bottom: 30px;
     color: $colorBase;
     &:hover {
-      .post__title--archive {
+      .post__title--archive,
+      .label {
         color: $colorLinkHover;
       }
     }
@@ -33,9 +24,6 @@
     font-weight: bold;
     border-bottom: 1px dotted $colorSub;
     &--archive {
-      margin: 0;
-      padding: 0 0 5px 0;
-      border-bottom: 1px dotted $colorSub;
       font-size: rem-calc(16);
       line-height: 1.4;
       transition: 0.3s;
@@ -48,19 +36,6 @@
       padding-bottom: 10px;
       border-bottom: 1px solid $colorSub;
       text-align: right;
-    }
-    > * {
-      display: inline-block;
-      font-weight: 400;
-      font-size: rem-calc(12);
-      &:first-child {
-        margin-left: 0;
-      }
-      a {
-        margin-left: 2px;
-        color: $colorBase;
-        line-height: 1;
-      }
     }
   }
   &__excerpt {
@@ -80,8 +55,8 @@
     }
   }
 }
-/*
- * media
+/**
+ * media queries
  */
 @media #{$medium-up} {
   .post {
@@ -118,6 +93,50 @@
     }
     &__excerpt {
       font-size: rem-calc(14);
+    }
+  }
+}
+
+/* post meta informations
+/* ---------------------------------------- */
+.metainfo {
+  @include hasPseudoClass(before);
+  display: inline-block;
+  color: $colorBase;
+  font-size: rem-calc(12);
+  font-weight: 400;
+  transition: 0.3s;
+  &:first-child {
+    margin-left: 0;
+  }
+  a {
+    margin-left: 2px;
+    color: $colorBase;
+    line-height: 1;
+  }
+  &--date {
+    &:before {
+      @include genericon('\f307', 1.1rem, top);
+    }
+  }
+  &--category {
+    &:before {
+      @include genericon('\f301', 1.1rem, top);
+    }
+  }
+  &--author {
+    &:before {
+      @include genericon('\f304', 1.1rem, top);
+    }
+  }
+  &--tag {
+    &:before {
+      @include genericon('\f302', 1.1rem, top);
+    }
+  }
+  &--comment {
+    &:before {
+      @include genericon('\f108', 1.1rem, top);
     }
   }
 }
