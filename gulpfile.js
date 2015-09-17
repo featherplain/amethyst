@@ -161,7 +161,7 @@ gulp.task('sass', function () {
   return $.rubySass(paths.scssPath, rubySassConf)
     .on('error', function(err) { console.error('Error!', err.message); })
     .pipe($.autoprefixer({
-      browsers: 'last 2 versions',
+      browsers: ['last 2 versions', 'ie 10', 'ie 9'],
       cascade: false
     }))
     .pipe(gulp.dest(paths.cssDest))

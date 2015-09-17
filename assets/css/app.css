@@ -2695,6 +2695,7 @@ input[type="reset"]:hover {
   background-color: #dedede;
   color: #ffffff;
   -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
@@ -2715,6 +2716,7 @@ input[type="reset"]:hover {
   background-color: #dedede;
   color: #ffffff;
   -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
