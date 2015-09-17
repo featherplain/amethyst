@@ -1,7 +1,9 @@
 @charset "utf-8";
 
+/* -------------------------------------------------------------- */
 /* post
-/* ---------------------------------------- */
+/* -------------------------------------------------------------- */
+
 .post {
   &__header {
     margin: 0 0 20px 0;
@@ -55,50 +57,10 @@
     }
   }
 }
-/**
- * media queries
- */
-@media #{$medium-up} {
-  .post {
-    &__link {
-      margin-bottom: 50px;
-    }
-    &__title {
-      margin-bottom: 8px;
-      font-size: rem-calc(24);
-      font-weight: bold;
-      &--archive {
-        font-size: rem-calc(28);
-        line-height: 1.4;
-      }
-    }
-    &__image {
-      margin-bottom: 20px;
-      border: 4px solid darken($colorBg, 5%);
-    }
-  }
-}
-@media #{$large-up} {
-  .post {
-    &__header {
-      margin: 0 0 40px 0;
-    }
-    &__title {
-      font-size: rem-calc(32);
-    }
-    &__image {
-      max-width: 100%;
-      height: auto;
-      border: 8px solid darken($colorBg, 5%);
-    }
-    &__excerpt {
-      font-size: rem-calc(14);
-    }
-  }
-}
 
-/* post meta informations
-/* ---------------------------------------- */
+/**
+ * meta informations
+ */
 .metainfo {
   @include hasPseudoClass(before);
   display: inline-block;
@@ -137,6 +99,47 @@
   &--comment {
     &:before {
       @include genericon('\f108', 1.1rem, top);
+    }
+  }
+}
+/**
+ * media queries
+ */
+@media #{$medium-up} {
+  .post {
+    &__link {
+      margin-bottom: 50px;
+    }
+    &__title {
+      margin-bottom: 8px;
+      font-size: rem-calc(24);
+      font-weight: bold;
+      &--archive {
+        font-size: rem-calc(28);
+        line-height: 1.4;
+      }
+    }
+    &__image {
+      margin-bottom: 20px;
+      border: 4px solid darken($colorBg, 5%);
+    }
+  }
+}
+@media #{$large-up} {
+  .post {
+    &__header {
+      margin: 0 0 40px 0;
+    }
+    &__title {
+      font-size: rem-calc(32);
+    }
+    &__image {
+      max-width: 100%;
+      height: auto;
+      border: 8px solid darken($colorBg, 5%);
+    }
+    &__excerpt {
+      font-size: rem-calc(14);
     }
   }
 }

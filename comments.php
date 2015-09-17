@@ -25,7 +25,7 @@ if ( post_password_required() ) {
 	<?php // You can start editing here -- including this comment! ?>
 
 	<?php if ( have_comments() ) : ?>
-		<h2 class="comments-title">
+		<h2 class="comments__title">
 			<?php
 				printf( // WPCS: XSS OK.
 					esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'othello' ) ),
@@ -45,7 +45,7 @@ if ( post_password_required() ) {
 		</nav><!-- / .comments__nav -->
 		<?php endif; // Check for comment navigation. ?>
 
-		<ul class="comments-list">
+		<ul class="comments__list">
 			<?php
 				wp_list_comments( array(
 					'avatar_size' => '48px',

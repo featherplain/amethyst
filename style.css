@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: othello
+Theme Name: Othello
 Theme URI: http://othello.asknode.net/
 Author: featherplain
 Author URI: http://asknode.net/
@@ -2088,7 +2088,7 @@ label.error {
   color: #f04124;
 }
 
-.photos__list:after, .nav-links:after, .main-img .sns-icons:after, .do:after, .gnav__list:after {
+.nav-links:after, .gnav__list:after {
   display: block;
   visibility: hidden;
   clear: both;
@@ -2097,13 +2097,12 @@ label.error {
   font-size: 0;
 }
 
-.block__title__inner {
-  letter-spacing: 2px;
-}
-
-/* othello default styles
-/* ---------------------------------------- */
-/* the root element */
+/* -------------------------------------------------------------- */
+/* Othello default styles
+/* -------------------------------------------------------------- */
+/**
+ * the root element
+ */
 html {
   font-size: 16px;
 }
@@ -2117,12 +2116,16 @@ body {
   font-weight: 400;
 }
 
-/* grouping content */
+/**
+ * grouping content
+ */
 iframe {
   vertical-align: middle;
 }
 
-/* text-level semantics */
+/**
+ * text-level semantics
+ */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
 }
@@ -2171,7 +2174,9 @@ p {
   text-decoration: none;
 }
 
-/* list items */
+/**
+ * list items
+ */
 ul, ol {
   margin: 0;
   padding: 0;
@@ -2195,7 +2200,9 @@ dl dd:last-child {
   margin-bottom: 0;
 }
 
-/* embedded content */
+/**
+ * embedded content
+ */
 figure {
   margin: 0;
 }
@@ -2209,7 +2216,9 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-/* table */
+/**
+ * table
+ */
 table {
   width: 100%;
   background-color: #ffffff;
@@ -2344,19 +2353,24 @@ input[type="reset"]:focus {
   text-decoration: none;
 }
 
+/* -------------------------------------------------------------- */
 /* comments
-/* ---------------------------------------- */
-/* comments */
+/* -------------------------------------------------------------- */
+/**
+ * comments
+ */
 .comments {
   margin: 40px 0;
 }
-.comments-title, .comment-reply-title {
+.comments__title, .comment-reply-title {
   margin: 20px 0;
   font-size: 1.375rem;
   font-weight: bold;
 }
 
-/* comment */
+/**
+ * comment
+ */
 .comment {
   list-style-type: none;
 }
@@ -2430,12 +2444,16 @@ input[type="reset"]:focus {
   color: #FFFFFF;
 }
 
-/* comment form */
+/**
+ * comment form
+ */
 .comment-notes {
   font-size: 0.875rem;
 }
 
-/* respond */
+/**
+ * respond
+ */
 .comment-respond {
   margin: 40px 0;
 }
@@ -2446,8 +2464,9 @@ input[type="reset"]:focus {
   font-weight: normal;
 }
 
-/* content tags
-/* ---------------------------------------- */
+/* -------------------------------------------------------------- */
+/* editor styles
+/* -------------------------------------------------------------- */
 .editor-style h1, .editor-style h2, .editor-style h3, .editor-style h4, .editor-style h5, .editor-style h6,
 .editor-style p, .editor-style ul, .editor-style ol, .editor-style dl, .editor-style pre, .editor-style blockquote, .editor-style table,
 .comment-content h1,
@@ -2605,7 +2624,7 @@ input[type="reset"]:focus {
   font-size: 0.875rem;
 }
 
-/*
+/**
  * media queries
  */
 @media only screen and (min-width: 40.0625em) {
@@ -2655,46 +2674,19 @@ input[type="reset"]:focus {
     margin: 0;
   }
 }
-/* form
-/* ---------------------------------------- */
-/* required */
+/* -------------------------------------------------------------- */
+/* forms
+/* -------------------------------------------------------------- */
+/**
+ * required
+ */
 .required {
   color: #f04124;
 }
 
-/* instagram
-/* ---------------------------------------- */
-.instagram {
-  text-align: center;
-  background-color: #222222;
-}
-.instagram__inner {
-  padding: 40px 0;
-}
-.instagram__description {
-  margin: 10px 0;
-  color: #ffffff;
-  font-size: 0.75rem;
-  letter-spacing: 2.2px;
-}
-
-.photos {
-  overflow: scroll;
-}
-.photos__list {
-  display: block;
-  width: 1080px;
-  margin: 0 auto;
-}
-.photos__item {
-  padding-left: 0;
-  padding-right: 0;
-  width: 16.66667%;
-  float: left;
-}
-
+/* -------------------------------------------------------------- */
 /* post navigation
-/* ---------------------------------------- */
+/* -------------------------------------------------------------- */
 .nav-links {
   padding: 20px 0;
 }
@@ -2748,7 +2740,7 @@ input[type="reset"]:focus {
   transform: rotate(90deg);
 }
 
-/*
+/**
  * media queries
  */
 @media only screen and (min-width: 64.0625em) {
@@ -2762,70 +2754,6 @@ input[type="reset"]:focus {
     padding: 0 0 0 10px;
   }
 }
-/* sns share buttons
-/* ---------------------------------------- */
-.snsShare__list {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
-}
-.snsShare__list li {
-  margin-right: 8px;
-  padding: 0;
-}
-.snsShare__list li:last-child {
-  margin-right: 0;
-}
-.snsShare__btn {
-  margin-right: 4px;
-  line-height: 1;
-}
-.snsShare__btn svg {
-  position: relative;
-  top: 2px;
-  left: 0;
-  margin-right: 4px;
-}
-.snsShare__count {
-  position: relative;
-  display: inline-block;
-  padding: 4px 6px;
-  vertical-align: top;
-  background-color: #ffffff;
-  border-radius: 3px;
-  border: 1px solid #dedede;
-  color: #222222;
-  font-size: 0.75rem;
-  font-weight: normal;
-  line-height: 1;
-}
-.snsShare__count:after {
-  content: '';
-  position: absolute;
-  border-style: solid;
-  border-width: 4px 4px 3px 0;
-  border-color: transparent #FFFFFF;
-  display: block;
-  width: 0;
-  z-index: 1;
-  left: -4px;
-  top: 6px;
-}
-.snsShare__count:before {
-  content: '';
-  position: absolute;
-  border-style: solid;
-  border-width: 4px 4px 3px 0;
-  border-color: transparent #dedede;
-  display: block;
-  width: 0;
-  z-index: 0;
-  left: -5px;
-  top: 6px;
-}
-
-/* media */
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name
 
@@ -2856,18 +2784,11 @@ The `sprites` mixin generates identical output to the CSS template
 
 @include sprites($spritesheet-sprites);
 */
+/* -------------------------------------------------------------- */
 /* widget
-/* ---------------------------------------- */
+/* -------------------------------------------------------------- */
 .widget {
   margin-bottom: 20px;
-}
-@media only screen and (min-width: 40.0625em) {
-  .widget--footer {
-    padding-left: 1.125rem;
-    padding-right: 1.125rem;
-    width: 33.33333%;
-    float: left;
-  }
 }
 .widget__title {
   margin: 0 0 12px 0;
@@ -3072,8 +2993,23 @@ The `sprites` mixin generates identical output to the CSS template
   text-align: center;
 }
 
-/* captions
-/* ---------------------------------------- */
+/**
+ * media queries
+ */
+@media only screen and (min-width: 40.0625em) {
+  .widget--footer {
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
+    width: 33.33333%;
+    float: left;
+  }
+}
+/* -------------------------------------------------------------- */
+/* WordPress classes
+/* -------------------------------------------------------------- */
+/**
+ * caption
+ */
 .wp-caption {
   margin-bottom: 0.9375rem;
   max-width: 100%;
@@ -3092,8 +3028,9 @@ The `sprites` mixin generates identical output to the CSS template
   font-size: 0.75rem;
 }
 
-/* galleries
-/* ---------------------------------------- */
+/**
+ * gallaries
+ */
 .gallery {
   margin-bottom: 0.9375rem;
 }
@@ -3136,8 +3073,9 @@ The `sprites` mixin generates identical output to the CSS template
   display: block;
 }
 
-/* alignment
-/* ---------------------------------------- */
+/**
+ * alignment
+ */
 .alignleft {
   display: inline;
   float: left;
@@ -3158,8 +3096,7 @@ The `sprites` mixin generates identical output to the CSS template
   margin-bottom: 0.9375rem;
 }
 
-.page-content .wp-smiley,
-.entry-content .wp-smiley,
+.editor-style .wp-smiley,
 .comment-content .wp-smiley {
   border: none;
   margin-bottom: 0;
@@ -3167,15 +3104,15 @@ The `sprites` mixin generates identical output to the CSS template
   padding: 0;
 }
 
-/* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
 object {
   max-width: 100%;
 }
 
-/* common
-/* ---------------------------------------- */
+/* -------------------------------------------------------------- */
+/* layout
+/* -------------------------------------------------------------- */
 /**
  * l-container
  */
@@ -3220,7 +3157,7 @@ body.custom-background .l-container:after {
 /**
  * page title
  */
-.page-title, .block__title {
+.page-title {
   margin-bottom: 30px;
   padding: 0 16px;
   font-size: 0.875rem;
@@ -3228,6 +3165,21 @@ body.custom-background .l-container:after {
   line-height: 1;
   letter-spacing: 1.4px;
   text-transform: uppercase;
+}
+
+/**
+ * one column
+ */
+.full-width .page-title {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto 30px auto;
+}
+.full-width .l-primary {
+  width: 100%;
+  max-width: 780px;
+  margin: 0  auto 40px auto;
+  float: none;
 }
 
 /**
@@ -3261,8 +3213,9 @@ body.custom-background .l-container:after {
     float: left;
   }
 }
+/* -------------------------------------------------------------- */
 /* footer
-/* ---------------------------------------- */
+/* -------------------------------------------------------------- */
 /**
  * footer widgets
  */
@@ -3325,195 +3278,6 @@ body.custom-background .l-container:after {
   .footer-widgets__inner:after {
     clear: both;
   }
-}
-
-/* front
-/* ---------------------------------------- */
-/* main-img */
-.main-img {
-  margin: 140px auto;
-  padding: 0 20px;
-  text-align: center;
-}
-.main-img__logo {
-  margin: 10px 0;
-  font-size: 1.75rem;
-  font-weight: bold;
-  letter-spacing: 4px;
-}
-.main-img__description {
-  font-size: 0.75rem;
-}
-.main-img .sns-icons {
-  margin-left: 0;
-  margin: o auto;
-}
-.main-img .sns-icons__item {
-  display: inline-block;
-  margin-right: 30px;
-}
-.main-img .sns-icons__item:last-child {
-  margin-right: 0;
-}
-
-/* block */
-.block {
-  margin: 80px 0;
-}
-.block__title__inner {
-  display: inline-block;
-  padding-bottom: 4px;
-  border-bottom: 1px solid #dedede;
-}
-
-/* works */
-.works {
-  margin: 0 auto;
-  max-width: 1080px;
-  width: 100%;
-  margin: 40px 0;
-}
-.works:before, .works:after {
-  content: " ";
-  display: table;
-}
-.works:after {
-  clear: both;
-}
-.works__item {
-  padding-left: 1.125rem;
-  padding-right: 1.125rem;
-  width: 100%;
-  float: left;
-}
-.works__link {
-  display: block;
-  position: relative;
-  width: 100%;
-  height: auto;
-}
-.works__link:after {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  content: '';
-  z-index: 1;
-  transition: 0.3s;
-}
-.works__link:hover:after {
-  background-color: transparent;
-}
-.works__caption {
-  margin: 10px 0;
-  text-align: center;
-  color: #222222;
-  font-weight: normal;
-}
-
-/* what i do */
-.do {
-  margin: 40px 0;
-  text-align: center;
-}
-.do__item {
-  padding-left: 1.125rem;
-  padding-right: 1.125rem;
-  width: 100%;
-  float: left;
-  padding: 20px 0;
-  transition: 0.3s;
-}
-.do__item:hover {
-  background-color: #f8f8f8;
-}
-.do__icon {
-  height: 80px;
-}
-.do__icon--exp {
-  padding: 22px 0;
-}
-.do__title {
-  margin: 10px 0;
-  line-height: 1;
-  font-size: 1.25rem;
-  font-weight: 500;
-}
-.do__description {
-  margin: 10px 0;
-  color: #b5b5b5;
-  font-size: 0.875rem;
-  line-height: 1;
-}
-.do__description a {
-  color: #b5b5b5;
-  padding-bottom: 1px;
-  border-bottom: 1px dotted #b5b5b5;
-}
-
-/* media */
-@media only screen and (min-width: 40.0625em) {
-  .mainImg {
-    margin: 180px auto;
-  }
-  .mainImg__logo {
-    font-size: 3.125rem;
-  }
-
-  .works__item {
-    padding-left: 0;
-    padding-right: 0;
-    width: 50%;
-    float: left;
-  }
-
-  .do__item {
-    padding-left: 0;
-    padding-right: 0;
-    width: 50%;
-    float: left;
-  }
-}
-@media only screen and (min-width: 64.0625em) {
-  .mainImg {
-    margin: 200px auto;
-  }
-  .mainImg__logo {
-    font-size: 5rem;
-  }
-  .mainImg__description {
-    font-size: 1rem;
-  }
-
-  .works__item {
-    padding-left: 1.125rem;
-    padding-right: 1.125rem;
-    width: 33.33333%;
-    float: left;
-  }
-
-  .do__item {
-    padding-left: 1.125rem;
-    padding-right: 1.125rem;
-    width: 33.33333%;
-    float: left;
-  }
-}
-/* full width
-/* ---------------------------------------- */
-.full-width .page-title, .full-width .block__title {
-  width: 100%;
-  max-width: 780px;
-  margin: 0 auto 30px auto;
-}
-.full-width .l-primary {
-  width: 100%;
-  max-width: 780px;
-  margin: 0  auto 40px auto;
-  float: none;
 }
 
 /* -------------------------------------------------------------- */
@@ -3711,8 +3475,9 @@ body.custom-background .l-container:after {
     width: 40%;
   }
 }
+/* -------------------------------------------------------------- */
 /* not found
-/* ---------------------------------------- */
+/* -------------------------------------------------------------- */
 body.error404 .l-primary {
   float: none;
   width: 100%;
@@ -3724,8 +3489,9 @@ body.error404 .l-primary {
   margin-top: 0;
 }
 
+/* -------------------------------------------------------------- */
 /* post
-/* ---------------------------------------- */
+/* -------------------------------------------------------------- */
 .post__header {
   margin: 0 0 20px 0;
 }
@@ -3777,44 +3543,8 @@ body.error404 .l-primary {
 }
 
 /**
- * media queries
+ * meta informations
  */
-@media only screen and (min-width: 40.0625em) {
-  .post__link {
-    margin-bottom: 50px;
-  }
-  .post__title {
-    margin-bottom: 8px;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  .post__title--archive {
-    font-size: 1.75rem;
-    line-height: 1.4;
-  }
-  .post__image {
-    margin-bottom: 20px;
-    border: 4px solid #ededed;
-  }
-}
-@media only screen and (min-width: 64.0625em) {
-  .post__header {
-    margin: 0 0 40px 0;
-  }
-  .post__title {
-    font-size: 2rem;
-  }
-  .post__image {
-    max-width: 100%;
-    height: auto;
-    border: 8px solid #ededed;
-  }
-  .post__excerpt {
-    font-size: 0.875rem;
-  }
-}
-/* post meta informations
-/* ---------------------------------------- */
 .metainfo {
   position: relative;
   display: inline-block;
@@ -3882,5 +3612,40 @@ body.error404 .l-primary {
   line-height: 1;
 }
 
-/* sidebar
-/* ---------------------------------------- */
+/**
+ * media queries
+ */
+@media only screen and (min-width: 40.0625em) {
+  .post__link {
+    margin-bottom: 50px;
+  }
+  .post__title {
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .post__title--archive {
+    font-size: 1.75rem;
+    line-height: 1.4;
+  }
+  .post__image {
+    margin-bottom: 20px;
+    border: 4px solid #ededed;
+  }
+}
+@media only screen and (min-width: 64.0625em) {
+  .post__header {
+    margin: 0 0 40px 0;
+  }
+  .post__title {
+    font-size: 2rem;
+  }
+  .post__image {
+    max-width: 100%;
+    height: auto;
+    border: 8px solid #ededed;
+  }
+  .post__excerpt {
+    font-size: 0.875rem;
+  }
+}

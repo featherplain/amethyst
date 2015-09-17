@@ -1,7 +1,9 @@
 @charset "utf-8";
 
-/* common
-/* ---------------------------------------- */
+/* -------------------------------------------------------------- */
+/* layout
+/* -------------------------------------------------------------- */
+
 /**
  * l-container
  */
@@ -35,6 +37,22 @@ body.custom-background {
   line-height: 1;
   letter-spacing: 1.4px;
   text-transform: uppercase;
+}
+/**
+ * one column
+ */
+.full-width {
+  .page-title {
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto 30px auto;
+  }
+  .l-primary {
+    width: 100%;
+    max-width: 780px;
+    margin: 0  auto 40px auto;
+    float: none;
+  }
 }
 /**
  * screen reader text

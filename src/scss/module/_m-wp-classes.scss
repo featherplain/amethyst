@@ -1,7 +1,12 @@
 @charset "UTF-8";
 
-/* captions
-/* ---------------------------------------- */
+/* -------------------------------------------------------------- */
+/* WordPress classes
+/* -------------------------------------------------------------- */
+
+/**
+ * caption
+ */
 .wp-caption {
   margin-bottom: rem-calc(15);
   max-width: 100%;
@@ -19,10 +24,9 @@
     }
   }
 }
-
-
-/* galleries
-/* ---------------------------------------- */
+/**
+ * gallaries
+ */
 .gallery {
   margin-bottom: rem-calc(15);
   &-item {
@@ -46,8 +50,9 @@
   }
 }
 
-/* alignment
-/* ---------------------------------------- */
+/**
+ * alignment
+ */
 .alignleft {
   display: inline;
   float: left;
@@ -65,16 +70,13 @@
   margin-right: rem-calc(15);
   margin-bottom: rem-calc(15);
 }
-.page-content .wp-smiley,
-.entry-content .wp-smiley,
+.editor-style .wp-smiley,
 .comment-content .wp-smiley {
   border: none;
   margin-bottom: 0;
   margin-top: 0;
   padding: 0;
 }
-
-/* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
 object {
