@@ -4,14 +4,14 @@
 /* ---------------------------------------- */
 .l-header {
   width: auto;
-  height: 50px;
+  height: auto;
   margin-bottom: 20px;
   &__inner {
     @include grid-row();
     position: relative;
   }
 }
-/*
+/**
  * site-branding
  */
 .site-title {
@@ -30,7 +30,7 @@
 .site-description {
   display: none;
 }
-/*
+/**
  * navigation
  */
 .gnav {
@@ -154,7 +154,7 @@
     background-color: lighten($colorBase, 16%);
   }
 }
-/*
+/**
  * media queries
  */
 @media #{$medium-up} {
@@ -162,13 +162,13 @@
     margin-bottom: 40px;
   }
   .site-title {
-    padding-right: 20px;
+    padding: 10px 20px 10px 14px;
     font-size: rem-calc(24);
   }
   .site-description {
     display: block;
     float: left;
-    margin: 18px 0;
+    margin: 14px 0 12px 0;
     font-size: rem-calc(14);
   }
   .gnav {

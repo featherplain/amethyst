@@ -3,35 +3,36 @@
 /* post navigation
 /* ---------------------------------------- */
 .nav-links {
+  @extend %clearfix;
   padding: 20px 0;
   a {
+    color: $colorBase;
     font-weight: 400;
+    &:hover {
+      color: $colorLink;
+    }
   }
 }
 .nav-previous {
-  position: relative;
-  padding: 10px 10px 5px 22px;
+  padding: 10px 0;
   text-align: left;
   &:before {
-    @include genericon('\f431');
-    position: absolute;
-    top: 14px;
-    left: 0;
-    background-color: $colorBase;
+    @include genericon('\f431', rem-calc(20));
+    margin-right: 6px;
+    vertical-align: middle;
+    background-color: $colorSub;
     color: #ffffff;
     transform: rotate(90deg);
   }
 }
 .nav-next {
-  position: relative;
-  padding: 10px 22px 5px 10px;
+  padding: 10px 0;
   text-align: right;
   &:after {
-    @include genericon('\f432');
-    position: absolute;
-    top: 14px;
-    right: 0;
-    background-color: $colorBase;
+    @include genericon('\f432', rem-calc(20));
+    margin-left: 6px;
+    vertical-align: middle;
+    background-color: $colorSub;
     color: #ffffff;
     transform: rotate(90deg);
   }
@@ -40,25 +41,12 @@
  * media queries
  */
 @media #{$large-up} {
-  .nav-links {
-    @include grid-row();
-  }
   .nav-previous {
-    @include grid-column(
-      $columns: 6,
-      $collapse: false
-    );
-    a {
-      margin-left: 4px;
-    }
+    float: left;
+    padding: 0 10px 0 0;
   }
   .nav-next {
-    @include grid-column(
-      $columns: 6,
-      $collapse: false
-    );
-    a {
-      margin-right: 4px;
-    }
+    float: right;
+    padding: 0 0 0 10px;
   }
 }

@@ -127,8 +127,7 @@ function othello_search_form( $form ) {
 	$form = '<div class="search"><form role="search" method="get" id="searchform" class="search__form" action="' . home_url( '/' ) . '" >
 	<label class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</label>
 	<input class="search__field" type="text" value="' . get_search_query() . '" placeholder="Seach for..." name="s" id="s" />
-	<input class="search__submit" type="submit" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'" />
-	</form></div>';
+	<input class="search__submit" type="submit" id="searchsubmit" value="'. esc_attr__( 'Search' ) .'" /></form></div>';
 
 	return $form;
 }
@@ -138,7 +137,7 @@ add_filter( 'get_search_form', 'othello_search_form' );
  * Register excerpt length.
 **/
 function custom_excerpt_length( $length ) {
-     return 15;
+  return 15;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
@@ -219,11 +218,6 @@ add_action( 'wp_enqueue_scripts', 'othello_scripts' );
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
 
 /**
  * Custom functions that act independently of the theme templates.

@@ -21,7 +21,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'othello' ); ?></a>
+	<a class="screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'othello' ); ?></a>
 
 	<div class="l-container">
     <header role="banner" class="l-header">
@@ -47,8 +47,16 @@
         		'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>' )
         		);
         	?>
-        	<!-- </div> -->
         </nav>
+
+        <?php if ( get_header_image() ) : // display custom header image ?>
+					<div class="header-image">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<img src="<?php header_image(); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+						</a>
+					</div>
+				<?php endif; // End header image check. ?>
+
       </div><!-- /.l-header__inner -->
     </header><!-- /.l-header -->
 

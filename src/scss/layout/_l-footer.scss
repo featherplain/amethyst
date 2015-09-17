@@ -3,20 +3,16 @@
 /* footer
 /* ---------------------------------------- */
 .l-footer {}
-/* footer widgets */
+/**
+ * footer widgets
+ */
 .footer-widgets {
   padding: $m40;
   background-color: $colorBg;
-  &__inner {
-    @media #{$small-only} {
-      padding: 0 16px;
-    }
-    @media #{$medium-up} {
-      @include grid-row();
-    }
-  }
 }
-/* copyright */
+/**
+ * copyright
+ */
 .copyright {
   background-color: #111111;
   &__inner {
@@ -29,5 +25,24 @@
     color: #ffffff;
     font-size: rem-calc(12);
     letter-spacing: 1.6px;
+    a {
+      color: #ffffff;
+      &:hover {
+        color: $colorLink;
+      }
+    }
+  }
+}
+/**
+ * media queries
+ */
+.footer-widgets {
+  &__inner {
+    @media #{$small-only} {
+      padding: 0 16px;
+    }
+    @media #{$medium-up} {
+      @include grid-row();
+    }
   }
 }
