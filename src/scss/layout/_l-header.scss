@@ -155,10 +155,6 @@
   }
 }
 /**
- * header image
- */
- .header-image {}
-/**
  * media queries
  */
 @media #{$medium-up} {
@@ -166,7 +162,7 @@
     margin-bottom: 40px;
   }
   .site-title {
-    padding: 10px 20px 10px 10px;
+    padding: 10px 20px 10px 14px;
     font-size: rem-calc(24);
   }
   .site-description {
