@@ -1,24 +1,18 @@
 @charset "UTF-8";
 
+/* -------------------------------------------------------------- */
 /* buttons
-/* ---------------------------------------- */
+/* -------------------------------------------------------------- */
 button,
 input[type="button"],
 input[type="submit"],
 input[type="reset"] {
-  @include button(
-    $bg: $colorBase
-  );
+  @include btnBase($colorBase, rem-calc(16));
   font-family: $fontFamily;
-  &:hover {
-    background-color: lighten($colorBase, 20%);
-  }
 }
 .btn {
-  @include button(
-    $bg: $colorBase
-  );
-  &:hover {
-    background-color: lighten($colorBase, 20%);
-  }
+  @include btnBase($colorBase, rem-calc(16));
+}
+.btn-full {
+  @include btnBase($colorBase, rem-calc(16), true);
 }

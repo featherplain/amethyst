@@ -14,10 +14,13 @@ Tags: white, responsive-layout, one-column, two-columns, right-sidebar, editor-s
 
 // core files
 @import 'core/config';
+
 /* -------------------------------------------------------------- */
 /* Foundation by ZURB
 /* foundation.zurb.com
 /* Licensed under MIT Open Source
+/*
+/* Othello requires 'grid' and 'forms'.
 /* -------------------------------------------------------------- */
 @import 'core/foundation';
 @import 'core/settings';
