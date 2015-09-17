@@ -3496,7 +3496,7 @@ object {
 /* ---------------------------------------- */
 .l-header {
   width: auto;
-  height: 50px;
+  height: auto;
   margin-bottom: 20px;
 }
 .l-header__inner {
@@ -3513,7 +3513,7 @@ object {
   clear: both;
 }
 
-/*
+/**
  * site-branding
  */
 .site-title {
@@ -3534,7 +3534,7 @@ object {
   display: none;
 }
 
-/*
+/**
  * navigation
  */
 .gnav__search {
@@ -3662,7 +3662,10 @@ object {
   background-color: #4b4b4b;
 }
 
-/*
+/**
+ * header image
+ */
+/**
  * media queries
  */
 @media only screen and (min-width: 40.0625em) {
@@ -3671,14 +3674,14 @@ object {
   }
 
   .site-title {
-    padding-right: 20px;
+    padding: 10px 20px 10px 10px;
     font-size: 1.5rem;
   }
 
   .site-description {
     display: block;
     float: left;
-    margin: 18px 0;
+    margin: 14px 0 12px 0;
     font-size: 0.875rem;
   }
 
