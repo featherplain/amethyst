@@ -3169,7 +3169,24 @@ object {
 
 /* common
 /* ---------------------------------------- */
-/*
+/**
+ * l-comtainer
+ */
+.l-container {
+  margin: 0 auto;
+  max-width: 1080px;
+  width: 100%;
+  background-color: #ffffff;
+}
+.l-container:before, .l-container:after {
+  content: " ";
+  display: table;
+}
+.l-container:after {
+  clear: both;
+}
+
+/**
  * l-main
  */
 .l-main {
@@ -3185,7 +3202,7 @@ object {
   clear: both;
 }
 
-/*
+/**
  * l-primary and l-sidebar
  */
 .l-primary,
@@ -3214,7 +3231,7 @@ object {
     float: left;
   }
 }
-/*
+/**
  * page title
  */
 .page-title, .block__title {
@@ -3227,7 +3244,7 @@ object {
   text-transform: uppercase;
 }
 
-/*
+/**
  * screen reader text
  */
 .screen-reader-text {
@@ -3667,11 +3684,6 @@ object {
 
   .gnav__list {
     width: 40%;
-  }
-}
-@media only screen and (min-width: 64.0625em) {
-  .site-title {
-    padding-left: 0;
   }
 }
 /* not found
