@@ -202,7 +202,7 @@ function othello_scripts() {
 	wp_enqueue_style( 'othello-genericons', get_template_directory_uri() . '/assets/genericons/genericons.css', array(), '3.0.3' );
 
 	// stylesheet
-	wp_enqueue_style( 'othello-style', get_template_directory_uri() . '/assets/css/app.css' );
+	wp_enqueue_style( 'othello-style', get_stylesheet_uri() );
 
 	// javascripts
 	wp_enqueue_script( 'othello-js-lib', get_template_directory_uri() . '/assets/js/lib.min.js', array( 'jquery' ), true );

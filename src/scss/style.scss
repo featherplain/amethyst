@@ -1,0 +1,32 @@
+@charset "utf-8";
+/*
+Theme Name: othello
+Theme URI: http://othello.asknode.net/
+Author: featherplain
+Author URI: http://asknode.net/
+Description: Othello is a simple theme based on Foundation5. The design is kept simple to keep the simplicity of the Foundation. Features are, 100% responsive layouts, Genericons and Font Awesome icons, minified CSS and JavaScript, Gulp use, Sass.
+Version: 0.0.1
+License: GNU General Public License v2 or later
+License URI: license.txt
+Text Domain: othello
+Tags: white, responsive-layout, one-column, two-columns, right-sidebar, editor-style, sticky-post, microformats, featured-images, custom-colors, custom-menu, custom-background
+*/
+
+// core files
+@import 'core/config';
+/* -------------------------------------------------------------- */
+/* Foundation by ZURB
+/* foundation.zurb.com
+/* Licensed under MIT Open Source
+/* -------------------------------------------------------------- */
+@import 'core/foundation';
+@import 'core/settings';
+@import 'core/placeholder';
+@import 'core/mixins';
+@import 'core/default';
+
+// module
+@import 'module/**/*.*';
+
+// layout
+@import 'layout/*.*';

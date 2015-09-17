@@ -30,7 +30,7 @@ var paths = {
 // scss
   'scssPath'       : 'src/scss/',
 // css
-  'cssDest'        : 'assets/css/',
+  'cssDest'        : './',
 // php
   'phpFiles'       : ['*.php', '**/*.php']
 };
@@ -165,7 +165,7 @@ gulp.task('sass', function () {
       cascade: false
     }))
     .pipe(gulp.dest(paths.cssDest))
-    .pipe($.filter('**/*.css'))
+    .pipe($.filter('*.css'))
     .pipe(browserSync.reload({ stream: true }));
 });
 
