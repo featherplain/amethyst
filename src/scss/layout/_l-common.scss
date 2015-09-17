@@ -3,13 +3,20 @@
 /* common
 /* ---------------------------------------- */
 
-/*
+/**
+ * l-comtainer
+ */
+.l-container {
+  @include grid-row();
+  background-color: #ffffff;
+}
+/**
  * l-main
  */
 .l-main {
   @include grid-row();
 }
-/*
+/**
  * l-primary and l-sidebar
  */
 .l-primary,
@@ -36,7 +43,7 @@
     );
   }
 }
-/*
+/**
  * page title
  */
  .page-title {
@@ -48,7 +55,7 @@
   letter-spacing: 1.4px;
   text-transform: uppercase;
 }
-/*
+/**
  * screen reader text
  */
 .screen-reader-text {
