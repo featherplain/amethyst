@@ -2,13 +2,14 @@
 
 /* common
 /* ---------------------------------------- */
-
 /**
- * l-comtainer
+ * l-container
  */
-.l-container {
-  @include grid-row();
-  background-color: #ffffff;
+body.custom-background {
+  .l-container {
+    @include grid-row();
+    background-color: #ffffff;
+  }
 }
 /**
  * l-main
@@ -23,6 +24,27 @@
 .l-sidebar {
   margin-bottom: 40px;
 }
+/**
+ * page title
+ */
+.page-title {
+  margin-bottom: 30px;
+  padding: 0 16px;
+  font-size: rem-calc(14);
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+/**
+ * screen reader text
+ */
+.screen-reader-text {
+  display: none;
+}
+/**
+ * media queries
+ */
 @media #{$small-only} {
   .l-primary,
   .l-sidebar {
@@ -42,22 +64,4 @@
       $collapse: false
     );
   }
-}
-/**
- * page title
- */
- .page-title {
-  margin-bottom: 30px;
-  padding: 0 16px;
-  font-size: rem-calc(14);
-  font-weight: normal;
-  line-height: 1;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-}
-/**
- * screen reader text
- */
-.screen-reader-text {
-  display: none;
 }
