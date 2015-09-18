@@ -1,8 +1,11 @@
 @charset "utf-8";
-/* othello default styles
-/* ---------------------------------------- */
+/* -------------------------------------------------------------- */
+/* Othello default styles
+/* -------------------------------------------------------------- */
 
-/* the root element */
+/**
+ * the root element
+ */
 html {
   font-size: 16px;
 }
@@ -15,12 +18,16 @@ body {
   font-weight: 400;
 }
 
-/* grouping content */
+/**
+ * grouping content
+ */
 iframe {
   vertical-align: middle;
 }
 
-/* text-level semantics */
+/**
+ * text-level semantics
+ */
 h1, h2, h3, h4, h5, h6 {
   font-family: $fontFamilyTitle;
   &,
@@ -63,7 +70,9 @@ p {
   text-decoration: none;
 }
 
-/* list items */
+/**
+ * list items
+ */
 ul, ol {
   margin: 0;
   padding: 0;
@@ -86,7 +95,9 @@ dl {
   }
 }
 
-/* embedded content */
+/**
+ * embedded content
+ */
 figure {
   margin: 0;
 }
@@ -98,7 +109,9 @@ svg:not(:root){
   overflow: hidden;
 }
 
-/* table */
+/**
+ * table
+ */
 table {
   width: 100%;
   background-color: #ffffff;

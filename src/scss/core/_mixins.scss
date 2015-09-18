@@ -159,6 +159,40 @@
   }
 }
 //***********************
+// button Base
+//***********************
+@mixin btnBase($color, $fontSize, $fullWidth: false) {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
+  text-align: center;
+  border: none;
+  background-color: $color;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: $fontSize;
+  transition: background-color 300ms ease-out;
+  // set $fullWidth
+  @if $fullWidth {
+    width: 100%;
+  }
+  &:focus {
+    outline: 0;
+  }
+  &:link,
+  &:visited {
+    color: #ffffff;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($color, 8%);
+    color: #ffffff;
+    outline: 0;
+    text-decoration: none;
+  }
+}
+//***********************
 // alert box
 //***********************
 @mixin alertBox($padding, $bg, $border, $color, $fontSize) {

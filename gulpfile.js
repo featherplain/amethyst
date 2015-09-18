@@ -30,7 +30,7 @@ var paths = {
 // scss
   'scssPath'       : 'src/scss/',
 // css
-  'cssDest'        : 'assets/css/',
+  'cssDest'        : './',
 // php
   'phpFiles'       : ['*.php', '**/*.php']
 };
@@ -84,32 +84,35 @@ gulp.task('image-min', function() {
     .pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task('sprite', function() {
-  var spriteData = gulp.src(paths.imagePath + 'sprite/*.png')
-  .pipe($.spritesmith({
-    imgName: 'sprite.png',
-    imgPath: '../images/sprite.png',
-    cssName: '_m-sprite.scss',
-    algorithm: 'top-down',
-    padding: 20
-  }));
-  spriteData.img.pipe(gulp.dest(paths.imageDest));
-  spriteData.css.pipe(gulp.dest(paths.scssPath + 'module'));
-});
+// If you need sprite tasks, uncomment these below lines.
+// You also need to uncomments [gulp tasks] on line 180, 181, 196.
 
-gulp.task('sprite-svg', function() {
-  return gulp.src(paths.imagePath + 'sprite-svg/*.svg')
-    .pipe($.svgSprite({
-      dest: './',
-      mode: { symbol: { dest: './' } }
-    }))
-    .pipe($.rename({
-      basename: 'symbol',
-      dirname: './',
-      prefix: 'sprite' + '.'
-    }))
-    .pipe(gulp.dest(paths.imageDest));
-});
+// gulp.task('sprite', function() {
+//   var spriteData = gulp.src(paths.imagePath + 'sprite/*.png')
+//   .pipe($.spritesmith({
+//     imgName: 'sprite.png',
+//     imgPath: './assets/images/sprite.png',
+//     cssName: '_sprite.scss',
+//     algorithm: 'top-down',
+//     padding: 20
+//   }));
+//   spriteData.img.pipe(gulp.dest(paths.imageDest));
+//   spriteData.css.pipe(gulp.dest(paths.scssPath + 'core'));
+// });
+
+// gulp.task('sprite-svg', function() {
+//   return gulp.src(paths.imagePath + 'sprite-svg/*.svg')
+//     .pipe($.svgSprite({
+//       dest: './',
+//       mode: { symbol: { dest: './' } }
+//     }))
+//     .pipe($.rename({
+//       basename: 'symbol',
+//       dirname: './',
+//       prefix: 'sprite' + '.'
+//     }))
+//     .pipe(gulp.dest(paths.imageDest));
+// });
 
 /*******************************************************************************
  * Jade Tasks
@@ -148,9 +151,18 @@ gulp.task('jsApp', function() {
     .pipe(browserSync.reload({ stream: true }));
 });
 
+gulp.task('jsFiles', function() {
+  return gulp.src(paths.jsPath + '*.js')
+    .pipe($.uglify())
+    .pipe($.rename({ suffix: '.min' }))
+    .pipe(gulp.dest(paths.jsDest))
+    .pipe(browserSync.reload({ stream: true }));
+});
+
 gulp.task('jsTasks', [
   'jsApp',
-  'jsLib'
+  'jsLib',
+  'jsFiles'
 ]);
 
 /***************************************************************************
@@ -165,7 +177,7 @@ gulp.task('sass', function () {
       cascade: false
     }))
     .pipe(gulp.dest(paths.cssDest))
-    .pipe($.filter('**/*.css'))
+    .pipe($.filter('*.css'))
     .pipe(browserSync.reload({ stream: true }));
 });
 
@@ -174,8 +186,8 @@ gulp.task('sass', function () {
 ***************************************************************************/
 
 gulp.task('watch', function() {
-  gulp.watch([paths.imageDest + 'sprite/*.png'],     ['sprite']);
-  gulp.watch([paths.imagePath + 'sprite-svg/*.svg'], ['sprite-svg'])
+  // gulp.watch([paths.imageDest + 'sprite/*.png'],     ['sprite']);
+  // gulp.watch([paths.imagePath + 'sprite-svg/*.svg'], ['sprite-svg'])
   gulp.watch([paths.htmlPath  + '*.html'],           ['bs-reload']);
   gulp.watch([paths.jadePath  + '**/*.jade'],        ['jade']);
   gulp.watch([paths.jsPath    + '**/*.js'],          ['jsTasks']);
@@ -190,8 +202,8 @@ gulp.task('default', [
   'jade',
   'jsTasks',
   'sass',
-  'sprite',
-  'sprite-svg',
+  // 'sprite',
+  // 'sprite-svg',
   'watch'
 ]);
 

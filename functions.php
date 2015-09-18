@@ -115,7 +115,7 @@ add_filter( 'body_class', 'othello_body_classes' );
  * @global int $content_width
  */
 function othello_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'othello_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'othello_content_width', 744 );
 }
 add_action( 'after_setup_theme', 'othello_content_width', 0 );
 
@@ -201,8 +201,11 @@ function othello_scripts() {
 	// genericons
 	wp_enqueue_style( 'othello-genericons', get_template_directory_uri() . '/assets/genericons/genericons.css', array(), '3.0.3' );
 
+	// Font Awesome
+	wp_enqueue_style( 'othello-font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css', array(), '4.4.0' );
+
 	// stylesheet
-	wp_enqueue_style( 'othello-style', get_template_directory_uri() . '/assets/css/app.css' );
+	wp_enqueue_style( 'othello-style', get_stylesheet_uri() );
 
 	// javascripts
 	wp_enqueue_script( 'othello-js-lib', get_template_directory_uri() . '/assets/js/lib.min.js', array( 'jquery' ), true );

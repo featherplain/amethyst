@@ -1,17 +1,11 @@
 @charset "UTF-8";
 
+/* -------------------------------------------------------------- */
 /* widget
-/* ---------------------------------------- */
+/* -------------------------------------------------------------- */
+
 .widget {
   margin-bottom: 20px;
-  &--footer {
-    @media #{$medium-up} {
-      @include grid-column(
-        $columns: 4,
-        $collapse: false
-      );
-    }
-  }
   &__title {
     margin: 0 0 12px 0;
     padding: 4px 0;
@@ -109,5 +103,18 @@
 #wp-calendar {
   td {
     text-align: center;
+  }
+}
+/**
+ * media queries
+ */
+@media #{$medium-up} {
+  .widget {
+    &--footer {
+      @include grid-column(
+        $columns: 4,
+        $collapse: false
+      );
+    }
   }
 }

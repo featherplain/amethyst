@@ -1,12 +1,15 @@
 @charset "utf-8";
 
+/* -------------------------------------------------------------- */
 /* comments
-/* ---------------------------------------- */
+/* -------------------------------------------------------------- */
 
-/* comments */
+/**
+ * comments
+ */
 .comments {
   margin: $m40;
-  &-title {
+  &__title {
     margin: 20px 0;
     font-size: rem-calc(22);
     font-weight: bold;
@@ -23,9 +26,10 @@
   //     font-size: rem-calc(11);
   //   }
   // }
-  &-list {}
 }
-/* comment */
+/**
+ * comment
+ */
 .comment {
   list-style-type: none;
   > .children {
@@ -75,13 +79,17 @@
     font-size: rem-calc(10);
   }
 }
-/* comment form */
+/**
+ * comment form
+ */
 .comment-notes {
   font-size: rem-calc(14);
 }
-/* respond */
+/**
+ * respond
+ */
 .comment-reply-title {
-  @extend .comments-title;
+  @extend .comments__title;
 }
 .comment-respond {
   margin: $m40;
