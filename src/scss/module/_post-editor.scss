@@ -1,12 +1,23 @@
 @charset "utf-8";
 
 /* -------------------------------------------------------------- */
-/* editor styles
+/* post editor styles on posts and comments
 /* -------------------------------------------------------------- */
-.editor-style,
+.post__editor,
 .comment-content {
-  h1, h2, h3, h4, h5, h6,
-  p, ul, ol, dl, pre, blockquote, table {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  dl,
+  pre,
+  blockquote,
+  table {
     margin: 20px 0;
   }
   h1 {
@@ -36,7 +47,8 @@
   ol {
     list-style-type: decimal;
   }
-  ul, ol {
+  ul,
+  ol {
     margin-left: 16px;
     li {
       margin: 8px;
@@ -45,7 +57,8 @@
     }
   }
   dl {
-    dt, dd {
+    dt,
+    dd {
       color: $colorText;
       font-size: rem-calc(14);
     }
@@ -71,6 +84,10 @@
     > * {
       margin: 0;
       font-size: rem-calc(13);
+    }
+    > ul,
+      ol {
+      margin-left: 16px;
     }
   }
   cite {
@@ -129,29 +146,44 @@
  * media queries
  */
 @media #{$medium-up} {
-  .editor-style,
+  .post__editor,
   .comment-content {
-    h1, h2, h3, h4, h5, h6,
-    p, ul, ol, dl, pre, blockquote, table {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    dl,
+    pre,
+    blockquote,
+    table {
       margin: 30px 0;
     }
     h1 {
-      font-size: rem-calc(24);
+      font-size: rem-calc(28);
     }
     h2 {
-      font-size: rem-calc(22);
+      font-size: rem-calc(24);
     }
     h3 {
-      font-size: rem-calc(20);
+      font-size: rem-calc(22);
     }
     h4 {
-      font-size: rem-calc(18);
+      font-size: rem-calc(20);
     }
     h5 {
-      font-size: rem-calc(16);
+      font-size: rem-calc(18);
     }
     h6 {
-      font-size: rem-calc(14);
+      font-size: rem-calc(16);
+    }
+    ul,
+    ol {
+      margin-left: 14px;
     }
     blockquote {
       > * {

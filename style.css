@@ -9,7 +9,7 @@ Version: 0.0.1
 License: GNU General Public License v2 or later
 License URI: license.txt
 Text Domain: othello
-Tags: white, responsive-layout, one-column, two-columns, right-sidebar, editor-style, sticky-post, microformats, featured-images, custom-colors, custom-menu, custom-background
+Tags: white, responsive-layout, ,mobile-first, one-column, two-columns, right-sidebar, editor-style, sticky-post, microformats, featured-images, custom-colors, custom-menu, custom-background
 */
 /* -------------------------------------------------------------- */
 /* Foundation by ZURB
@@ -2127,13 +2127,38 @@ iframe {
 /**
  * text-level semantics
  */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Helvetica Neue", "Helvetica", "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
 }
-h1, h1 > a, h2, h2 > a, h3, h3 > a, h4, h4 > a, h5, h5 > a, h6, h6 > a {
+h1, h1 > a,
+h2,
+h2 > a,
+h3,
+h3 > a,
+h4,
+h4 > a,
+h5,
+h5 > a,
+h6,
+h6 > a {
   color: #222222;
 }
-h1:hover, h1 > a:hover, h2:hover, h2 > a:hover, h3:hover, h3 > a:hover, h4:hover, h4 > a:hover, h5:hover, h5 > a:hover, h6:hover, h6 > a:hover {
+h1:hover, h1 > a:hover,
+h2:hover,
+h2 > a:hover,
+h3:hover,
+h3 > a:hover,
+h4:hover,
+h4 > a:hover,
+h5:hover,
+h5 > a:hover,
+h6:hover,
+h6 > a:hover {
   text-decoration: none;
 }
 
@@ -2178,7 +2203,8 @@ p {
 /**
  * list items
  */
-ul, ol {
+ul,
+ol {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -3025,10 +3051,31 @@ input[type="reset"]:focus {
 }
 
 /* -------------------------------------------------------------- */
-/* editor styles
+/* forms
 /* -------------------------------------------------------------- */
-.editor-style h1, .editor-style h2, .editor-style h3, .editor-style h4, .editor-style h5, .editor-style h6,
-.editor-style p, .editor-style ul, .editor-style ol, .editor-style dl, .editor-style pre, .editor-style blockquote, .editor-style table,
+/**
+ * required
+ */
+.required {
+  color: #f04124;
+}
+
+/* -------------------------------------------------------------- */
+/* post editor styles on posts and comments
+/* -------------------------------------------------------------- */
+.post__editor h1,
+.post__editor h2,
+.post__editor h3,
+.post__editor h4,
+.post__editor h5,
+.post__editor h6,
+.post__editor p,
+.post__editor ul,
+.post__editor ol,
+.post__editor dl,
+.post__editor pre,
+.post__editor blockquote,
+.post__editor table,
 .comment-content h1,
 .comment-content h2,
 .comment-content h3,
@@ -3044,75 +3091,78 @@ input[type="reset"]:focus {
 .comment-content table {
   margin: 20px 0;
 }
-.editor-style h1,
+.post__editor h1,
 .comment-content h1 {
   font-size: 1.375rem;
 }
-.editor-style h2,
+.post__editor h2,
 .comment-content h2 {
   font-size: 1.125rem;
   border-bottom: 1px dotted #dedede;
 }
-.editor-style h3,
+.post__editor h3,
 .comment-content h3 {
   font-size: 1.0625rem;
 }
-.editor-style h4,
+.post__editor h4,
 .comment-content h4 {
   font-size: 1rem;
 }
-.editor-style h5,
+.post__editor h5,
 .comment-content h5 {
   font-size: 0.9375rem;
   font-weight: normal;
 }
-.editor-style h6,
+.post__editor h6,
 .comment-content h6 {
   font-size: 0.875rem;
   font-weight: normal;
 }
-.editor-style ul,
+.post__editor ul,
 .comment-content ul {
   list-style-type: square;
 }
-.editor-style ol,
+.post__editor ol,
 .comment-content ol {
   list-style-type: decimal;
 }
-.editor-style ul, .editor-style ol,
+.post__editor ul,
+.post__editor ol,
 .comment-content ul,
 .comment-content ol {
   margin-left: 16px;
 }
-.editor-style ul li, .editor-style ol li,
+.post__editor ul li,
+.post__editor ol li,
 .comment-content ul li,
 .comment-content ol li {
   margin: 8px;
   font-size: 0.875rem;
   line-height: 1.4;
 }
-.editor-style dl dt, .editor-style dl dd,
+.post__editor dl dt,
+.post__editor dl dd,
 .comment-content dl dt,
 .comment-content dl dd {
   color: #454545;
   font-size: 0.875rem;
 }
-.editor-style dl dt,
+.post__editor dl dt,
 .comment-content dl dt {
   margin-left: 0;
   font-family: "Helvetica Neue", "Helvetica", "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
 }
-.editor-style dl dd,
+.post__editor dl dd,
 .comment-content dl dd {
   margin-left: 14px;
 }
-.editor-style p,
+.post__editor p,
 .comment-content p {
   color: #454545;
   font-size: 0.875rem;
   line-height: 1.5;
 }
-.editor-style blockquote,
+.post__editor blockquote,
 .comment-content blockquote {
   position: relative;
   padding: 10px;
@@ -3120,17 +3170,23 @@ input[type="reset"]:focus {
   border: 1px dotted #dedede;
   font-size: 0.8125rem;
 }
-.editor-style blockquote > *,
+.post__editor blockquote > *,
 .comment-content blockquote > * {
   margin: 0;
   font-size: 0.8125rem;
 }
-.editor-style cite,
+.post__editor blockquote > ul,
+.post__editor blockquote ol,
+.comment-content blockquote > ul,
+.comment-content blockquote ol {
+  margin-left: 16px;
+}
+.post__editor cite,
 .comment-content cite {
   font-size: 0.75rem;
   font-style: normal;
 }
-.editor-style pre,
+.post__editor pre,
 .comment-content pre {
   padding: 10px;
   background-color: #f8f8f8;
@@ -3140,11 +3196,11 @@ input[type="reset"]:focus {
   word-wrap: normal;
   overflow-x: auto;
 }
-.editor-style pre code,
+.post__editor pre code,
 .comment-content pre code {
   background-color: transparent;
 }
-.editor-style code,
+.post__editor code,
 .comment-content code {
   background-color: #f8f8f8;
   border: none;
@@ -3153,7 +3209,7 @@ input[type="reset"]:focus {
   font-family: Menlo, Consolas, Courier, sans-serif;
   font-size: 0.75rem;
 }
-.editor-style kbd,
+.post__editor kbd,
 .comment-content kbd {
   padding: 2px 4px;
   background-color: #313131;
@@ -3164,20 +3220,20 @@ input[type="reset"]:focus {
   font-size: 0.75rem;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
-.editor-style address,
+.post__editor address,
 .comment-content address {
   color: #454545;
   font-size: 0.875rem;
   font-style: normal;
 }
-.editor-style ins,
+.post__editor ins,
 .comment-content ins {
   padding: 0 4px;
   background-color: #7fdffd;
   color: #454545;
   text-decoration: none;
 }
-.editor-style table,
+.post__editor table,
 .comment-content table {
   border: 1px solid #dedede;
   background-color: #ffffff;
@@ -3189,8 +3245,19 @@ input[type="reset"]:focus {
  * media queries
  */
 @media only screen and (min-width: 40.0625em) {
-  .editor-style h1, .editor-style h2, .editor-style h3, .editor-style h4, .editor-style h5, .editor-style h6,
-  .editor-style p, .editor-style ul, .editor-style ol, .editor-style dl, .editor-style pre, .editor-style blockquote, .editor-style table,
+  .post__editor h1,
+  .post__editor h2,
+  .post__editor h3,
+  .post__editor h4,
+  .post__editor h5,
+  .post__editor h6,
+  .post__editor p,
+  .post__editor ul,
+  .post__editor ol,
+  .post__editor dl,
+  .post__editor pre,
+  .post__editor blockquote,
+  .post__editor table,
   .comment-content h1,
   .comment-content h2,
   .comment-content h3,
@@ -3206,45 +3273,41 @@ input[type="reset"]:focus {
   .comment-content table {
     margin: 30px 0;
   }
-  .editor-style h1,
+  .post__editor h1,
   .comment-content h1 {
+    font-size: 1.75rem;
+  }
+  .post__editor h2,
+  .comment-content h2 {
     font-size: 1.5rem;
   }
-  .editor-style h2,
-  .comment-content h2 {
+  .post__editor h3,
+  .comment-content h3 {
     font-size: 1.375rem;
   }
-  .editor-style h3,
-  .comment-content h3 {
+  .post__editor h4,
+  .comment-content h4 {
     font-size: 1.25rem;
   }
-  .editor-style h4,
-  .comment-content h4 {
+  .post__editor h5,
+  .comment-content h5 {
     font-size: 1.125rem;
   }
-  .editor-style h5,
-  .comment-content h5 {
+  .post__editor h6,
+  .comment-content h6 {
     font-size: 1rem;
   }
-  .editor-style h6,
-  .comment-content h6 {
-    font-size: 0.875rem;
+  .post__editor ul,
+  .post__editor ol,
+  .comment-content ul,
+  .comment-content ol {
+    margin-left: 14px;
   }
-  .editor-style blockquote > *,
+  .post__editor blockquote > *,
   .comment-content blockquote > * {
     margin: 0;
   }
 }
-/* -------------------------------------------------------------- */
-/* forms
-/* -------------------------------------------------------------- */
-/**
- * required
- */
-.required {
-  color: #f04124;
-}
-
 /* -------------------------------------------------------------- */
 /* post navigation
 /* -------------------------------------------------------------- */
@@ -3624,7 +3687,7 @@ input[type="reset"]:focus {
   margin-bottom: 0.9375rem;
 }
 
-.editor-style .wp-smiley,
+.post__editor .wp-smiley,
 .comment-content .wp-smiley {
   border: none;
   margin-bottom: 0;

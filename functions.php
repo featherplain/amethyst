@@ -80,11 +80,23 @@ function othello_setup() {
 		'link',
 	) );
 
-	// Set up the WordPress core custom background feature.
+	/*
+	 * Set up the WordPress core custom background feature.
+	 */
 	add_theme_support( 'custom-background', apply_filters( 'othello_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+	/*
+	 * Enable support editor-style on WordPress dashboard.
+	 */
+	add_editor_style( array(
+		'assets/css/editor-style.css',
+		'assets/genericons/genericons.css',
+		'assets/font-awesome/css/font-awesome.min.css',
+		othello_font_url()
+	) );
+
 }
 endif; // othello_setup
 add_action( 'after_setup_theme', 'othello_setup' );
