@@ -13,9 +13,8 @@
     margin-bottom: 30px;
     color: $colorBase;
     &:hover {
-      .post__title--archive,
-      .label {
-        color: $colorLinkHover;
+      .post__title--archive {
+        color: $colorLink;
       }
     }
   }
@@ -75,6 +74,9 @@
     margin-left: 2px;
     color: $colorBase;
     line-height: 1;
+    &:hover {
+      color: $colorLink;
+    }
   }
   &--date {
     &:before {

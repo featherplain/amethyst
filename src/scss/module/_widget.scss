@@ -7,13 +7,12 @@
 .widget {
   margin-bottom: 20px;
   &__title {
-    margin: 0 0 12px 0;
-    padding: 4px 0;
+    margin: 0;
+    padding: 8px 0;
     border-top: 2px solid $colorBase;
-    border-bottom: 1px solid $colorBase;
     font-family: $fontFamilyTitle;
     font-size: rem-calc(16);
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     text-align: center;
   }
@@ -31,7 +30,7 @@
   // text widget
   &_text {
     .textwidget {
-      margin: $m20;
+      // margin: $m20;
       font-size: rem-calc(14);
     }
   }
@@ -41,10 +40,6 @@
   }
   // categories
   &_categories {
-    @include widgetBase;
-  }
-  // archives
-  &_archives {
     @include widgetBase;
   }
   // nav
@@ -89,7 +84,7 @@
       a {
         padding: 2px;
         &:hover {
-          background-color: $colorSub;
+          background-color: lighten($colorLink, 46%);
         }
       }
     }
