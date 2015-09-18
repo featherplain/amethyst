@@ -2611,14 +2611,14 @@ body.custom-background .l-container:after {
 }
 
 /**
- * one column
+ * single column
  */
-.full-width .page-title {
+.single-column .page-title {
   width: 100%;
   max-width: 780px;
   margin: 0 auto 30px auto;
 }
-.full-width .l-primary {
+.single-column .l-primary {
   width: 100%;
   max-width: 780px;
   margin: 0  auto 40px auto;

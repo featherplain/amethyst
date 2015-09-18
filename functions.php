@@ -110,9 +110,9 @@ add_action( 'after_setup_theme', 'othello_setup' );
 function othello_body_classes( $classes ) {
 
 	if ( ( ! is_active_sidebar( 'sidebar' ) )
-		|| is_page_template( 'template-parts/full-width.php' )
+		|| is_page_template( 'template-parts/single-column.php' )
 		|| is_attachment() ) {
-		$classes[] = 'full-width';
+		$classes[] = 'single-column';
 	}
 
 	return $classes;
