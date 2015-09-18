@@ -26,10 +26,11 @@ Tags: white, responsive-layout, one-column, two-columns, right-sidebar, editor-s
 @import 'core/settings';
 @import 'core/placeholder';
 @import 'core/mixins';
+// @import 'core/sprite';
 @import 'core/default';
-
-// module
-@import 'module/**/*.*';
 
 // layout
 @import 'layout/*.*';
+// module
+@import 'module/*.*';
+
