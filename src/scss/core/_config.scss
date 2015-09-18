@@ -8,16 +8,20 @@ $colorBase          : #222222;
 $colorSub           : #dedede;
 $colorText          : #454545;
 $colorBg            : #fafafa;
-$colorLink          : #999999;
+$colorLink          : #04abdf;
 $colorLinkHover     : darken($colorLink, 18%);
 $colorSelection     : lighten($colorLink, 50%);
+$colorBtn           : $colorLink;
 // others
 $colorRed           : #f04124;
 $colorRedLighten    : lighten($colorRed, 36%);
 $colorYellow        : #f0bd24;
 $colorYellowLighten : lighten($colorYellow, 36%);
 $colorGreen         : #43ac6a;
-$colorBlue          : #007095;
+$colorBlue          : #04abdf; // default is same as $colorLink
+$colorGray          : #999999;
+$colorBlack         : #222222; // default is same as $colorBase
+$colorPink          : #ff4c7d;
 //***********************
 // path
 //***********************
@@ -27,9 +31,9 @@ $filePath           : "./assets/images/";
 // font-family
 //***********************
 // primary
-$fontFamily         : "Avenir Next", "Avenir", "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+$fontFamily         : "Helvetica Neue", "Helvetica", "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
 // title
-$fontFamilyTitle    : "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+$fontFamilyTitle    : "Helvetica Neue", "Helvetica", "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
 // code
 $fontFamilyCode     : Menlo, Consolas, Courier, sans-serif;
 
