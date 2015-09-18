@@ -28,7 +28,7 @@
 	</header><!-- / .post__header -->
 
 	<div class="post__content">
-		<div class="editor-style">
+		<div class="post__editor">
 
 			<?php the_content(); ?>
 
