@@ -26,6 +26,9 @@
     display: block;
     color: $colorBase;
     line-height: 1.2;
+    &:hover {
+      color: $colorLink;
+    }
   }
 }
 .site-description {
