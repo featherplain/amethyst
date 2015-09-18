@@ -151,9 +151,18 @@ gulp.task('jsApp', function() {
     .pipe(browserSync.reload({ stream: true }));
 });
 
+gulp.task('jsFiles', function() {
+  return gulp.src(paths.jsPath + '*.js')
+    .pipe($.uglify())
+    .pipe($.rename({ suffix: '.min' }))
+    .pipe(gulp.dest(paths.jsDest))
+    .pipe(browserSync.reload({ stream: true }));
+});
+
 gulp.task('jsTasks', [
   'jsApp',
-  'jsLib'
+  'jsLib',
+  'jsFiles'
 ]);
 
 /***************************************************************************
