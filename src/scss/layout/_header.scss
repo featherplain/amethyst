@@ -90,11 +90,18 @@
     margin: 0;
     text-align: center;
     background-color: $colorBase;
+    border-radius: 0;
+    box-shadow: none;
     outline: 0;
     &:before {
       @include genericon('\f419');
       margin: 16px auto;
       color: #ffffff;
+    }
+    &:hover,
+    &:focus {
+      outline: 0;
+      background-color: lighten($colorBase, 8%);
     }
   }
   // toggle sub menu
@@ -108,14 +115,18 @@
     margin: 0;
     padding: 0;
     background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
     &:before {
       @include genericon('\f431', 28px);
       text-align: center;
       margin: 11px auto;
       color: #ffffff;
     }
+    &:hover,
     &:focus {
       outline: 0;
+      background-color: lighten($colorBase, 8%);
     }
   }
   &__list {

@@ -166,8 +166,10 @@
   margin: 1rem 0;
   padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
   text-align: center;
-  border: none;
   background-color: $color;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 0 darken($colorLink, 6%);
   color: #ffffff;
   cursor: pointer;
   font-size: $fontSize;

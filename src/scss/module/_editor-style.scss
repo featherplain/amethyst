@@ -60,7 +60,7 @@
   p {
     color: $colorText;
     font-size: rem-calc(14);
-    line-height: 1.7;
+    line-height: 1.5;
   }
   blockquote {
     position: relative;
@@ -98,8 +98,8 @@
     font-size: rem-calc(12);
   }
   kbd {
-    padding: 2px;
-    background-color: $colorBase;
+    padding: 2px 4px;
+    background-color: lighten($colorBase, 6%);
     border: 1px solid lighten($colorBase, 30%);
     border-radius: 3px;
     color: #ffffff;
@@ -113,7 +113,8 @@
     font-style: normal;
   }
   ins {
-    background-color: lighten(#cc0000, 54%);
+    padding: 0 4px;
+    background-color: lighten($colorLink, 30%);
     color: $colorText;
     text-decoration: none;
   }
@@ -132,7 +133,7 @@
   .comment-content {
     h1, h2, h3, h4, h5, h6,
     p, ul, ol, dl, pre, blockquote, table {
-      margin: 24px 0;
+      margin: 30px 0;
     }
     h1 {
       font-size: rem-calc(24);

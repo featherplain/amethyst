@@ -2112,8 +2112,9 @@ body {
   background-repeat: no-repeat;
   color: #222222;
   word-wrap: break-word;
-  font-family: "Avenir Next", "Avenir", "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
-  font-weight: 400;
+  font-family: "Helvetica Neue", "Helvetica", "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+  font-weight: 300;
+  letter-spacing: 0.1px;
 }
 
 /**
@@ -2127,7 +2128,7 @@ iframe {
  * text-level semantics
  */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+  font-family: "Helvetica Neue", "Helvetica", "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
 }
 h1, h1 > a, h2, h2 > a, h3, h3 > a, h4, h4 > a, h5, h5 > a, h6, h6 > a {
   color: #222222;
@@ -2137,7 +2138,7 @@ h1:hover, h1 > a:hover, h2:hover, h2 > a:hover, h3:hover, h3 > a:hover, h4:hover
 }
 
 a {
-  color: #999999;
+  color: #04abdf;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -2145,11 +2146,11 @@ a:focus {
   outline: thin dotted;
 }
 a:link, a:visited {
-  color: #999999;
+  color: #04abdf;
 }
 a:hover, a:active, a:focus {
   outline: 0;
-  color: #6b6b6b;
+  color: #026685;
   text-decoration: none;
 }
 
@@ -2159,14 +2160,14 @@ p {
 
 ::-moz-selection {
   background: transparent;
-  background-color: white;
-  color: #dedede;
+  background-color: #e3f8ff;
+  color: #222222;
 }
 
 ::selection {
   background: transparent;
-  background-color: white;
-  color: #dedede;
+  background-color: #e3f8ff;
+  color: #222222;
 }
 
 .fa {
@@ -2293,7 +2294,7 @@ table td {
   color: #ffffff;
 }
 .copyright__text a:hover {
-  color: #999999;
+  color: #04abdf;
 }
 
 /**
@@ -2418,6 +2419,8 @@ table td {
   margin: 0;
   text-align: center;
   background-color: #222222;
+  border-radius: 0;
+  box-shadow: none;
   outline: 0;
 }
 .gnav__trigger:before {
@@ -2431,6 +2434,10 @@ table td {
   margin: 16px auto;
   color: #ffffff;
 }
+.gnav__trigger:hover, .gnav__trigger:focus {
+  outline: 0;
+  background-color: #363636;
+}
 .gnav__arrowdown {
   display: block;
   position: absolute;
@@ -2441,6 +2448,8 @@ table td {
   margin: 0;
   padding: 0;
   background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
 }
 .gnav__arrowdown:before {
   position: static;
@@ -2454,8 +2463,9 @@ table td {
   margin: 11px auto;
   color: #ffffff;
 }
-.gnav__arrowdown:focus {
+.gnav__arrowdown:hover, .gnav__arrowdown:focus {
   outline: 0;
+  background-color: #363636;
 }
 .gnav__list {
   display: none;
@@ -2644,14 +2654,14 @@ body.error404 .l-primary {
 }
 .post__link:hover .post__title--archive,
 .post__link:hover .label {
-  color: #6b6b6b;
+  color: #026685;
 }
 .post__title {
   margin: 0;
   padding: 0 0 5px 0;
   font-size: 1.25rem;
   font-weight: bold;
-  border-bottom: 1px dotted #dedede;
+  border-bottom: 1px solid #dedede;
 }
 .post__title--archive {
   font-size: 1rem;
@@ -2802,13 +2812,15 @@ input[type="reset"] {
   margin: 1rem 0;
   padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
   text-align: center;
+  background-color: #04abdf;
   border: none;
-  background-color: #222222;
+  border-radius: 4px;
+  box-shadow: 0 2px 0 #0394c1;
   color: #ffffff;
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 300ms ease-out;
-  font-family: "Avenir Next", "Avenir", "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+  font-family: "Helvetica Neue", "Helvetica", "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
 }
 button:focus,
 input[type="button"]:focus,
@@ -2835,7 +2847,7 @@ input[type="submit"]:focus,
 input[type="reset"]:hover,
 input[type="reset"]:active,
 input[type="reset"]:focus {
-  background-color: #0e0e0e;
+  background-color: #038cb7;
   color: #ffffff;
   outline: 0;
   text-decoration: none;
@@ -2846,8 +2858,10 @@ input[type="reset"]:focus {
   margin: 1rem 0;
   padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
   text-align: center;
+  background-color: #04abdf;
   border: none;
-  background-color: #222222;
+  border-radius: 4px;
+  box-shadow: 0 2px 0 #0394c1;
   color: #ffffff;
   cursor: pointer;
   font-size: 1rem;
@@ -2860,7 +2874,7 @@ input[type="reset"]:focus {
   color: #ffffff;
 }
 .btn:hover, .btn:active, .btn:focus {
-  background-color: #0e0e0e;
+  background-color: #038cb7;
   color: #ffffff;
   outline: 0;
   text-decoration: none;
@@ -2871,8 +2885,10 @@ input[type="reset"]:focus {
   margin: 1rem 0;
   padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
   text-align: center;
+  background-color: #04abdf;
   border: none;
-  background-color: #222222;
+  border-radius: 4px;
+  box-shadow: 0 2px 0 #0394c1;
   color: #ffffff;
   cursor: pointer;
   font-size: 1rem;
@@ -2886,7 +2902,7 @@ input[type="reset"]:focus {
   color: #ffffff;
 }
 .btn-full:hover, .btn-full:active, .btn-full:focus {
-  background-color: #0e0e0e;
+  background-color: #038cb7;
   color: #ffffff;
   outline: 0;
   text-decoration: none;
@@ -2935,7 +2951,7 @@ input[type="reset"]:focus {
   display: inline-block;
   margin-left: 7px;
   vertical-align: top;
-  font-family: "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+  font-family: "Helvetica Neue", "Helvetica", "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
   font-size: 1.125rem;
 }
 .comment-author .says {
@@ -2973,7 +2989,7 @@ input[type="reset"]:focus {
   transition: background-color 300ms ease-out;
   margin: 0 0 0 58px;
   border: 1px solid #dedede;
-  font-family: "Avenir Next", "Avenir", "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+  font-family: "Helvetica Neue", "Helvetica", "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
   font-size: 0.625rem;
 }
 .comment .reply:hover, .comment .reply:focus {
@@ -3079,7 +3095,7 @@ input[type="reset"]:focus {
 .editor-style dl dt,
 .comment-content dl dt {
   margin-left: 0;
-  font-family: "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+  font-family: "Helvetica Neue", "Helvetica", "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
 }
 .editor-style dl dd,
 .comment-content dl dd {
@@ -3089,7 +3105,7 @@ input[type="reset"]:focus {
 .comment-content p {
   color: #454545;
   font-size: 0.875rem;
-  line-height: 1.7;
+  line-height: 1.5;
 }
 .editor-style blockquote,
 .comment-content blockquote {
@@ -3134,8 +3150,8 @@ input[type="reset"]:focus {
 }
 .editor-style kbd,
 .comment-content kbd {
-  padding: 2px;
-  background-color: #222222;
+  padding: 2px 4px;
+  background-color: #313131;
   border: 1px solid #6f6f6f;
   border-radius: 3px;
   color: #ffffff;
@@ -3151,7 +3167,8 @@ input[type="reset"]:focus {
 }
 .editor-style ins,
 .comment-content ins {
-  background-color: #ffe0e0;
+  padding: 0 4px;
+  background-color: #7fdffd;
   color: #454545;
   text-decoration: none;
 }
@@ -3182,7 +3199,7 @@ input[type="reset"]:focus {
   .comment-content pre,
   .comment-content blockquote,
   .comment-content table {
-    margin: 24px 0;
+    margin: 30px 0;
   }
   .editor-style h1,
   .comment-content h1 {
@@ -3234,7 +3251,7 @@ input[type="reset"]:focus {
   font-weight: 400;
 }
 .nav-links a:hover {
-  color: #999999;
+  color: #04abdf;
 }
 
 .nav-previous {
@@ -3302,9 +3319,9 @@ input[type="reset"]:focus {
 .widget__title {
   margin: 0 0 12px 0;
   padding: 4px 0;
-  border-top: 1px solid #222222;
+  border-top: 2px solid #222222;
   border-bottom: 1px solid #222222;
-  font-family: "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+  font-family: "Helvetica Neue", "Helvetica", "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
   font-size: 1rem;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -3337,7 +3354,7 @@ input[type="reset"]:focus {
   font-size: 0.8125rem;
 }
 .widget_archive ul li a:hover {
-  color: #6b6b6b;
+  color: #026685;
 }
 .widget_categories ul li {
   padding: 6px 0;
@@ -3354,7 +3371,7 @@ input[type="reset"]:focus {
   font-size: 0.8125rem;
 }
 .widget_categories ul li a:hover {
-  color: #6b6b6b;
+  color: #026685;
 }
 .widget_archives ul li {
   padding: 6px 0;
@@ -3371,7 +3388,7 @@ input[type="reset"]:focus {
   font-size: 0.8125rem;
 }
 .widget_archives ul li a:hover {
-  color: #6b6b6b;
+  color: #026685;
 }
 .widget_nav_menu ul li {
   padding: 6px 0;
@@ -3388,7 +3405,7 @@ input[type="reset"]:focus {
   font-size: 0.8125rem;
 }
 .widget_nav_menu ul li a:hover {
-  color: #6b6b6b;
+  color: #026685;
 }
 .widget_pages ul li {
   padding: 6px 0;
@@ -3405,7 +3422,7 @@ input[type="reset"]:focus {
   font-size: 0.8125rem;
 }
 .widget_pages ul li a:hover {
-  color: #6b6b6b;
+  color: #026685;
 }
 .widget_custom_menu ul li {
   padding: 6px 0;
@@ -3422,7 +3439,7 @@ input[type="reset"]:focus {
   font-size: 0.8125rem;
 }
 .widget_custom_menu ul li a:hover {
-  color: #6b6b6b;
+  color: #026685;
 }
 .widget_recent_comments ul li {
   padding: 6px 0;
@@ -3439,7 +3456,7 @@ input[type="reset"]:focus {
   font-size: 0.8125rem;
 }
 .widget_recent_comments ul li a:hover {
-  color: #6b6b6b;
+  color: #026685;
 }
 .widget_meta ul li {
   padding: 6px 0;
@@ -3456,7 +3473,7 @@ input[type="reset"]:focus {
   font-size: 0.8125rem;
 }
 .widget_meta ul li a:hover {
-  color: #6b6b6b;
+  color: #026685;
 }
 .widget_recent_entries ul li {
   padding: 6px 0;
@@ -3473,7 +3490,7 @@ input[type="reset"]:focus {
   font-size: 0.8125rem;
 }
 .widget_recent_entries ul li a:hover {
-  color: #6b6b6b;
+  color: #026685;
 }
 .widget_recent_entries .post-date {
   display: block;
