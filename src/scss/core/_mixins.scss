@@ -1,24 +1,24 @@
 @charset "utf-8";
 
-//***********************
+//*--------------------------------------------------*/
 // hasPseudoClass
-// $name
-//***********************
-@mixin hasPseudoClass($loc:false, $position: absolute){
+// @param $name
+//*--------------------------------------------------*/
+@mixin hasPseudoClass($loc:false, $position: absolute) {
   position: relative;
-  @if $loc == before{
+  @if $loc == before {
     &:before{
       display: block;
       content: "";
       position: $position;
     }
-  }@else if $loc == after{
+  } @else if $loc == after {
     &:after{
       display: block;
       content: "";
       position: $position;
     }
-  }@else{
+  } @else {
     &:before,
     &:after{
       display: block;
@@ -28,11 +28,11 @@
   }
 }
 
-//***********************
+//*--------------------------------------------------*/
 // imageReplace
 // @param $name
-//***********************
-@mixin imageReplace($path, $imgWidth, $imgHeight, $scale: 1, $position: 0 0, $size: 100%, $repeat: no-repeat){
+//*--------------------------------------------------*/
+@mixin imageReplace($path, $imgWidth, $imgHeight, $scale: 1, $position: 0 0, $size: 100%, $repeat: no-repeat) {
   display: block;
   overflow: hidden;
   padding-top: $imgHeight * $scale;
@@ -44,11 +44,11 @@
   background-repeat: $repeat;
 }
 
-//***********************
+//*--------------------------------------------------*/
 // Sprite css image replacement (Medium size)
 // @param $name
-//***********************
-@mixin sprite-ir($sprite, $scale: 1, $display: block){
+//*--------------------------------------------------*/
+@mixin sprite-ir($sprite, $scale: 1, $display: block) {
   @include sprite-image($sprite);
   $sprite-offset-x: nth($sprite, 3) * $scale;
   $sprite-offset-y: nth($sprite, 4) * $scale;
@@ -63,11 +63,14 @@
 }
 
 
-//***********************
+//*--------------------------------------------------*/
 // web font
-//***********************
+// @param $name
+//*--------------------------------------------------*/
+
 // use genericon
-@mixin genericon($content:'\f100', $fontsize: 16px, $valaign: text-bottom, $position: static, $display: inline-block, $line-height: 1){
+// http://genericons.com/
+@mixin genericon($content:'\f100', $fontsize: 16px, $valaign: text-bottom, $position: static, $display: inline-block, $line-height: 1) {
   position: $position;
   display: $display;
   content: $content;
@@ -77,7 +80,8 @@
   line-height: $line-height;
 }
 // use font-awesome
-@mixin fa($content: '', $fontsize: 16px, $valaign: baseline){
+// https://fortawesome.github.io/Font-Awesome/
+@mixin fa($content: '', $fontsize: 16px, $valaign: baseline) {
   display: inline-block;
   content: $content;
   vertical-align: $valaign;
@@ -89,9 +93,10 @@
   -webkit-font-smoothing: antialiased;
 }
 
-//***********************
+//*--------------------------------------------------*/
 // css graphic
-//***********************
+// @param $name
+//*--------------------------------------------------*/
 // Triangle
 @mixin triangle($direction, $width, $height, $color) {
   width: 0;
@@ -132,35 +137,10 @@
     border-left: $size solid transparent;
   }
 }
-//***********************
-// base styles on sidebar widget
-//***********************
-@mixin widgetBase {
-  ul {
-    border-bottom: 1px solid lighten($colorSub, 6%);
-    li {
-      list-style-type: none;
-      border-top: 1px solid lighten($colorSub, 6%);
-      ul {
-        margin-left: 12px;
-        border-bottom: none;
-        li {
-        }
-      }
-      a {
-        display: block;
-        padding: 8px 0;
-        font-size: rem-calc(13);
-        &:hover {
-          color: $colorLink;
-        }
-      }
-    }
-  }
-}
-//***********************
+//*--------------------------------------------------*/
 // button Base
-//***********************
+// @param $name
+//*--------------------------------------------------*/
 @mixin btnBase($color, $fontSize, $fullWidth: false) {
   display: inline-block;
   margin: 1rem 0;
@@ -194,9 +174,10 @@
     text-decoration: none;
   }
 }
-//***********************
+//*--------------------------------------------------*/
 // alert box
-//***********************
+// @param $name
+//*--------------------------------------------------*/
 @mixin alertBox($padding, $bg, $border, $color, $fontSize) {
   padding: $padding;
   background-color: $bg;

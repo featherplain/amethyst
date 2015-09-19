@@ -1,9 +1,12 @@
 @charset "UTF-8";
 
 /* -------------------------------------------------------------- */
-/* widget
+/* sidebar
 /* -------------------------------------------------------------- */
 
+/**
+ * widget
+ */
 .widget {
   margin-bottom: 20px;
   &__title {
@@ -21,6 +24,50 @@
     font-size: rem-calc(14);
     line-height: 1.4;
   }
+}
+
+// widget base style
+%widgetBase {
+  ul {
+    border-bottom: 1px solid lighten($colorSub, 6%);
+    li {
+      list-style-type: none;
+      border-top: 1px solid lighten($colorSub, 6%);
+      ul {
+        margin-left: 12px;
+        border-bottom: none;
+        li {
+        }
+      }
+      a {
+        display: block;
+        padding: 8px 0;
+        font-size: rem-calc(13);
+        &:hover {
+          color: $colorLink;
+        }
+      }
+    }
+  }
+}
+// widget post list style
+%widgetPostList {
+  @extend %widgetBase;
+  span {
+    display: block;
+    color: darken($colorSub, 10%);
+    font-size: rem-calc(12);
+  }
+  time {
+    display: block;
+    margin: 4px 0;
+    text-align: right;
+    color: darken($colorSub, 10%);
+    font-size: rem-calc(12);
+  }
+}
+
+.widget {
   // search
   &_search {
     input[type="submit"] {
@@ -35,47 +82,36 @@
   }
   // archive
   &_archive {
-    @include widgetBase;
+    @extend %widgetBase;
   }
   // categories
   &_categories {
-    @include widgetBase;
+    @extend %widgetBase;
   }
   // nav
   &_nav_menu {
-    @include widgetBase;
+    @extend %widgetBase;
   }
   // pages
   &_pages {
-    @include widgetBase;
+    @extend %widgetBase;
   }
   // custom menu
   &_custom_menu {
-    @include widgetBase;
+    @extend %widgetBase;
   }
   // recent comments
   &_recent_comments {
-    @include widgetBase;
+    @extend %widgetBase;
   }
   // meta
   &_meta {
-    @include widgetBase;
+    @extend %widgetBase;
   }
   // recent posts
-  &_recent_entries {
-    @include widgetBase;
-    .post-date {
-      display: block;
-      color: darken($colorSub, 10%);
-      font-size: rem-calc(12);
-    }
-    time {
-      display: block;
-      margin: 4px 0;
-      text-align: right;
-      color: darken($colorSub, 10%);
-      font-size: rem-calc(12);
-    }
+  &_recent_entries,
+  &_rss {
+    @extend %widgetPostList;
   }
   // tag cloud
   &_tag_cloud {
