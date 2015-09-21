@@ -15,8 +15,6 @@ Tags: white, responsive-layout, ,mobile-first, one-column, two-columns, right-si
 /* Foundation by ZURB
 /* foundation.zurb.com
 /* Licensed under MIT Open Source
-/*
-/* Othello requires 'grid' and 'forms'.
 /* -------------------------------------------------------------- */
 meta.foundation-version {
   font-family: "/5.5.2/";
@@ -28,18 +26,18 @@ meta.foundation-mq-small {
 }
 
 meta.foundation-mq-small-only {
-  font-family: "/only screen and (max-width: 40em)/";
+  font-family: "/only screen and (max-width: 48em)/";
   width: 0;
 }
 
 meta.foundation-mq-medium {
-  font-family: "/only screen and (min-width:40.0625em)/";
-  width: 40.0625em;
+  font-family: "/only screen and (min-width:48.0625em)/";
+  width: 48.0625em;
 }
 
 meta.foundation-mq-medium-only {
-  font-family: "/only screen and (min-width:40.0625em) and (max-width:64em)/";
-  width: 40.0625em;
+  font-family: "/only screen and (min-width:48.0625em) and (max-width:64em)/";
+  width: 48.0625em;
 }
 
 meta.foundation-mq-large {
@@ -92,11 +90,11 @@ body {
 
 body {
   background: #fff;
-  color: #222;
+  color: #222222;
   cursor: auto;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Lato", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   line-height: 1.5;
   margin: 0;
   padding: 0;
@@ -173,7 +171,7 @@ select {
 
 .row {
   margin: 0 auto;
-  max-width: 62.5rem;
+  max-width: 1080px;
   width: 100%;
 }
 .row:before, .row:after {
@@ -193,7 +191,7 @@ select {
   margin-right: 0;
 }
 .row .row {
-  margin: 0 -0.9375rem;
+  margin: 0 -1.125rem;
   max-width: none;
   width: auto;
 }
@@ -219,8 +217,8 @@ select {
 
 .column,
 .columns {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
+  padding-left: 1.125rem;
+  padding-right: 1.125rem;
   width: 100%;
   float: left;
 }
@@ -388,8 +386,8 @@ select {
   .column,
   .columns {
     position: relative;
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
     float: left;
   }
 
@@ -537,12 +535,12 @@ select {
   }
   .row.small-uncollapse > .column,
   .row.small-uncollapse > .columns {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
     float: left;
   }
 }
-@media only screen and (min-width: 40.0625em) {
+@media only screen and (min-width: 48.0625em) {
   .medium-push-0 {
     position: relative;
     left: 0;
@@ -690,8 +688,8 @@ select {
   .column,
   .columns {
     position: relative;
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
     float: left;
   }
 
@@ -839,8 +837,8 @@ select {
   }
   .row.medium-uncollapse > .column,
   .row.medium-uncollapse > .columns {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
     float: left;
   }
 
@@ -1136,8 +1134,8 @@ select {
   .column,
   .columns {
     position: relative;
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
     float: left;
   }
 
@@ -1285,8 +1283,8 @@ select {
   }
   .row.large-uncollapse > .column,
   .row.large-uncollapse > .columns {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
     float: left;
   }
 
@@ -1441,8 +1439,8 @@ button, .button {
   border-style: solid;
   border-width: 0;
   cursor: pointer;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-weight: normal;
+  font-family: "Helvetica Neue", "Helvetica", "Lato", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+  font-weight: 300;
   line-height: normal;
   margin: 0 0 1.25rem;
   position: relative;
@@ -1451,27 +1449,27 @@ button, .button {
   display: inline-block;
   padding: 1rem 2rem 1.0625rem 2rem;
   font-size: 1rem;
-  background-color: #008CBA;
-  border-color: #007095;
+  background-color: #222222;
+  border-color: #1b1b1b;
   color: #FFFFFF;
   transition: background-color 300ms ease-out;
 }
 button:hover, button:focus, .button:hover, .button:focus {
-  background-color: #007095;
+  background-color: #1b1b1b;
 }
 button:hover, button:focus, .button:hover, .button:focus {
   color: #FFFFFF;
 }
 button.secondary, .button.secondary {
-  background-color: #e7e7e7;
-  border-color: #b9b9b9;
+  background-color: #dedede;
+  border-color: #b2b2b2;
   color: #333333;
 }
 button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
-  background-color: #b9b9b9;
+  background-color: #b2b2b2;
 }
 button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
-  color: #333333;
+  color: #FFFFFF;
 }
 button.success, .button.success {
   background-color: #43AC6A;
@@ -1549,38 +1547,38 @@ button.round, .button.round {
   border-radius: 1000px;
 }
 button.disabled, button[disabled], .button.disabled, .button[disabled] {
-  background-color: #008CBA;
-  border-color: #007095;
+  background-color: #222222;
+  border-color: #1b1b1b;
   color: #FFFFFF;
   box-shadow: none;
   cursor: default;
   opacity: 0.7;
 }
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  background-color: #007095;
+  background-color: #1b1b1b;
 }
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
   color: #FFFFFF;
 }
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  background-color: #008CBA;
+  background-color: #222222;
 }
 button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
-  background-color: #e7e7e7;
-  border-color: #b9b9b9;
+  background-color: #dedede;
+  border-color: #b2b2b2;
   color: #333333;
   box-shadow: none;
   cursor: default;
   opacity: 0.7;
 }
 button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
-  background-color: #b9b9b9;
+  background-color: #b2b2b2;
 }
 button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
-  color: #333333;
+  color: #FFFFFF;
 }
 button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
-  background-color: #e7e7e7;
+  background-color: #dedede;
 }
 button.disabled.success, button[disabled].success, .button.disabled.success, .button[disabled].success {
   background-color: #43AC6A;
@@ -1656,7 +1654,7 @@ button::-moz-focus-inner {
   padding: 0;
 }
 
-@media only screen and (min-width: 40.0625em) {
+@media only screen and (min-width: 48.0625em) {
   button, .button {
     display: inline-block;
   }
@@ -1700,7 +1698,7 @@ label {
   cursor: pointer;
   display: block;
   font-size: 0.875rem;
-  font-weight: normal;
+  font-weight: 300;
   line-height: 1.5;
   margin-bottom: 0;
   /* Styles for required inputs */
@@ -2017,7 +2015,7 @@ fieldset legend {
   display: block;
   font-size: 0.75rem;
   font-style: italic;
-  font-weight: normal;
+  font-weight: 300;
   margin-bottom: 1rem;
   margin-top: -1px;
   padding: 0.375rem 0.5625rem 0.5625rem;
@@ -2032,7 +2030,7 @@ span.error, small.error {
   display: block;
   font-size: 0.75rem;
   font-style: italic;
-  font-weight: normal;
+  font-weight: 300;
   margin-bottom: 1rem;
   margin-top: -1px;
   padding: 0.375rem 0.5625rem 0.5625rem;
@@ -2057,7 +2055,7 @@ span.error, small.error {
   display: block;
   font-size: 0.75rem;
   font-style: italic;
-  font-weight: normal;
+  font-weight: 300;
   margin-bottom: 1rem;
   margin-top: -1px;
   padding: 0.375rem 0.5625rem 0.5625rem;
@@ -2101,27 +2099,12 @@ label.error {
 /* Othello default styles
 /* -------------------------------------------------------------- */
 /**
- * the root element
+ * root element
  */
-html {
-  font-size: 16px;
-}
-
-body {
-  background-color: #fff;
-  background-repeat: no-repeat;
-  color: #222222;
-  word-wrap: break-word;
-  font-family: "Helvetica Neue", "Helvetica", "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
-  font-weight: 300;
-  letter-spacing: 0.1px;
-}
-
-/**
- * grouping content
- */
-iframe {
-  vertical-align: middle;
+@media only screen and (max-width: 48em) {
+  body {
+    position: static;
+  }
 }
 
 /**
@@ -2133,7 +2116,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Helvetica Neue", "Helvetica", "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+  font-family: "Helvetica Neue", "Helvetica", "Lato", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
 }
 h1, h1 > a,
 h2,
@@ -2225,6 +2208,13 @@ dl dd {
 }
 dl dd:last-child {
   margin-bottom: 0;
+}
+
+/**
+ * grouping content
+ */
+iframe {
+  vertical-align: middle;
 }
 
 /**
@@ -2326,12 +2316,12 @@ table td {
 /**
  * media queries
  */
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   .footer-widgets__inner {
     padding: 0 16px;
   }
 }
-@media only screen and (min-width: 40.0625em) {
+@media only screen and (min-width: 48.0625em) {
   .footer-widgets__inner {
     margin: 0 auto;
     max-width: 1080px;
@@ -2532,7 +2522,7 @@ table td {
 /**
  * media queries
  */
-@media only screen and (min-width: 40.0625em) {
+@media only screen and (min-width: 48.0625em) {
   .l-header {
     margin-bottom: 40px;
   }
@@ -2635,13 +2625,13 @@ body.custom-background .l-container:after {
 /**
  * media queries
  */
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 48em) {
   .l-primary,
   .l-sidebar {
     padding: 0 16px;
   }
 }
-@media only screen and (min-width: 40.0625em) {
+@media only screen and (min-width: 48.0625em) {
   .l-primary {
     padding-left: 1.125rem;
     padding-right: 1.125rem;
@@ -2798,7 +2788,7 @@ body.error404 .l-primary {
 /**
  * media queries
  */
-@media only screen and (min-width: 40.0625em) {
+@media only screen and (min-width: 48.0625em) {
   .post__link {
     margin-bottom: 50px;
   }
@@ -2845,7 +2835,7 @@ body.error404 .l-primary {
   margin: 0;
   padding: 8px 0;
   border-top: 2px solid #222222;
-  font-family: "Helvetica Neue", "Helvetica", "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+  font-family: "Helvetica Neue", "Helvetica", "Lato", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
   font-size: 1rem;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -2914,7 +2904,7 @@ body.error404 .l-primary {
 /**
  * media queries
  */
-@media only screen and (min-width: 40.0625em) {
+@media only screen and (min-width: 48.0625em) {
   .widget--footer {
     padding-left: 1.125rem;
     padding-right: 1.125rem;
@@ -2941,7 +2931,7 @@ input[type="reset"] {
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 300ms ease-out;
-  font-family: "Helvetica Neue", "Helvetica", "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+  font-family: "Helvetica Neue", "Helvetica", "Lato", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
 }
 button:focus,
 input[type="button"]:focus,
@@ -3072,7 +3062,7 @@ input[type="reset"]:focus {
   display: inline-block;
   margin-left: 7px;
   vertical-align: top;
-  font-family: "Helvetica Neue", "Helvetica", "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+  font-family: "Helvetica Neue", "Helvetica", "Lato", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
   font-size: 1.125rem;
 }
 .comment-author .says {
@@ -3095,8 +3085,8 @@ input[type="reset"]:focus {
   border-style: solid;
   border-width: 0;
   cursor: pointer;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-weight: normal;
+  font-family: "Helvetica Neue", "Helvetica", "Lato", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+  font-weight: 300;
   line-height: normal;
   margin: 0 0 1.25rem;
   position: relative;
@@ -3110,7 +3100,7 @@ input[type="reset"]:focus {
   transition: background-color 300ms ease-out;
   margin: 0 0 0 58px;
   border: 1px solid #dedede;
-  font-family: "Helvetica Neue", "Helvetica", "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+  font-family: "Helvetica Neue", "Helvetica", "Lato", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
   font-size: 0.625rem;
 }
 .comment .reply:hover, .comment .reply:focus {
@@ -3240,7 +3230,7 @@ input[type="reset"]:focus {
 .post__editor dl dt,
 .comment-content dl dt {
   margin-left: 0;
-  font-family: "Helvetica Neue", "Helvetica", "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+  font-family: "Helvetica Neue", "Helvetica", "Lato", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
 }
 .post__editor dl dd,
 .comment-content dl dd {
@@ -3334,7 +3324,7 @@ input[type="reset"]:focus {
 /**
  * media queries
  */
-@media only screen and (min-width: 40.0625em) {
+@media only screen and (min-width: 48.0625em) {
   .post__editor h1,
   .post__editor h2,
   .post__editor h3,

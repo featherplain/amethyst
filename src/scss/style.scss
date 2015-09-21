@@ -12,25 +12,38 @@ Text Domain: othello
 Tags: white, responsive-layout, ,mobile-first, one-column, two-columns, right-sidebar, editor-style, sticky-post, microformats, featured-images, custom-colors, custom-menu, custom-background
 */
 
-// core files
+// -------------------------------------------------------------- //
+// corefiles
+// -------------------------------------------------------------- //
+// config
 @import 'core/config';
 
+// Foundation
 /* -------------------------------------------------------------- */
 /* Foundation by ZURB
 /* foundation.zurb.com
 /* Licensed under MIT Open Source
-/*
-/* Othello requires 'grid' and 'forms'.
 /* -------------------------------------------------------------- */
-@import 'core/foundation';
 @import 'core/settings';
+@import 'core/foundation';
+
+// original mixins and placeholder
 @import 'core/placeholder';
 @import 'core/mixins';
+
+// If you need CSS sprite images, uncomment 'core/sprite'.
 // @import 'core/sprite';
+
+// Othello default styles
 @import 'core/default';
 
+// -------------------------------------------------------------- //
 // layout
+// -------------------------------------------------------------- //
 @import 'layout/*.*';
+
+// -------------------------------------------------------------- //
 // module
+// -------------------------------------------------------------- //
 @import 'module/*.*';
 

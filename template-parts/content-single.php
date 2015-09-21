@@ -22,7 +22,7 @@
 			</div>
 		</div>
 		<?php // post thumbnail
-		$size = 'thumb744x400';
+		$size = 'thumb774x400';
 		the_post_thumbnail( $size, array( 'class'	=> 'attachment-' . $size . ' post__image' ) );
 		?>
 	</header><!-- / .post__header -->

@@ -45,8 +45,8 @@ function othello_setup() {
 	/*
 	 * Extra image sizes.
 	 */
-	set_post_thumbnail_size( 744, 400, true );
-	add_image_size( 'thumb744x400', 744, 400, true );
+	set_post_thumbnail_size( 774, 400, true );
+	add_image_size( 'thumb774x400', 774, 400, true );
 	add_image_size( 'thumb288x154', 288, 154, true );
 
 	/*
@@ -127,7 +127,7 @@ add_filter( 'body_class', 'othello_body_classes' );
  * @global int $content_width
  */
 function othello_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'othello_content_width', 744 );
+	$GLOBALS['content_width'] = apply_filters( 'othello_content_width', 774 );
 }
 add_action( 'after_setup_theme', 'othello_content_width', 0 );
 

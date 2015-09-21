@@ -4,26 +4,12 @@
 /* -------------------------------------------------------------- */
 
 /**
- * the root element
+ * root element
  */
-html {
-  font-size: 16px;
-}
 body {
-  background-color: #fff;
-  background-repeat: no-repeat;
-  color: $colorBase;
-  word-wrap: break-word;
-  font-family: $fontFamily;
-  font-weight: 300;
-  letter-spacing: 0.1px;
-}
-
-/**
- * grouping content
- */
-iframe {
-  vertical-align: middle;
+  @media #{$small-only} {
+    position: static;
+  }
 }
 
 /**
@@ -102,6 +88,12 @@ dl {
   }
 }
 
+/**
+ * grouping content
+ */
+iframe {
+  vertical-align: middle;
+}
 /**
  * embedded content
  */
