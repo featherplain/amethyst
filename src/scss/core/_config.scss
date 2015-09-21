@@ -28,14 +28,14 @@ $colorPink          : #ff4c7d;
 $filePath           : "./assets/images/";
 
 //***********************
-// font-family
+// font
 //***********************
-// primary
-$fontFamily         : "Helvetica Neue", "Helvetica", "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
-// title
-$fontFamilyTitle    : "Helvetica Neue", "Helvetica", "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
-// code
+// font Family
+$fontFamily         : "Helvetica Neue", "Helvetica", "Lato", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+$fontFamilyTitle    : $fontFamily;
 $fontFamilyCode     : Menlo, Consolas, Courier, sans-serif;
+// font weight
+$fontWeight         : 300;
 
 //***********************
 // block size
