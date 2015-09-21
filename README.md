@@ -1,7 +1,9 @@
 Othello
 ============
 
-Simple WordPress Theme using foundation
+![Othello](./screenshot.png)
+
+Simple WordPress Theme based on Foundation
 
 ## Requires
 
