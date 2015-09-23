@@ -55,10 +55,20 @@ body.custom-background {
   }
 }
 /**
- * screen reader text
+ * error 404
  */
-.screen-reader-text {
-  display: none;
+body.error404 {
+  .l-primary {
+    float: none;
+    width: 100%;
+    max-width: 780px;
+    margin: 0 auto 40px auto;
+  }
+}
+.not-found {
+  &__title {
+    margin-top: 0;
+  }
 }
 /**
  * media queries

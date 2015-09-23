@@ -1,8 +1,8 @@
 {
-  "name": "project-starter",
-  "version": "0.3.0",
-  "description": "Project starter for web development with gulp + foundation",
-  "uri": "https://github.com/featherplain/project-starter",
+  "name": "Othello",
+  "version": "1.0.0",
+  "description": "Othello is a simple WordPress theme based on Foundation. The design is kept simple to keep the simplicity of the Foundation. Features are, 100% responsive layouts, Genericons, Gulp use, Sass.",
+  "uri": "https://github.com/featherplain/othello",
   "main": "gulpfile.js",
   "scripts": {
     "gulp-server": "gulp default --mode server",
@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Megumi Hano",
-  "license": "MIT",
+  "license": "GPLv2 or Later",
   "devDependencies": {
     "browser-sync": "latest",
     "gulp": "latest",
@@ -23,6 +23,7 @@
     "gulp-imagemin": "latest",
     "gulp-jade": "latest",
     "gulp-load-plugins": "latest",
+    "gulp-minify-css": "^1.2.1",
     "gulp-plumber": "latest",
     "gulp-prettify": "latest",
     "gulp-rename": "latest",

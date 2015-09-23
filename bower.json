@@ -1,10 +1,10 @@
 {
-  "name": "project-starter",
-  "version": "0.3.0",
+  "name": "Othello",
+  "version": "1.0.0",
   "authors": [
     "featherplain <info@featherplain.com>"
   ],
-  "license": "MIT",
+  "license": "GPLv2 or Later",
   "ignore": [
     "**/.*",
     "node_modules",

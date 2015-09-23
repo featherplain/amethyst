@@ -7,29 +7,7 @@ Description: Used to style the TinyMCE editor.
 /* -------------------------------------------------------------- */
 /* Othello default styles
 /* -------------------------------------------------------------- */
-/**
- * the root element
- */
-html {
-  font-size: 16px;
-}
 
-body {
-  background-color: #fff;
-  background-repeat: no-repeat;
-  color: #222222;
-  word-wrap: break-word;
-  font-family: "Helvetica Neue", "Helvetica", "Lato", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
-  font-weight: 300;
-  letter-spacing: 0.1px;
-}
-
-/**
- * grouping content
- */
-iframe {
-  vertical-align: middle;
-}
 
 /**
  * text-level semantics
@@ -102,11 +80,6 @@ p {
   color: #222222;
 }
 
-.fa {
-  display: inline-block;
-  text-decoration: none;
-}
-
 /**
  * list items
  */
@@ -132,6 +105,13 @@ dl dd {
 }
 dl dd:last-child {
   margin-bottom: 0;
+}
+
+/**
+ * grouping content
+ */
+iframe {
+  vertical-align: middle;
 }
 
 /**
