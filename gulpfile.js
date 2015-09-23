@@ -37,7 +37,7 @@ var paths = {
 
 var rubySassConf = {
   loadPath       : ['bower_components/foundation/scss'],
-  require        : 'sass-globbing',
+  // require        : 'sass-globbing',
   sourcemap      : false,
   style          : 'expanded'
 };

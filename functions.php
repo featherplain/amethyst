@@ -93,7 +93,6 @@ function othello_setup() {
 	add_editor_style( array(
 		'assets/css/editor-style.css',
 		'assets/genericons/genericons.css',
-		'assets/font-awesome/css/font-awesome.min.css',
 		othello_font_url()
 	) );
 
@@ -212,9 +211,6 @@ function othello_scripts() {
 
 	// genericons
 	wp_enqueue_style( 'othello-genericons', get_template_directory_uri() . '/assets/genericons/genericons.css', array(), '3.0.3' );
-
-	// Font Awesome
-	wp_enqueue_style( 'othello-font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css', array(), '4.4.0' );
 
 	// stylesheet
 	wp_enqueue_style( 'othello-style', get_stylesheet_uri() );

@@ -4,7 +4,7 @@ Theme Name: Othello
 Theme URI: http://othello.asknode.net/
 Author: featherplain
 Author URI: http://asknode.net/
-Description: Othello is a simple theme based on Foundation5. The design is kept simple to keep the simplicity of the Foundation. Features are, 100% responsive layouts, Genericons and Font Awesome icons, minified CSS and JavaScript, Gulp use, Sass.
+Description: Othello is a simple theme based on Foundation5. The design is kept simple to keep the simplicity of the Foundation. Features are, 100% responsive layouts, Genericons, Gulp use, Sass.
 Version: 0.0.1
 License: GNU General Public License v2 or later
 License URI: license.txt
@@ -12,11 +12,8 @@ Text Domain: othello
 Tags: white, responsive-layout, ,mobile-first, one-column, two-columns, right-sidebar, editor-style, sticky-post, microformats, featured-images, custom-colors, custom-menu, custom-background
 */
 
-// -------------------------------------------------------------- //
-// corefiles
-// -------------------------------------------------------------- //
 // config
-@import 'core/config';
+@import 'components/core/config';
 
 // Foundation
 /* -------------------------------------------------------------- */
@@ -24,26 +21,25 @@ Tags: white, responsive-layout, ,mobile-first, one-column, two-columns, right-si
 /* foundation.zurb.com
 /* Licensed under MIT Open Source
 /* -------------------------------------------------------------- */
-@import 'core/settings';
-@import 'core/foundation';
+@import 'components/core/settings';
+@import 'components/core/foundation';
 
 // original mixins and placeholder
-@import 'core/placeholder';
-@import 'core/mixins';
+@import 'components/core/placeholder';
+@import 'components/core/mixins';
 
-// If you need CSS sprite images, uncomment 'core/sprite'.
-// @import 'core/sprite';
+// If you need CSS sprite images, uncomment 'components/core/sprite'.
+// @import 'components/core/sprite';
 
-// Othello default styles
-@import 'core/default';
-
-// -------------------------------------------------------------- //
-// layout
-// -------------------------------------------------------------- //
-@import 'layout/*.*';
-
-// -------------------------------------------------------------- //
-// module
-// -------------------------------------------------------------- //
-@import 'module/*.*';
-
+@import 'components/default';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/layout';
+@import 'components/post';
+@import 'components/post-navigation';
+@import 'components/post-editor';
+@import 'components/wp-classes';
+@import 'components/comments';
+@import 'components/widgets';
+@import 'components/forms';
+@import 'components/buttons';
