@@ -17,24 +17,24 @@ msgstr ""
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:19
+#: 404.php:17
 #@ othello
 msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
 msgstr ""
 
 #: 404.php:27
 #@ othello
-msgid "Most Used Categories"
+msgid "Categories"
 msgstr ""
 
 #. translators: %1$s: smiley
-#: 404.php:44
+#: 404.php:27
 #, php-format
 #@ othello
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: comments.php:29
+#: comments.php:31
 #, php-format
 #@ othello
 msgctxt "comments title"
@@ -43,19 +43,19 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:38
-#: comments.php:59
+#: comments.php:40
+#: comments.php:60
 #@ othello
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:41
+#: comments.php:42
 #: comments.php:62
 #@ othello
 msgid "Older Comments"
 msgstr ""
 
-#: comments.php:42
+#: comments.php:43
 #: comments.php:63
 #@ othello
 msgid "Newer Comments"
@@ -71,277 +71,72 @@ msgstr ""
 msgid "http://wordpress.org/"
 msgstr ""
 
-#: footer.php:16
+#: footer.php:31
 #, php-format
 #@ othello
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: footer.php:18
-#, php-format
-#@ othello
-msgid "Theme: %1$s by %2$s."
-msgstr ""
-
-#: functions.php:45
+#: functions.php:56
 #: header.php:32
 #@ othello
-msgid "Primary Menu"
+msgid "Global Menu"
 msgstr ""
 
-#: functions.php:100
+#: functions.php:162
 #@ othello
 msgid "Sidebar"
 msgstr ""
 
-#: header.php:23
+#: functions.php:164
+#@ othello
+msgid "Main Widgets Sidebar. Shows up in all pages."
+msgstr ""
+
+#: functions.php:171
+#@ othello
+msgid "Footer Widgets"
+msgstr ""
+
+#: functions.php:173
+#@ othello
+msgid "Will show a widgets area on the footer. Shows up in all pages."
+msgstr ""
+
+#: header.php:26
 #@ othello
 msgid "Skip to content"
 msgstr ""
 
-#: inc/extras.php:52
-#, php-format
-#@ othello
-msgid "Page %s"
-msgstr ""
-
-#: inc/template-tags.php:23
-#@ othello
-msgid "Posts navigation"
-msgstr ""
-
-#: inc/template-tags.php:27
-#@ othello
-msgid "Older posts"
-msgstr ""
-
-#: inc/template-tags.php:31
-#@ othello
-msgid "Newer posts"
-msgstr ""
-
-#: inc/template-tags.php:56
-#@ othello
-msgid "Post navigation"
-msgstr ""
-
-#: inc/template-tags.php:86
-#, php-format
-#@ othello
-msgctxt "post date"
-msgid "Posted on %s"
-msgstr ""
-
-#: inc/template-tags.php:91
-#, php-format
-#@ othello
-msgctxt "post author"
-msgid "by %s"
-msgstr ""
-
-#. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:108
-#: inc/template-tags.php:114
-#@ othello
-msgid ", "
-msgstr ""
-
-#: inc/template-tags.php:110
-#, php-format
-#@ othello
-msgid "Posted in %1$s"
-msgstr ""
-
-#: inc/template-tags.php:116
-#, php-format
-#@ othello
-msgid "Tagged %1$s"
-msgstr ""
-
-#: inc/template-tags.php:122
-#@ othello
-msgid "Leave a comment"
-msgstr ""
-
-#: inc/template-tags.php:122
-#@ othello
-msgid "1 Comment"
-msgstr ""
-
-#: inc/template-tags.php:122
-#@ othello
-msgid "% Comments"
-msgstr ""
-
-#: inc/template-tags.php:126
-#: template-parts/content-page.php:26
-#@ othello
-msgid "Edit"
-msgstr ""
-
-#: inc/template-tags.php:143
-#, php-format
-#@ othello
-msgid "Category: %s"
-msgstr ""
-
-#: inc/template-tags.php:145
-#, php-format
-#@ othello
-msgid "Tag: %s"
-msgstr ""
-
-#: inc/template-tags.php:147
-#, php-format
-#@ othello
-msgid "Author: %s"
-msgstr ""
-
-#: inc/template-tags.php:149
-#, php-format
-#@ othello
-msgid "Year: %s"
-msgstr ""
-
-#: inc/template-tags.php:149
-#@ othello
-msgctxt "yearly archives date format"
-msgid "Y"
-msgstr ""
-
-#: inc/template-tags.php:151
-#, php-format
-#@ othello
-msgid "Month: %s"
-msgstr ""
-
-#: inc/template-tags.php:151
-#@ othello
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr ""
-
-#: inc/template-tags.php:153
-#, php-format
-#@ othello
-msgid "Day: %s"
-msgstr ""
-
-#: inc/template-tags.php:153
-#@ othello
-msgctxt "daily archives date format"
-msgid "F j, Y"
-msgstr ""
-
-#: inc/template-tags.php:156
-#@ othello
-msgctxt "post format archive title"
-msgid "Asides"
-msgstr ""
-
-#: inc/template-tags.php:158
-#@ othello
-msgctxt "post format archive title"
-msgid "Galleries"
-msgstr ""
-
-#: inc/template-tags.php:160
-#@ othello
-msgctxt "post format archive title"
-msgid "Images"
-msgstr ""
-
-#: inc/template-tags.php:162
-#@ othello
-msgctxt "post format archive title"
-msgid "Videos"
-msgstr ""
-
-#: inc/template-tags.php:164
-#@ othello
-msgctxt "post format archive title"
-msgid "Quotes"
-msgstr ""
-
-#: inc/template-tags.php:166
-#@ othello
-msgctxt "post format archive title"
-msgid "Links"
-msgstr ""
-
-#: inc/template-tags.php:168
-#@ othello
-msgctxt "post format archive title"
-msgid "Statuses"
-msgstr ""
-
-#: inc/template-tags.php:170
-#@ othello
-msgctxt "post format archive title"
-msgid "Audio"
-msgstr ""
-
-#: inc/template-tags.php:172
-#@ othello
-msgctxt "post format archive title"
-msgid "Chats"
-msgstr ""
-
-#: inc/template-tags.php:175
-#, php-format
-#@ othello
-msgid "Archives: %s"
-msgstr ""
-
-#. translators: 1: Taxonomy singular name, 2: Current taxonomy term
-#: inc/template-tags.php:179
-#, php-format
-#@ othello
-msgid "%1$s: %2$s"
-msgstr ""
-
-#: inc/template-tags.php:181
-#@ othello
-msgid "Archives"
-msgstr ""
-
-#: search.php:16
+#: search.php:12
 #, php-format
 #@ othello
 msgid "Search Results for: %s"
 msgstr ""
 
-#: template-parts/content-none.php:14
+#: template-parts/content-none.php:13
 #@ othello
 msgid "Nothing Found"
 msgstr ""
 
-#: template-parts/content-none.php:20
+#: template-parts/content-none.php:16
 #, php-format
 #@ othello
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: template-parts/content-none.php:24
+#: template-parts/content-none.php:20
 #@ othello
 msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr ""
 
-#: template-parts/content-none.php:29
+#: template-parts/content-none.php:25
 #@ othello
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
-#: template-parts/content-page.php:19
-#: template-parts/content-single.php:23
-#: template-parts/content.php:32
+#: template-parts/content-page.php:25
+#: template-parts/content-single.php:39
 #@ othello
 msgid "Pages:"
-msgstr ""
-
-#. translators: %s: Name of current post
-#: template-parts/content.php:25
-#, php-format
-#@ othello
-msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
