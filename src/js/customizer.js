@@ -6,6 +6,7 @@
   $siteTitle = $('.site-title a');
   $siteDesc  = $('.site-description');
   $siteBrand = $('.site-title a, .site-description');
+  $copyRight = $('#copy');
   $api       = wp.customize;
   // Site title and description.
   $api('blogname', function(value) {
