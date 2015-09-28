@@ -161,7 +161,7 @@ function othello_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'othello' ),
 		'id'            => 'sidebar',
-		'description'   => '',
+		'description'   => 'Main Widgets Sidebar. Shows up in all pages.',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget__title">',
@@ -170,7 +170,7 @@ function othello_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Footer Widgets', 'othello' ),
 		'id'            => 'footer-widgets',
-		'description'   => '',
+		'description'   => 'Will show a widgets area on the footer. Shows up in all pages.',
 		'before_widget' => '<aside id="%1$s" class="widget widget--footer %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget__title">',
@@ -229,11 +229,6 @@ add_action( 'wp_enqueue_scripts', 'othello_scripts' );
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/inc/extras.php';
 
 /**
  * Customizer additions.
