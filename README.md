@@ -1,6 +1,8 @@
 Othello
 ============
 
+[![Deployment status from DeployBot](https://node.deploybot.com/badge/45290642017213/44676.svg)](http://deploybot.com)
+
 ![Othello](./screenshot.png)
 
 Simple WordPress Theme based on Foundation
