@@ -12,10 +12,10 @@
   background-color: $colorBg;
 }
 /**
- * copyright
+ * siteinfo
  */
-.copyright {
-  background-color: #111111;
+.siteinfo {
+  background-color: darken($colorBase, 4%);
   &__inner {
     @include grid-row();
     padding: 20px 0;

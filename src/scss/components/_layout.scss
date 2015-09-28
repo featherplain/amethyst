@@ -18,6 +18,7 @@ body.custom-background {
  */
 .l-main {
   @include grid-row();
+  min-height: 100vh;
 }
 /**
  * l-primary and l-sidebar
