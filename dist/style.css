@@ -92,7 +92,7 @@ body {
   background: #fff;
   color: #222222;
   cursor: auto;
-  font-family: "Helvetica Neue", "Helvetica", "Lato", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
   font-style: normal;
   font-weight: 300;
   line-height: 1.5;
@@ -1439,7 +1439,7 @@ button, .button {
   border-style: solid;
   border-width: 0;
   cursor: pointer;
-  font-family: "Helvetica Neue", "Helvetica", "Lato", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
   font-weight: 300;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -2116,7 +2116,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Helvetica Neue", "Helvetica", "Lato", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
 }
 h1, h1 > a,
 h2,
@@ -2978,7 +2978,7 @@ body.error404 .l-primary {
 .post__editor dl dt,
 .comment-content dl dt {
   margin-left: 0;
-  font-family: "Helvetica Neue", "Helvetica", "Lato", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
 }
 .post__editor dl dd,
 .comment-content dl dd {
@@ -3285,7 +3285,7 @@ object {
   display: inline-block;
   margin-left: 7px;
   vertical-align: top;
-  font-family: "Helvetica Neue", "Helvetica", "Lato", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
   font-size: 1.125rem;
 }
 .comment-author .says {
@@ -3308,7 +3308,7 @@ object {
   border-style: solid;
   border-width: 0;
   cursor: pointer;
-  font-family: "Helvetica Neue", "Helvetica", "Lato", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
   font-weight: 300;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -3323,7 +3323,7 @@ object {
   transition: background-color 300ms ease-out;
   margin: 0 0 0 58px;
   border: 1px solid #dedede;
-  font-family: "Helvetica Neue", "Helvetica", "Lato", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
   font-size: 0.625rem;
 }
 .comment .reply:hover, .comment .reply:focus {
@@ -3363,7 +3363,7 @@ object {
   margin: 0;
   padding: 8px 0;
   border-top: 2px solid #222222;
-  font-family: "Helvetica Neue", "Helvetica", "Lato", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
   font-size: 1rem;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -3468,7 +3468,7 @@ input[type="reset"] {
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 300ms ease-out;
-  font-family: "Helvetica Neue", "Helvetica", "Lato", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
 }
 button:focus,
 input[type="button"]:focus,

@@ -60,11 +60,6 @@ gulp.task('install:foundation', function() {
 // Distribution is not executed automatically.
 // This needs to be executed manually.
 
-gulp.task('copy:files', function() {
-  return gulp.src('src/shell/', {read: false})
-    .pipe($.shell(['bash src/shell/files.sh']));
-});
-
 gulp.task( 'copy:src', function() {
   return gulp.src(
     ['src/scss/**/*.scss', 'src/js/**/*.js'],
@@ -79,6 +74,11 @@ gulp.task( 'copy:assets', function() {
     {base: 'assets'}
   )
   .pipe(gulp.dest('./dist/assets/'));
+});
+
+gulp.task('copy:files', function() {
+  return gulp.src('src/shell/', {read: false})
+    .pipe($.shell(['bash src/shell/files.sh']));
 });
 
 //***************************************************************************
@@ -239,5 +239,5 @@ gulp.task('init', function(cb) {
 });
 
 gulp.task('dist', function(cb) {
-  runSequence('copy:files', 'copy:src', 'copy:assets', cb);
+  runSequence('copy:src', 'copy:assets', 'copy:files', cb);
 });
