@@ -29,6 +29,9 @@
       line-height: 1.4;
       transition: 0.3s;
     }
+    &--page {
+      border-bottom: none;
+    }
   }
   &__meta {
     margin-bottom: 14px;
