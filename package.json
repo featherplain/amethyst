@@ -28,6 +28,7 @@
     "gulp-prettify": "latest",
     "gulp-rename": "latest",
     "gulp-ruby-sass": "1.0.1",
+    "gulp-sass": "^2.0.4",
     "gulp-shell": "latest",
     "gulp-svg-sprite": "latest",
     "gulp-uglify": "latest",
