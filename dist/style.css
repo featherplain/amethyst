@@ -2583,61 +2583,13 @@ body.custom-background .l-container:after {
 }
 
 /**
- * l-primary and l-sidebar
+ * l-primary
  */
-.l-primary,
-.l-sidebar {
+.l-primary {
   margin-bottom: 40px;
 }
-
-/**
- * page title
- */
-.page-title {
-  margin-bottom: 30px;
-  padding: 0 16px;
-  font-size: 0.875rem;
-  font-weight: normal;
-  line-height: 1;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-}
-
-/**
- * single column
- */
-.single-column .page-title {
-  width: 100%;
-  max-width: 780px;
-  margin: 0 auto 30px auto;
-}
-.single-column .l-primary {
-  width: 100%;
-  max-width: 780px;
-  margin: 0  auto 40px auto;
-  float: none;
-}
-
-/**
- * error 404
- */
-body.error404 .l-primary {
-  float: none;
-  width: 100%;
-  max-width: 780px;
-  margin: 0 auto 40px auto;
-}
-
-.not-found__title {
-  margin-top: 0;
-}
-
-/**
- * media queries
- */
 @media only screen and (max-width: 48em) {
-  .l-primary,
-  .l-sidebar {
+  .l-primary {
     padding: 0 16px;
   }
 }
@@ -2648,7 +2600,28 @@ body.error404 .l-primary {
     width: 75%;
     float: left;
   }
+}
+@media only screen and (min-width: 48.0625em) {
+  .l-primary--single-column {
+    float: none;
+    width: 100%;
+    max-width: 780px;
+    margin: 0  auto 40px auto;
+  }
+}
 
+/**
+ * l-sidebar
+ */
+.l-sidebar {
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 48em) {
+  .l-sidebar {
+    padding: 0 16px;
+  }
+}
+@media only screen and (min-width: 48.0625em) {
   .l-sidebar {
     padding-left: 1.125rem;
     padding-right: 1.125rem;
@@ -2656,6 +2629,49 @@ body.error404 .l-primary {
     float: left;
   }
 }
+
+/**
+ * page title
+ */
+.page-title {
+  margin-bottom: 40px;
+  padding: 0 18px;
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+/**
+ * no sidebar
+ */
+.no-sidebar .page-title {
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 780px;
+}
+@media only screen and (max-width: 48em) {
+  .no-sidebar .page-title {
+    padding: 0 16px;
+  }
+}
+.no-sidebar .l-primary {
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 48em) {
+  .no-sidebar .l-primary {
+    padding: 0 16px;
+  }
+}
+
+/**
+ * error 404
+ */
+.not-found__title {
+  margin-top: 0;
+}
+
 /* -------------------------------------------------------------- */
 /* post
 /* -------------------------------------------------------------- */
@@ -2681,6 +2697,9 @@ body.error404 .l-primary {
   font-size: 1rem;
   line-height: 1.4;
   transition: 0.3s;
+}
+.post__title--page {
+  border-bottom: none;
 }
 .post__meta {
   margin-bottom: 14px;

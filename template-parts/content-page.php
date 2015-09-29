@@ -4,14 +4,18 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package _s
+ * @package othello
  */
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'post--page' ); ?>>
 	<header class="post__header">
-		<?php the_title( '<h1 class="post__title">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="post__title post__title--page">', '</h1>' ); ?>
+		<?php // post thumbnail
+			$size = 'othello_full_width_image';
+			the_post_thumbnail( $size, array( 'class'	=> 'attachment-' . $size . ' post__image' ) );
+		?>
 	</header><!-- / .post__header -->
 
 	<div class="post__content">

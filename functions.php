@@ -106,13 +106,10 @@ add_action( 'after_setup_theme', 'othello_setup' );
  * @return array The filtered body class list.
  */
 function othello_body_classes( $classes ) {
-
 	if ( ( ! is_active_sidebar( 'sidebar' ) )
-		|| is_page_template( 'template-parts/single-column.php' )
 		|| is_attachment() ) {
-		$classes[] = 'single-column';
+		$classes[] = 'no-sidebar';
 	}
-
 	return $classes;
 }
 add_filter( 'body_class', 'othello_body_classes' );
@@ -147,7 +144,7 @@ add_filter( 'get_search_form', 'othello_search_form' );
  * Register excerpt length.
 **/
 function custom_excerpt_length( $length ) {
-  return 15;
+  return 30;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
