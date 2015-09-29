@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-<div class="l-primary">
+<div class="l-primary l-primary--single-column">
 	<section class="not-found">
 
 		<h2 class="not-found__title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'othello' ); ?></h2>
