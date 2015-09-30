@@ -3393,24 +3393,23 @@ object {
   font-size: 0.875rem;
   line-height: 1.4;
 }
-
-.widget_recent_entries ul, .widget_rss ul, .widget_archive ul, .widget_categories ul, .widget_nav_menu ul, .widget_pages ul, .widget_custom_menu ul, .widget_recent_comments ul, .widget_meta ul {
-  border-bottom: 1px solid #ededed;
-}
-.widget_recent_entries ul li, .widget_rss ul li, .widget_archive ul li, .widget_categories ul li, .widget_nav_menu ul li, .widget_pages ul li, .widget_custom_menu ul li, .widget_recent_comments ul li, .widget_meta ul li {
-  list-style-type: none;
+.widget ul li {
+  padding: 8px 0;
   border-top: 1px solid #ededed;
+  font-size: 0.8125rem;
 }
-.widget_recent_entries ul li ul, .widget_rss ul li ul, .widget_archive ul li ul, .widget_categories ul li ul, .widget_nav_menu ul li ul, .widget_pages ul li ul, .widget_custom_menu ul li ul, .widget_recent_comments ul li ul, .widget_meta ul li ul {
+.widget ul li ul {
+  margin-top: 8px;
   margin-left: 12px;
   border-bottom: none;
 }
-.widget_recent_entries ul li a, .widget_rss ul li a, .widget_archive ul li a, .widget_categories ul li a, .widget_nav_menu ul li a, .widget_pages ul li a, .widget_custom_menu ul li a, .widget_recent_comments ul li a, .widget_meta ul li a {
-  display: block;
-  padding: 8px 0;
+.widget ul li ul li:last-child {
+  padding-bottom: 0;
+}
+.widget ul li a {
   font-size: 0.8125rem;
 }
-.widget_recent_entries ul li a:hover, .widget_rss ul li a:hover, .widget_archive ul li a:hover, .widget_categories ul li a:hover, .widget_nav_menu ul li a:hover, .widget_pages ul li a:hover, .widget_custom_menu ul li a:hover, .widget_recent_comments ul li a:hover, .widget_meta ul li a:hover {
+.widget ul li a:hover {
   color: #04abdf;
 }
 
