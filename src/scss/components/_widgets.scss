@@ -21,24 +21,22 @@
     font-size: rem-calc(14);
     line-height: 1.4;
   }
-}
-
-// widget base style
-%widgetBase {
   ul {
-    border-bottom: 1px solid lighten($colorSub, 6%);
     li {
-      list-style-type: none;
+      padding: 8px 0;
       border-top: 1px solid lighten($colorSub, 6%);
+      font-size: rem-calc(13);
       ul {
+        margin-top: 8px;
         margin-left: 12px;
         border-bottom: none;
         li {
+          &:last-child {
+            padding-bottom: 0;
+          }
         }
       }
       a {
-        display: block;
-        padding: 8px 0;
         font-size: rem-calc(13);
         &:hover {
           color: $colorLink;
@@ -47,9 +45,9 @@
     }
   }
 }
+
 // widget post list style
 %widgetPostList {
-  @extend %widgetBase;
   span {
     display: block;
     color: darken($colorSub, 10%);
@@ -63,7 +61,6 @@
     font-size: rem-calc(12);
   }
 }
-
 .widget {
   // search
   &_search {
@@ -76,34 +73,6 @@
     .textwidget {
       font-size: rem-calc(14);
     }
-  }
-  // archive
-  &_archive {
-    @extend %widgetBase;
-  }
-  // categories
-  &_categories {
-    @extend %widgetBase;
-  }
-  // nav
-  &_nav_menu {
-    @extend %widgetBase;
-  }
-  // pages
-  &_pages {
-    @extend %widgetBase;
-  }
-  // custom menu
-  &_custom_menu {
-    @extend %widgetBase;
-  }
-  // recent comments
-  &_recent_comments {
-    @extend %widgetBase;
-  }
-  // meta
-  &_meta {
-    @extend %widgetBase;
   }
   // recent posts
   &_recent_entries,
@@ -121,9 +90,8 @@
       }
     }
   }
-  // calendar
-  .widget_calendar {}
 }
+// widget_calendar
 #calendar_wrap {
   border: 1px solid $colorSub;
 }
