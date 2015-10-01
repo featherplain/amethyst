@@ -14,18 +14,6 @@
     font-size: rem-calc(22);
     font-weight: bold;
   }
-  // &-text {
-  //   font-size: rem-calc(14);
-  //   code {
-  //     margin-left: 5px;
-  //     background-color: lighten($colorSub, 8%);
-  //     border-radius: 4px;
-  //     border: none;
-  //     color: #cc0000;
-  //     font-family: $fontFamilyCode;
-  //     font-size: rem-calc(11);
-  //   }
-  // }
 }
 /**
  * comment
@@ -69,14 +57,13 @@
     margin-left: $commentMargin;
   }
   .reply {
-    @include button(
-      $padding: rem-calc(6),
-      $bg: transparent
-    );
     margin: 0 0 0 $commentMargin;
-    border: 1px solid $colorSub;
-    font-family: $fontFamily;
-    font-size: rem-calc(10);
+    a {
+      padding: 4px 6px;
+      border: 1px solid $colorSub;
+      font-family: $fontFamily;
+      font-size: rem-calc(10);
+    }
   }
 }
 /**
