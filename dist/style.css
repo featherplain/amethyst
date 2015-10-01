@@ -4,12 +4,12 @@ Theme Name: Othello
 Theme URI: http://othello.asknode.net/
 Author: featherplain
 Author URI: http://asknode.net/
-Description: Othello is a simple theme based on Foundation5. The design is kept simple to keep the simplicity of the Foundation. Features are, 100% responsive layouts, Genericons, Gulp use, Sass.
-Version: 0.0.1
+Description: Othello is a simple theme based on Foundation. The design is kept simple to keep the simplicity of the Foundation. Features are, 100% responsive layouts, Genericons, Gulp use, Sass.
+Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: license.txt
 Text Domain: othello
-Tags: white, responsive-layout, ,mobile-first, one-column, two-columns, right-sidebar, editor-style, sticky-post, microformats, featured-images, custom-colors, custom-menu, custom-background
+Tags: white, responsive-layout, mobile-first, one-column, two-columns, right-sidebar, editor-style, sticky-post, microformats, featured-images, custom-colors, custom-menu, custom-background
 */
 /* -------------------------------------------------------------- */
 /* Foundation by ZURB
@@ -2146,7 +2146,7 @@ h6 > a:hover {
 }
 
 a {
-  color: #04abdf;
+  color: #9966cc;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -2154,11 +2154,11 @@ a:focus {
   outline: thin dotted;
 }
 a:link, a:visited {
-  color: #04abdf;
+  color: #9966cc;
 }
 a:hover, a:active, a:focus {
   outline: 0;
-  color: #026685;
+  color: #6b36a1;
   text-decoration: none;
 }
 
@@ -2168,13 +2168,13 @@ p {
 
 ::-moz-selection {
   background: transparent;
-  background-color: #e3f8ff;
+  background-color: white;
   color: #222222;
 }
 
 ::selection {
   background: transparent;
-  background-color: #e3f8ff;
+  background-color: white;
   color: #222222;
 }
 
@@ -2310,7 +2310,7 @@ table td {
   line-height: 1.2;
 }
 .site-title a:hover {
-  color: #04abdf;
+  color: #9966cc;
 }
 
 .site-description {
@@ -2519,7 +2519,7 @@ table td {
   color: #ffffff;
 }
 .siteinfo__text a:hover {
-  color: #04abdf;
+  color: #9966cc;
 }
 
 /**
@@ -2684,7 +2684,7 @@ body.custom-background .l-container:after {
   color: #222222;
 }
 .post__link:hover .post__title--archive {
-  color: #04abdf;
+  color: #9966cc;
 }
 .post__title {
   margin: 0;
@@ -2752,7 +2752,7 @@ body.custom-background .l-container:after {
   line-height: 1;
 }
 .metainfo a:hover {
-  color: #04abdf;
+  color: #9966cc;
 }
 .metainfo--date:before {
   position: static;
@@ -2848,7 +2848,7 @@ body.custom-background .l-container:after {
   font-weight: 400;
 }
 .nav-links a:hover {
-  color: #04abdf;
+  color: #9966cc;
 }
 
 .nav-previous {
@@ -3076,7 +3076,7 @@ body.custom-background .l-container:after {
 .post__editor ins,
 .comment-content ins {
   padding: 0 4px;
-  background-color: #7fdffd;
+  background-color: #e6d9f2;
   color: #454545;
   text-decoration: none;
 }
@@ -3321,35 +3321,13 @@ object {
   margin-left: 58px;
 }
 .comment .reply {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border-radius: 0;
-  border-style: solid;
-  border-width: 0;
-  cursor: pointer;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
-  font-weight: 300;
-  line-height: normal;
-  margin: 0 0 1.25rem;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  padding: 0.375rem 0.75rem 0.4375rem 0.75rem;
-  background-color: transparent;
-  border-color: transparent;
-  color: #FFFFFF;
-  transition: background-color 300ms ease-out;
   margin: 0 0 0 58px;
+}
+.comment .reply a {
+  padding: 4px 6px;
   border: 1px solid #dedede;
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
   font-size: 0.625rem;
-}
-.comment .reply:hover, .comment .reply:focus {
-  background-color: transparent;
-}
-.comment .reply:hover, .comment .reply:focus {
-  color: #FFFFFF;
 }
 
 /**
@@ -3393,25 +3371,24 @@ object {
   font-size: 0.875rem;
   line-height: 1.4;
 }
-
-.widget_recent_entries ul, .widget_rss ul, .widget_archive ul, .widget_categories ul, .widget_nav_menu ul, .widget_pages ul, .widget_custom_menu ul, .widget_recent_comments ul, .widget_meta ul {
-  border-bottom: 1px solid #ededed;
-}
-.widget_recent_entries ul li, .widget_rss ul li, .widget_archive ul li, .widget_categories ul li, .widget_nav_menu ul li, .widget_pages ul li, .widget_custom_menu ul li, .widget_recent_comments ul li, .widget_meta ul li {
-  list-style-type: none;
+.widget ul li {
+  padding: 8px 0;
   border-top: 1px solid #ededed;
+  font-size: 0.8125rem;
 }
-.widget_recent_entries ul li ul, .widget_rss ul li ul, .widget_archive ul li ul, .widget_categories ul li ul, .widget_nav_menu ul li ul, .widget_pages ul li ul, .widget_custom_menu ul li ul, .widget_recent_comments ul li ul, .widget_meta ul li ul {
+.widget ul li ul {
+  margin-top: 8px;
   margin-left: 12px;
   border-bottom: none;
 }
-.widget_recent_entries ul li a, .widget_rss ul li a, .widget_archive ul li a, .widget_categories ul li a, .widget_nav_menu ul li a, .widget_pages ul li a, .widget_custom_menu ul li a, .widget_recent_comments ul li a, .widget_meta ul li a {
-  display: block;
-  padding: 8px 0;
+.widget ul li ul li:last-child {
+  padding-bottom: 0;
+}
+.widget ul li a {
   font-size: 0.8125rem;
 }
-.widget_recent_entries ul li a:hover, .widget_rss ul li a:hover, .widget_archive ul li a:hover, .widget_categories ul li a:hover, .widget_nav_menu ul li a:hover, .widget_pages ul li a:hover, .widget_custom_menu ul li a:hover, .widget_recent_comments ul li a:hover, .widget_meta ul li a:hover {
-  color: #04abdf;
+.widget ul li a:hover {
+  color: #9966cc;
 }
 
 .widget_recent_entries span, .widget_rss span {
@@ -3437,7 +3414,7 @@ object {
   padding: 2px;
 }
 .widget_tag_cloud .tagcloud a:hover {
-  background-color: #cff3fe;
+  background-color: white;
 }
 
 #calendar_wrap {
@@ -3480,9 +3457,9 @@ input[type="reset"] {
   margin: 1rem 0;
   padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
   text-align: center;
-  background-color: #04abdf;
+  background-color: #9966cc;
   border: none;
-  box-shadow: 0 2px 0 #0394c1;
+  box-shadow: 0 2px 0 #8a4fc4;
   color: #ffffff;
   cursor: pointer;
   font-size: 1rem;
@@ -3514,7 +3491,7 @@ input[type="submit"]:focus,
 input[type="reset"]:hover,
 input[type="reset"]:active,
 input[type="reset"]:focus {
-  background-color: #038cb7;
+  background-color: #8547c2;
   color: #ffffff;
   outline: 0;
   text-decoration: none;
@@ -3525,9 +3502,9 @@ input[type="reset"]:focus {
   margin: 1rem 0;
   padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
   text-align: center;
-  background-color: #04abdf;
+  background-color: #9966cc;
   border: none;
-  box-shadow: 0 2px 0 #0394c1;
+  box-shadow: 0 2px 0 #8a4fc4;
   color: #ffffff;
   cursor: pointer;
   font-size: 1rem;
@@ -3540,7 +3517,7 @@ input[type="reset"]:focus {
   color: #ffffff;
 }
 .btn:hover, .btn:active, .btn:focus {
-  background-color: #038cb7;
+  background-color: #8547c2;
   color: #ffffff;
   outline: 0;
   text-decoration: none;
@@ -3551,9 +3528,9 @@ input[type="reset"]:focus {
   margin: 1rem 0;
   padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
   text-align: center;
-  background-color: #04abdf;
+  background-color: #9966cc;
   border: none;
-  box-shadow: 0 2px 0 #0394c1;
+  box-shadow: 0 2px 0 #8a4fc4;
   color: #ffffff;
   cursor: pointer;
   font-size: 1rem;
@@ -3567,7 +3544,7 @@ input[type="reset"]:focus {
   color: #ffffff;
 }
 .btn-full:hover, .btn-full:active, .btn-full:focus {
-  background-color: #038cb7;
+  background-color: #8547c2;
   color: #ffffff;
   outline: 0;
   text-decoration: none;
