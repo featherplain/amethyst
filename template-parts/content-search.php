@@ -2,11 +2,12 @@
 /**
  * Template part for displaying results in search pages.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package othello
+ * Version    : 1.0.0
+ * Author     : featherplain
+ * Author URI : http://asknode.net/
+ * License    : GPLv2 or later
+ * License URI: license.txt
  */
-
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'post' ); ?>>

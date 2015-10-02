@@ -2,8 +2,8 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: othello 1.0.0\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/othello\n"
+"Project-Id-Version: amethyst 1.0.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/amethyst\n"
 "POT-Creation-Date: 2015-06-12 21:51:31+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,30 +13,30 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
 #: 404.php:15
-#@ othello
+#@ amethyst
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
 #: 404.php:17
-#@ othello
+#@ amethyst
 msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
 msgstr ""
 
 #: 404.php:27
-#@ othello
+#@ amethyst
 msgid "Categories"
 msgstr ""
 
 #. translators: %1$s: smiley
 #: 404.php:27
 #, php-format
-#@ othello
+#@ amethyst
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
 #: comments.php:31
 #, php-format
-#@ othello
+#@ amethyst
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
@@ -45,98 +45,98 @@ msgstr[1] ""
 
 #: comments.php:40
 #: comments.php:60
-#@ othello
+#@ amethyst
 msgid "Comment navigation"
 msgstr ""
 
 #: comments.php:42
 #: comments.php:62
-#@ othello
+#@ amethyst
 msgid "Older Comments"
 msgstr ""
 
 #: comments.php:43
 #: comments.php:63
-#@ othello
+#@ amethyst
 msgid "Newer Comments"
 msgstr ""
 
 #: comments.php:75
-#@ othello
+#@ amethyst
 msgid "Comments are closed."
 msgstr ""
 
 #: footer.php:16
-#@ othello
+#@ amethyst
 msgid "http://wordpress.org/"
 msgstr ""
 
 #: footer.php:31
 #, php-format
-#@ othello
+#@ amethyst
 msgid "Proudly powered by %s"
 msgstr ""
 
 #: functions.php:56
 #: header.php:32
-#@ othello
+#@ amethyst
 msgid "Global Menu"
 msgstr ""
 
 #: functions.php:162
-#@ othello
+#@ amethyst
 msgid "Sidebar"
 msgstr ""
 
 #: functions.php:164
-#@ othello
+#@ amethyst
 msgid "Main Widgets Sidebar. Shows up in all pages."
 msgstr ""
 
 #: functions.php:171
-#@ othello
+#@ amethyst
 msgid "Footer Widgets"
 msgstr ""
 
 #: functions.php:173
-#@ othello
+#@ amethyst
 msgid "Will show a widgets area on the footer. Shows up in all pages."
 msgstr ""
 
 #: header.php:26
-#@ othello
+#@ amethyst
 msgid "Skip to content"
 msgstr ""
 
 #: search.php:12
 #, php-format
-#@ othello
+#@ amethyst
 msgid "Search Results for: %s"
 msgstr ""
 
 #: template-parts/content-none.php:13
-#@ othello
+#@ amethyst
 msgid "Nothing Found"
 msgstr ""
 
 #: template-parts/content-none.php:16
 #, php-format
-#@ othello
+#@ amethyst
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #: template-parts/content-none.php:20
-#@ othello
+#@ amethyst
 msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr ""
 
 #: template-parts/content-none.php:25
-#@ othello
+#@ amethyst
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
 #: template-parts/content-page.php:25
 #: template-parts/content-single.php:39
-#@ othello
+#@ amethyst
 msgid "Pages:"
 msgstr ""

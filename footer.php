@@ -2,11 +2,11 @@
 /**
  * The template for displaying the footer.
  *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package othello
+ * Version    : 1.0.0
+ * Author     : featherplain
+ * Author URI : http://asknode.net/
+ * License    : GPLv2 or later
+ * License URI: license.txt
  */
 
 if ( ! is_active_sidebar( 'footer-widgets' ) )
@@ -28,7 +28,7 @@ if ( ! is_active_sidebar( 'footer-widgets' ) )
       <div class="siteinfo">
         <div class="siteinfo__inner">
         	<p id="credit" class="siteinfo__text">
-        		<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'othello' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'othello' ), 'WordPress' ); ?></a>
+        		<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'amethyst' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'amethyst' ), 'WordPress' ); ?></a>
 					</p>
         </div>
       </div>
