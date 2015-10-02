@@ -2,11 +2,12 @@
 /**
  * Template part for displaying posts.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package othello
+ * Version    : 1.0.0
+ * Author     : featherplain
+ * Author URI : http://asknode.net/
+ * License    : GPLv2 or later
+ * License URI: license.txt
  */
-
 ?>
 
 <article class="post">
@@ -15,7 +16,7 @@
 
 		<div class="post__meta">
 			<div class="metainfo metainfo--date">
-				<time><?php the_time( get_option( 'date_format' ) ); ?></time>
+				<span><?php the_time( get_option( 'date_format' ) ); ?></span>
 			</div>
 			<div class="metainfo metainfo--author">
 				<span><?php echo get_the_author_meta( 'display_name' ); ?></span>

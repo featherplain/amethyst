@@ -8,7 +8,7 @@ $colorBase          : #222222;
 $colorSub           : #dedede;
 $colorText          : #454545;
 $colorBg            : #fafafa;
-$colorLink          : #9966cc;
+$colorLink          : #e80c7a;
 $colorLinkHover     : darken($colorLink, 18%);
 $colorSelection     : lighten($colorLink, 50%);
 $colorBtn           : $colorLink;
@@ -18,7 +18,7 @@ $colorRedLighten    : lighten($colorRed, 36%);
 $colorYellow        : #f0bd24;
 $colorYellowLighten : lighten($colorYellow, 36%);
 $colorGreen         : #43ac6a;
-$colorPurple        : #9966cc; // default is same as $colorLink
+$colorPurple        : #e80c7a; // default is same as $colorLink
 $colorGray          : #999999;
 $colorBlack         : #222222; // default is same as $colorBase
 $colorPink          : #ff4c7d;
