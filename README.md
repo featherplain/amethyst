@@ -1,7 +1,7 @@
 Amethyst
 ============
 
-[![Deployment status from DeployBot](https://node.deploybot.com/badge/45290642017213/44676.svg)](http://deploybot.com)
+[![Deployment status from DeployBot](https://amethyst.deploybot.com/badge/02267418010971/47642.svg)](http://deploybot.com)
 
 ![Amethyst](./screenshot.png)
 
