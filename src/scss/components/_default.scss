@@ -51,6 +51,7 @@ a {
 }
 p {
   color: $colorBase;
+  font-family: $fontFamily;
 }
 ::selection {
   background: transparent;
@@ -65,6 +66,7 @@ ul,
 ol {
   margin: 0;
   padding: 0;
+  font-family: $fontFamily;
   list-style: none;
 }
 dl {
