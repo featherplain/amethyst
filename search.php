@@ -2,14 +2,16 @@
 /**
  * The template for displaying search results pages.
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- *
- * @package othello
+ * Version    : 1.0.0
+ * Author     : featherplain
+ * Author URI : http://asknode.net/
+ * License    : GPLv2 or later
+ * License URI: license.txt
  */
 
 get_header(); ?>
 
-	<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'othello' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+	<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'amethyst' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 	<div class="l-primary">
 
 		<?php if ( have_posts() ) : ?>

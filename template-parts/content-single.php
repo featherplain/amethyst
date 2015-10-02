@@ -2,11 +2,12 @@
 /**
  * Template part for displaying single posts.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package othello
+ * Version    : 1.0.0
+ * Author     : featherplain
+ * Author URI : http://asknode.net/
+ * License    : GPLv2 or later
+ * License URI: license.txt
  */
-
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'post' ); ?>>
@@ -15,7 +16,7 @@
 
 		<div class="post__meta">
 			<div class="metainfo metainfo--date">
-				<time><?php the_time( get_option( 'date_format' ) ); ?></time>
+				<span><?php the_time( get_option( 'date_format' ) ); ?></span>
 			</div>
 			<div class="metainfo metainfo--author">
 				<span><?php echo get_the_author_meta( 'display_name' ); ?></span>
@@ -36,7 +37,7 @@
 
 		<?php
 			wp_link_pages( array(
-				'before' => '<p class="post__pager">' . esc_html__( 'Pages: ', 'othello' ),
+				'before' => '<p class="post__pager">' . esc_html__( 'Pages: ', 'amethyst' ),
 				'after'  => '</p>',
 			) );
 		?>

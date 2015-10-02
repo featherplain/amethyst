@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------- */
-/* Othello
+/* Amethyst
 /* -------------------------------------------------------------- */
 Author: featherplain
 Donate link: http://www.amazon.co.jp/registry/wishlist/2GURV789X3MLT
@@ -9,9 +9,10 @@ Tested up to: 4.3.1
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: license.txt
+Text Domain: amethyst
 
 == Description ==
-Othello is a simple theme based on Foundation. The design is kept simple to keep the simplicity of the Foundation. Features are, 100% responsive layouts, Genericons, Gulp use, Sass.
+Amethyst is a simple theme based on Foundation. The design is kept simple to keep the simplicity of the Foundation. Features are, 100% responsive layouts, Genericons, Gulp use, Sass.
 
 
 /* Installation
@@ -23,7 +24,7 @@ Othello is a simple theme based on Foundation. The design is kept simple to keep
 3. Click the "Install Now" button.
 
 == Manual installation ==
-1. Upload the "othello" folder to the "/wp-content/themes/" directory.
+1. Upload the "amethyst" folder to the "/wp-content/themes/" directory.
 
 == Activiation and Use ==
 1. Activate the Theme through the "Themes" menu in WordPress.
@@ -75,7 +76,7 @@ Micro formats compatible. WordPress, by default, outputs a class "hentry", which
 * .btn-full: A class for link contents with full width button style.
 
 == Using child theme with Sass ==
-While you can @import or wp_enqueue_script the style.css from your child theme, you can utilize the variables and functions of Sassified Foundation. Copy /othello/src/scss/ directory to your child theme directory so that you can compile them with Gulp and such.
+While you can @import or wp_enqueue_script the style.css from your child theme, you can utilize the variables and functions of Sassified Foundation. Copy /amethyst/src/scss/ directory to your child theme directory so that you can compile them with Gulp and such.
 
 /* -------------------------------------------------------------- */
 /* Change log

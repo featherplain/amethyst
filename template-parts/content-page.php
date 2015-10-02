@@ -2,18 +2,19 @@
 /**
  * Template part for displaying page content in page.php.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package othello
+ * Version    : 1.0.0
+ * Author     : featherplain
+ * Author URI : http://asknode.net/
+ * License    : GPLv2 or later
+ * License URI: license.txt
  */
-
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'post--page' ); ?>>
 	<header class="post__header">
 		<?php the_title( '<h1 class="post__title post__title--page">', '</h1>' ); ?>
 		<?php // post thumbnail
-			$size = 'othello_full_width_image';
+			$size = 'thumb774x400';
 			the_post_thumbnail( $size, array( 'class'	=> 'attachment-' . $size . ' post__image' ) );
 		?>
 	</header><!-- / .post__header -->
@@ -26,7 +27,7 @@
 		</div>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'othello' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'amethyst' ),
 				'after'  => '</div>',
 			) );
 		?>

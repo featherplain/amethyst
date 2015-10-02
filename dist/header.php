@@ -2,11 +2,11 @@
 /**
  * The header for our theme.
  *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package othello
+ * Version    : 1.0.0
+ * Author     : featherplain
+ * Author URI : http://asknode.net/
+ * License    : GPLv2 or later
+ * License URI: license.txt
  */
 
 ?><!DOCTYPE html>
@@ -23,7 +23,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<a class="screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'othello' ); ?></a>
+	<a class="screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'amethyst' ); ?></a>
 
 	<div class="l-container">
     <header role="banner" class="l-header">

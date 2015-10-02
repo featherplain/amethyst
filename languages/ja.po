@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: othello 1.1\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/othello\n"
+"Project-Id-Version: amethyst 1.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/amethyst\n"
 "POT-Creation-Date: 2012-11-12 01:30:16+00:00\n"
 "PO-Revision-Date: 2012-11-13 10:41+0900\n"
 "Language: JAPANESE\n"
@@ -425,21 +425,21 @@ msgid "Meta"
 msgstr "メタ"
 
 #. Theme Name of the plugin/theme
-msgid "othello"
+msgid "amethyst"
 msgstr "オセロ"
 
 #. Theme URI of the plugin/theme
-msgid "http://othello.asknode.net"
-msgstr "http://othello.asknode.net"
+msgid "http://amethyst.asknode.net"
+msgstr "http://amethyst.asknode.net"
 
 #. Description of the plugin/theme
 msgid ""
-"Hi. I'm a starter theme called <code>othello</code>, or <em>underscores</em>, if "
+"Hi. I'm a starter theme called <code>amethyst</code>, or <em>underscores</em>, if "
 "you like. I'm a theme meant for hacking so don't use me as a <em>Parent "
 "Theme</em>. Instead try turning me into the next, most awesome, WordPress "
 "theme out there. That's what I'm here for."
 msgstr ""
-"<code>othello</code>（オセロ）というスターター・テーマです。親テーマ用"
+"<code>amethyst</code>（オセロ）というスターター・テーマです。親テーマ用"
 "ではなく、改変のベースとなるテーマとして作られています。これをもとに変更を加"
 "えて、次世代のすばらしい WordPress テーマを作るためのコードの参考にしてくださ"
 "い。"
