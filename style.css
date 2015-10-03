@@ -9,7 +9,7 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: license.txt
 Text Domain: amethyst
-Tags: white, responsive-layout, mobile-first, one-column, two-columns, right-sidebar, editor-style, sticky-post, microformats, featured-images, custom-colors, custom-menu, custom-background
+Tags: white, responsive-layout, single-column, two-columns, right-sidebar, editor-style, sticky-post, microformats, featured-images, custom-colors, custom-menu, custom-background
 */
 /* -------------------------------------------------------------- */
 /* Foundation by ZURB
@@ -2674,6 +2674,13 @@ body.custom-background .l-container:after {
   margin-top: 0;
 }
 
+/**
+ * WordPress classes
+ */
+.sticky {
+  display: inherit;
+}
+
 /* -------------------------------------------------------------- */
 /* post
 /* -------------------------------------------------------------- */
@@ -3279,7 +3286,7 @@ object {
 }
 
 /**
- * comment
+ * WordPress comment classes
  */
 .comment {
   list-style-type: none;
@@ -3322,6 +3329,12 @@ object {
 .comment-content {
   margin-left: 58px;
 }
+.comment-notes {
+  font-size: 0.875rem;
+}
+.comment-respond {
+  margin: 40px 0;
+}
 .comment .reply {
   margin: 0 0 0 58px;
 }
@@ -3339,20 +3352,6 @@ object {
 .edit-link {
   font-size: 0.75rem;
   border-bottom: 1px dotted #e80c7a;
-}
-
-/**
- * comment form
- */
-.comment-notes {
-  font-size: 0.875rem;
-}
-
-/**
- * respond
- */
-.comment-respond {
-  margin: 40px 0;
 }
 
 #cancel-comment-reply-link {
@@ -3402,6 +3401,9 @@ object {
   color: #e80c7a;
 }
 
+/**
+ * WordPress widget classes
+ */
 .widget_recent_entries span, .widget_rss span {
   display: block;
   color: #c5c5c5;
