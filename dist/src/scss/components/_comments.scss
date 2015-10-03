@@ -16,7 +16,7 @@
   }
 }
 /**
- * comment
+ * WordPress comment classes
  */
 .comment {
   list-style-type: none;
@@ -56,6 +56,15 @@
   &-content {
     margin-left: $commentMargin;
   }
+  &-notes {
+    font-size: rem-calc(14);
+  }
+  &-reply-title {
+    @extend .comments__title;
+  }
+  &-respond {
+    margin: $m40;
+  }
   .reply {
     margin: 0 0 0 $commentMargin;
     a {
@@ -72,21 +81,6 @@
 .edit-link {
   font-size: rem-calc(12);
   border-bottom: 1px dotted $colorLink;
-}
-/**
- * comment form
- */
-.comment-notes {
-  font-size: rem-calc(14);
-}
-/**
- * respond
- */
-.comment-reply-title {
-  @extend .comments__title;
-}
-.comment-respond {
-  margin: $m40;
 }
 #cancel-comment-reply-link {
   border: 1px solid $colorSub;
