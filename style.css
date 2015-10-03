@@ -3332,6 +3332,15 @@ object {
   font-size: 0.625rem;
 }
 
+.bypostauthor {
+  background-color: #fef5fa;
+}
+
+.edit-link {
+  font-size: 0.75rem;
+  border-bottom: 1px dotted #e80c7a;
+}
+
 /**
  * comment form
  */
