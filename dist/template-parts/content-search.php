@@ -10,7 +10,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'post' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<a href="<?php the_permalink(); ?>" rel="bookmark" class="post__link">
 		<?php the_title( '<h2 class="post__title post__title--archive">', '</h2>' ); ?>
 

@@ -66,6 +66,13 @@
     }
   }
 }
+.bypostauthor {
+  background-color: lighten($colorLink, 50%);
+}
+.edit-link {
+  font-size: rem-calc(12);
+  border-bottom: 1px dotted $colorLink;
+}
 /**
  * comment form
  */
