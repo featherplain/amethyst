@@ -10,7 +10,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'post' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="post__header">
 		<?php the_title( '<h1 class="post__title">', '</h1>' ); ?>
 

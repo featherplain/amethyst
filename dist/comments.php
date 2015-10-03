@@ -52,7 +52,7 @@ if ( post_password_required() ) {
 					'short_ping'  => true,
 				) );
 			?>
-		</ol><!-- .comment-list -->
+		</ul><!-- .comment-list -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 		<nav class="comments__nav" role="navigation">
