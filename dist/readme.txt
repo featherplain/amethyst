@@ -3,13 +3,12 @@
 /* -------------------------------------------------------------- */
 Author: featherplain
 Donate link: http://www.amazon.co.jp/registry/wishlist/2GURV789X3MLT
-Tags: white, responsive-layout, single-column, two-columns, right-sidebar, editor-style, sticky-post, microformats, featured-images, custom-colors, custom-menu, custom-background
+Tags: white, responsive-layout, one-column, two-columns, right-sidebar, editor-style, sticky-post, microformats, featured-images, custom-colors, custom-menu, custom-background
 Requires at least: 4.1
 Tested up to: 4.3.1
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: license.txt
-Text Domain: amethyst
 
 == Description ==
 Amethyst is a simple theme based on Foundation. The design is kept simple to keep the simplicity of the Foundation. Features are, 100% responsive layouts, Genericons, Gulp use, Sass.
