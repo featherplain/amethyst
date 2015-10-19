@@ -16,6 +16,7 @@
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-concat": "latest",
+    "gulp-css-globbing": "^0.1.8",
     "gulp-csso": "latest",
     "gulp-data": "latest",
     "gulp-filter": "latest",
@@ -27,13 +28,12 @@
     "gulp-plumber": "latest",
     "gulp-prettify": "latest",
     "gulp-rename": "latest",
-    "gulp-ruby-sass": "1.0.1",
     "gulp-sass": "^2.0.4",
     "gulp-shell": "latest",
+    "gulp-sourcemaps": "^1.6.0",
     "gulp-svg-sprite": "latest",
     "gulp-uglify": "latest",
     "gulp.spritesmith": "latest",
-    "main-bower-files": "latest",
     "run-sequence": "^1.1.0",
     "yargs": "^3.12.0"
   }
