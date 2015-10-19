@@ -35,11 +35,9 @@ var paths = {
   'phpFiles'       : ['*.php', '**/*.php']
 };
 
-var rubySassConf = {
-  loadPath       : ['bower_components/foundation/scss'],
-  // require        : 'sass-globnbing',
-  sourcemap      : false,
-  style          : 'expanded'
+var gulpSassConf = {
+  loadPath       : [],
+  outputStyle    : 'expanded'
 };
 
 //***************************************************************************
@@ -198,11 +196,17 @@ gulp.task('jsTasks', [
 //***************************************************************************/
 
 gulp.task('sass', function () {
-  return $.rubySass(paths.scssPath, rubySassConf)
-    .on('error', function(err) { console.error('Error!', err.message); })
+  return gulp.src(paths.scssPath + '**/*.scss')
+    .pipe($.sourcemaps.init())
+    .pipe($.cssGlobbing({ extensions: ['.scss'] }))
+    .pipe($.sass(gulpSassConf).on('error', $.sass.logError))
     .pipe($.autoprefixer({
       browsers: ['last 2 versions', 'ie 10', 'ie 9'],
       cascade: false
+    }))
+    .pipe($.sourcemaps.write('maps', {
+      includeContent: false,
+      sourceRoot: paths.scssPath
     }))
     .pipe(gulp.dest(paths.cssDest))
     .pipe(browserSync.reload({ stream: true }));
