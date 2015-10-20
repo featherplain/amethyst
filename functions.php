@@ -103,10 +103,9 @@ add_action( 'after_setup_theme', 'amethyst_setup' );
  * @return array The filtered body class list.
  */
 function amethyst_body_classes( $classes ) {
-	if ( ( ! is_active_sidebar( 'sidebar' ) )
-		|| is_attachment() ) {
-		$classes[] = 'no-sidebar';
-	}
+	if ( is_active_sidebar( 'sidebar' ) && ! is_attachment() && ! is_404() )
+		$classes[] = 'sidebar';
+
 	return $classes;
 }
 add_filter( 'body_class', 'amethyst_body_classes' );
