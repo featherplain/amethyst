@@ -2,7 +2,6 @@
 /**
  * The template for displaying 404 pages (not found).
  *
- * Version    : 1.0.0
  * Author     : featherplain
  * Author URI : http://asknode.net/
  * License    : GPLv2 or later
