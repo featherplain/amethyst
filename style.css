@@ -2608,6 +2608,7 @@ table td {
  */
 .l-main {
   margin-bottom: 40px;
+  min-height: 100vh;
   width: 100%;
   max-width: 780px;
   margin: 0 auto;
@@ -2642,7 +2643,6 @@ body.sidebar .l-main {
   margin: 0 auto;
   max-width: 1080px;
   width: 100%;
-  min-height: 100vh;
 }
 
 body.sidebar .l-main:before, body.sidebar .l-main:after {

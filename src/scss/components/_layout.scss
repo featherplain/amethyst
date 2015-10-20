@@ -9,6 +9,7 @@
  */
 .l-main {
   @include layoutMargin;
+  min-height: 100vh;
   width: 100%;
   max-width: 780px;
   margin: 0 auto;
@@ -26,7 +27,6 @@ body {
   &.sidebar {
     .l-main {
       @include grid-row();
-      min-height: 100vh;
     }
     .l-primary {
       @media #{$medium-up} {
