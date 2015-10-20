@@ -198,7 +198,7 @@ gulp.task('jsTasks', [
 gulp.task('sass', function () {
   return gulp.src(paths.scssPath + '**/*.scss')
     .pipe($.sourcemaps.init())
-    .pipe($.cssGlobbing({ extensions: ['.scss'] }))
+    // .pipe($.cssGlobbing({ extensions: ['.scss'] }))
     .pipe($.sass(gulpSassConf).on('error', $.sass.logError))
     .pipe($.autoprefixer({
       browsers: ['last 2 versions', 'ie 10', 'ie 9'],
