@@ -5,7 +5,7 @@ Theme URI: http://amethyst.asknode.net/
 Author: featherplain
 Author URI: http://asknode.net/
 Description: Amethyst is a simple theme based on Foundation. The design is kept simple to keep the simplicity of the Foundation. Features are, 100% responsive layouts, Genericons, Gulp use, Sass.
-Version: 1.0.1
+Version: 1.0.2
 License: GNU General Public License v2 or later
 License URI: license.txt
 Text Domain: amethyst
@@ -2182,13 +2182,13 @@ p {
 
 ::-moz-selection {
   background: transparent;
-  background-color: #fef5fa;
+  background-color: #fcc4e0;
   color: #222222;
 }
 
 ::selection {
   background: transparent;
-  background-color: #fef5fa;
+  background-color: #fcc4e0;
   color: #222222;
 }
 
@@ -2604,7 +2604,24 @@ table td {
 /* layout
 /* -------------------------------------------------------------- */
 /**
- * l-container
+ * l-main
+ */
+.l-main {
+  margin-bottom: 40px;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 48em) {
+  .l-main {
+    padding: 0 16px;
+  }
+}
+
+/**
+ * body classes
  */
 body.custom-background .l-container {
   margin: 0 auto;
@@ -2622,40 +2639,23 @@ body.custom-background .l-container:after {
   clear: both;
 }
 
-/**
- * l-main
- */
-.l-main {
+body.sidebar .l-main {
   margin: 0 auto;
   max-width: 1080px;
   width: 100%;
-  min-height: 100vh;
 }
 
-.l-main:before, .l-main:after {
+body.sidebar .l-main:before, body.sidebar .l-main:after {
   content: " ";
   display: table;
 }
 
-.l-main:after {
+body.sidebar .l-main:after {
   clear: both;
 }
 
-/**
- * l-primary
- */
-.l-primary {
-  margin-bottom: 40px;
-}
-
-@media only screen and (max-width: 48em) {
-  .l-primary {
-    padding: 0 16px;
-  }
-}
-
 @media only screen and (min-width: 48.0625em) {
-  .l-primary {
+  body.sidebar .l-primary {
     padding-left: 1.125rem;
     padding-right: 1.125rem;
     width: 75%;
@@ -2664,29 +2664,7 @@ body.custom-background .l-container:after {
 }
 
 @media only screen and (min-width: 48.0625em) {
-  .l-primary--single-column {
-    float: none;
-    width: 100%;
-    max-width: 780px;
-    margin: 0 auto 40px auto;
-  }
-}
-
-/**
- * l-sidebar
- */
-.l-sidebar {
-  margin-bottom: 40px;
-}
-
-@media only screen and (max-width: 48em) {
-  .l-sidebar {
-    padding: 0 16px;
-  }
-}
-
-@media only screen and (min-width: 48.0625em) {
-  .l-sidebar {
+  body.sidebar .l-sidebar {
     padding-left: 1.125rem;
     padding-right: 1.125rem;
     width: 25%;
@@ -2699,37 +2677,11 @@ body.custom-background .l-container:after {
  */
 .page-title {
   margin-bottom: 40px;
-  padding: 0 18px;
   font-size: 0.875rem;
   font-weight: normal;
   line-height: 1;
   letter-spacing: 0.6px;
   text-transform: uppercase;
-}
-
-/**
- * no sidebar
- */
-.no-sidebar .page-title {
-  margin-bottom: 40px;
-  width: 100%;
-  max-width: 780px;
-}
-
-@media only screen and (max-width: 48em) {
-  .no-sidebar .page-title {
-    padding: 0 16px;
-  }
-}
-
-.no-sidebar .l-primary {
-  margin-bottom: 40px;
-}
-
-@media only screen and (max-width: 48em) {
-  .no-sidebar .l-primary {
-    padding: 0 16px;
-  }
 }
 
 /**

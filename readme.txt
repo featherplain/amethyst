@@ -78,6 +78,9 @@ While you can @import or wp_enqueue_script the style.css from your child theme, 
 /* Change log
 /* -------------------------------------------------------------- */
 
+== 1.0.2 ==
+* Bugfix single column page layout doesn't work when sidebar is invalid
+
 == 1.0.1 ==
 * Remove old ja.po and ja.mo
 * Remove unnecessary .pot file

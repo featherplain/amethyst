@@ -2,7 +2,6 @@
 /**
  * Template Name: Single column Page
  *
- * Version    : 1.0.0
  * Author     : featherplain
  * Author URI : http://asknode.net/
  * License    : GPLv2 or later
@@ -11,7 +10,7 @@
 
 get_header(); ?>
 
-	<div class="l-primary l-primary--single-column">
+	<div class="l-primary">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
@@ -26,6 +25,6 @@ get_header(); ?>
 
 		<?php endwhile; // End of the loop. ?>
 
-	</div><!-- / .l-primary .l-primary--single-column -->
+	</div><!-- / .l-primary  -->
 
 <?php get_footer(); ?>

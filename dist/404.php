@@ -2,7 +2,6 @@
 /**
  * The template for displaying 404 pages (not found).
  *
- * Version    : 1.0.0
  * Author     : featherplain
  * Author URI : http://asknode.net/
  * License    : GPLv2 or later
@@ -11,7 +10,7 @@
 
 get_header(); ?>
 
-<div class="l-primary l-primary--single-column">
+<div class="l-primary">
 	<section class="not-found">
 
 		<h2 class="not-found__title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'amethyst' ); ?></h2>

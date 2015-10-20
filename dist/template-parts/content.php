@@ -2,7 +2,6 @@
 /**
  * Template part for displaying posts.
  *
- * Version    : 1.0.0
  * Author     : featherplain
  * Author URI : http://asknode.net/
  * License    : GPLv2 or later
