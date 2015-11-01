@@ -1,0 +1,162 @@
+# Amethyst v1.0.2
+# Copyright (C) 2015 featherplain
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Amethyst v1.0.2\n"
+"Report-Msgid-Bugs-To: featherplain <info@asknode.net>\n"
+"POT-Creation-Date: 2015-11-01 14:53+0900\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: featherplain <info@asknode.net>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
+"_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: 404.php\n"
+"X-Poedit-SearchPath-2: archive.php\n"
+"X-Poedit-SearchPath-3: comments.php\n"
+"X-Poedit-SearchPath-4: footer.php\n"
+"X-Poedit-SearchPath-5: functions.php\n"
+"X-Poedit-SearchPath-6: header.php\n"
+"X-Poedit-SearchPath-7: index.php\n"
+"X-Poedit-SearchPath-8: page.php\n"
+"X-Poedit-SearchPath-9: search.php\n"
+"X-Poedit-SearchPath-10: sidebar.php\n"
+"X-Poedit-SearchPath-11: single.php\n"
+"X-Poedit-SearchPath-12: inc\n"
+"X-Poedit-SearchPath-13: template-parts\n"
+"X-Poedit-SearchPathExcluded-0: bower.json\n"
+"X-Poedit-SearchPathExcluded-1: gulpfile.js\n"
+"X-Poedit-SearchPathExcluded-2: license.txt\n"
+"X-Poedit-SearchPathExcluded-3: package.json\n"
+"X-Poedit-SearchPathExcluded-4: README.md\n"
+"X-Poedit-SearchPathExcluded-5: readme.txt\n"
+"X-Poedit-SearchPathExcluded-6: screenshot.png\n"
+"X-Poedit-SearchPathExcluded-7: setting.json\n"
+"X-Poedit-SearchPathExcluded-8: style.css\n"
+"X-Poedit-SearchPathExcluded-9: assets\n"
+"X-Poedit-SearchPathExcluded-10: bower_components\n"
+"X-Poedit-SearchPathExcluded-11: dist\n"
+"X-Poedit-SearchPathExcluded-12: maps\n"
+"X-Poedit-SearchPathExcluded-13: node_modules\n"
+"X-Poedit-SearchPathExcluded-14: src\n"
+
+#: 404.php:16
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "お探しのページは見つかりませんでした。"
+
+#: 404.php:18
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"ここには何も見つかりませんでした。以下のリンクや検索を試してみてください。"
+
+#: 404.php:28
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "月別アーカイブを見てみてください%1$s"
+
+#: comments.php:29
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+
+#: comments.php:38 comments.php:58
+msgid "Comment navigation"
+msgstr "コメントのナビゲーション"
+
+#: comments.php:40 comments.php:60
+msgid "Older Comments"
+msgstr "古いコメント"
+
+#: comments.php:41 comments.php:61
+msgid "Newer Comments"
+msgstr "新しいコメント"
+
+#: comments.php:73
+msgid "Comments are closed."
+msgstr "コメントは受け付けていません。"
+
+#: footer.php:30
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: footer.php:30
+#, php-format
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: functions.php:53
+msgid "Global Menu"
+msgstr "グローバルメニュー"
+
+#: functions.php:129
+msgid "Search for..."
+msgstr "検索…"
+
+#: functions.php:131
+msgid "Search"
+msgstr "検索"
+
+#: functions.php:150
+msgid "Sidebar"
+msgstr "サイドバー"
+
+#: functions.php:159
+msgid "Footer Widgets"
+msgstr "フッターウィジェット"
+
+#: header.php:25
+msgid "Skip to content"
+msgstr "コンテンツをスキップ"
+
+#: search.php:13
+#, php-format
+msgid "Search Results for: %s"
+msgstr "%s の検索結果"
+
+#: template-parts/content-none.php:13
+msgid "Nothing Found"
+msgstr "何も見つかりませんでした"
+
+#: template-parts/content-none.php:16
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"最初の投稿の準備はできましたか? <a href=\"%1$s\">ここから始めましょう</a>。"
+
+#: template-parts/content-none.php:20
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"ご指定の検索条件に合う投稿がありませんでした。他のキーワードでもう一度検索し"
+"てみてください。"
+
+#: template-parts/content-none.php:25
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "お探しのコンテンツが見つからないようです。検索を試してみてください。"
+
+#: template-parts/content-page.php:29
+msgid "Pages:"
+msgstr "ページ:"
+
+#: template-parts/content-single.php:39
+msgid "Pages: "
+msgstr "ページ:"
