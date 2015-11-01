@@ -56,6 +56,9 @@ body {
   line-height: 1;
   letter-spacing: 0.6px;
   text-transform: uppercase;
+  @media #{$medium-up} {
+    padding: 0 14px;
+  }
 }
 /**
  * error 404

@@ -2684,6 +2684,12 @@ body.sidebar .l-main:after {
   text-transform: uppercase;
 }
 
+@media only screen and (min-width: 48.0625em) {
+  .page-title {
+    padding: 0 14px;
+  }
+}
+
 /**
  * error 404
  */
