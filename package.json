@@ -5,6 +5,7 @@
   "uri": "https://github.com/featherplain/amethyst",
   "main": "gulpfile.js",
   "scripts": {
+    "gulp": "gulp",
     "gulp-server": "gulp default --mode server",
     "gulp-init": "bower install; gulp init",
     "test": "echo \"Error: no test specified\" && exit 1"
