@@ -38,6 +38,10 @@ Simple WordPress Theme based on Foundation. See details at [readme.txt](readme.t
 
 ### Options
 
+#### Distribution
+
+    $ npm run gulp-zip
+
 #### Autoprefix
 
 You'd like to autoprefix specific browsers, edit gulpfile.js below these lines.
