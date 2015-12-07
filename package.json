@@ -8,6 +8,7 @@
     "gulp": "gulp",
     "gulp-server": "gulp default --mode server",
     "gulp-init": "bower install; gulp init",
+    "gulp-zip": "gulp zip",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Megumi Hano",
@@ -34,6 +35,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-svg-sprite": "latest",
     "gulp-uglify": "latest",
+    "gulp-zip": "latest",
     "gulp.spritesmith": "latest",
     "run-sequence": "^1.1.0",
     "yargs": "^3.12.0"

@@ -32,7 +32,9 @@ var paths = {
 // css
   'cssDest'        : './',
 // php
-  'phpFiles'       : ['*.php', '**/*.php']
+  'phpFiles'       : ['*.php', '**/*.php'],
+// zip
+  'zip'            : ['*.php', '**/*.php', '*.txt', '*.png', '*.css', 'assets/', 'languages/', 'src/scss/', 'src/js/', '!**/.DS_Store']
 };
 
 var gulpSassConf = {
@@ -55,28 +57,10 @@ gulp.task('install:foundation', function() {
 // * Distribution
 //**************************************************************************/
 
-// Distribution is not executed automatically.
-// This needs to be executed manually.
-
-gulp.task( 'copy:src', function() {
-  return gulp.src(
-    ['src/scss/**/*.scss', 'src/js/**/*.js'],
-    {base: 'src'}
-  )
-  .pipe(gulp.dest('./dist/src/'));
-});
-
-gulp.task( 'copy:assets', function() {
-  return gulp.src(
-    ['assets/**/*.*'],
-    {base: 'assets'}
-  )
-  .pipe(gulp.dest('./dist/assets/'));
-});
-
-gulp.task('copy:files', function() {
-  return gulp.src('src/shell/', {read: false})
-    .pipe($.shell(['bash src/shell/files.sh']));
+gulp.task('zip', function() {
+  return gulp.src(paths.zip)
+    .pipe($.zip('amethyst.zip'))
+    .pipe(gulp.dest(paths.root));
 });
 
 //***************************************************************************
@@ -240,8 +224,4 @@ gulp.task('default', [
 
 gulp.task('init', function(cb) {
   runSequence('bower:install', 'install:foundation', cb);
-});
-
-gulp.task('dist', function(cb) {
-  runSequence('copy:src', 'copy:assets', 'copy:files', cb);
 });
