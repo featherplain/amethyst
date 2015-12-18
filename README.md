@@ -22,10 +22,10 @@ Simple WordPress Theme based on Foundation. See details at [readme.txt](readme.t
         $ cd path/to/directory ; npm install
   
 
-2.  To run gulp tasks with proxy mode, Set hostname on line 18 in gulpfile.js.
+2.  To run gulp tasks with proxy mode, Set hostname on line 18 in gulpfile.js. Default is `amethyst.dev`.
 
 
-        'vhost'          : 'example.dev'
+        'vhost'          : 'amethyst.dev'
 
 
 2.  Run gulp. You don't need to install gulp globally.
