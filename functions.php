@@ -126,7 +126,7 @@ add_action( 'after_setup_theme', 'amethyst_content_width', 0 );
  */
 function amethyst_search_form( $form ) {
 	$form = '<div class="search"><form role="search" method="get" id="searchform" class="search__form" action="' . home_url( '/' ) . '" >
-	<label class="screen-reader-text" for="s">' . __( 'Search for...', 'amethyst' ) . '</label>
+	<label class="screen-reader-text" for="s">' . esc_html__( 'Search for...', 'amethyst' ) . '</label>
 	<input class="search__field" type="text" value="' . get_search_query() . '" placeholder="' . __( 'Search for...', 'amethyst' ) . '" name="s" id="s" />
 	<input class="search__submit" type="submit" id="searchsubmit" value="'. esc_attr__( 'Search', 'amethyst' ) .'" /></form></div>';
 
@@ -149,7 +149,7 @@ function amethyst_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'amethyst' ),
 		'id'            => 'sidebar',
-		'description'   => 'Main Widgets Sidebar. Shows up in all pages.',
+		'description'   => esc_html__( 'Main Widgets Sidebar. Shows up in all pages.', 'amethyst' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget__title">',
@@ -158,7 +158,7 @@ function amethyst_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Footer Widgets', 'amethyst' ),
 		'id'            => 'footer-widgets',
-		'description'   => 'Will show a widgets area on the footer. Shows up in all pages.',
+		'description'   => esc_html__( 'Will show a widgets area on the footer. Shows up in all pages.', 'amethyst' ),
 		'before_widget' => '<aside id="%1$s" class="widget widget--footer %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget__title">',
