@@ -2612,13 +2612,6 @@ body.sidebar .l-main:after {
   margin-top: 0;
 }
 
-/**
- * WordPress classes
- */
-.sticky {
-  display: inherit;
-}
-
 /* -------------------------------------------------------------- */
 /* post
 /* -------------------------------------------------------------- */
@@ -2695,7 +2688,7 @@ body.sidebar .l-main:after {
 /**
  * meta informations
  */
-.metainfo {
+.metadata {
   position: relative;
   display: inline-block;
   color: #222222;
@@ -2704,27 +2697,27 @@ body.sidebar .l-main:after {
   transition: 0.3s;
 }
 
-.metainfo:before {
+.metadata:before {
   display: block;
   content: "";
   position: absolute;
 }
 
-.metainfo:first-child {
+.metadata:first-child {
   margin-left: 0;
 }
 
-.metainfo a {
+.metadata a {
   margin-left: 2px;
   color: #222222;
   line-height: 1;
 }
 
-.metainfo a:hover {
+.metadata a:hover {
   color: #e80c7a;
 }
 
-.metainfo--date:before {
+.metadata--date:before {
   position: static;
   display: inline-block;
   content: "";
@@ -2734,7 +2727,7 @@ body.sidebar .l-main:after {
   line-height: 1;
 }
 
-.metainfo--category:before {
+.metadata--category:before {
   position: static;
   display: inline-block;
   content: "";
@@ -2744,7 +2737,7 @@ body.sidebar .l-main:after {
   line-height: 1;
 }
 
-.metainfo--author:before {
+.metadata--author:before {
   position: static;
   display: inline-block;
   content: "";
@@ -2754,7 +2747,7 @@ body.sidebar .l-main:after {
   line-height: 1;
 }
 
-.metainfo--tag:before {
+.metadata--tag:before {
   position: static;
   display: inline-block;
   content: "";
@@ -2764,7 +2757,7 @@ body.sidebar .l-main:after {
   line-height: 1;
 }
 
-.metainfo--comment:before {
+.metadata--comment:before {
   position: static;
   display: inline-block;
   content: "";
@@ -2772,6 +2765,23 @@ body.sidebar .l-main:after {
   font-size: 1.1rem;
   font-family: Genericons;
   line-height: 1;
+}
+
+.metadata--featured:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: top;
+  font-size: 1.1rem;
+  font-family: Genericons;
+  line-height: 1;
+}
+
+/**
+ * for sticky post
+ */
+.sticky {
+  display: inherit;
 }
 
 /**
