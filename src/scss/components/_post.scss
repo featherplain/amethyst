@@ -69,7 +69,7 @@
 /**
  * meta informations
  */
-.metainfo {
+.metadata {
   @include hasPseudoClass(before);
   display: inline-block;
   color: $colorBase;
@@ -112,7 +112,20 @@
       @include genericon('\f108', 1.1rem, top);
     }
   }
+  // for sticky post
+  &--featured {
+    &:before {
+      @include genericon('\f308', 1.1rem, top);
+    }
+  }
 }
+/**
+ * for sticky post
+ */
+.sticky {
+  display: inherit;
+}
+
 /**
  * media queries
  */

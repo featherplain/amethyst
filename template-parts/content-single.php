@@ -14,10 +14,15 @@
 		<?php the_title( '<h1 class="post__title">', '</h1>' ); ?>
 
 		<div class="post__meta">
-			<div class="metainfo metainfo--date">
+			<?php if ( is_sticky() ) : ?>
+				<div class="metadata metadata--featured">
+					<span><?php echo esc_html__( 'featured', 'amethyst' ); ?></span>
+				</div>
+			<?php endif; ?>
+			<div class="metadata metadata--date">
 				<span><?php the_time( get_option( 'date_format' ) ); ?></span>
 			</div>
-			<div class="metainfo metainfo--author">
+			<div class="metadata metadata--author">
 				<span><?php echo get_the_author_meta( 'display_name' ); ?></span>
 			</div>
 		</div>
@@ -44,13 +49,13 @@
 	<footer class="post__footer">
 	  <div class="post__meta post__meta--footer">
 
-			<?php the_tags( '<div class="metainfo metainfo--tag">' , ',' , '</div>' ); ?>
+			<?php the_tags( '<div class="metadata metadata--tag">' , ',' , '</div>' ); ?>
 
 			<?php // category
 			$cats = get_the_category();
 			$cat_html = '';
 			foreach ( $cats as $cat) {
-				$cat_html = '<div class="metainfo metainfo--category"><a href="' . get_category_link( $cat->cat_ID ) . '">' . $cat->name . '</a></div>';
+				$cat_html = '<div class="metadata metadata--category"><a href="' . get_category_link( $cat->cat_ID ) . '">' . $cat->name . '</a></div>';
 			}
 			?>
 			<?php echo $cat_html; ?>

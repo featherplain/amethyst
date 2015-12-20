@@ -282,20 +282,22 @@ pre {
   background-color: #f8f8f8;
   color: #454545;
   font-family: Menlo, Consolas, Courier, sans-serif;
-  font-size: 0.75rem;
+  font-size: 80%;
   word-wrap: normal;
   overflow-x: auto;
 }
-pre code {
+pre > code {
   background-color: transparent;
+  padding: 0;
 }
 code {
   background-color: #f8f8f8;
   border: none;
   border-radius: 3px;
-  color: #cc0000;
+  color: #454545;
   font-family: Menlo, Consolas, Courier, sans-serif;
-  font-size: 0.75rem;
+  font-size: 80%;
+  padding: 2px 4px;
 }
 kbd {
   padding: 2px 4px;
@@ -304,7 +306,7 @@ kbd {
   border-radius: 3px;
   color: #ffffff;
   font-family: Menlo, Consolas, Courier, sans-serif;
-  font-size: 0.75rem;
+  font-size: 80%;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 address {

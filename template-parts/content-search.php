@@ -15,10 +15,15 @@
 
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="post__meta">
-			<div class="metainfo metainfo--date">
+			<?php if ( is_sticky() ) : ?>
+				<div class="metadata metadata--featured">
+					<span><?php echo esc_html__( 'featured', 'amethyst' ); ?></span>
+				</div>
+			<?php endif; ?>
+			<div class="metadata metadata--date">
 				<time><?php the_time( get_option( 'date_format' ) ); ?></time>
 			</div>
-			<div class="metainfo metainfo--date">
+			<div class="metadata metadata--date">
 				<span><?php echo get_the_author_meta( 'display_name' ); ?></span>
 			</div>
 		</div>

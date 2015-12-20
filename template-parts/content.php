@@ -14,10 +14,15 @@
 		<?php the_title( '<h2 class="post__title post__title--archive">', '</h2>' ); ?>
 
 		<div class="post__meta">
-			<div class="metainfo metainfo--date">
+			<?php if ( is_sticky() ) : ?>
+				<div class="metadata metadata--featured">
+					<span><?php echo esc_html__( 'featured', 'amethyst' ); ?></span>
+				</div>
+			<?php endif; ?>
+			<div class="metadata metadata--date">
 				<span><?php the_time( get_option( 'date_format' ) ); ?></span>
 			</div>
-			<div class="metainfo metainfo--author">
+			<div class="metadata metadata--author">
 				<span><?php echo get_the_author_meta( 'display_name' ); ?></span>
 			</div>
 		</div>
