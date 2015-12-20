@@ -235,12 +235,18 @@ select {
 }
 
 .column + .column:last-child,
-.columns + .columns:last-child {
+.columns + .column:last-child, .column +
+.columns:last-child,
+.columns +
+.columns:last-child {
   float: right;
 }
 
 .column + .column.end,
-.columns + .columns.end {
+.columns + .column.end, .column +
+.columns.end,
+.columns +
+.columns.end {
   float: left;
 }
 
@@ -1251,15 +1257,11 @@ button, .button {
   transition: background-color 300ms ease-out;
 }
 
-button:hover,
-button:focus, .button:hover,
-.button:focus {
+button:hover, button:focus, .button:hover, .button:focus {
   background-color: #1b1b1b;
 }
 
-button:hover,
-button:focus, .button:hover,
-.button:focus {
+button:hover, button:focus, .button:hover, .button:focus {
   color: #FFFFFF;
 }
 
@@ -1269,15 +1271,11 @@ button.secondary, .button.secondary {
   color: #333333;
 }
 
-button.secondary:hover,
-button.secondary:focus, .button.secondary:hover,
-.button.secondary:focus {
+button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
   background-color: #b2b2b2;
 }
 
-button.secondary:hover,
-button.secondary:focus, .button.secondary:hover,
-.button.secondary:focus {
+button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
   color: #FFFFFF;
 }
 
@@ -1287,15 +1285,11 @@ button.success, .button.success {
   color: #FFFFFF;
 }
 
-button.success:hover,
-button.success:focus, .button.success:hover,
-.button.success:focus {
+button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
   background-color: #368a55;
 }
 
-button.success:hover,
-button.success:focus, .button.success:hover,
-.button.success:focus {
+button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
   color: #FFFFFF;
 }
 
@@ -1305,15 +1299,11 @@ button.alert, .button.alert {
   color: #FFFFFF;
 }
 
-button.alert:hover,
-button.alert:focus, .button.alert:hover,
-.button.alert:focus {
+button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
   background-color: #cf2a0e;
 }
 
-button.alert:hover,
-button.alert:focus, .button.alert:hover,
-.button.alert:focus {
+button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
   color: #FFFFFF;
 }
 
@@ -1323,15 +1313,11 @@ button.warning, .button.warning {
   color: #FFFFFF;
 }
 
-button.warning:hover,
-button.warning:focus, .button.warning:hover,
-.button.warning:focus {
+button.warning:hover, button.warning:focus, .button.warning:hover, .button.warning:focus {
   background-color: #cf6e0e;
 }
 
-button.warning:hover,
-button.warning:focus, .button.warning:hover,
-.button.warning:focus {
+button.warning:hover, button.warning:focus, .button.warning:hover, .button.warning:focus {
   color: #FFFFFF;
 }
 
@@ -1341,15 +1327,11 @@ button.info, .button.info {
   color: #333333;
 }
 
-button.info:hover,
-button.info:focus, .button.info:hover,
-.button.info:focus {
+button.info:hover, button.info:focus, .button.info:hover, .button.info:focus {
   background-color: #61b6d9;
 }
 
-button.info:hover,
-button.info:focus, .button.info:hover,
-.button.info:focus {
+button.info:hover, button.info:focus, .button.info:hover, .button.info:focus {
   color: #FFFFFF;
 }
 
@@ -1401,27 +1383,15 @@ button.disabled, button[disabled], .button.disabled, .button[disabled] {
   opacity: 0.7;
 }
 
-button.disabled:hover,
-button.disabled:focus, button[disabled]:hover,
-button[disabled]:focus, .button.disabled:hover,
-.button.disabled:focus, .button[disabled]:hover,
-.button[disabled]:focus {
+button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
   background-color: #1b1b1b;
 }
 
-button.disabled:hover,
-button.disabled:focus, button[disabled]:hover,
-button[disabled]:focus, .button.disabled:hover,
-.button.disabled:focus, .button[disabled]:hover,
-.button[disabled]:focus {
+button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
   color: #FFFFFF;
 }
 
-button.disabled:hover,
-button.disabled:focus, button[disabled]:hover,
-button[disabled]:focus, .button.disabled:hover,
-.button.disabled:focus, .button[disabled]:hover,
-.button[disabled]:focus {
+button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
   background-color: #222222;
 }
 
@@ -1434,27 +1404,15 @@ button.disabled.secondary, button[disabled].secondary, .button.disabled.secondar
   opacity: 0.7;
 }
 
-button.disabled.secondary:hover,
-button.disabled.secondary:focus, button[disabled].secondary:hover,
-button[disabled].secondary:focus, .button.disabled.secondary:hover,
-.button.disabled.secondary:focus, .button[disabled].secondary:hover,
-.button[disabled].secondary:focus {
+button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
   background-color: #b2b2b2;
 }
 
-button.disabled.secondary:hover,
-button.disabled.secondary:focus, button[disabled].secondary:hover,
-button[disabled].secondary:focus, .button.disabled.secondary:hover,
-.button.disabled.secondary:focus, .button[disabled].secondary:hover,
-.button[disabled].secondary:focus {
+button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
   color: #FFFFFF;
 }
 
-button.disabled.secondary:hover,
-button.disabled.secondary:focus, button[disabled].secondary:hover,
-button[disabled].secondary:focus, .button.disabled.secondary:hover,
-.button.disabled.secondary:focus, .button[disabled].secondary:hover,
-.button[disabled].secondary:focus {
+button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
   background-color: #dedede;
 }
 
@@ -1467,27 +1425,15 @@ button.disabled.success, button[disabled].success, .button.disabled.success, .bu
   opacity: 0.7;
 }
 
-button.disabled.success:hover,
-button.disabled.success:focus, button[disabled].success:hover,
-button[disabled].success:focus, .button.disabled.success:hover,
-.button.disabled.success:focus, .button[disabled].success:hover,
-.button[disabled].success:focus {
+button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
   background-color: #368a55;
 }
 
-button.disabled.success:hover,
-button.disabled.success:focus, button[disabled].success:hover,
-button[disabled].success:focus, .button.disabled.success:hover,
-.button.disabled.success:focus, .button[disabled].success:hover,
-.button[disabled].success:focus {
+button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
   color: #FFFFFF;
 }
 
-button.disabled.success:hover,
-button.disabled.success:focus, button[disabled].success:hover,
-button[disabled].success:focus, .button.disabled.success:hover,
-.button.disabled.success:focus, .button[disabled].success:hover,
-.button[disabled].success:focus {
+button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
   background-color: #43AC6A;
 }
 
@@ -1500,27 +1446,15 @@ button.disabled.alert, button[disabled].alert, .button.disabled.alert, .button[d
   opacity: 0.7;
 }
 
-button.disabled.alert:hover,
-button.disabled.alert:focus, button[disabled].alert:hover,
-button[disabled].alert:focus, .button.disabled.alert:hover,
-.button.disabled.alert:focus, .button[disabled].alert:hover,
-.button[disabled].alert:focus {
+button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
   background-color: #cf2a0e;
 }
 
-button.disabled.alert:hover,
-button.disabled.alert:focus, button[disabled].alert:hover,
-button[disabled].alert:focus, .button.disabled.alert:hover,
-.button.disabled.alert:focus, .button[disabled].alert:hover,
-.button[disabled].alert:focus {
+button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
   color: #FFFFFF;
 }
 
-button.disabled.alert:hover,
-button.disabled.alert:focus, button[disabled].alert:hover,
-button[disabled].alert:focus, .button.disabled.alert:hover,
-.button.disabled.alert:focus, .button[disabled].alert:hover,
-.button[disabled].alert:focus {
+button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
   background-color: #f04124;
 }
 
@@ -1533,27 +1467,15 @@ button.disabled.warning, button[disabled].warning, .button.disabled.warning, .bu
   opacity: 0.7;
 }
 
-button.disabled.warning:hover,
-button.disabled.warning:focus, button[disabled].warning:hover,
-button[disabled].warning:focus, .button.disabled.warning:hover,
-.button.disabled.warning:focus, .button[disabled].warning:hover,
-.button[disabled].warning:focus {
+button.disabled.warning:hover, button.disabled.warning:focus, button[disabled].warning:hover, button[disabled].warning:focus, .button.disabled.warning:hover, .button.disabled.warning:focus, .button[disabled].warning:hover, .button[disabled].warning:focus {
   background-color: #cf6e0e;
 }
 
-button.disabled.warning:hover,
-button.disabled.warning:focus, button[disabled].warning:hover,
-button[disabled].warning:focus, .button.disabled.warning:hover,
-.button.disabled.warning:focus, .button[disabled].warning:hover,
-.button[disabled].warning:focus {
+button.disabled.warning:hover, button.disabled.warning:focus, button[disabled].warning:hover, button[disabled].warning:focus, .button.disabled.warning:hover, .button.disabled.warning:focus, .button[disabled].warning:hover, .button[disabled].warning:focus {
   color: #FFFFFF;
 }
 
-button.disabled.warning:hover,
-button.disabled.warning:focus, button[disabled].warning:hover,
-button[disabled].warning:focus, .button.disabled.warning:hover,
-.button.disabled.warning:focus, .button[disabled].warning:hover,
-.button[disabled].warning:focus {
+button.disabled.warning:hover, button.disabled.warning:focus, button[disabled].warning:hover, button[disabled].warning:focus, .button.disabled.warning:hover, .button.disabled.warning:focus, .button[disabled].warning:hover, .button[disabled].warning:focus {
   background-color: #f08a24;
 }
 
@@ -1566,27 +1488,15 @@ button.disabled.info, button[disabled].info, .button.disabled.info, .button[disa
   opacity: 0.7;
 }
 
-button.disabled.info:hover,
-button.disabled.info:focus, button[disabled].info:hover,
-button[disabled].info:focus, .button.disabled.info:hover,
-.button.disabled.info:focus, .button[disabled].info:hover,
-.button[disabled].info:focus {
+button.disabled.info:hover, button.disabled.info:focus, button[disabled].info:hover, button[disabled].info:focus, .button.disabled.info:hover, .button.disabled.info:focus, .button[disabled].info:hover, .button[disabled].info:focus {
   background-color: #61b6d9;
 }
 
-button.disabled.info:hover,
-button.disabled.info:focus, button[disabled].info:hover,
-button[disabled].info:focus, .button.disabled.info:hover,
-.button.disabled.info:focus, .button[disabled].info:hover,
-.button[disabled].info:focus {
+button.disabled.info:hover, button.disabled.info:focus, button[disabled].info:hover, button[disabled].info:focus, .button.disabled.info:hover, .button.disabled.info:focus, .button[disabled].info:hover, .button[disabled].info:focus {
   color: #FFFFFF;
 }
 
-button.disabled.info:hover,
-button.disabled.info:focus, button[disabled].info:hover,
-button[disabled].info:focus, .button.disabled.info:hover,
-.button.disabled.info:focus, .button[disabled].info:hover,
-.button[disabled].info:focus {
+button.disabled.info:hover, button.disabled.info:focus, button[disabled].info:hover, button[disabled].info:focus, .button.disabled.info:hover, .button.disabled.info:focus, .button[disabled].info:hover, .button[disabled].info:focus {
   background-color: #a0d3e8;
 }
 
@@ -1777,36 +1687,21 @@ input[type="text"]:disabled, input[type="password"]:disabled, input[type="date"]
   cursor: default;
 }
 
-input[type="text"][disabled],
-input[type="text"][readonly],
-fieldset[disabled] input[type="text"], input[type="password"][disabled],
-input[type="password"][readonly],
-fieldset[disabled] input[type="password"], input[type="date"][disabled],
-input[type="date"][readonly],
-fieldset[disabled] input[type="date"], input[type="datetime"][disabled],
-input[type="datetime"][readonly],
-fieldset[disabled] input[type="datetime"], input[type="datetime-local"][disabled],
-input[type="datetime-local"][readonly],
-fieldset[disabled] input[type="datetime-local"], input[type="month"][disabled],
-input[type="month"][readonly],
-fieldset[disabled] input[type="month"], input[type="week"][disabled],
-input[type="week"][readonly],
-fieldset[disabled] input[type="week"], input[type="email"][disabled],
-input[type="email"][readonly],
-fieldset[disabled] input[type="email"], input[type="number"][disabled],
-input[type="number"][readonly],
-fieldset[disabled] input[type="number"], input[type="search"][disabled],
-input[type="search"][readonly],
-fieldset[disabled] input[type="search"], input[type="tel"][disabled],
-input[type="tel"][readonly],
-fieldset[disabled] input[type="tel"], input[type="time"][disabled],
-input[type="time"][readonly],
-fieldset[disabled] input[type="time"], input[type="url"][disabled],
-input[type="url"][readonly],
-fieldset[disabled] input[type="url"], input[type="color"][disabled],
-input[type="color"][readonly],
-fieldset[disabled] input[type="color"], textarea[disabled],
-textarea[readonly],
+input[type="text"][disabled], input[type="text"][readonly],
+fieldset[disabled] input[type="text"], input[type="password"][disabled], input[type="password"][readonly],
+fieldset[disabled] input[type="password"], input[type="date"][disabled], input[type="date"][readonly],
+fieldset[disabled] input[type="date"], input[type="datetime"][disabled], input[type="datetime"][readonly],
+fieldset[disabled] input[type="datetime"], input[type="datetime-local"][disabled], input[type="datetime-local"][readonly],
+fieldset[disabled] input[type="datetime-local"], input[type="month"][disabled], input[type="month"][readonly],
+fieldset[disabled] input[type="month"], input[type="week"][disabled], input[type="week"][readonly],
+fieldset[disabled] input[type="week"], input[type="email"][disabled], input[type="email"][readonly],
+fieldset[disabled] input[type="email"], input[type="number"][disabled], input[type="number"][readonly],
+fieldset[disabled] input[type="number"], input[type="search"][disabled], input[type="search"][readonly],
+fieldset[disabled] input[type="search"], input[type="tel"][disabled], input[type="tel"][readonly],
+fieldset[disabled] input[type="tel"], input[type="time"][disabled], input[type="time"][readonly],
+fieldset[disabled] input[type="time"], input[type="url"][disabled], input[type="url"][readonly],
+fieldset[disabled] input[type="url"], input[type="color"][disabled], input[type="color"][readonly],
+fieldset[disabled] input[type="color"], textarea[disabled], textarea[readonly],
 fieldset[disabled] textarea {
   background-color: #DDDDDD;
   cursor: default;
@@ -2089,7 +1984,7 @@ label.error {
   color: #f04124;
 }
 
-.gnav__list:after, .nav-links:after {
+.gnav__list:after, .siteinfo__inner:after, .nav-links:after {
   display: block;
   visibility: hidden;
   clear: both;
@@ -2162,14 +2057,11 @@ a:focus {
   outline: thin dotted;
 }
 
-a:link,
-a:visited {
+a:link, a:visited {
   color: #e80c7a;
 }
 
-a:hover,
-a:active,
-a:focus {
+a:hover, a:active, a:focus {
   outline: 0;
   color: #91074c;
   text-decoration: none;
@@ -2427,8 +2319,7 @@ table td {
   color: #ffffff;
 }
 
-.gnav__trigger:hover,
-.gnav__trigger:focus {
+.gnav__trigger:hover, .gnav__trigger:focus {
   outline: 0;
   background-color: #363636;
 }
@@ -2460,8 +2351,7 @@ table td {
   color: #ffffff;
 }
 
-.gnav__arrowdown:hover,
-.gnav__arrowdown:focus {
+.gnav__arrowdown:hover, .gnav__arrowdown:focus {
   outline: 0;
   background-color: #363636;
 }
@@ -2549,7 +2439,8 @@ table td {
   max-width: 1080px;
   width: 100%;
   padding: 20px 0;
-  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 1.6px;
 }
 
 .siteinfo__inner:before, .siteinfo__inner:after {
@@ -2561,24 +2452,48 @@ table td {
   clear: both;
 }
 
-.siteinfo__text {
-  margin: 10px auto;
-  color: #ffffff;
-  font-size: 0.75rem;
-  letter-spacing: 1.6px;
+.siteinfo__credit {
+  padding-left: 1.125rem;
+  padding-right: 1.125rem;
+  width: 50%;
+  float: left;
 }
 
-.siteinfo__text a {
+.siteinfo__credit a {
   color: #ffffff;
 }
 
-.siteinfo__text a:hover {
+.siteinfo__credit a:hover {
   color: #e80c7a;
+}
+
+.siteinfo__copy {
+  padding-left: 1.125rem;
+  padding-right: 1.125rem;
+  width: 50%;
+  float: right;
+  color: #ffffff;
+  text-align: right;
+}
+
+.siteinfo__sep {
+  color: #ffffff;
 }
 
 /**
  * media queries
  */
+@media only screen and (max-width: 48em) {
+  .siteinfo__credit, .siteinfo__copy {
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
+    width: 100%;
+    float: left;
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
 @media only screen and (max-width: 48em) {
   .footer-widgets__inner {
     padding: 0 16px;
@@ -3514,15 +3429,13 @@ object {
 /**
  * WordPress widget classes
  */
-.widget_recent_entries span,
-.widget_rss span {
+.widget_recent_entries span, .widget_rss span {
   display: block;
   color: #c5c5c5;
   font-size: 0.75rem;
 }
 
-.widget_recent_entries time,
-.widget_rss time {
+.widget_recent_entries time, .widget_rss time {
   display: block;
   margin: 4px 0;
   text-align: right;
@@ -3604,8 +3517,7 @@ input[type="reset"]:focus {
   outline: 0;
 }
 
-button:link,
-button:visited,
+button:link, button:visited,
 input[type="button"]:link,
 input[type="button"]:visited,
 input[type="submit"]:link,
@@ -3615,9 +3527,7 @@ input[type="reset"]:visited {
   color: #ffffff;
 }
 
-button:hover,
-button:active,
-button:focus,
+button:hover, button:active, button:focus,
 input[type="button"]:hover,
 input[type="button"]:active,
 input[type="button"]:focus,
@@ -3651,14 +3561,11 @@ input[type="reset"]:focus {
   outline: 0;
 }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   color: #ffffff;
 }
 
-.btn:hover,
-.btn:active,
-.btn:focus {
+.btn:hover, .btn:active, .btn:focus {
   background-color: #c10a66;
   color: #ffffff;
   outline: 0;
@@ -3684,14 +3591,11 @@ input[type="reset"]:focus {
   outline: 0;
 }
 
-.btn-full:link,
-.btn-full:visited {
+.btn-full:link, .btn-full:visited {
   color: #ffffff;
 }
 
-.btn-full:hover,
-.btn-full:active,
-.btn-full:focus {
+.btn-full:hover, .btn-full:active, .btn-full:focus {
   background-color: #c10a66;
   color: #ffffff;
   outline: 0;
