@@ -26,12 +26,15 @@ if ( ! is_active_sidebar( 'footer-widgets' ) )
 
       <div class="siteinfo">
         <div class="siteinfo__inner">
-        	<p id="credit" class="siteinfo__text">
-        		<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'amethyst' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'amethyst' ), 'WordPress' ); ?></a>
+        	<p id="credit" class="siteinfo__credit">
+        		<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'amethyst' ), 'WordPress' ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'amethyst' ), 'WordPress' ); ?></a>
+        		<span class="siteinfo__sep">&nbsp;|&nbsp;</span>
+        		<a href="<?php echo esc_url( __( 'http://asknode.net/', 'amethyst' ), 'featherplain' ); ?>"><?php printf( esc_html__( 'Theme by %s', 'amethyst' ), 'featherplain' ); ?></a>
 					</p>
+					<p id="copy" class="siteinfo__copy">&copy;&nbsp;<?php echo date('Y'); ?>&nbsp;<?php bloginfo( 'name' ); ?></p>
         </div>
-      </div>
-    </footer><!-- /.l-footer-->
+      </div><!-- / .siteinfo -->
+    </footer><!-- / .l-footer -->
 
 	</div><!-- /.l-container -->
 

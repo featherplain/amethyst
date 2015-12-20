@@ -18,14 +18,16 @@
   background-color: darken($colorBase, 4%);
   &__inner {
     @include grid-row();
+    @extend %clearfix;
     padding: 20px 0;
-    text-align: center;
-  }
-  &__text {
-    margin: 10px auto;
-    color: #ffffff;
     font-size: rem-calc(12);
     letter-spacing: 1.6px;
+  }
+  &__credit {
+    @include grid-column(
+      $columns: 6,
+      $float: left
+    );
     a {
       color: #ffffff;
       &:hover {
@@ -33,10 +35,33 @@
       }
     }
   }
+  &__copy {
+     @include grid-column(
+      $columns: 6,
+      $float: right
+    );
+    color: #ffffff;
+    text-align: right;
+  }
+  &__sep {
+    color: #ffffff;
+  }
 }
 /**
  * media queries
  */
+.siteinfo {
+  @media #{$small-only} {
+    &__credit,
+    &__copy {
+      @include grid-column(
+        $columns: 12
+      );
+      margin: 10px 0;
+      text-align: center;
+    }
+  }
+}
 .footer-widgets {
   &__inner {
     @media #{$small-only} {
