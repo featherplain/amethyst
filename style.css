@@ -2671,8 +2671,15 @@ body.sidebar .l-main:after {
 
 .post__image {
   width: 100%;
+  height: auto;
   margin-bottom: 10px;
+  background-color: #3c3c3c;
   border: 2px solid #ededed;
+}
+
+.post__image img {
+  display: block;
+  margin: 0 auto;
 }
 
 .post__pager {
