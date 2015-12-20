@@ -1,6 +1,6 @@
 {
   "name": "Amethyst",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Amethyst is a simple WordPress theme based on Foundation. The design is kept simple to keep the simplicity of the Foundation. Features are, 100% responsive layouts, Genericons, Gulp use, Sass.",
   "uri": "https://github.com/featherplain/amethyst",
   "main": "gulpfile.js",
@@ -8,7 +8,7 @@
     "gulp": "gulp",
     "gulp-server": "gulp default --mode server",
     "gulp-init": "bower install; gulp init",
-    "gulp-zip": "gulp zip",
+    "gulp-zip": "gulp zip:amethyst",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Megumi Hano",
@@ -35,7 +35,6 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-svg-sprite": "latest",
     "gulp-uglify": "latest",
-    "gulp-zip": "latest",
     "gulp.spritesmith": "latest",
     "run-sequence": "^1.1.0",
     "yargs": "^3.12.0"

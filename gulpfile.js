@@ -33,8 +33,6 @@ var paths = {
   'cssDest'        : './',
 // php
   'phpFiles'       : ['*.php', '**/*.php'],
-// zip
-  'zip'            : ['*.php', '**/*.php', '*.txt', '*.png', '*.css', 'assets/', 'languages/', 'src/scss/', 'src/js/', '!**/.DS_Store']
 };
 
 var gulpSassConf = {
@@ -57,10 +55,9 @@ gulp.task('install:foundation', function() {
 // * Distribution
 //**************************************************************************/
 
-gulp.task('zip', function() {
-  return gulp.src(paths.zip)
-    .pipe($.zip('amethyst.zip'))
-    .pipe(gulp.dest(paths.root));
+gulp.task('zip:amethyst', function() {
+  return gulp.src('src/shell/', {read: false})
+    .pipe($.shell(['bash src/shell/zip.sh']));
 });
 
 //***************************************************************************
