@@ -2195,7 +2195,6 @@ table td {
 .l-header {
   width: auto;
   height: auto;
-  margin-bottom: 20px;
 }
 
 .l-header__inner {
@@ -2398,9 +2397,6 @@ table td {
  * media queries
  */
 @media only screen and (min-width: 48.0625em) {
-  .l-header {
-    margin-bottom: 40px;
-  }
   .site-title {
     padding: 10px 20px 10px 14px;
     font-size: 1.5rem;
@@ -2522,16 +2518,17 @@ table td {
  * l-main
  */
 .l-main {
-  margin-bottom: 40px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
   min-height: 100vh;
   width: 100%;
   max-width: 780px;
-  margin: 0 auto;
 }
 
 @media only screen and (max-width: 48em) {
   .l-main {
-    padding: 0 16px;
+    padding: 20px 16px;
   }
 }
 

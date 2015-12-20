@@ -4,9 +4,11 @@
 // layout
 //*--------------------------------------------------*/
 @mixin layoutMargin {
-  margin-bottom: 40px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
   @media #{$small-only} {
-    padding: 0 16px;
+    padding: 20px 16px;
   }
 }
 
