@@ -33,10 +33,6 @@ Foundation
 License: MIT
 Source: http://foundation.zurb.com/
 
-FastClick
-License: MIT
-Source: https://github.com/ftlabs/fastclick
-
 HTML5 Shiv
 License: MIT/GPL2 License
 Source: https://github.com/aFarkas/html5shiv
@@ -77,6 +73,16 @@ While you can @import or wp_enqueue_script the style.css from your child theme, 
 /* -------------------------------------------------------------- */
 /* Change log
 /* -------------------------------------------------------------- */
+
+== 1.0.4 ==
+* Add "featured" tag to the sticky post
+* Modify <code> and <pre> font color
+* Bugfix some layout styles
+* Delete unnecessary post thumbnail sizes
+* Delete unnecessary JavaScript files
+* Add copyright and theme credit on footer
+* Make the sidebar descriptions to be translatable
+* Make the placeholder text in search form to be escaped
 
 == 1.0.3 ==
 * Translate to Japanese

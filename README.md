@@ -64,14 +64,6 @@ You'd like to autoprefix specific browsers, edit gulpfile.js below these lines.
 - License: MIT
 - Source: [http://foundation.zurb.com/](http://foundation.zurb.com/)
 
-### FastClick
-
-    src/js/lib/fastclick.js
-
-- License: MIT
-- Source: [https://github.com/ftlabs/fastclick](https://github.com/ftlabs/fastclick)
-    
-
 ### Genericons
 
     assets/genericons/
