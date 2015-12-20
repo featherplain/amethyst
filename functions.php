@@ -35,16 +35,10 @@ function amethyst_setup() {
 	add_theme_support( 'title-tag' );
 
 	/*
-	 * Enable support for Post Thumbnails on posts and pages.
+	 * Enable support for post thumbnails on posts and pages.
 	 */
 	add_theme_support( 'post-thumbnails' );
-
-	/*
-	 * Extra image sizes.
-	 */
 	set_post_thumbnail_size( 774, 400, true );
-	add_image_size( 'thumb774x400', 774, 400, true );
-	add_image_size( 'thumb288x154', 288, 154, true );
 
 	/*
 	 * This theme uses wp_nav_menu() in one location.

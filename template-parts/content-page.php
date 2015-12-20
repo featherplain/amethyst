@@ -12,10 +12,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'post--page' ); ?>>
 	<header class="post__header">
 		<?php the_title( '<h1 class="post__title post__title--page">', '</h1>' ); ?>
-		<?php // post thumbnail
-			$size = 'thumb774x400';
-			the_post_thumbnail( $size, array( 'class'	=> 'attachment-' . $size . ' post__image' ) );
-		?>
+		<?php if ( has_post_thumbnail() ) : ?>
+			<div class="post__image"><?php the_post_thumbnail(); ?></div>
+		<?php endif; ?>
 	</header><!-- / .post__header -->
 
 	<div class="post__content">

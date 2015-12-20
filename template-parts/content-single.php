@@ -21,10 +21,9 @@
 				<span><?php echo get_the_author_meta( 'display_name' ); ?></span>
 			</div>
 		</div>
-		<?php // post thumbnail
-		$size = 'thumb774x400';
-		the_post_thumbnail( $size, array( 'class'	=> 'attachment-' . $size . ' post__image' ) );
-		?>
+		<?php if ( has_post_thumbnail() ) : ?>
+			<div class="post__image"><?php the_post_thumbnail(); ?></div>
+		<?php endif; ?>
 	</header><!-- / .post__header -->
 
 	<div class="post__content">

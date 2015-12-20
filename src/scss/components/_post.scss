@@ -47,8 +47,14 @@
   }
   &__image {
     width: 100%;
+    height: auto;
     margin-bottom: 10px;
+    background-color: lighten($colorBase, 10%);
     border: 2px solid darken($colorBg, 5%);
+    img {
+      display: block;
+      margin: 0 auto;
+    }
   }
   &__pager {
     padding: 10px 0;
