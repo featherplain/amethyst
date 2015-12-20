@@ -3042,27 +3042,29 @@ body.sidebar .l-main:after {
 .post__editor pre,
 .comment-content pre {
   padding: 10px;
-  background-color: #f8f8f8;
+  background-color: #f2f2f2;
   color: #454545;
   font-family: Menlo, Consolas, Courier, sans-serif;
-  font-size: 0.75rem;
+  font-size: 80%;
   word-wrap: normal;
   overflow-x: auto;
 }
 
-.post__editor pre code,
-.comment-content pre code {
+.post__editor pre > code,
+.comment-content pre > code {
   background-color: transparent;
+  padding: 0;
 }
 
 .post__editor code,
 .comment-content code {
-  background-color: #f8f8f8;
+  background-color: #f2f2f2;
   border: none;
   border-radius: 3px;
-  color: #cc0000;
+  color: #454545;
   font-family: Menlo, Consolas, Courier, sans-serif;
-  font-size: 0.75rem;
+  font-size: 80%;
+  padding: 2px 4px;
 }
 
 .post__editor kbd,
@@ -3073,7 +3075,7 @@ body.sidebar .l-main:after {
   border-radius: 3px;
   color: #ffffff;
   font-family: Menlo, Consolas, Courier, sans-serif;
-  font-size: 0.75rem;
+  font-size: 80%;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
