@@ -173,7 +173,7 @@ function amethyst_scripts() {
 	wp_enqueue_style( 'amethyst-style', get_stylesheet_uri() );
 
 	// javascripts
-	wp_enqueue_script( 'amethyst-js-lib', get_template_directory_uri() . '/assets/js/lib.min.js', array( 'jquery' ), true );
+	wp_enqueue_script( 'amethyst-js-foundation', get_template_directory_uri() . '/assets/js/foundation.min.js', array( 'jquery' ), true );
 	wp_enqueue_script( 'amethyst-js-script', get_template_directory_uri() . '/assets/js/script.min.js', array( 'jquery' ), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

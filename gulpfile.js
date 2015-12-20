@@ -95,7 +95,7 @@ gulp.task('image-min', function() {
 });
 
 // If you need sprite tasks, uncomment these below lines.
-// You also need to uncomments [gulp tasks] on line 180, 181, 196.
+// You also need to uncomments [ Gulp Tasks ] on line 180, 181, 196.
 
 // gulp.task('sprite', function() {
 //   var spriteData = gulp.src(paths.imagePath + 'sprite/*.png')
@@ -143,37 +143,13 @@ gulp.task('jade', function() {
 //* JS Tasks
 //***************************************************************************/
 
-gulp.task('jsLib', function() {
-  return gulp.src(paths.jsPath + 'lib/*.js')
-    .pipe($.concat('lib.js'))
-    .pipe($.uglify())
-    .pipe($.rename({ suffix: '.min' }))
-    .pipe(gulp.dest(paths.jsDest))
-    .pipe(browserSync.reload({ stream: true }));
-});
-
-gulp.task('jsApp', function() {
-  return gulp.src(paths.jsPath + 'app/*.js')
-    .pipe($.concat('script.js'))
-    .pipe($.uglify())
-    .pipe($.rename({ suffix: '.min' }))
-    .pipe(gulp.dest(paths.jsDest))
-    .pipe(browserSync.reload({ stream: true }));
-});
-
-gulp.task('jsFiles', function() {
+gulp.task('js', function() {
   return gulp.src(paths.jsPath + '*.js')
     .pipe($.uglify())
     .pipe($.rename({ suffix: '.min' }))
     .pipe(gulp.dest(paths.jsDest))
     .pipe(browserSync.reload({ stream: true }));
 });
-
-gulp.task('jsTasks', [
-  'jsApp',
-  'jsLib',
-  'jsFiles'
-]);
 
 //***************************************************************************
 //* Sass Tasks
@@ -205,7 +181,7 @@ gulp.task('watch', function() {
   // gulp.watch([paths.imagePath + 'sprite-svg/*.svg'], ['sprite-svg'])
   gulp.watch([paths.htmlPath  + '*.html'],           ['bs-reload']);
   gulp.watch([paths.jadePath  + '**/*.jade'],        ['jade']);
-  gulp.watch([paths.jsPath    + '**/*.js'],          ['jsTasks']);
+  gulp.watch([paths.jsPath    + '*.js'],             ['js']);
   gulp.watch([paths.scssPath  + '**/*.scss'],        ['sass']);
   gulp.watch([paths.phpFiles],                       ['bs-reload']);
 });
@@ -215,7 +191,7 @@ gulp.task('default', [
   'bs-reload',
   'image-min',
   'jade',
-  'jsTasks',
+  'js',
   'sass',
   // 'sprite',
   // 'sprite-svg',
