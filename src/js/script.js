@@ -34,8 +34,6 @@
       }
     };
     globalNav.init();
-
-
   });
 })(jQuery);
 
