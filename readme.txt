@@ -10,6 +10,10 @@ License URI: license.txt
 == Description ==
 Amethyst is a simple theme based on Foundation. The design is kept simple to keep the simplicity of the Foundation. Features are, 100% responsive layouts, Genericons, Gulp use, Sass.
 
+== Copyright ==
+Amethyst WordPress Theme, Copyright 2015 featherplain
+Amethyst is distributed under the terms of the GNU GPL
+
 
 /* Installation
 /* -------------------------------------------------------------- */

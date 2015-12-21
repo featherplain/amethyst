@@ -141,9 +141,9 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
  */
 function amethyst_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'amethyst' ),
+		'name'          => __( 'Sidebar', 'amethyst' ),
 		'id'            => 'sidebar',
-		'description'   => esc_html__( 'Main Widgets Sidebar. Shows up in all pages.', 'amethyst' ),
+		'description'   => __( 'Main Widgets Sidebar. Shows up in all pages.', 'amethyst' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget__title">',
