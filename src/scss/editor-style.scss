@@ -1,0 +1,34 @@
+@charset "utf-8";
+/*
+Theme Name: Amethyst
+Description: Used to style the TinyMCE editor.
+*/
+
+// config
+@import 'components/core/config';
+
+// Foundation
+/* -------------------------------------------------------------- */
+/* Foundation by ZURB
+/* foundation.zurb.com
+/* Licensed under MIT Open Source
+/* -------------------------------------------------------------- */
+@import 'components/core/settings';
+@import 'components/core/foundation';
+
+// original mixins and placeholder
+@import 'components/core/placeholder';
+@import 'components/core/mixins';
+@import 'components/core/functions';
+
+@import 'components/default';
+@import 'components/forms';
+@import 'components/buttons';
+
+// WordPress
+@import 'components/wp/wp-config';
+@import 'components/wp/wp-mixins';
+@import 'components/wp/wp-classes';
+
+// editor style
+@include wp-editor-styles;

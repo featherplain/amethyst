@@ -81,7 +81,7 @@ function amethyst_setup() {
 	 * Enable support editor-style on WordPress dashboard.
 	 */
 	add_editor_style( array(
-		'assets/css/editor-style.css',
+		'editor-style.css',
 		'assets/genericons/genericons.css'
 	) );
 

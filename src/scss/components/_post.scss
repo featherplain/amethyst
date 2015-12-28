@@ -23,7 +23,7 @@
     padding: 0 0 5px 0;
     font-size: rem-calc(20);
     font-weight: bold;
-    border-bottom: 1px solid $colorSub;
+    border-bottom: $borderSolid;
     &--archive {
       font-size: rem-calc(16);
       line-height: 1.4;
@@ -38,7 +38,7 @@
     &--footer {
       margin: 0;
       padding-bottom: 10px;
-      border-bottom: 1px solid $colorSub;
+      border-bottom: $borderSolid;
       text-align: right;
     }
   }

@@ -1,11 +1,9 @@
 @charset "utf-8";
 
 /* -------------------------------------------------------------- */
-/* forms
+/* WordPress editor styles
 /* -------------------------------------------------------------- */
-/**
- * required
- */
-.required {
-  color: $colorRed;
+.post__content,
+.comment-content {
+  @include wp-editor-styles;
 }
