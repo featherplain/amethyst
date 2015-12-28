@@ -92,6 +92,20 @@
   line-height: $line-height;
 }
 
+// use font awesome
+@mixin fa($content:'\f19a', $fontsize: 16px, $valign: text-bottom, $position: static, $display: inline-block, $line-height: 1) {
+  display: $display;
+  content: $content;
+  font-family: FontAwesome;
+  font-size: $fontsize;
+  line-height: $line-height;
+  text-rendering: auto;
+  vertical-align: $valign;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
 //*--------------------------------------------------*/
 // css graphic
 // @param $name
