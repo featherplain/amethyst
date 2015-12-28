@@ -71,6 +71,15 @@ You'd like to autoprefix specific browsers, edit gulpfile.js below these lines.
 - License: GPLv2
 - Source: [http://genericons.com/](http://genericons.com/)
 
+### Font Awesome
+
+    assets/font-awesome/
+
+- License: 
+  - Font License: SIL OFL 1.1
+  - Code License: MIT License
+- Source: [https://fortawesome.github.io/Font-Awesome/](https://fortawesome.github.io/Font-Awesome/)
+
 ### HTML5 Shiv
 
     src/js/html5shiv.js

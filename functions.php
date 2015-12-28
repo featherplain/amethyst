@@ -169,6 +169,9 @@ function amethyst_scripts() {
 	// genericons
 	wp_enqueue_style( 'amethyst-genericons', get_template_directory_uri() . '/assets/genericons/genericons.css', array(), '3.4' );
 
+	// font awesome
+	wp_enqueue_style( 'amethyst-fa', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.css', array(), '4.5.0' );
+
 	// stylesheet
 	wp_enqueue_style( 'amethyst-style', get_stylesheet_uri() );
 

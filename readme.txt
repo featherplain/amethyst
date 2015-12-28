@@ -45,6 +45,11 @@ Genericons
 License: GPLv2
 Source: http://genericons.com/
 
+Font Awesome
+Font License: SIL OFL 1.1
+Code License: MIT
+Source: https://fortawesome.github.io/Font-Awesome/
+
 
 /* Theme Features
 /* -------------------------------------------------------------- */
