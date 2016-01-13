@@ -32,20 +32,18 @@
 	</header><!-- / .post__header -->
 
 	<div class="post__content">
-		<div class="post__editor">
 
-			<?php the_content(); ?>
-
-		</div>
-
-		<?php
-			wp_link_pages( array(
-				'before' => '<p class="post__pager">' . esc_html__( 'Pages: ', 'amethyst' ),
-				'after'  => '</p>',
-			) );
-		?>
+		<?php the_content(); ?>
 
 	</div><!-- .post__content -->
+
+	<?php
+		wp_link_pages( array(
+			'before' => '<p class="post__pager">' . esc_html__( 'Pages: ', 'amethyst' ),
+			'after'  => '</p>',
+		) );
+	?>
+
 	<footer class="post__footer">
 	  <div class="post__meta post__meta--footer">
 

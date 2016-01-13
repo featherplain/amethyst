@@ -18,17 +18,15 @@
 	</header><!-- / .post__header -->
 
 	<div class="post__content">
-		<div class="post__editor">
 
-			<?php the_content(); ?>
+		<?php the_content(); ?>
 
-		</div>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'amethyst' ),
-				'after'  => '</div>',
-			) );
-		?>
 	</div><!-- .post__content -->
+	<?php
+		wp_link_pages( array(
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'amethyst' ),
+			'after'  => '</div>',
+		) );
+	?>
 </article><!-- / #post-## .post -->
 
