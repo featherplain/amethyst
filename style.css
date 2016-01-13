@@ -2074,14 +2074,14 @@ p {
 
 ::-moz-selection {
   background: transparent;
-  background-color: #fcc4e0;
-  color: #222222;
+  background-color: #0c7ae8;
+  color: #fff;
 }
 
 ::selection {
   background: transparent;
-  background-color: #fcc4e0;
-  color: #222222;
+  background-color: #0c7ae8;
+  color: #fff;
 }
 
 /**
