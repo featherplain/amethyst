@@ -45,6 +45,7 @@ function amethyst_setup() {
 	 */
 	register_nav_menus( array(
 		'global_nav' => esc_html__( 'Global Menu', 'amethyst' ),
+		'social_nav' => esc_html__( 'Social Links', 'amethyst' ),
 	) );
 
 	/*

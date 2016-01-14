@@ -6,7 +6,7 @@
 // specific variables and mixin
 $navButtonSize: 50px;
 
-@mixin navPos($position: absolute, $top, $right) {
+@mixin navPos($top, $right, $position: absolute) {
   position: $position;
   top: $top;
   right: $right;
@@ -52,7 +52,7 @@ $navButtonSize: 50px;
  */
 .gnav {
   &__search {
-    @mixin navPos($top: 0, right: $navButtonSize);
+    @include navPos($top: 0, $right: $navButtonSize);
     margin-bottom: 0;
   }
   // toggle button global navigation
@@ -81,7 +81,7 @@ $navButtonSize: 50px;
   }
   // toggle sub menu
   &__arrowdown {
-    @mixin navPos($top: 0, right: 0);
+    @include navPos($top: 0, $right: 0);
     display: block;
     width: $navButtonSize;
     height: $navButtonSize;
@@ -104,7 +104,7 @@ $navButtonSize: 50px;
   }
   &__list {
     @extend %clearfix;
-    @mixin navPos($top: $navButtonSize, right: 0);
+    @include navPos($top: $navButtonSize, $right: 0);
     display: none;
     width: 100%;
     margin: 0;
