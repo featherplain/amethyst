@@ -12,9 +12,8 @@ function build_amethyst() {
   cp *.php amethyst/
   cp screenshot.png amethyst/
   cp *.txt amethyst/
-  cp style.css amethyst/
+  cp *.css amethyst/
   zip amethyst.zip -r amethyst -x "*.DS_Store"
-  # zip amethyst.zip -r /amethyst/amethyst * -x *.DS_Store
   rm -rf amethyst
   return
 }
