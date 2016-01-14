@@ -6,6 +6,7 @@ Amethyst
 ![Amethyst](./screenshot.png)
 
 Simple WordPress Theme based on Foundation. See details at [readme.txt](readme.txt).
+Theme demo: [http://amethyst.asknode.net/](http://amethyst.asknode.net/) 
 
 ## Requires
 
@@ -33,7 +34,7 @@ Simple WordPress Theme based on Foundation. See details at [readme.txt](readme.t
         // proxy mode
         $ npm run gulp
 
-        // server mode for static websites
+        // server mode for static websites or files
         $ npm run gulp-server
 
 ### Options

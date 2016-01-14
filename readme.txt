@@ -8,7 +8,7 @@ License: GPLv2 or later
 License URI: license.txt
 
 == Description ==
-Amethyst is a simple theme based on Foundation. The design is kept simple to keep the simplicity of the Foundation. Features are, 100% responsive layouts, Genericons, Gulp use, Sass.
+Amethyst is a simple blog theme that cared to typography and readability for all devices. The design is kept simple, fully responsive and flexible tow-columns. Features are, two widgets, customizer, Foundation, Genericons, Font Awesome, Sass, Gulp use.
 
 == Copyright ==
 Amethyst WordPress Theme, Copyright 2015 featherplain
@@ -67,6 +67,7 @@ Source: https://fortawesome.github.io/Font-Awesome/
 
 == Navigation ==
 * Global navigation ( in header )
+* Social links ( in footer )
 
 == HTML5, Microformats compatible ==
 HTML5 mark upped. Page structure follows Foundation and it's kept as simple as possible.
@@ -82,6 +83,15 @@ While you can @import or wp_enqueue_script the style.css from your child theme, 
 /* -------------------------------------------------------------- */
 /* Change log
 /* -------------------------------------------------------------- */
+
+== 1.1.0 ==
+* Add social links in footer
+* Add Font Awesome
+* Add specific WordPress directory for sass use
+* Make highlighted text more accessible
+* Fixed menu text is hidden on global navigation
+* Escape translated text in the search form on header
+* Refactor header css
 
 == 1.0.4 ==
 * Add "featured" tag to the sticky post

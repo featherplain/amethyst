@@ -1,6 +1,6 @@
 {
   "name": "Amethyst",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Amethyst is a simple WordPress theme based on Foundation. The design is kept simple to keep the simplicity of the Foundation. Features are, 100% responsive layouts, Genericons, Gulp use, Sass.",
   "uri": "https://github.com/featherplain/amethyst",
   "main": "gulpfile.js",
