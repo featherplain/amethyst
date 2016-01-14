@@ -3,92 +3,64 @@
 /* -------------------------------------------------------------- */
 /* header
 /* -------------------------------------------------------------- */
+// specific variables and mixin
+$navButtonSize: 50px;
+
+@mixin navPos($position: absolute, $top, $right) {
+  position: $position;
+  top: $top;
+  right: $right;
+}
+
+/**
+ * l-header
+ */
 .l-header {
   width: auto;
   height: auto;
-  // margin-bottom: 20px;
   &__inner {
     @include grid-row();
     position: relative;
   }
 }
 /**
- * site-branding
+ * site brand
  */
-.site-title {
-  float: left;
-  max-width: 80%;
-  margin: 0;
-  padding: 14px 36px 14px 14px;
-  font-weight: bold;
-  font-size: rem-calc(16);
-  a {
-    display: block;
-    color: $colorBase;
-    line-height: 1.2;
-    &:hover {
-      color: $colorLink;
+.sitebrand {
+  &__title {
+    float: left;
+    max-width: 80%;
+    margin: 0;
+    padding: 14px 36px 14px 14px;
+    font-weight: bold;
+    font-size: rem-calc(16);
+    a {
+      display: block;
+      color: $colorBase;
+      line-height: 1.2;
+      &:hover {
+        color: $colorLink;
+      }
     }
   }
-}
-.site-description {
-  display: none;
+  &__description {
+    display: none;
+  }
 }
 /**
  * navigation
  */
 .gnav {
   &__search {
-    position: absolute;
-    top: 0;
-    right: 50px;
+    @mixin navPos($top: 0, right: $navButtonSize);
     margin-bottom: 0;
-    // search form on header
-    .search {
-      &__form {
-        margin-bottom: 0;
-      }
-      &__field {
-        width: 50px;
-        height: 50px;
-        margin-bottom: 0;
-        padding-left: 42px;
-        border: none;
-        box-shadow: none;
-        cursor: pointer;
-        background-color: darken($colorBg, 5%);
-        background-image: url($filePath + 'icon_search.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 20px 20px;
-        transition: width 400ms ease, background 400ms ease;
-        &:focus  {
-          width: 240px;
-          padding-left: 30px;
-          background-position: 6px center;
-          background-repeat: no-repeat;
-          background-size: 20px 20px;
-          cursor: text;
-          outline: 0;
-        }
-        @media #{$retina} {
-          background-image: url($filePath + 'icon_search_2x.png');
-          &:focus {
-            background-image: url($filePath + 'icon_search_2x.png');
-          }
-        }
-      }
-      &__submit {
-        display: none;
-      }
-    }
   }
   // toggle button global navigation
   &__trigger {
     display: inline-block;
     float: right;
-    width: 50px;
-    height: 50px;
+    width: $navButtonSize;
+    height: $navButtonSize;
     padding: 0;
     margin: 0;
     text-align: center;
@@ -109,12 +81,10 @@
   }
   // toggle sub menu
   &__arrowdown {
+    @mixin navPos($top: 0, right: 0);
     display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50px;
-    height: 50px;
+    width: $navButtonSize;
+    height: $navButtonSize;
     margin: 0;
     padding: 0;
     background-color: transparent;
@@ -134,10 +104,8 @@
   }
   &__list {
     @extend %clearfix;
+    @mixin navPos($top: $navButtonSize, right: 0);
     display: none;
-    position: absolute;
-    top: 50px;
-    right: 0;
     width: 100%;
     margin: 0;
     background-color: $colorBase;
@@ -155,7 +123,7 @@
       border-top: 1px dotted $colorSub;
       a {
         display: block;
-        padding: 13px;
+        padding: 13px $navButtonSize 13px 13px;
         color: #ffffff;
         font-weight: normal;
         text-transform: uppercase;
@@ -163,28 +131,71 @@
       }
     }
   }
-  // child menu
-  .sub-menu {
-    display: none;
-    background-color: lighten($colorBase, 16%);
+}
+// child menu
+.sub-menu {
+  display: none;
+  background-color: lighten($colorBase, 16%);
+}
+
+/**
+ * search form on header
+ */
+.gnav {
+  .search {
+    &__form {
+      margin-bottom: 0;
+    }
+    &__field {
+      width: $navButtonSize;
+      height: $navButtonSize;
+      margin-bottom: 0;
+      padding-left: 42px;
+      border: none;
+      box-shadow: none;
+      cursor: pointer;
+      background-color: darken($colorBg, 5%);
+      background-image: url($filePath + 'icon_search.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
+      transition: width 400ms ease, background 400ms ease;
+      &:focus  {
+        width: 240px;
+        padding-left: 30px;
+        background-position: 6px center;
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        cursor: text;
+        outline: 0;
+      }
+      @media #{$retina} {
+        background-image: url($filePath + 'icon_search_2x.png');
+        &:focus {
+          background-image: url($filePath + 'icon_search_2x.png');
+        }
+      }
+    }
+    &__submit {
+      display: none;
+    }
   }
 }
 /**
  * media queries
  */
 @media #{$medium-up} {
-  .l-header {
-    // margin-bottom: 40px;
-  }
-  .site-title {
-    padding: 10px 20px 10px 14px;
-    font-size: rem-calc(24);
-  }
-  .site-description {
-    display: block;
-    float: left;
-    margin: 14px 0 12px 0;
-    font-size: rem-calc(14);
+  .sitebrand {
+    &__title {
+      padding: 10px 20px 10px 14px;
+      font-size: rem-calc(24);
+    }
+    &__description {
+      display: block;
+      float: left;
+      margin: 14px 0 12px 0;
+      font-size: rem-calc(14);
+    }
   }
   .gnav {
     &__list {
