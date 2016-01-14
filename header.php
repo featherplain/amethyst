@@ -27,11 +27,11 @@
 	<div class="l-container">
     <header role="banner" class="l-header">
       <div class="l-header__inner">
-      	<div class="site-branding">
-	      	<h1 class="site-title">
+      	<div class="sitebrand">
+	      	<h1 class="sitebrand__title">
 	      		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 	      	</h1>
-	      	<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+	      	<p class="sitebrand__description"><?php bloginfo( 'description' ); ?></p>
       	</div>
 
         <nav class="gnav" role="navigation">
