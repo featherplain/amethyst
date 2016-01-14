@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+/* -------------------------------------------------------------- */
+/* social-links
+/* -------------------------------------------------------------- */
+.snav {
+  &__list {
+    @extend %clearfix;
+    padding-left: 0;
+    margin-left: 0;
+    li {
+      float: left;
+      margin: 2px;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+  a {
+    display: inline-block;
+    border: $borderSolid;
+    border-radius: 50%;
+    color: #fff;
+    padding: 6px;
+    line-height: 1;
+    letter-spacing: 0;
+    vertical-align: middle;
+    &:hover {
+      background-color: #fff;
+      color: $colorBase;
+    }
+    &[href*="facebook.com"] {
+      &:before {
+        @include genericon($content: '\f203', $fontsize: 18px);
+      }
+    }
+    &[href*="twitter.com"] {
+      &:before {
+        @include genericon($content: '\f202', $fontsize: 18px);
+      }
+    }
+    &[href*="github.com"] {
+      &:before {
+        @include genericon($content: '\f200', $fontsize: 18px);
+      }
+    }
+    &[href*="wordpress.org"] {
+      &:before {
+        @include genericon($content: '\f205', $fontsize: 18px);
+      }
+    }
+    &[href*="flickr.com"] {
+      &:before {
+        @include genericon($content: '\f211', $fontsize: 18px);
+      }
+    }
+    &[href*="instagram.com"] {
+      &:before {
+        @include genericon($content: '\f215', $fontsize: 18px);
+      }
+    }
+    &[href*="codepen.io"] {
+      &:before {
+        @include genericon($content: '\f216', $fontsize: 18px);
+      }
+    }
+    &[href*="linkedin.com"] {
+      &:before {
+        @include genericon($content: '\f207', $fontsize: 18px);
+      }
+    }
+    &[href*="dribbble.com"] {
+      &:before {
+        @include genericon($content: '\f201', $fontsize: 18px);
+      }
+    }
+    &[href*="foursquare.com"] {
+      &:before {
+        @include genericon($content: '\f226', $fontsize: 18px);
+      }
+    }
+    &[href*="pinterest.com"] {
+      &:before {
+        @include genericon($content: '\f209', $fontsize: 18px);
+      }
+    }
+    &[href*="tumblr.com"] {
+      &:before {
+        @include genericon($content: '\f214', $fontsize: 18px);
+      }
+    }
+    &[href*="vimeo.com"] {
+      &:before {
+        @include genericon($content: '\f212', $fontsize: 18px);
+      }
+    }
+    &[href*="youtube.com"] {
+      &:before {
+        @include genericon($content: '\f213', $fontsize: 18px);
+      }
+    }
+    &[href*="plus.google.com"] {
+      &:before {
+        @include genericon($content: '\f206', $fontsize: 18px);
+      }
+    }
+  }
+}

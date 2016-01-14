@@ -1984,7 +1984,7 @@ label.error {
   color: #f04124;
 }
 
-.gnav__list:after, .siteinfo__inner:after, .nav-links:after {
+.gnav__list:after, .siteinfo__inner:after, .nav-links:after, .snav__list:after {
   display: block;
   visibility: hidden;
   clear: both;
@@ -2192,6 +2192,9 @@ table td {
 /* -------------------------------------------------------------- */
 /* header
 /* -------------------------------------------------------------- */
+/**
+ * l-header
+ */
 .l-header {
   width: auto;
   height: auto;
@@ -2281,10 +2284,10 @@ table td {
 }
 
 .gnav__arrowdown {
-  display: block;
   position: absolute;
   top: 0;
   right: 0;
+  display: block;
   width: 50px;
   height: 50px;
   margin: 0;
@@ -2313,10 +2316,10 @@ table td {
 }
 
 .gnav__list {
-  display: none;
   position: absolute;
   top: 50px;
   right: 0;
+  display: none;
   width: 100%;
   margin: 0;
   background-color: #222222;
@@ -2452,10 +2455,7 @@ table td {
 }
 
 .siteinfo__credit {
-  padding-left: 1.125rem;
-  padding-right: 1.125rem;
-  width: 50%;
-  float: left;
+  text-align: right;
 }
 
 .siteinfo__credit a {
@@ -2466,12 +2466,20 @@ table td {
   color: #e80c7a;
 }
 
+.siteinfo__social {
+  padding-left: 1.125rem;
+  padding-right: 1.125rem;
+  width: 50%;
+  float: left;
+}
+
 .siteinfo__copy {
   padding-left: 1.125rem;
   padding-right: 1.125rem;
   width: 50%;
   float: right;
   color: #ffffff;
+  margin: 10px 0;
   text-align: right;
 }
 
@@ -2483,13 +2491,19 @@ table td {
  * media queries
  */
 @media only screen and (max-width: 48em) {
-  .siteinfo__credit, .siteinfo__copy {
+  .siteinfo__credit, .siteinfo__copy, .siteinfo__social {
     padding-left: 1.125rem;
     padding-right: 1.125rem;
     width: 100%;
     float: left;
     margin: 10px 0;
-    text-align: center;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 48.0625em) {
+  .siteinfo__credit {
+    padding: 0 18px;
   }
 }
 
@@ -3223,6 +3237,189 @@ input[type="reset"]:focus {
   color: #ffffff;
   outline: 0;
   text-decoration: none;
+}
+
+/* -------------------------------------------------------------- */
+/* social-links
+/* -------------------------------------------------------------- */
+.snav__list {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.snav__list li {
+  float: left;
+  margin: 2px;
+}
+
+.snav__list li:first-child {
+  margin-left: 0;
+}
+
+.snav a {
+  display: inline-block;
+  border: 1px solid #dedede;
+  border-radius: 50%;
+  color: #fff;
+  padding: 6px;
+  line-height: 1;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+
+.snav a:hover {
+  background-color: #fff;
+  color: #222222;
+}
+
+.snav a[href*="facebook.com"]:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: text-bottom;
+  font-size: 18px;
+  font-family: Genericons;
+  line-height: 1;
+}
+
+.snav a[href*="twitter.com"]:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: text-bottom;
+  font-size: 18px;
+  font-family: Genericons;
+  line-height: 1;
+}
+
+.snav a[href*="github.com"]:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: text-bottom;
+  font-size: 18px;
+  font-family: Genericons;
+  line-height: 1;
+}
+
+.snav a[href*="wordpress.org"]:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: text-bottom;
+  font-size: 18px;
+  font-family: Genericons;
+  line-height: 1;
+}
+
+.snav a[href*="flickr.com"]:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: text-bottom;
+  font-size: 18px;
+  font-family: Genericons;
+  line-height: 1;
+}
+
+.snav a[href*="instagram.com"]:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: text-bottom;
+  font-size: 18px;
+  font-family: Genericons;
+  line-height: 1;
+}
+
+.snav a[href*="codepen.io"]:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: text-bottom;
+  font-size: 18px;
+  font-family: Genericons;
+  line-height: 1;
+}
+
+.snav a[href*="linkedin.com"]:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: text-bottom;
+  font-size: 18px;
+  font-family: Genericons;
+  line-height: 1;
+}
+
+.snav a[href*="dribbble.com"]:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: text-bottom;
+  font-size: 18px;
+  font-family: Genericons;
+  line-height: 1;
+}
+
+.snav a[href*="foursquare.com"]:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: text-bottom;
+  font-size: 18px;
+  font-family: Genericons;
+  line-height: 1;
+}
+
+.snav a[href*="pinterest.com"]:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: text-bottom;
+  font-size: 18px;
+  font-family: Genericons;
+  line-height: 1;
+}
+
+.snav a[href*="tumblr.com"]:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: text-bottom;
+  font-size: 18px;
+  font-family: Genericons;
+  line-height: 1;
+}
+
+.snav a[href*="vimeo.com"]:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: text-bottom;
+  font-size: 18px;
+  font-family: Genericons;
+  line-height: 1;
+}
+
+.snav a[href*="youtube.com"]:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: text-bottom;
+  font-size: 18px;
+  font-family: Genericons;
+  line-height: 1;
+}
+
+.snav a[href*="plus.google.com"]:before {
+  position: static;
+  display: inline-block;
+  content: "";
+  vertical-align: text-bottom;
+  font-size: 18px;
+  font-family: Genericons;
+  line-height: 1;
 }
 
 .post__content p,
