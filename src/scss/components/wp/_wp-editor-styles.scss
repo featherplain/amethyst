@@ -3,7 +3,158 @@
 /* -------------------------------------------------------------- */
 /* WordPress editor styles
 /* -------------------------------------------------------------- */
+%editorMargin {
+  margin: $editor-margin-sm;
+  @media #{$medium-up} {
+    margin: $editor-margin-md;
+  }
+}
 .post__content,
 .comment-content {
-  @include wp-editor-styles;
+  // heading tag styles
+  // set font-size
+  @for $i from 1 through 6 {
+    h#{$i} {
+      font-size: #{22 - $i*1}px;
+      @media #{$medium-up} {
+        font-size: #{28 - $i*2}px;
+      }
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: $editor-h-margin-sm;
+    line-height: $editor-h-line-height;
+    @media #{$medium-up} {
+      margin: $editor-h-margin-md;
+    }
+  }
+
+  h2 {
+    border-bottom: $borderDot;
+  }
+
+  h5,
+  h6 {
+    font-weight: normal;
+  }
+
+  p {
+    @extend %editorMargin;
+    font-size: $editor-font-size;
+    line-height: 1.6;
+  }
+
+  dl {
+    @extend %editorMargin;
+    dt,
+    dd {
+      font-size: $editor-font-size;
+    }
+    dt {
+      margin-left: 0;
+      font-family: $fontFamilyTitle;
+    }
+    dd {
+      margin-left: 14px;
+    }
+  }
+
+  ul, ol {
+    @extend %editorMargin;
+    margin-left: 16px;
+    li {
+      margin: 8px;
+      font-size: $editor-font-size;
+      line-height: 1.4;
+    }
+  }
+  ul {
+    list-style-type: square;
+  }
+  ol {
+    list-style-type: decimal;
+  }
+
+  blockquote {
+    @extend %editorMargin;
+    padding: 10px;
+    color: $colorText;
+    border: $borderDot;
+    font-size: 90%;
+    > * {
+      margin: 0;
+      font-size: 90%;
+    }
+    > ul,
+      ol {
+      margin-left: 16px;
+    }
+  }
+
+  pre,
+  code,
+  var {
+    background-color: lighten($colorSub, 8%);
+    border-radius: 3px;
+    font-family: $fontFamilyCode;
+    font-size: 80%;
+  }
+
+  pre {
+    @extend %editorMargin;
+    padding: 10px;
+    background-color: lighten($colorSub, 8%);
+    word-wrap: normal;
+    overflow-x: auto;
+    > code {
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+
+  code,
+  var {
+    border: none;
+    padding: 2px 4px;
+  }
+
+  kbd {
+    padding: 2px 4px;
+    background-color: lighten($colorBase, 6%);
+    border: 1px solid lighten($colorBase, 32%);
+    border-radius: 3px;
+    color: #ffffff;
+    font-family: $fontFamilyCode;
+    font-size: 80%;
+    box-shadow: 1px 1px 2px rgba(0,0,0,.3);
+  }
+
+  cite {
+    font-size: 86%;
+    font-style: normal;
+  }
+
+  address {
+    color: $colorText;
+    font-size: $editor-font-size;
+    font-style: normal;
+  }
+
+  ins {
+    padding: 0 4px;
+    background-color: lighten($colorLink, 36%);
+    text-decoration: none;
+  }
+
+  table {
+    border: 1px solid $colorSub;
+    background-color: #fff;
+    text-align: left;
+    font-size: $editor-font-size;
+  }
 }

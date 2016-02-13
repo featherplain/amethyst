@@ -93,12 +93,16 @@ iframe {
   vertical-align: middle;
 }
 /**
- * embedded content
+ * embeded content
  */
 figure {
   margin: 0;
 }
-img {
+img,
+embed,
+iframe,
+object {
+  max-width: 100%;
   line-height: 1.0;
   border: 0;
 }

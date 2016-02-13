@@ -2124,13 +2124,17 @@ iframe {
 }
 
 /**
- * embedded content
+ * embeded content
  */
 figure {
   margin: 0;
 }
 
-img {
+img,
+embed,
+iframe,
+object {
+  max-width: 100%;
   line-height: 1.0;
   border: 0;
 }
@@ -3422,6 +3426,9 @@ input[type="reset"]:focus {
   line-height: 1;
 }
 
+/* -------------------------------------------------------------- */
+/* WordPress editor styles
+/* -------------------------------------------------------------- */
 .post__content p,
 .comment-content p, .post__content dl,
 .comment-content dl, .post__content ul, .post__content ol,
@@ -3444,9 +3451,6 @@ input[type="reset"]:focus {
   }
 }
 
-/* -------------------------------------------------------------- */
-/* WordPress editor styles
-/* -------------------------------------------------------------- */
 .post__content h1,
 .comment-content h1 {
   font-size: 21px;
@@ -3819,18 +3823,6 @@ input[type="reset"]:focus {
   margin-bottom: 0;
   margin-top: 0;
   padding: 0;
-}
-
-img,
-embed,
-iframe,
-object {
-  max-width: 100%;
-  height: auto;
-}
-
-figure {
-  margin: 0;
 }
 
 /*# sourceMappingURL=maps/style.css.map */
