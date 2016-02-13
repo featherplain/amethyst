@@ -8,13 +8,12 @@ Description: Used to style the TinyMCE editor.
 @import 'components/core/config';
 
 // Foundation
-/* -------------------------------------------------------------- */
-/* Foundation by ZURB
-/* foundation.zurb.com
-/* Licensed under MIT Open Source
-/* -------------------------------------------------------------- */
 @import 'components/core/settings';
-@import 'components/core/foundation';
+@import 'components/core/foundation/components/global';
+// hotfix patch
+.mce-content-body {
+  height: auto !important;
+}
 
 // original mixins and placeholder
 @import 'components/core/placeholder';
@@ -27,8 +26,5 @@ Description: Used to style the TinyMCE editor.
 
 // WordPress
 @import 'components/wp/wp-config';
-@import 'components/wp/wp-mixins';
+@import 'components/wp/wp-editor-styles';
 @import 'components/wp/wp-classes';
-
-// editor style
-@include wp-editor-styles;
