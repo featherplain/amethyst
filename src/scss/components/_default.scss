@@ -2,12 +2,13 @@
 /* -------------------------------------------------------------- */
 /* Amethyst default styles
 /* -------------------------------------------------------------- */
-
+// load Foundation
+@include foundation-global-styles;
 /**
  * root element
  */
 body {
-  @media #{$small-only} {
+  @include breakpoint(small only) {
     position: static;
   }
 }

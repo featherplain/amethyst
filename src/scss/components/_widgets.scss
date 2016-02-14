@@ -106,12 +106,11 @@
 /**
  * media queries
  */
-@media #{$medium-up} {
+@include breakpoint(medium) {
   .widget {
     &--footer {
       @include grid-column(
-        $columns: 4,
-        $collapse: false
+        $columns: 4
       );
     }
   }

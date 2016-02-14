@@ -129,7 +129,7 @@
 /**
  * media queries
  */
-@media #{$medium-up} {
+@include breakpoint(medium) {
   .post {
     &__link {
       margin-bottom: 50px;
@@ -149,7 +149,7 @@
     }
   }
 }
-@media #{$large-up} {
+@include breakpoint(large) {
   .post {
     &__header {
       margin: 0 0 40px 0;

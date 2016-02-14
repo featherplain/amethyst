@@ -169,7 +169,7 @@ $navButtonSize: 50px;
         cursor: text;
         outline: 0;
       }
-      @media #{$retina} {
+      @include breakpoint(retina) {
         background-image: url($filePath + 'icon_search_2x.png');
         &:focus {
           background-image: url($filePath + 'icon_search_2x.png');
@@ -184,7 +184,7 @@ $navButtonSize: 50px;
 /**
  * media queries
  */
-@media #{$medium-up} {
+@include breakpoint(medium) {
   .sitebrand {
     &__title {
       padding: 10px 20px 10px 14px;

@@ -12,26 +12,25 @@ Text Domain: amethyst
 Tags: white, responsive-layout, one-column, two-columns, right-sidebar, editor-style, sticky-post, microformats, featured-images, custom-colors, custom-menu, custom-background
 */
 
-// config
+//
+// core files
+// -------------------------------------------------------------------
+// variables
 @import 'components/core/config';
-
-// Foundation
-/* -------------------------------------------------------------- */
-/* Foundation by ZURB
-/* foundation.zurb.com
-/* Licensed under MIT Open Source
-/* -------------------------------------------------------------- */
-@import 'components/core/settings';
-@import 'components/core/foundation';
-
 // original mixins and placeholder
 @import 'components/core/placeholder';
 @import 'components/core/mixins';
 @import 'components/core/functions';
+// Foundation
+@import 'components/core/foundation/settings';
+@import 'components/core/foundation/foundation';
 
-// If you need CSS sprite images, uncomment 'components/core/sprite'.
+// If you need CSS sprite images, uncomment this.
 // @import 'components/core/sprite';
 
+//
+// styles
+// -------------------------------------------------------------------
 @import 'components/default';
 @import 'components/header';
 @import 'components/footer';
@@ -43,7 +42,6 @@ Tags: white, responsive-layout, one-column, two-columns, right-sidebar, editor-s
 @import 'components/forms';
 @import 'components/buttons';
 @import 'components/social-links';
-
 // WordPress
 @import 'components/wp/wp-config';
 @import 'components/wp/wp-editor-styles';
