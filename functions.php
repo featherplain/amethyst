@@ -120,10 +120,10 @@ add_action( 'after_setup_theme', 'amethyst_content_width', 0 );
  * Register search form.
  */
 function amethyst_search_form( $form ) {
-	$form = '<div class="search"><form role="search" method="get" id="searchform" class="search__form" action="' . home_url( '/' ) . '" >
+	$form = '<div class="searchbar"><form role="search" method="get" id="searchform" class="searchbar__form" action="' . home_url( '/' ) . '" >
 	<label class="screen-reader-text" for="s">' . _x( 'Search for...', 'label', 'amethyst' ) . '</label>
-	<input class="search__field" type="text" value="' . get_search_query() . '" placeholder="' . esc_attr_x( 'Search for...', 'placeholder', 'amethyst' ) . '" name="s" id="s" />
-	<input class="search__submit" type="submit" id="searchsubmit" value="'. esc_attr_x( 'Search', 'label', 'amethyst' ) .'" /></form></div>';
+	<input class="searchbar__field" type="text" value="' . get_search_query() . '" placeholder="' . esc_attr_x( 'Search for...', 'placeholder', 'amethyst' ) . '" name="s" id="s" />
+	<input class="searchbar__submit" type="submit" id="searchsubmit" value="'. esc_attr_x( 'Search', 'label', 'amethyst' ) .'" /></form></div>';
 
 	return $form;
 }

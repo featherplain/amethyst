@@ -1,5 +1,5 @@
 @charset "utf-8";
-/*
+/*!
 Theme Name: Amethyst
 Theme URI: http://amethyst.asknode.net/
 Author: featherplain
@@ -32,6 +32,8 @@ Tags: white, responsive-layout, one-column, two-columns, right-sidebar, editor-s
 // styles
 // -------------------------------------------------------------------
 @import 'components/default';
+@import 'components/forms';
+@import 'components/buttons';
 @import 'components/header';
 @import 'components/footer';
 @import 'components/layout';
@@ -39,8 +41,6 @@ Tags: white, responsive-layout, one-column, two-columns, right-sidebar, editor-s
 @import 'components/post-navigation';
 @import 'components/comments';
 @import 'components/widgets';
-@import 'components/forms';
-@import 'components/buttons';
 @import 'components/social-links';
 // WordPress
 @import 'components/wp/wp-config';

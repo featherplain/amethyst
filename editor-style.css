@@ -8,9 +8,6 @@ Description: Used to style the TinyMCE editor.
  * foundation.zurb.com
  * Licensed under MIT Open Source
  */
-/* -------------------------------------------------------------- */
-/* Amethyst default styles
-/* -------------------------------------------------------------- */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
    * 1. Set default font family to sans-serif.
@@ -472,6 +469,9 @@ button {
   line-height: 1;
 }
 
+/* -------------------------------------------------------------- */
+/* Amethyst default styles
+/* -------------------------------------------------------------- */
 /**
  * root element
  */
@@ -913,15 +913,8 @@ select[multiple] {
 }
 
 /**
- * required
+ * buttons
  */
-.required {
-  color: #f04124;
-}
-
-/* -------------------------------------------------------------- */
-/* buttons
-/* -------------------------------------------------------------- */
 button,
 input[type="button"],
 input[type="submit"],
@@ -973,6 +966,16 @@ input[type="reset"]:focus {
   text-decoration: none;
 }
 
+/**
+ * required
+ */
+.required {
+  color: #f04124;
+}
+
+/* -------------------------------------------------------------- */
+/* buttons
+/* -------------------------------------------------------------- */
 .btn {
   display: inline-block;
   margin: 1rem 0;
