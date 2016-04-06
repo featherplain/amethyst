@@ -5,8 +5,9 @@ Amethyst
 
 ![Amethyst](./screenshot.png)
 
-Simple WordPress Theme based on Foundation. See details at [readme.txt](readme.txt).
-Theme demo: [http://amethyst.asknode.net/](http://amethyst.asknode.net/) 
+- Simple WordPress Theme based on Foundation. See details at [readme.txt](readme.txt).
+- GitHub Page: [http://featherplain.github.io/amethyst/](http://featherplain.github.io/amethyst/)
+- Theme demo: [http://amethyst.asknode.net/](http://amethyst.asknode.net/) 
 
 ## Requires
 
