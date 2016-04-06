@@ -1220,11 +1220,11 @@ input[type="reset"]:focus {
 /**
  * search form on header
  */
-.searchbar__form {
+.gnav .searchbar__form {
   margin-bottom: 0;
 }
 
-.searchbar__field {
+.gnav .searchbar__field {
   width: 50px;
   height: 50px;
   margin-bottom: 0;
@@ -1240,25 +1240,23 @@ input[type="reset"]:focus {
   transition: width .3s ease-out, background .3s ease-out;
 }
 
-.searchbar__field:focus {
+.gnav .searchbar__field:focus {
   width: 240px;
   padding-left: 30px;
   background-position: 6px center;
   cursor: text;
-  outline: 0;
-  transition: width .3s ease-out, background .3s ease-out;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .searchbar__field {
+  .gnav .searchbar__field {
     background-image: url("./assets/images/icon_search_2x.png");
   }
-  .searchbar__field:focus {
+  .gnav .searchbar__field:focus {
     background-image: url("./assets/images/icon_search_2x.png");
   }
 }
 
-.searchbar__submit {
+.gnav .searchbar__submit {
   display: none !important;
 }
 
