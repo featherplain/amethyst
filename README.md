@@ -5,11 +5,12 @@ Amethyst
 
 Simple WordPress Theme based on Foundation. See details at [readme.txt](readme.txt).
 
-- Daownload: [https://wordpress.org/themes/amethyst/](https://wordpress.org/themes/amethyst/)
+![Amethyst](./screenshot.png)
+
+- Download: [https://wordpress.org/themes/amethyst/](https://wordpress.org/themes/amethyst/)
 - GitHub Page: [http://featherplain.github.io/amethyst/](http://featherplain.github.io/amethyst/)
 - Theme demo: [http://amethyst.asknode.net/](http://amethyst.asknode.net/) 
 
-![Amethyst](./screenshot.png)
 
 
 ## Requires
