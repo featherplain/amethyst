@@ -84,6 +84,9 @@ While you can @import or wp_enqueue_script the style.css from your child theme, 
 /* Change log
 /* -------------------------------------------------------------- */
 
+== 2.0.1 ==
+* Bugfix search form is same as header
+
 == 2.0.0 ==
 * Update Foundation from 5.x to 6.x
 * Bugfix media embed content height is too short
