@@ -3,11 +3,14 @@ Amethyst
 
 [![Deployment status from DeployBot](https://amethyst.deploybot.com/badge/02267418010971/47642.svg)](http://deploybot.com)
 
-![Amethyst](./screenshot.png)
+Simple WordPress Theme based on Foundation. See details at [readme.txt](readme.txt).
 
-- Simple WordPress Theme based on Foundation. See details at [readme.txt](readme.txt).
+- Daownload: [https://wordpress.org/themes/amethyst/](https://wordpress.org/themes/amethyst/)
 - GitHub Page: [http://featherplain.github.io/amethyst/](http://featherplain.github.io/amethyst/)
 - Theme demo: [http://amethyst.asknode.net/](http://amethyst.asknode.net/) 
+
+![Amethyst](./screenshot.png)
+
 
 ## Requires
 
@@ -17,19 +20,22 @@ Amethyst
 ## Setup your project
 
 
-1.  Install some dependencies.
+1. Make WordPress environment.
+
+
+1. Install some dependencies.
 
 
         $ cd path/to/directory ; npm install
   
 
-2.  To run gulp tasks with proxy mode, Set hostname on line 18 in gulpfile.js. Default is `amethyst.dev`.
+1. To run gulp tasks with proxy mode, Set hostname on line 18 in gulpfile.js. Default is `amethyst.dev`.
 
 
         'vhost'          : 'amethyst.dev'
 
 
-2.  Run gulp. You don't need to install gulp globally.
+1. Run gulp. You don't need to install gulp globally.
 
         // proxy mode
         $ npm run gulp
