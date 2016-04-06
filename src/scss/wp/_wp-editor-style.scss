@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+// WordPress editor styles.
+@include exports("wp-editor") {
+
+  @if $include-wp-editor-styles {
+
+    /* -------------------------------------------------------------- */
+    /* WordPress editor styles
+    /* -------------------------------------------------------------- */
+
+    .entry-content {
+      @include wp-editor-styles;
+    }
+
+  }
+
+}

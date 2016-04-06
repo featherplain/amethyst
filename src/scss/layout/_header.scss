@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+/* -------------------------------------------------------------- */
+/* header
+/* -------------------------------------------------------------- */
+$menuBtnLength: 50px;
+$menuItemPadding: 16px;
+
+.l-header {
+  position: relative;
+}
+.l-nav {
+  position: relative;
+  @include breakpoint(medium) {
+    float: right;
+  }
+  @include breakpoint(medium only) {
+    padding: 0 $menuItemPadding;
+  }
+}
+.btnNav {
+  display: block;
+  float: right;
+  width: $menuBtnLength;
+  height: $menuBtnLength;
+  background-color: #fff;
+  border: none;
+  font-size: rem-calc(20);
+  &:focus,
+  &:active {
+    outline: none;
+  }
+  @include breakpoint(medium) {
+    display: none;
+  }
+}
+.menu {
+  @extend %clearfix;
+  display: none;
+  position: absolute;
+  top: $menuBtnLength;
+  right: 16px;
+  background-color: $colorBase;
+  box-shadow: 1px 2px 3px rgba(0,0,0,.4);
+  margin: 0;
+  z-index: 2;
+  @include breakpoint(small only) {
+    &--active {
+      @include breakpoint(small only) {
+        display: block;
+      }
+    }
+    &:before {
+      @include triangle('up', 10px, 12px, $colorBase);
+      position: absolute;
+      top: -8px;
+      right: 4px;
+      content: "";
+    }
+  }
+  @include breakpoint(medium) {
+    display: block;
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  &__item {
+    border-top: 1px dotted $colorBg;
+    &:first-child {
+      border-top: none;
+    }
+    &--btn {
+      padding: $menuItemPadding;
+    }
+    @include breakpoint(medium) {
+      float: left;
+      border: none;
+      padding: $menuItemPadding 0;
+    }
+  }
+  &__link {
+    display: block;
+    width: 100%;
+    color: #fff;
+    padding: $menuItemPadding;
+    line-height: 1;
+    @include breakpoint(medium) {
+      color: $colorBase;
+    }
+  }
+}
+// .--active {
+//   @include breakpoint(small only) {
+//     display: block;
+//   }
+// }

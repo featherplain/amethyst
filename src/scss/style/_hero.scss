@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+/* -------------------------------------------------------------- */
+/* hero
+/* -------------------------------------------------------------- */
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+  &__title {
+    font-weight: 100;
+    margin: 20px 0;
+    // media queries
+    @include breakpoint(medium) {
+      font-size: rem-calc(60);
+    }
+    @include breakpoint(large) {
+      font-size: rem-calc(80);
+    }
+  }
+  &__description {
+    margin: 20px 0;
+    @include breakpoint(large) {
+      font-size: rem-calc(22);
+      margin: 20px 0;
+    }
+  }
+  &__button {
+    margin: 0 6px;
+  }
+  img {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+}
+/* -------------------------------------------------------------- */
+/* featured
+/* -------------------------------------------------------------- */
+.featured {
+  @include grid-row();
+  &__columns8 {
+    @include grid-col;
+    @include breakpoint(medium) {
+      @include grid-col-size(6);
+      &--pos {
+        @include grid-col-pos(6);
+      }
+    }
+    @include breakpoint(large) {
+      @include grid-col-size(8);
+      &--pos {
+        @include grid-col-pos(4);
+      }
+    }
+  }
+  &__columns4 {
+    @include grid-col;
+    @include breakpoint(medium) {
+      @include grid-col-size(6);
+      &--pos {
+        @include grid-col-pos(-6);
+      }
+    }
+    @include breakpoint(large) {
+      @include grid-col-size(4);
+      &--pos {
+        @include grid-col-pos(-8);
+      }
+    }
+  }
+  &__title {
+    font-size: rem-calc(40);
+    font-weight: 100;
+    margin-top: 0;
+    margin-bottom: 20px;
+    @include breakpoint(large) {
+      font-size: rem-calc(68);
+    }
+  }
+  img {
+    max-width: 780px;
+    height: auto;
+  }
+}
+/* -------------------------------------------------------------- */
+/* features
+/* -------------------------------------------------------------- */
+.features {
+  @include grid-row();
+  &__title {
+    text-align: center;
+    margin-top: 0;
+    @include breakpoint(large) {
+      font-size: rem-calc(36);
+    }
+  }
+  &__subTitle {
+    border-bottom: 2px solid $colorBg;
+    font-weight: 200;
+    padding-bottom: 10px;
+    text-align: center;
+    @include breakpoint(large) {
+      font-size: rem-calc(28);
+    }
+  }
+  &__links {
+    margin: 20px 0;
+  }
+  &__text {
+    font-size: rem-calc(14);
+  }
+  &__columns {
+    min-height: 160px;
+    @include grid-col();
+    @include breakpoint(medium) {
+      @include grid-col-size(6);
+    }
+    @include breakpoint(large) {
+      @include grid-col-size(4);
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Amethyst",
+  "author": "featherplain",
+  "url": {
+    "wp": "https://wordpress.org/themes/amethyst/",
+    "gh": "https://github.com/featherplain/amethyst/",
+    "demo": "http://amethyst.asknode.net/"
+    },
+  "page": {
+    "top": {
+      "title": "Amethyst | WordPress theme",
+      "description": "Amethyst is a simple WordPress theme that cared to typography and readability for all devices.",
+      "keywords": "WordPress, theme, free, GPL, GPLv2 or later, 100% GPL",
+      "ogpimage":""
+    }
+  },
+  "path": {
+    "img": "/assets/images/"
+  }
+}

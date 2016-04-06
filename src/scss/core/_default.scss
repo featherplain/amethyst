@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+/* -------------------------------------------------------------- */
+/* default style
+/* -------------------------------------------------------------- */
+
+/**
+ * the root element
+ */
+html {
+  font-size: 16px;
+}
+body {
+  background-color: #fff;
+  background-repeat: no-repeat;
+  color: $colorBase;
+  word-wrap: break-word;
+  font-family: $fontFamily;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/**
+ * grouping content
+ */
+iframe {
+  vertical-align: middle;
+}
+
+/**
+ * text-level semantics
+ */
+a {
+  color: $colorLink;
+  text-decoration: none;
+  word-wrap: break-word;
+  &:focus {
+    outline: thin dotted;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
+    text-decoration: none;
+  }
+}
+::selection {
+  background: transparent;
+  background-color: $colorSelection;
+  color: #fff;
+}
+.fa {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/**
+ * list items
+ */
+ul,ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/**
+ * embedded content
+ */
+img {
+  width: 100%;
+  line-height: 1.0;
+  border: 0;
+}
+svg:not(:root){
+  overflow: hidden;
+}
+
+/**
+ * table
+ */
+table {
+  font: 100%;
+  font-size: inherit;
+  border-spacing: 0;
+  border-collapse: collapse;
+}

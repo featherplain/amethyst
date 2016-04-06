@@ -1,0 +1,14 @@
+.icon-gh {
+  &:before {
+    @include fa($content: '\f09b', $valaign: baseline);
+    font-size: inherit;
+    margin-right: 4px;
+  }
+}
+.icon-wp {
+  &:before {
+    @include fa($content: '\f19a', $valaign: baseline);
+    font-size: inherit;
+    margin-right: 4px;
+  }
+}

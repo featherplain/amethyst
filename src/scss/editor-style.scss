@@ -1,0 +1,23 @@
+@charset "utf-8";
+/*
+Theme Name: your theme
+Description: Used to style the TinyMCE editor.
+*/
+
+@import 'core/functions';
+@import 'core/config';
+@import 'core/mixins';
+
+
+// WordPress editor styles.
+@include exports("wp-visual-editor") {
+
+  @if $include-wp-tinymce-styles {
+
+    @import 'core/default';
+    @import 'wp/wp-classes';
+
+    @include wp-editor-styles;
+  }
+}
+

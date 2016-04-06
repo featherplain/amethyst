@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+/* -------------------------------------------------------------- */
+/* footer
+/* -------------------------------------------------------------- */
+@mixin footerBorderTop {
+  border-top: 2px solid $colorBase;
+  padding-top: 20px;
+}
+/**
+ * footer info
+ */
+.footerInfo {
+  background-color: $colorBg;
+  letter-spacing: 0.6px;
+  padding: 20px 0;
+  &__inner {
+    @include grid-row();
+  }
+  &__theme {
+    @include grid-col;
+    margin-bottom: 20px;
+    @include breakpoint(large) {
+      @include grid-col-size(3);
+    }
+  }
+  &__content {
+    @include grid-col;
+    margin-bottom: 20px;
+    @include breakpoint(large) {
+      @include footerBorderTop;
+      @include grid-col-size(9);
+      @include grid-col-collapse;
+    }
+  }
+  &__title {
+    @include footerBorderTop;
+    margin-top: 0;
+    text-align: center;
+  }
+  &__subTitle {
+    font-weight: 200;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  &__text {
+    font-size: rem-calc(12);
+    margin-top: 0;
+    &--quote {
+      position: relative;
+      padding-left: 16px;
+      margin: auto 0;
+      &:before {
+        @include fa('\f10e', 8px);
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    a {
+      color: $colorBase;
+      font-weight: 500;
+    }
+  }
+  &__col {
+    @include grid-col;
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 2.6rem;
+    @include breakpoint(medium) {
+      @include grid-col-size(6);
+      padding-left: 2.6rem;
+    }
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: $colorSub;
+    }
+    &--trouble {
+      &:before {
+        @include fa('\f05a', 32px);
+      }
+    }
+    &--download {
+      &:before {
+        @include fa('\f019', 32px);
+      }
+    }
+    &--author {
+      &:before {
+        @include fa('\f007', 32px);
+      }
+    }
+    &--wordpress {
+      &:before {
+        @include fa('\f19a', 32px);
+      }
+    }
+  }
+}
+/**
+ * copy
+ */
+.copy {
+  background-color: $colorBase;
+  padding: 20px 0;
+  &__text {
+    color: #fff;
+    text-align: center;
+  }
+}

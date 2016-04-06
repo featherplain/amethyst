@@ -1,0 +1,37 @@
+@charset "utf-8";
+/*----------------------------------------------------------------------------*/
+/* project starter
+/*----------------------------------------------------------------------------*/
+
+// core files
+// ----------------------------------------------------------------------------
+@import 'core/config';
+@import 'core/functions';
+@import 'core/placeholder';
+@import 'core/mixins';
+@import 'core/sprite';
+
+// Foundation
+// Uncomment these belows if you use Foundation.
+// ----------------------------------------------------------------------------
+@import 'core/foundation/settings';
+@import 'core/foundation/foundation';
+
+@import 'core/default';
+
+// module
+// ----------------------------------------------------------------------------
+@import 'module/*.*';
+
+// layout
+// ----------------------------------------------------------------------------
+@import 'layout/*.*';
+
+// style
+// ----------------------------------------------------------------------------
+@import 'style/*.*';
+
+// WordPress
+// Uncomment if you build WordPress theme.
+// ----------------------------------------------------------------------------
+// @import 'wp/*.*';

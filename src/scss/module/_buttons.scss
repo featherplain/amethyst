@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/* -------------------------------------------------------------- */
+/* buttons
+/* -------------------------------------------------------------- */
+
+.btn {
+ @include button(false, $colorLink, auto, #fff, solid);
+ border-radius: 4px;
+ font-size: rem-calc(16);
+ &--nav {
+  margin: 0;
+  font-size: rem-calc(16);
+ }
+}
+.btnFooter {
+  @include button(false, $colorSub, auto, #fff, solid);
+  border-radius: 4px;
+  color: #fff;
+  font-size: rem-calc(12);
+}
+.btnHollow {
+  @include button(false, $colorLink, auto, $colorLink, hollow);
+  font-size: rem-calc(16);
+  border-radius: 4px;
+}

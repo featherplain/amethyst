@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+/* -------------------------------------------------------------- */
+/* layout
+/* -------------------------------------------------------------- */
+.l-container {
+  z-index: 1;
+}
+.l-header {
+  @extend %baseWidth;
+}
+.l-footer {
+}
+.l-main {
+  @extend %baseWidth;
+}
+.block {
+  margin: 40px 0;
+  @include breakpoint(medium) {
+    margin: 60px 0;
+  }
+  @include breakpoint(large) {
+    margin: 80px 0;
+  }
+}
+.row {
+  @include grid-row;
+}
+.col {
+  @include grid-col;
+  &--lg-3 {
+    @include grid-col-size(3);
+  }
+  &--lg-9 {
+    @include grid-col-size(9);
+  }
+  &--lg-6 {
+    @include grid-col-size(6);
+  }
+}
