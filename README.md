@@ -10,7 +10,6 @@ Theme demo: [http://amethyst.asknode.net/](http://amethyst.asknode.net/)
 
 ## Requires
 
-- Bower
 - Node.js
 - npm
 
@@ -38,6 +37,10 @@ Theme demo: [http://amethyst.asknode.net/](http://amethyst.asknode.net/)
         $ npm run gulp-server
 
 ### Options
+
+#### Initialize Foundation
+
+    $ npm run foundation-init
 
 #### Distribution
 

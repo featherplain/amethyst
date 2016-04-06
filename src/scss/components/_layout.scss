@@ -28,18 +28,16 @@ body {
       @include grid-row();
     }
     .l-primary {
-      @media #{$medium-up} {
-        @include grid-column(
-          $columns: 9,
-          $collapse: false
+      @include breakpoint(medium) {
+        @include grid-col(
+          $columns: 9
         );
       }
     }
     .l-sidebar {
-      @media #{$medium-up} {
-        @include grid-column(
-          $columns: 3,
-          $collapse: false
+      @include breakpoint(medium) {
+        @include grid-col(
+          $columns: 3
         );
       }
     }
@@ -55,7 +53,7 @@ body {
   line-height: 1;
   letter-spacing: 0.6px;
   text-transform: uppercase;
-  @media #{$medium-up} {
+  @include breakpoint(medium) {
     padding: 0 14px;
   }
 }

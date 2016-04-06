@@ -8,12 +8,8 @@ Description: Used to style the TinyMCE editor.
 @import 'components/core/config';
 
 // Foundation
-@import 'components/core/settings';
-@import 'components/core/foundation/components/global';
-// hotfix patch
-.mce-content-body {
-  height: auto !important;
-}
+@import 'components/core/foundation/settings';
+@import 'components/core/foundation/foundation';
 
 // original mixins and placeholder
 @import 'components/core/placeholder';

@@ -42,7 +42,7 @@
 /**
  * media queries
  */
-@media #{$large-up} {
+@include breakpoint(large) {
   .nav-previous {
     float: left;
     padding: 0 10px 0 0;

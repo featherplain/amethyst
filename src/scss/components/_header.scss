@@ -141,50 +141,47 @@ $navButtonSize: 50px;
 /**
  * search form on header
  */
-.gnav {
-  .search {
-    &__form {
-      margin-bottom: 0;
+.searchbar {
+  &__form {
+    margin-bottom: 0;
+  }
+  &__field {
+    width: $navButtonSize;
+    height: $navButtonSize;
+    margin-bottom: 0;
+    padding-left: 42px;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    background-color: darken($colorBg, 5%);
+    background-image: url($filePath + 'icon_search.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    transition: width .3s ease-out, background .3s ease-out;
+    &:focus  {
+      width: 240px;
+      padding-left: 30px;
+      background-position: 6px center;
+      cursor: text;
+      outline: 0;
+      transition: width .3s ease-out, background .3s ease-out;
     }
-    &__field {
-      width: $navButtonSize;
-      height: $navButtonSize;
-      margin-bottom: 0;
-      padding-left: 42px;
-      border: none;
-      box-shadow: none;
-      cursor: pointer;
-      background-color: darken($colorBg, 5%);
-      background-image: url($filePath + 'icon_search.png');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 20px 20px;
-      transition: width 400ms ease, background 400ms ease;
-      &:focus  {
-        width: 240px;
-        padding-left: 30px;
-        background-position: 6px center;
-        background-repeat: no-repeat;
-        background-size: 20px 20px;
-        cursor: text;
-        outline: 0;
-      }
-      @media #{$retina} {
+    @include breakpoint(retina) {
+      background-image: url($filePath + 'icon_search_2x.png');
+      &:focus {
         background-image: url($filePath + 'icon_search_2x.png');
-        &:focus {
-          background-image: url($filePath + 'icon_search_2x.png');
-        }
       }
     }
-    &__submit {
-      display: none;
-    }
+  }
+  &__submit {
+    display: none !important;
   }
 }
 /**
  * media queries
  */
-@media #{$medium-up} {
+@include breakpoint(medium) {
   .sitebrand {
     &__title {
       padding: 10px 20px 10px 14px;

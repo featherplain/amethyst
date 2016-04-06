@@ -1,13 +1,14 @@
 @charset "utf-8";
+// load Foundation
+@include foundation-global-styles;
 /* -------------------------------------------------------------- */
 /* Amethyst default styles
 /* -------------------------------------------------------------- */
-
 /**
  * root element
  */
 body {
-  @media #{$small-only} {
+  @include breakpoint(small only) {
     position: static;
   }
 }
