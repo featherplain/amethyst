@@ -35,7 +35,7 @@ Amethyst is distributed under the terms of the GNU GPL
 
 Foundation
 License: MIT
-Source: http://foundation.zurb.com/
+Source: http://foundation.zurb.com/sites.html
 
 HTML5 Shiv
 License: MIT/GPL2 License
@@ -83,6 +83,11 @@ While you can @import or wp_enqueue_script the style.css from your child theme, 
 /* -------------------------------------------------------------- */
 /* Change log
 /* -------------------------------------------------------------- */
+
+== 2.0.0 ==
+* Update Foundation from 5.x to 6.x
+* Bugfix media embed content height is too short
+* Bugfix text editor height increases continuously by clicking or typing on it
 
 == 1.1.0 ==
 * Add social links in footer

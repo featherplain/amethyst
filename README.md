@@ -62,11 +62,12 @@ You'd like to autoprefix specific browsers, edit gulpfile.js below these lines.
 ### Foundation
 
     src/scss/core/foundation/
-    src/scss/core/_settings.scss
     src/scss/core/_foundation.scss
+    src/scss/core/_global.scss
+    src/scss/core/_settings.scss
 
 - License: MIT
-- Source: [http://foundation.zurb.com/](http://foundation.zurb.com/)
+- Source: [http://foundation.zurb.com/sites.html](http://foundation.zurb.com/sites.html)
 
 ### Genericons
 
