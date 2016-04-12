@@ -12,53 +12,12 @@ block prepend meta
 block append meta
 block body
   .l-container
-    include inc/layout/_l-header
+    include inc/layout/_header
     .l-main
-      .hero
-        img(src="#{path.img}img_main.png", alt="")
-        h1.hero__title #{name}
-        p.hero__description #{page.top.description}
-        a.btn.icon-wp.hero__button(href="#{url.wp}" target="_blank") Download
-        a.btnHollow.icon-gh.hero__button(href="#{url.demo}" target="_blank") View demo
-      section.block.featured
-        .featured__columns8
-          img(src="#{path.img}img_multi_device_mockup.png", alt="iPhone and iPad mockup image")
-        .featured__columns4
-          h2.featured__title Designed for all devices.
-          p.featured__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec mollis. Quisque convallis libero in sapien pharetra tincidunt. Aliquam elit ante, malesuada id, tempor eu, gravida id, odio.
-      section.block.featured
-        .featured__columns8.featured__columns8--pos
-          img(src="#{path.img}img_browser_mockup.png", alt="browser ")
-        .featured__columns4.featured__columns4--pos
-          h2.featured__title Simple blog theme
-          p.featured__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec mollis. Quisque convallis libero in sapien pharetra tincidunt. Aliquam elit ante, malesuada id, tempor eu, gravida id, odio.
-      section.block.features
-        h2.features__title Theme features
-        .features__columns
-          h3.features__subTitle Foundation
-          p.features__text
-            span Amethyst is based on Foudation grid system. You can customize easliy with Foundation components.
-            br
-            a(href="http://foundation.zurb.com/sites.html", target="_blank") &gt;&gt; Foundation
-        .features__columns
-          h3.features__subTitle Sass
-          p.features__text If you want to build child theme, you can customize using included Sass files.
-        .features__columns
-          h3.features__subTitle Icon Fonts
-          p.features__text
-            span Amethyst includes Genericons and Font Awesome.
-            br
-            a(href="http://genericons.com/", target="_blank") &gt;&gt; Genericons
-            br
-            a(href="https://fortawesome.github.io/Font-Awesome/", target="_blank") &gt;&gt; Font Awesome
-        .features__columns
-          h3.features__subTitle Widgets
-          p.features__text Amethyst has two widgets: right sidebar and footer widget area.
-        .features__columns
-          h3.features__subTitle Layouts
-          p.features__text Flexible tow-columns. Default is single column. It contains single column page template.
-        .features__columns
-          h3.features__subTitle Customizer
-          p.features__text You can change text and background color, upload background image.
-    include inc/layout/_l-footer
+      include inc/layout/_hero
+      include inc/layout/_pickup
+      include inc/layout/_features
+    // / .l-main
+    include inc/layout/_footer
+  // / .l-container
 block append scriptFooter

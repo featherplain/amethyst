@@ -9,12 +9,13 @@
   &__title {
     font-weight: 100;
     margin: 20px 0;
+    font-size: rem-calc(50);
     // media queries
     @include breakpoint(medium) {
-      font-size: rem-calc(60);
+      font-size: rem-calc(70);
     }
     @include breakpoint(large) {
-      font-size: rem-calc(80);
+      font-size: rem-calc(90);
     }
   }
   &__description {
@@ -33,9 +34,9 @@
   }
 }
 /* -------------------------------------------------------------- */
-/* featured
+/* pickup
 /* -------------------------------------------------------------- */
-.featured {
+.pickup {
   @include grid-row();
   &__columns8 {
     @include grid-col;
@@ -85,12 +86,36 @@
 /* features
 /* -------------------------------------------------------------- */
 .features {
-  @include grid-row();
+  &__row {
+    @include grid-row();
+  }
+  &__item {
+    margin-bottom: 30px;
+    // media query
+    @include breakpoint(small) {
+      @include grid-col(
+        $columns: 12
+      );
+    }
+    @include breakpoint(medium) {
+      @include grid-col(
+        $columns: 6
+      );
+      min-height: 300px;
+    }
+    @include breakpoint(large) {
+      @include grid-col(
+        $columns: 4
+      );
+    }
+  }
   &__title {
     text-align: center;
     margin-top: 0;
+    margin-bottom: 40px;
     @include breakpoint(large) {
       font-size: rem-calc(36);
+      margin-bottom: 60px;
     }
   }
   &__subTitle {
@@ -108,14 +133,9 @@
   &__text {
     font-size: rem-calc(14);
   }
-  &__columns {
-    min-height: 160px;
-    @include grid-col();
-    @include breakpoint(medium) {
-      @include grid-col-size(6);
-    }
-    @include breakpoint(large) {
-      @include grid-col-size(4);
-    }
+  &__img {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
   }
 }

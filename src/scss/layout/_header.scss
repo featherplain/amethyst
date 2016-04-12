@@ -3,19 +3,30 @@
 /* -------------------------------------------------------------- */
 /* header
 /* -------------------------------------------------------------- */
-$menuBtnLength: 50px;
+$headerHeight: 50px;
+$menuBtnLength: $headerHeight;
 $menuItemPadding: 16px;
 
 .l-header {
   position: relative;
+  height: $headerHeight;
+  padding: 0 10px;
 }
 .l-nav {
   position: relative;
   @include breakpoint(medium) {
     float: right;
   }
-  @include breakpoint(medium only) {
-    padding: 0 $menuItemPadding;
+}
+.siteTitle {
+  float: left;
+  margin: 0;
+  padding: 14px 0;
+  font-size: rem-calc(22);
+  line-height: 1;
+  // media query
+  @include breakpoint(medium) {
+    padding: 28px 0;
   }
 }
 .btnNav {
@@ -89,8 +100,3 @@ $menuItemPadding: 16px;
     }
   }
 }
-// .--active {
-//   @include breakpoint(small only) {
-//     display: block;
-//   }
-// }
