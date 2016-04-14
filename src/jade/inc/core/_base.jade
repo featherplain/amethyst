@@ -13,13 +13,10 @@ html(xmlns:og="http://ogp.me/ns#", xmlns:fb='https://www.facebook.com/2008/fbml'
       link(rel='apple-touch-icon', href='/apple-touch-icon.png')
       link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')
       link(rel='stylesheet', href='assets/css/app.css')
-    block script
-      //- != '\n<!--[if lt IE 9]>'
-      //- script(src="dist/js/app/html5shiv-printshiv.js")
-      //- != '\n<![endif]-->'
   body(class=bodyClass)
     block body
     block scriptFooter
-      script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+      script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js")
       script(src="assets/js/lib.min.js")
       script(src="assets/js/script.min.js")
+      script(async defer id="github-bjs", src="https://buttons.github.io/buttons.js")

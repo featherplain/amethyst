@@ -9,6 +9,7 @@
   &__title {
     font-weight: 100;
     margin: 20px 0;
+    text-align: center;
     font-size: rem-calc(50);
     // media queries
     @include breakpoint(medium) {
@@ -28,9 +29,9 @@
   &__button {
     margin: 0 6px;
   }
-  img {
-    max-width: 1240px;
-    margin: 0 auto;
+}
+.slider {
+  &__item {
   }
 }
 /* -------------------------------------------------------------- */

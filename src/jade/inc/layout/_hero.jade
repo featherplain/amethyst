@@ -1,5 +1,10 @@
 .hero
-  img(src="#{path.img}img_main.png", alt="")
+  ul.bxslider.slider
+    li.slider__item
+      img(src="#{path.img}img_layout_01.png", alt="two columns layout")
+    li.slider__item
+      img(src="#{path.img}img_layout_02.png", alt="one column layout")
+  // / .bxslider .slider
   h2.hero__title #{name}
   p.hero__description #{page.top.description}
   a.btn.icon-wp.hero__button(href="#{url.wp}" target="_blank") Download
