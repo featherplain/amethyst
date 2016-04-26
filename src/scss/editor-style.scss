@@ -22,5 +22,12 @@ Description: Used to style the TinyMCE editor.
 
 // WordPress
 @import 'components/wp/wp-config';
-@import 'components/wp/wp-editor-styles';
 @import 'components/wp/wp-classes';
+
+
+// editor styles
+html {
+  padding: 10px;
+}
+
+@include editor-styles;

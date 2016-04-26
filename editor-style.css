@@ -1036,291 +1036,6 @@ input[type="reset"]:focus {
 }
 
 /* -------------------------------------------------------------- */
-/* WordPress editor styles
-/* -------------------------------------------------------------- */
-.post__content p,
-.comment-content p, .post__content dl,
-.comment-content dl, .post__content ul, .post__content ol,
-.comment-content ul,
-.comment-content ol, .post__content blockquote,
-.comment-content blockquote, .post__content pre,
-.comment-content pre {
-  margin: 14px 0 24px 0;
-}
-
-@media screen and (min-width: 48em) {
-  .post__content p,
-  .comment-content p, .post__content dl,
-  .comment-content dl, .post__content ul, .post__content ol,
-  .comment-content ul,
-  .comment-content ol, .post__content blockquote,
-  .comment-content blockquote, .post__content pre,
-  .comment-content pre {
-    margin: 24px 0 34px 0;
-  }
-}
-
-.post__content h1,
-.comment-content h1 {
-  font-size: 21px;
-}
-
-@media screen and (min-width: 48em) {
-  .post__content h1,
-  .comment-content h1 {
-    font-size: 26px;
-  }
-}
-
-.post__content h2,
-.comment-content h2 {
-  font-size: 20px;
-}
-
-@media screen and (min-width: 48em) {
-  .post__content h2,
-  .comment-content h2 {
-    font-size: 24px;
-  }
-}
-
-.post__content h3,
-.comment-content h3 {
-  font-size: 19px;
-}
-
-@media screen and (min-width: 48em) {
-  .post__content h3,
-  .comment-content h3 {
-    font-size: 22px;
-  }
-}
-
-.post__content h4,
-.comment-content h4 {
-  font-size: 18px;
-}
-
-@media screen and (min-width: 48em) {
-  .post__content h4,
-  .comment-content h4 {
-    font-size: 20px;
-  }
-}
-
-.post__content h5,
-.comment-content h5 {
-  font-size: 17px;
-}
-
-@media screen and (min-width: 48em) {
-  .post__content h5,
-  .comment-content h5 {
-    font-size: 18px;
-  }
-}
-
-.post__content h6,
-.comment-content h6 {
-  font-size: 16px;
-}
-
-@media screen and (min-width: 48em) {
-  .post__content h6,
-  .comment-content h6 {
-    font-size: 16px;
-  }
-}
-
-.post__content h1,
-.post__content h2,
-.post__content h3,
-.post__content h4,
-.post__content h5,
-.post__content h6,
-.comment-content h1,
-.comment-content h2,
-.comment-content h3,
-.comment-content h4,
-.comment-content h5,
-.comment-content h6 {
-  margin: 20px 0 14px 0;
-  line-height: 1.5;
-}
-
-@media screen and (min-width: 48em) {
-  .post__content h1,
-  .post__content h2,
-  .post__content h3,
-  .post__content h4,
-  .post__content h5,
-  .post__content h6,
-  .comment-content h1,
-  .comment-content h2,
-  .comment-content h3,
-  .comment-content h4,
-  .comment-content h5,
-  .comment-content h6 {
-    margin: 30px 0 24px 0;
-  }
-}
-
-.post__content h2,
-.comment-content h2 {
-  border-bottom: 1px dotted #dedede;
-}
-
-.post__content h5,
-.post__content h6,
-.comment-content h5,
-.comment-content h6 {
-  font-weight: normal;
-}
-
-.post__content p,
-.comment-content p {
-  font-size: 0.875rem;
-  line-height: 1.6;
-}
-
-.post__content dl dt,
-.post__content dl dd,
-.comment-content dl dt,
-.comment-content dl dd {
-  font-size: 0.875rem;
-}
-
-.post__content dl dt,
-.comment-content dl dt {
-  margin-left: 0;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
-}
-
-.post__content dl dd,
-.comment-content dl dd {
-  margin-left: 14px;
-}
-
-.post__content ul, .post__content ol,
-.comment-content ul,
-.comment-content ol {
-  margin-left: 16px;
-}
-
-.post__content ul li, .post__content ol li,
-.comment-content ul li,
-.comment-content ol li {
-  margin: 8px;
-  font-size: 0.875rem;
-  line-height: 1.4;
-}
-
-.post__content ul,
-.comment-content ul {
-  list-style-type: square;
-}
-
-.post__content ol,
-.comment-content ol {
-  list-style-type: decimal;
-}
-
-.post__content blockquote,
-.comment-content blockquote {
-  padding: 10px;
-  color: #454545;
-  border: 1px dotted #dedede;
-  font-size: 90%;
-}
-
-.post__content blockquote > *,
-.comment-content blockquote > * {
-  margin: 0;
-  font-size: 90%;
-}
-
-.post__content blockquote > ul,
-.post__content blockquote ol,
-.comment-content blockquote > ul,
-.comment-content blockquote ol {
-  margin-left: 16px;
-}
-
-.post__content pre,
-.post__content code,
-.post__content var,
-.comment-content pre,
-.comment-content code,
-.comment-content var {
-  background-color: #f2f2f2;
-  border-radius: 3px;
-  font-family: Menlo, Consolas, Courier, sans-serif;
-  font-size: 80%;
-}
-
-.post__content pre,
-.comment-content pre {
-  padding: 10px;
-  background-color: #f2f2f2;
-  word-wrap: normal;
-  overflow-x: auto;
-}
-
-.post__content pre > code,
-.comment-content pre > code {
-  background-color: transparent;
-  padding: 0;
-}
-
-.post__content code,
-.post__content var,
-.comment-content code,
-.comment-content var {
-  border: none;
-  padding: 2px 4px;
-}
-
-.post__content kbd,
-.comment-content kbd {
-  padding: 2px 4px;
-  background-color: #313131;
-  border: 1px solid #747474;
-  border-radius: 3px;
-  color: #ffffff;
-  font-family: Menlo, Consolas, Courier, sans-serif;
-  font-size: 80%;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.post__content cite,
-.comment-content cite {
-  font-size: 86%;
-  font-style: normal;
-}
-
-.post__content address,
-.comment-content address {
-  color: #454545;
-  font-size: 0.875rem;
-  font-style: normal;
-}
-
-.post__content ins,
-.comment-content ins {
-  padding: 0 4px;
-  background-color: #fbb1d6;
-  text-decoration: none;
-}
-
-.post__content table,
-.comment-content table {
-  border: 1px solid #dedede;
-  background-color: #fff;
-  text-align: left;
-  font-size: 0.875rem;
-}
-
-/* -------------------------------------------------------------- */
 /* WordPress specific classes
 /* -------------------------------------------------------------- */
 /**
@@ -1432,6 +1147,216 @@ input[type="reset"]:focus {
   margin-bottom: 0;
   margin-top: 0;
   padding: 0;
+}
+
+html {
+  padding: 10px;
+}
+
+h1 {
+  font-size: 21px;
+}
+
+@media screen and (min-width: 48em) {
+  h1 {
+    font-size: 26px;
+  }
+}
+
+h2 {
+  font-size: 20px;
+}
+
+@media screen and (min-width: 48em) {
+  h2 {
+    font-size: 24px;
+  }
+}
+
+h3 {
+  font-size: 19px;
+}
+
+@media screen and (min-width: 48em) {
+  h3 {
+    font-size: 22px;
+  }
+}
+
+h4 {
+  font-size: 18px;
+}
+
+@media screen and (min-width: 48em) {
+  h4 {
+    font-size: 20px;
+  }
+}
+
+h5 {
+  font-size: 17px;
+}
+
+@media screen and (min-width: 48em) {
+  h5 {
+    font-size: 18px;
+  }
+}
+
+h6 {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 48em) {
+  h6 {
+    font-size: 16px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 20px 0 14px 0;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 48em) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 30px 0 24px 0;
+  }
+}
+
+h2 {
+  border-bottom: 1px dotted #dedede;
+}
+
+h5,
+h6 {
+  font-weight: normal;
+}
+
+p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+dl dt,
+dl dd {
+  font-size: 0.875rem;
+}
+
+dl dt {
+  margin-left: 0;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+}
+
+dl dd {
+  margin-left: 14px;
+}
+
+ul, ol {
+  margin-left: 16px;
+}
+
+ul li, ol li {
+  margin: 8px;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+ul {
+  list-style-type: square;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+blockquote {
+  padding: 10px;
+  color: #454545;
+  border: 1px dotted #dedede;
+  font-size: 90%;
+}
+
+blockquote > * {
+  margin: 0;
+  font-size: 90%;
+}
+
+blockquote > ul,
+blockquote ol {
+  margin-left: 16px;
+}
+
+pre,
+code,
+var {
+  background-color: #f2f2f2;
+  border-radius: 3px;
+  font-family: Menlo, Consolas, Courier, sans-serif;
+  font-size: 80%;
+}
+
+pre {
+  padding: 10px;
+  background-color: #f2f2f2;
+  word-wrap: normal;
+  overflow-x: auto;
+}
+
+pre > code {
+  background-color: transparent;
+  padding: 0;
+}
+
+code,
+var {
+  border: none;
+  padding: 2px 4px;
+}
+
+kbd {
+  padding: 2px 4px;
+  background-color: #313131;
+  border: 1px solid #747474;
+  border-radius: 3px;
+  color: #ffffff;
+  font-family: Menlo, Consolas, Courier, sans-serif;
+  font-size: 80%;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+cite {
+  font-size: 86%;
+  font-style: normal;
+}
+
+address {
+  color: #454545;
+  font-size: 0.875rem;
+  font-style: normal;
+}
+
+ins {
+  padding: 0 4px;
+  background-color: #fbb1d6;
+  text-decoration: none;
+}
+
+table {
+  border: 1px solid #dedede;
+  background-color: #fff;
+  text-align: left;
+  font-size: 0.875rem;
 }
 
 /*# sourceMappingURL=maps/editor-style.css.map */
