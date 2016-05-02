@@ -22,8 +22,12 @@ README.md
 bower.json
 gulpfile.js
 node_modules
+maps
 package.json
-src
+src/html
+src/images
+src/jade
+src/shell
 README.md
 setting.json
 bower_components
