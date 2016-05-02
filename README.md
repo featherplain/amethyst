@@ -2,6 +2,7 @@ Amethyst
 ============
 
 [![Deployment status from DeployBot](https://amethyst.deploybot.com/badge/02267418010971/47642.svg)](http://deploybot.com)
+[![Build Status](https://travis-ci.org/featherplain/amethyst.svg?branch=master)](https://travis-ci.org/featherplain/amethyst)
 
 Simple WordPress Theme based on Foundation. See details at [readme.txt](readme.txt).
 
