@@ -9,6 +9,7 @@ branches:
 
 script:
   - ls -al style.css
+  - if find . -name "*.php" -exec php -l {} \; | grep "^[Parse error|Fatal error]"; then exit 1; fi;
 
 after_success: bash ./.bin/deploy.sh
 
