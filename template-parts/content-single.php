@@ -6,6 +6,7 @@
  * @author featherplain
  * @link http://asknode.net/
  * @license GPLv2 or later
+ *
  */
 ?>
 
@@ -49,12 +50,12 @@
 
 			<?php the_tags( '<div class="metadata metadata--tag">' , ',' , '</div>' ); ?>
 
-			<?php // category
-			$cats = get_the_category();
-			$cat_html = '';
-			foreach ( $cats as $cat) {
-				$cat_html = '<div class="metadata metadata--category"><a href="' . get_category_link( $cat->cat_ID ) . '">' . $cat->name . '</a></div>';
-			}
+			<?php // Get category.
+				$cats = get_the_category();
+				$cat_html = '';
+				foreach ( $cats as $cat) {
+					$cat_html = '<div class="metadata metadata--category"><a href="' . get_category_link( $cat->cat_ID ) . '">' . $cat->name . '</a></div>';
+				}
 			?>
 			<?php echo $cat_html; ?>
 
@@ -63,4 +64,3 @@
 </article><!-- / #post-## .post -->
 
 <?php the_post_navigation(); ?>
-

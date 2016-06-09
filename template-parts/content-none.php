@@ -6,6 +6,7 @@
  * @author featherplain
  * @link http://asknode.net/
  * @license GPLv2 or later
+ *
  */
 ?>
 
