@@ -44,7 +44,9 @@ if ( ! is_active_sidebar( 'footer-widgets' ) )
 							?>
 					  </nav>
 					</div>
-					<p id="copy" class="siteinfo__copy">&copy;&nbsp;<?php echo date('Y'); ?>&nbsp;<?php bloginfo( 'name' ); ?></p>
+					<p id="copy" class="siteinfo__copy">
+						<?php echo ent2ncr("&copy;&nbsp;") . date('Y') . ent2ncr("&nbsp;"); ?><?php bloginfo( 'name' ); ?>
+					</p>
         </div>
       </div><!-- / .siteinfo -->
     </footer><!-- / .l-footer -->

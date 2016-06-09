@@ -32,7 +32,8 @@ README.md
 setting.json
 bower_components
 .DS_store
-*.zip" > .gitignore
+*.zip
+*.xml" > .gitignore
 
 git init
 git config user.name "featherplain"
