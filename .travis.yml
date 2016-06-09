@@ -26,8 +26,9 @@ before_script:
 
 script:
   - ls -al style.css
+  #PHP Syntax check.
   - if find . -name "*.php" -exec php -l {} \; | grep "^[Parse error|Fatal error]"; then exit 1; fi;
-  #for phpcs
+  #PHPCS checker.
   - if [[ "$SNIFF" == "1" ]]; then $PHPCS_DIR/scripts/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php; fi
 
 after_success: bash ./.bin/deploy.sh
