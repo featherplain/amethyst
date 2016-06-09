@@ -78,6 +78,7 @@ function amethyst_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
 	/*
 	 * Enable support editor-style on WordPress dashboard.
 	 */
@@ -87,7 +88,7 @@ function amethyst_setup() {
 	) );
 
 }
-endif; // amethyst_setup
+endif; // Amethyst_setup.
 add_action( 'after_setup_theme', 'amethyst_setup' );
 
 /*
@@ -167,16 +168,16 @@ add_action( 'widgets_init', 'amethyst_widgets_init' );
  */
 function amethyst_scripts() {
 
-	// genericons
+	// Enqueue genericons.
 	wp_enqueue_style( 'amethyst-genericons', get_template_directory_uri() . '/assets/genericons/genericons.css', array(), '3.4' );
 
-	// font awesome
+	// Enqueue font awesome.
 	wp_enqueue_style( 'amethyst-fa', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.css', array(), '4.5.0' );
 
-	// stylesheet
+	// Enqueue stylesheet.
 	wp_enqueue_style( 'amethyst-style', get_stylesheet_uri() );
 
-	// javascripts
+	// Enqueue javascripts.
 	wp_enqueue_script( 'amethyst-js-foundation', get_template_directory_uri() . '/assets/js/foundation.min.js', array( 'jquery' ), true );
 	wp_enqueue_script( 'amethyst-js-script', get_template_directory_uri() . '/assets/js/script.min.js', array( 'jquery' ), true );
 
