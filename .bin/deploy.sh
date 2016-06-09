@@ -32,8 +32,10 @@ README.md
 setting.json
 bower_components
 .DS_store
-*.zip
-*.xml" > .gitignore
+vendor
+composer.*
+codesniffer.ruleset.xml
+*.zip" > .gitignore
 
 git init
 git config user.name "featherplain"

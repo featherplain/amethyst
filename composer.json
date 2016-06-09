@@ -1,0 +1,12 @@
+{
+    "name": "featherplain/amethyst",
+    "authors": [
+        {
+            "name": "Megumi Hano"
+        }
+    ],
+    "require-dev": {
+        "squizlabs/php_codesniffer": "2.*",
+        "wp-coding-standards/wpcs": "2014-12-11"
+    }
+}

@@ -16,6 +16,5 @@
         <exclude name="WordPress.VIP" />
     </rule>
 
-    <!-- Include sniffs for PHP cross-version compatibility. -->
-    <rule ref="PHPCompatibility"/>
+    <exclude-pattern>*/vendor/*</exclude-pattern>
 </ruleset>
