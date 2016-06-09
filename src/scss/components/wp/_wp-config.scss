@@ -34,6 +34,12 @@ $wp-align-margin           : rem-calc(18);
 
 // editor style mixin
 //------------------------------
+%editorMargin {
+  margin: $editor-margin-sm;
+  @include breakpoint(medium) {
+    margin: $editor-margin-md;
+  }
+}
 @mixin editor-styles {
   // heading tag styles
   // set font-size

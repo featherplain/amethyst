@@ -1439,7 +1439,7 @@ input[type="reset"]:focus {
   max-width: 780px;
 }
 
-@media screen and (min-width: 0em) and (max-width: 47.9375em) {
+@media (min-width: 0em) and (max-width: 47.9375em) {
   .l-main {
     padding: 20px 16px;
   }
@@ -2234,9 +2234,6 @@ body.sidebar .l-main::after {
   line-height: 1;
 }
 
-/* -------------------------------------------------------------- */
-/* WordPress editor styles
-/* -------------------------------------------------------------- */
 .post__content p,
 .comment-content p, .post__content dl,
 .comment-content dl, .post__content ul, .post__content ol,
@@ -2259,6 +2256,9 @@ body.sidebar .l-main::after {
   }
 }
 
+/* -------------------------------------------------------------- */
+/* WordPress editor styles
+/* -------------------------------------------------------------- */
 .post__content h1,
 .comment-content h1 {
   font-size: 21px;

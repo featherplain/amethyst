@@ -3,12 +3,6 @@
 /* -------------------------------------------------------------- */
 /* WordPress editor styles
 /* -------------------------------------------------------------- */
-%editorMargin {
-  margin: $editor-margin-sm;
-  @include breakpoint(medium) {
-    margin: $editor-margin-md;
-  }
-}
 .post__content,
 .comment-content {
   @include editor-styles;
