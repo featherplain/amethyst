@@ -2,10 +2,11 @@
 /**
  * Custom Header feature.
  *
- * Author     : featherplain
- * Author URI : http://asknode.net/
- * License    : GPLv2 or later
- * License URI: license.txt
+ * @package amethyst
+ * @author featherplain
+ * @link http://asknode.net/
+ * @license GPLv2 or later
+ *
  */
 
 
@@ -31,10 +32,12 @@ function amethyst_custom_header_setup() {
 add_action( 'after_setup_theme', 'amethyst_custom_header_setup' );
 
 if ( ! function_exists( 'amethyst_header_style' ) ) :
+
 /*
- * Styles the header image and text displayed on the blog
+ * Styles the header image and text displayed on the blog.
  *
  * @see amethyst_custom_header_setup().
+ *
  */
 function amethyst_header_style() {
 	$header_text_color = get_header_textcolor();
@@ -69,13 +72,14 @@ function amethyst_header_style() {
 	</style>
 	<?php
 }
-endif; // amethyst_header_style
+endif; // Amethyst_header_style.
 
 if ( ! function_exists( 'amethyst_admin_header_style' ) ) :
 /*
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
  * @see amethyst_custom_header_setup().
+ *
  */
 function amethyst_admin_header_style() {
 ?>
@@ -97,13 +101,14 @@ function amethyst_admin_header_style() {
 	</style>
 <?php
 }
-endif; // amethyst_admin_header_style
+endif; // Amethyst_admin_header_style/
 
 if ( ! function_exists( 'amethyst_admin_header_image' ) ) :
 /*
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
  * @see amethyst_custom_header_setup().
+ *
  */
 function amethyst_admin_header_image() {
 ?>
@@ -118,4 +123,4 @@ function amethyst_admin_header_image() {
 	</div>
 <?php
 }
-endif; // amethyst_admin_header_image
+endif; // Amethyst_admin_header_image.
