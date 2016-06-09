@@ -8,7 +8,12 @@ branches:
   - master
   - develop
 
+cache:
+ directories:
+ - node_modules
+
 before_script:
+  - nvm install 6
   - npm run setup
 
 script:
