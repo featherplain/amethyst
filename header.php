@@ -39,7 +39,7 @@
 					<?php get_search_form(); ?>
 				</div>
 				<button class="gnav__trigger"></button>
-				<?php // global navigation
+				<?php // Set global navigation.
 				wp_nav_menu( array(
 						'theme_location' => 'global_nav',
 						'container'      => false,
@@ -51,7 +51,7 @@
 				?>
 			</nav>
 
-			<?php if ( get_header_image() ) : // display custom header image ?>
+			<?php if ( get_header_image() ) : // Display custom header image. ?>
 				<div class="header-image">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<img src="<?php header_image(); ?>" width="<?php echo absint( get_custom_header()->width ); ?>"
