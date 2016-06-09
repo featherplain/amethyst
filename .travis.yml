@@ -10,7 +10,8 @@ branches:
 
 cache:
  directories:
- - node_modules
+  - node_modules
+  - vendor
 
 before_script:
   - nvm install 6
