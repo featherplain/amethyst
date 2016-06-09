@@ -1,15 +1,32 @@
 language: php
 
 php:
-  - "7.0.0"
+  - "7"
+
+env:
+  global:
+    - PHPCS_DIR=/tmp/phpcs
+    - SNIFFS_DIR=/tmp/sniffs
+
+matrix:
+  include:
+    - php: 7
+      env: SNIFF=1
+  allow_failures:
+    - php: 7
+      env: SNIFF=1
 
 branches:
   only:
   - master
 
+before_script:
+  - if [[ "$SNIFF" == "1" ]]; then bash ./bin/install-phpcs.sh; fi
+
 script:
   - ls -al style.css
   - if find . -name "*.php" -exec php -l {} \; | grep "^[Parse error|Fatal error]"; then exit 1; fi;
+  - if [[ "$SNIFF" == "1" ]]; then $PHPCS_DIR/scripts/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php; fi
 
 after_success: bash ./.bin/deploy.sh
 
