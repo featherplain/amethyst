@@ -2,10 +2,10 @@
 /**
  * The main template file.
  *
- * Author     : featherplain
- * Author URI : http://asknode.net/
- * License    : GPLv2 or later
- * License URI: license.txt
+ * @package amethyst
+ * @author featherplain
+ * @link http://asknode.net/
+ * @license GPLv2 or later
  */
 
 get_header(); ?>
