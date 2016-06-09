@@ -5,12 +5,12 @@
   "uri": "https://github.com/featherplain/amethyst",
   "main": "gulpfile.js",
   "scripts": {
-    "setup": "npm install && composer install && vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs/",
+    "setup": "npm install && composer install",
     "gulp": "gulp",
     "gulp-server": "gulp default --mode server",
     "foundation-init": "npm install; gulp init",
     "gulp-zip": "gulp zip:amethyst",
-    "test": "vendor/bin/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php"
+    "test": "composer test"
   },
   "author": "Megumi Hano",
   "license": "GPLv2",
