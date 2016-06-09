@@ -1035,6 +1035,16 @@ input[type="reset"]:focus {
   text-decoration: none;
 }
 
+p, dl, ul, ol, blockquote, pre {
+  margin: 14px 0 24px 0;
+}
+
+@media screen and (min-width: 48em) {
+  p, dl, ul, ol, blockquote, pre {
+    margin: 24px 0 34px 0;
+  }
+}
+
 /* -------------------------------------------------------------- */
 /* WordPress specific classes
 /* -------------------------------------------------------------- */
