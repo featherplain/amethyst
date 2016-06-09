@@ -21,7 +21,7 @@ branches:
   - master
 
 before_script:
-  - if [[ "$SNIFF" == "1" ]]; then bash ./bin/install-phpcs.sh; fi
+  - if [[ "$SNIFF" == "1" ]]; then bash ./.bin/install-phpcs.sh; fi
 
 script:
   - ls -al style.css
