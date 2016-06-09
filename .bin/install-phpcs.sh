@@ -2,8 +2,6 @@
 
 set -e
 
-export PHPCS_DIR=/tmp/phpcs
-export SNIFFS_DIR=/tmp/sniffs
 # Install CodeSniffer for WordPress Coding Standards checks.
 git clone -b master --depth 1 https://github.com/squizlabs/PHP_CodeSniffer.git $PHPCS_DIR;
 # Install WordPress Coding Standards.
