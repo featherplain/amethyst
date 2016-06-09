@@ -10,7 +10,7 @@ Simple WordPress Theme based on Foundation. See details at [readme.txt](readme.t
 
 - Download: [https://wordpress.org/themes/amethyst/](https://wordpress.org/themes/amethyst/)
 - GitHub Page: [http://featherplain.github.io/amethyst/](http://featherplain.github.io/amethyst/)
-- Theme demo: [http://amethyst.asknode.net/](http://amethyst.asknode.net/) 
+- Theme demo: [http://amethyst.asknode.net/](http://amethyst.asknode.net/)
 
 
 
@@ -28,8 +28,8 @@ Simple WordPress Theme based on Foundation. See details at [readme.txt](readme.t
 1. Install some dependencies.
 
 
-        $ cd path/to/directory ; npm install
-  
+        $ cd path/to/directory && npm run setup
+
 
 1. To run gulp tasks with proxy mode, Set hostname on line 18 in gulpfile.js. Default is `amethyst.dev`.
 
@@ -44,6 +44,10 @@ Simple WordPress Theme based on Foundation. See details at [readme.txt](readme.t
 
         // server mode for static websites or files
         $ npm run gulp-server
+
+1. Run automated testing.
+
+        $ npm test
 
 ### Options
 
@@ -89,7 +93,7 @@ You'd like to autoprefix specific browsers, edit gulpfile.js below these lines.
 
     assets/font-awesome/
 
-- License: 
+- License:
   - Font License: SIL OFL 1.1
   - Code License: MIT License
 - Source: [https://fortawesome.github.io/Font-Awesome/](https://fortawesome.github.io/Font-Awesome/)

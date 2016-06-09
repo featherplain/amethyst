@@ -32,6 +32,9 @@ README.md
 setting.json
 bower_components
 .DS_store
+vendor
+composer.*
+codesniffer.ruleset.xml
 *.zip" > .gitignore
 
 git init
