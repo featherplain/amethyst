@@ -18,8 +18,8 @@ matrix:
         - SNIFFS_DIR=/tmp/sniffs
 
 branches:
-  only:
   - master
+  - develop
 
 before_script:
   - if [[ "$SNIFF" == "1" ]]; then bash ./.bin/install-phpcs.sh; fi
