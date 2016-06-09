@@ -2,10 +2,10 @@
 /**
  * The template for displaying the footer.
  *
- * Author     : featherplain
- * Author URI : http://asknode.net/
- * License    : GPLv2 or later
- * License URI: license.txt
+ * @package amethyst
+ * @author featherplain
+ * @link http://asknode.net/
+ * @license GPLv2 or later
  */
 
 if ( ! is_active_sidebar( 'footer-widgets' ) )

@@ -2,10 +2,10 @@
 /**
  * Template part for displaying a message that posts cannot be found.
  *
- * Author     : featherplain
- * Author URI : http://asknode.net/
- * License    : GPLv2 or later
- * License URI: license.txt
+ * @package amethyst
+ * @author featherplain
+ * @link http://asknode.net/
+ * @license GPLv2 or later
  */
 ?>
 

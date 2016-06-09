@@ -13,7 +13,6 @@
         <exclude name="Squiz.Commenting.ClassComment" />
         <exclude name="Squiz.Commenting.FunctionComment" />
         <exclude name="Generic.Commenting.DocComment" />
-        <exclude name="Squiz.Commenting.FileComment.Missing" />
         <exclude name="WordPress.VIP" />
     </rule>
 
