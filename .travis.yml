@@ -15,7 +15,8 @@ cache:
 
 before_script:
   - nvm install 6
-  - npm run setup
+  - npm install
+  - composer install
 
 script:
   - ls -al style.css
