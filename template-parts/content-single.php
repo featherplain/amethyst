@@ -24,7 +24,7 @@
 				<span><?php the_time( get_option( 'date_format' ) ); ?></span>
 			</div>
 			<div class="metadata metadata--author">
-				<span><?php echo get_the_author_meta( 'display_name' ); ?></span>
+				<span><?php echo esc_html( get_the_author_meta( 'display_name' ) ); ?></span>
 			</div>
 		</div>
 		<?php if ( has_post_thumbnail() ) : ?>
@@ -51,13 +51,12 @@
 			<?php the_tags( '<div class="metadata metadata--tag">' , ',' , '</div>' ); ?>
 
 			<?php // Get category.
-				$cats = get_the_category();
-				$cat_html = '';
-				foreach ( $cats as $cat) {
-					$cat_html = '<div class="metadata metadata--category"><a href="' . get_category_link( $cat->cat_ID ) . '">' . $cat->name . '</a></div>';
-				}
+			$cats = get_the_category();
+			foreach ( $cats as $cat ) :?>
+				<div class="metadata metadata--category"><a href="<?php echo esc_url( get_category_link( $cat->cat_ID ) );?>"><?php echo esc_html( $cat->name );?></a></div>
+				<?php
+			endforeach;
 			?>
-			<?php echo $cat_html; ?>
 
 	  </div>
 	</footer>

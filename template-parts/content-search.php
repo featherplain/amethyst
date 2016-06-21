@@ -25,7 +25,7 @@
 				<time><?php the_time( get_option( 'date_format' ) ); ?></time>
 			</div>
 			<div class="metadata metadata--date">
-				<span><?php echo get_the_author_meta( 'display_name' ); ?></span>
+				<span><?php echo esc_html( get_the_author_meta( 'display_name' ) ); ?></span>
 			</div>
 		</div>
 		<?php endif; ?>

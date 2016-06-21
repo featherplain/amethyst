@@ -23,7 +23,7 @@
 				<span><?php the_time( get_option( 'date_format' ) ); ?></span>
 			</div>
 			<div class="metadata metadata--author">
-				<span><?php echo get_the_author_meta( 'display_name' ); ?></span>
+				<span><?php echo esc_html( get_the_author_meta( 'display_name' ) ); ?></span>
 			</div>
 		</div>
 		<?php if ( has_post_thumbnail() ) : ?>
