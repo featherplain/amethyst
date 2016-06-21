@@ -19,7 +19,7 @@ before_script:
 
 script:
   - ls -al style.css
-  - npm test
+  - composer test
 
 after_success: bash ./.bin/deploy.sh
 
