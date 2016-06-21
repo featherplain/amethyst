@@ -10,6 +10,9 @@
         "wp-coding-standards/wpcs": "2014-12-11"
     },
     "scripts" :{
+        "post-install-cmd": [
+            "php vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs/"
+        ],
         "post-update-cmd": [
             "php vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs/"
         ],
