@@ -30,3 +30,11 @@ indent_size = 2
 [*.inc]
 indent_style = tab
 indent_size = 2
+
+[*.json]
+indent_style = space
+indent_size = 2
+
+[*.xml]
+indent_style = space
+indent_size = 2

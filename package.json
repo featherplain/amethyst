@@ -5,12 +5,12 @@
   "uri": "https://github.com/featherplain/amethyst",
   "main": "gulpfile.js",
   "scripts": {
-    "setup": "npm install && composer install",
+    "setup": "npm install && php composer.phar install",
     "gulp": "gulp",
     "gulp-server": "gulp default --mode server",
     "foundation-init": "npm install; gulp init",
     "gulp-zip": "gulp zip:amethyst",
-    "test": "composer test"
+    "test": "php composer.phar test"
   },
   "author": "Megumi Hano",
   "license": "GPLv2",

@@ -84,7 +84,7 @@ function amethyst_setup() {
 	 */
 	add_editor_style( array(
 		'editor-style.css',
-		'assets/genericons/genericons.css'
+		'assets/genericons/genericons.css',
 	) );
 
 }
@@ -112,10 +112,16 @@ add_filter( 'body_class', 'amethyst_body_classes' );
  *
  * @global int $content_width
  */
-function amethyst_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'amethyst_content_width', 774 );
+// function amethyst_content_width() {
+// 	$GLOBALS['content_width'] = apply_filters( 'amethyst_content_width', 774 );
+// 	}
+// add_action( 'after_setup_theme', 'amethyst_content_width', 0 );
+
+function amethyst_adjust_content_width() {
+	global $content_width;
+	$content_width = 774;
 }
-add_action( 'after_setup_theme', 'amethyst_content_width', 0 );
+add_action( 'template_redirect', 'amethyst_adjust_content_width' );
 
 /*
  * Register search form.
