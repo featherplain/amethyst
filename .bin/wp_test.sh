@@ -6,10 +6,10 @@ mkdir -p $WP_DEVELOP_DIR
 # Use the Git mirror of WordPress.
 git clone --depth=1 --branch="$WP_VERSION" git://develop.git.wordpress.org/ $WP_DEVELOP_DIR
 # Set up Amethyst theme information.
-theme_slug=$(base $(pwd))
-theme_dir=$WP_DEVELOP_DIR/src/wp-content/themes/$theme_slug
+export THEME_SLUG=amethyst
+export THEME_DIR=$WP_DEVELOP_DIR/src/wp-content/themes/$THEME_SLUG
 cd ..
-mv $theme_slug $theme_dir
+mv $THEME_SLUG $THEME_DIR
 # Set up WordPress configuration.
 cd $WP_DEVELOP_DIR
 echo $WP_DEVELOP_DIR
@@ -20,7 +20,7 @@ sed -i "s/randummstring3212//" wp-tests-config.php
 # Create WordPress database.
 mysql -e 'CREATE DATABASE wordpress_test;' -uroot
 # Hop into themes directory.
-cd $theme_dir
+cd $THEME_DIR
 # Install JSCS: JavaScript Code Style checker
 # @link http://jscs.info/
 npm install -g jscs
