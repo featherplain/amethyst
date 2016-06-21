@@ -11,7 +11,7 @@ branches:
 cache:
  directories:
   - node_modules
-  - vendor
+  #- vendor
 
 before_script:
   - nvm install 6
