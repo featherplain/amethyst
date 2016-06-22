@@ -45,7 +45,7 @@ if ( ! is_active_sidebar( 'footer-widgets' ) )
 					  </nav>
 					</div>
 					<p id="copy" class="siteinfo__copy">
-						<?php echo ent2ncr("&copy;&nbsp;") . date('Y') . ent2ncr("&nbsp;"); ?><?php bloginfo( 'name' ); ?>
+						<?php echo esc_html( '&copy;&nbsp;' . date('Y') . '&nbsp;' . get_bloginfo( 'name' ) ); ?>
 					</p>
         </div>
       </div><!-- / .siteinfo -->
