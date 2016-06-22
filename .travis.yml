@@ -1,8 +1,8 @@
 language: php
 
 php:
-  - 7.0
   - 5.6
+  - 7
 
 branches:
   - master
@@ -15,13 +15,11 @@ cache:
 
 before_script:
   - nvm install 6
-  - npm install
-  - composer install
-  # - bash ./.bin/wp_test.sh
+  - npm run setup
 
 script:
   - ls -al style.css
-  - composer test
+  - npm test
 
 after_success: bash ./.bin/deploy.sh
 
@@ -29,6 +27,3 @@ env:
   global:
   - GH_REF: github.com/featherplain/amethyst.git
   - secure: "GPx464flJRRtd66iBD3avvM0qFhovjo3RJB0cXQE/EIjew9HjiXIPM3mcYvT8azr0DI/SpTLhJ1zF2vFkJfGgZ8/ojC0h1q6D6nYyv0ajJxFDA2E/UZpMEkxcHOekpsj8yXGYB1g/zCo0Vwesw9NuLxdF7aHPiMWIgA7e3lTsV7a/EjyZ1xlf9vRtd8U8x9QrevWfFQGHMMiqV+a8BVGSM6u0RY1QFmJZtOm2fUOiJnencq7gDOJxbKzFp18rIZJEqgUhtjct4aPfpP48XtcVSAQbGlLOXDavAh742rgtKj7g/MWAgzgMUYmWp3uUYQe/ErqGFeG7MbOnktqxmUGTN9M5cz7O/ZgO2f8dTwg6QFUlVEZrfra4lWX2XZl9rxS1LRTCG/JvzPM4ap2SOIRXT+lgI7kKkmNO5ux5d3U9PVs8BupPFMqjPUJlRsgjZt6bfanMxM68s9hah3JKr7v4ZPNCAmEJWGfUuLXIi6Ozbp6VhPVLtPBkX8DganEGZlkQf7xzW6YJuLxp9LX3iZ0tPhEt3YgDQwPGYuBTh+QALOMhuFeNCZlLNq7XGdNVefQHc2PJyVmWGilLxRaGF6ygBLRbttEphewMR/BkW7wIgQsOUZC4wOlHVuOU5CfqtuQzNTGZPrszl+oIsCyP7p782gomCaCQMwltfdC4BIE194="
-  # @link https://github.com/WordPress/WordPress
-  # - WP_VERSION=master WP_MULTISITE=0
-
