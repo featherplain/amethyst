@@ -18,6 +18,7 @@ Simple WordPress Theme based on Foundation. See details at [readme.txt](readme.t
 
 - Node.js
 - npm
+- Composer
 
 ## Setup your project
 
@@ -109,3 +110,7 @@ You'd like to autoprefix specific browsers, edit gulpfile.js below these lines.
 ## License
 
 [GNU GENERAL PUBLIC LICENSE Version 2](license.txt)
+
+## Contributors
+
+Thanks to @torounit, @miya0001

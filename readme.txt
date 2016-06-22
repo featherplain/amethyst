@@ -84,6 +84,10 @@ While you can @import or wp_enqueue_script the style.css from your child theme, 
 /* Change log
 /* -------------------------------------------------------------- */
 
+== 2.0.3 ==
+* Fix some PHP CodeSniffer errors
+* Add automated test with Travis CI and local machine
+
 == 2.0.2 ==
 * Bugfix visual editor doesn't show bullted list style
 
