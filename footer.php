@@ -35,12 +35,13 @@ if ( ! is_active_sidebar( 'footer-widgets' ) ) :
 						<nav class="snav">
 							<?php
 							wp_nav_menu( array(
-								'theme_location' => 'social_nav',
-								'container'      => false,
-								'items_wrap'     => '<ul id="%1$s" class="snav__list">%3$s</ul>',
-								'link_before'    => '<span class="screen-reader-text">',
-								'link_after'     => '</span>',
-								) );
+									'theme_location' => 'social_nav',
+									'container'      => false,
+									'items_wrap'     => '<ul id="%1$s" class="snav__list">%3$s</ul>',
+									'link_before'    => '<span class="screen-reader-text">',
+									'link_after'     => '</span>',
+								)
+							);
 							?>
 					  </nav>
 					</div>
@@ -53,6 +54,9 @@ if ( ! is_active_sidebar( 'footer-widgets' ) ) :
 
 	</div><!-- /.l-container -->
 
+<?php
+endif;
+?>
 <?php wp_footer(); ?>
 
 </body>
