@@ -98,8 +98,9 @@ add_action( 'after_setup_theme', 'amethyst_setup' );
  * @return array The filtered body class list.
  */
 function amethyst_body_classes( $classes ) {
-	if ( is_active_sidebar( 'sidebar' ) && ! is_attachment() && ! is_404() && ! is_page_template( 'template-parts/single-column.php' ))
+	if ( is_active_sidebar( 'sidebar' ) && ! is_attachment() && ! is_404() && ! is_page_template( 'template-parts/single-column.php' ) ) {
 		$classes[] = 'sidebar';
+	}
 
 	return $classes;
 }
@@ -140,7 +141,7 @@ add_filter( 'get_search_form', 'amethyst_search_form' );
  * Register excerpt length.
  */
 function custom_excerpt_length( $length ) {
-  return 30;
+	return 30;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
