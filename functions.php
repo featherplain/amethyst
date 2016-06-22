@@ -114,8 +114,9 @@ add_filter( 'body_class', 'amethyst_body_classes' );
  */
 function amethyst_content_width() {
 	// $GLOBALS['content_width'] = apply_filters( 'amethyst_content_width', 774 );
+	// $content_width = apply_filters( 'amethyst_content_width', 774 );
 	global $content_width;
-	$content_width = apply_filters( 'amethyst_content_width', 774 );
+	if ( !isset( $content_width ) ) $content_width = 774;
 }
 add_action( 'after_setup_theme', 'amethyst_content_width', 0 );
 
