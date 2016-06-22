@@ -1,0 +1,199 @@
+@charset "utf-8";
+
+//*--------------------------------------------------*/
+// layout
+//*--------------------------------------------------*/
+@mixin layoutMargin {
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @media #{$small-only} {
+    padding: 20px 16px;
+  }
+}
+
+//*--------------------------------------------------*/
+// hasPseudoClass
+// @param $name
+//*--------------------------------------------------*/
+@mixin hasPseudoClass($loc:false, $position: absolute) {
+  position: relative;
+  @if $loc == before {
+    &:before{
+      display: block;
+      content: "";
+      position: $position;
+    }
+  } @else if $loc == after {
+    &:after{
+      display: block;
+      content: "";
+      position: $position;
+    }
+  } @else {
+    &:before,
+    &:after{
+      display: block;
+      content: "";
+      position: $position;
+    }
+  }
+}
+
+//*--------------------------------------------------*/
+// imageReplace
+// @param $name
+//*--------------------------------------------------*/
+@mixin imageReplace($path, $imgWidth, $imgHeight, $scale: 1, $position: 0 0, $size: 100%, $repeat: no-repeat) {
+  display: block;
+  overflow: hidden;
+  padding-top: $imgHeight * $scale;
+  width: $imgWidth * $scale;
+  height: 0;
+  background-image: url($filePath + $path);
+  background-position: $position;
+  background-size: $size;
+  background-repeat: $repeat;
+}
+
+//*--------------------------------------------------*/
+// Sprite css image replacement (Medium size)
+// @param $name
+//*--------------------------------------------------*/
+@mixin sprite-ir($sprite, $scale: 1, $display: block) {
+  @include sprite-image($sprite);
+  $sprite-offset-x: nth($sprite, 3) * $scale;
+  $sprite-offset-y: nth($sprite, 4) * $scale;
+  background-position: $sprite-offset-x  $sprite-offset-y;
+  display: $display;
+  overflow: hidden;
+  padding-top: nth($sprite, 6) * $scale;
+  width: nth($sprite, 5) * $scale;
+  height: 0;
+  background-repeat: no-repeat;
+  background-size: nth($sprite, 7) * $scale nth($sprite, 8) * $scale;
+}
+
+
+//*--------------------------------------------------*/
+// web font
+// @param $name
+//*--------------------------------------------------*/
+
+// use genericon
+// http://genericons.com/
+@mixin genericon($content:'\f100', $fontsize: 16px, $valaign: text-bottom, $position: static, $display: inline-block, $line-height: 1) {
+  position: $position;
+  display: $display;
+  content: $content;
+  vertical-align: $valaign;
+  font-size: $fontsize;
+  font-family: Genericons;
+  line-height: $line-height;
+}
+
+// use font awesome
+@mixin fa($content:'\f19a', $fontsize: 16px, $valign: text-bottom, $position: static, $display: inline-block, $line-height: 1) {
+  display: $display;
+  content: $content;
+  font-family: FontAwesome;
+  font-size: $fontsize;
+  line-height: $line-height;
+  text-rendering: auto;
+  vertical-align: $valign;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+//*--------------------------------------------------*/
+// css graphic
+// @param $name
+//*--------------------------------------------------*/
+// Triangle
+@mixin triangle($direction, $width, $height, $color) {
+  width: 0;
+  height: 0;
+  @if $direction == 'up' {
+    border-right: $height / 2 solid transparent;
+    border-bottom: $width solid $color;
+    border-left: $height / 2 solid transparent;
+  } @else if $direction == 'down' {
+    border-top: $width solid $color;
+    border-right: $height / 2 solid transparent;
+    border-left: $height / 2 solid transparent;
+  } @else if $direction == 'left' {
+    border-top: $height / 2 solid transparent;
+    border-right: $width solid $color;
+    border-bottom: $height / 2 solid transparent;
+  } @else if $direction == 'right' {
+    border-top: $height / 2 solid transparent;
+    border-bottom: $height / 2 solid transparent;
+    border-left: $width solid $color;
+  }
+}
+
+@mixin corner-triangle($corner, $size, $color) {
+  width: 0;
+  height: 0;
+  @if $corner == 'top-left' {
+    border-top: $size solid $color;
+    border-right: $size solid transparent;
+  } @else if $corner == 'top-right' {
+    border-top: $size solid $color;
+    border-left: $size solid transparent;
+  } @else if $corner == 'bottom-left' {
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+  } @else if $corner == 'bottom-right' {
+    border-bottom: $size solid $color;
+    border-left: $size solid transparent;
+  }
+}
+//*--------------------------------------------------*/
+// button Base
+// @param $name
+//*--------------------------------------------------*/
+@mixin btnBase($color, $fontSize, $fullWidth: false) {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
+  text-align: center;
+  background-color: $color;
+  border: none;
+  box-shadow: 0 2px 0 darken($colorLink, 6%);
+  color: #ffffff;
+  cursor: pointer;
+  font-size: $fontSize;
+  transition: background-color 300ms ease-out;
+  // set $fullWidth
+  @if $fullWidth {
+    width: 100%;
+  }
+  &:focus {
+    outline: 0;
+  }
+  &:link,
+  &:visited {
+    color: #ffffff;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($color, 8%);
+    color: #ffffff;
+    outline: 0;
+    text-decoration: none;
+  }
+}
+//*--------------------------------------------------*/
+// alert box
+// @param $name
+//*--------------------------------------------------*/
+@mixin alertBox($padding, $bg, $border, $color, $fontSize) {
+  padding: $padding;
+  background-color: $bg;
+  border: 1px dotted $border;
+  color: $color;
+  font-size: rem-calc($fontSize);
+}

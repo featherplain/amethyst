@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+/* -------------------------------------------------------------- */
+/* WordPress editor styles
+/* -------------------------------------------------------------- */
+.post__content,
+.comment-content {
+  @include editor-styles;
+}

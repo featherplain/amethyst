@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+/* -------------------------------------------------------------- */
+/* post
+/* -------------------------------------------------------------- */
+
+.post {
+  &__header {
+    margin: 0 0 20px 0;
+  }
+  &__link {
+    display: block;
+    margin-bottom: 30px;
+    color: $colorBase;
+    &:hover {
+      .post__title--archive {
+        color: $colorLink;
+      }
+    }
+  }
+  &__title {
+    margin: 0;
+    padding: 0 0 5px 0;
+    font-size: rem-calc(20);
+    font-weight: bold;
+    border-bottom: $borderSolid;
+    &--archive {
+      font-size: rem-calc(16);
+      line-height: 1.4;
+      transition: 0.3s;
+    }
+    &--page {
+      border-bottom: none;
+    }
+  }
+  &__meta {
+    margin-bottom: 14px;
+    &--footer {
+      margin: 0;
+      padding-bottom: 10px;
+      border-bottom: $borderSolid;
+      text-align: right;
+    }
+  }
+  &__excerpt {
+    font-size: rem-calc(12);
+  }
+  &__image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    background-color: lighten($colorBase, 10%);
+    border: 2px solid darken($colorBg, 5%);
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  &__pager {
+    padding: 10px 0;
+    text-align: center;
+    border: 1px dotted $colorSub;
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+/**
+ * meta informations
+ */
+.metadata {
+  @include hasPseudoClass(before);
+  display: inline-block;
+  color: $colorBase;
+  font-size: rem-calc(12);
+  font-weight: 400;
+  transition: 0.3s;
+  &:first-child {
+    margin-left: 0;
+  }
+  a {
+    margin-left: 2px;
+    color: $colorBase;
+    line-height: 1;
+    &:hover {
+      color: $colorLink;
+    }
+  }
+  &--date {
+    &:before {
+      @include genericon('\f307', 1.1rem, top);
+    }
+  }
+  &--category {
+    &:before {
+      @include genericon('\f301', 1.1rem, top);
+    }
+  }
+  &--author {
+    &:before {
+      @include genericon('\f304', 1.1rem, top);
+    }
+  }
+  &--tag {
+    &:before {
+      @include genericon('\f302', 1.1rem, top);
+    }
+  }
+  &--comment {
+    &:before {
+      @include genericon('\f108', 1.1rem, top);
+    }
+  }
+  // for sticky post
+  &--featured {
+    &:before {
+      @include genericon('\f308', 1.1rem, top);
+    }
+  }
+}
+/**
+ * for sticky post
+ */
+.sticky {
+  display: inherit;
+}
+
+/**
+ * media queries
+ */
+@include breakpoint(medium) {
+  .post {
+    &__link {
+      margin-bottom: 50px;
+    }
+    &__title {
+      margin-bottom: 8px;
+      font-size: rem-calc(24);
+      font-weight: bold;
+      &--archive {
+        font-size: rem-calc(28);
+        line-height: 1.4;
+      }
+    }
+    &__image {
+      margin-bottom: 20px;
+      border: 4px solid darken($colorBg, 5%);
+    }
+  }
+}
+@include breakpoint(large) {
+  .post {
+    &__header {
+      margin: 0 0 40px 0;
+    }
+    &__title {
+      font-size: rem-calc(32);
+    }
+    &__image {
+      max-width: 100%;
+      height: auto;
+      border: 8px solid darken($colorBg, 5%);
+    }
+    &__excerpt {
+      font-size: rem-calc(14);
+    }
+  }
+}

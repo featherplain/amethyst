@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+/* -------------------------------------------------------------- */
+/* comments
+/* -------------------------------------------------------------- */
+
+/**
+ * comments
+ */
+.comments {
+  margin: $m40;
+  &__title {
+    margin: 20px 0;
+    font-size: rem-calc(22);
+    font-weight: bold;
+  }
+}
+/**
+ * WordPress comment classes
+ */
+.comment {
+  list-style-type: none;
+  > .children {
+    margin-left: 20px;
+  }
+  &-awaiting-moderation {
+    margin-left: $commentMargin;
+    @include alertBox(4px, $colorYellowLighten, $colorYellow, $colorBase, 12);
+  }
+  &-body {
+    padding: $m20;
+    border-bottom: 1px dotted $colorSub;
+  }
+  &-author {
+    .avatar {
+      border-radius: 50%;
+    }
+    .fn {
+      display: inline-block;
+      margin-left: 7px;
+      vertical-align: top;
+      font-family: $fontFamilyTitle;
+      font-size: rem-calc(18);
+    }
+    .says {
+      display: none;
+    }
+  }
+  &-metadata {
+    margin-top: -28px;
+    margin-left: $commentMargin;
+    time {
+      font-size: rem-calc(12);
+    }
+  }
+  &-content {
+    margin-left: $commentMargin;
+  }
+  &-notes {
+    font-size: rem-calc(14);
+  }
+  &-reply-title {
+    @extend .comments__title;
+  }
+  &-respond {
+    margin: $m40;
+  }
+  .reply {
+    margin: 0 0 0 $commentMargin;
+    a {
+      padding: 4px 6px;
+      border: 1px solid $colorSub;
+      font-family: $fontFamily;
+      font-size: rem-calc(10);
+    }
+  }
+}
+.bypostauthor {
+  background-color: lighten($colorLink, 50%);
+}
+.edit-link {
+  font-size: rem-calc(12);
+  border-bottom: 1px dotted $colorLink;
+}
+#cancel-comment-reply-link {
+  border: 1px solid $colorSub;
+  font-size: rem-calc(14);
+  font-weight: normal;
+}

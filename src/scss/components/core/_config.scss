@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+//----------------------------------------------------------------------------
+// color
+//----------------------------------------------------------------------------
+// primary
+$colorBase          : #222222;
+$colorSub           : #dedede;
+$colorText          : #454545;
+$colorBg            : #fafafa;
+$colorLink          : #e80c7a;
+$colorLinkHover     : darken($colorLink, 18%);
+$colorSelection     : #0c7ae8;
+$colorBtn           : $colorLink;
+// others
+$colorRed           : #f04124;
+$colorRedLighten    : lighten($colorRed, 36%);
+$colorYellow        : #f0bd24;
+$colorYellowLighten : lighten($colorYellow, 36%);
+$colorGreen         : #43ac6a;
+$colorPurple        : #e80c7a; // default is same as $colorLink
+$colorGray          : #999999;
+$colorBlack         : #222222; // default is same as $colorBase
+$colorPink          : #ff4c7d;
+
+//----------------------------------------------------------------------------
+// path
+//----------------------------------------------------------------------------
+$filePath           : "./assets/images/";
+
+//----------------------------------------------------------------------------
+// font
+//----------------------------------------------------------------------------
+// font Family
+$fontFamily         : "Helvetica Neue", "Helvetica", "Roboto", "Hiragino Kaku Gothic ProN", Meiryo, "MS PGothic", Arial, Sans-Serif;
+$fontFamilyTitle    : $fontFamily;
+$fontFamilyCode     : Menlo, Consolas, Courier, sans-serif;
+// font weight
+$fontWeight         : 300;
+
+//----------------------------------------------------------------------------
+// grid
+//----------------------------------------------------------------------------
+$maxWidth           : 1080px;
+
+//----------------------------------------------------------------------------
+// base margin
+//----------------------------------------------------------------------------
+$m10                : 10px 0;
+$m20                : 20px 0;
+$m30                : 30px 0;
+$m40                : 40px 0;
+
+//----------------------------------------------------------------------------
+// styles
+//----------------------------------------------------------------------------
+// border style
+$borderSolid        : 1px solid $colorSub;
+$borderDot          : 1px dotted $colorSub;
+// border radius
+$globalRadius       : 4px;
+
+//----------------------------------------------------------------------------
+// navigation size
+//----------------------------------------------------------------------------
+// $menuHeight        : ;
+// $menuItemWidth     : ;
+// $menuItemHeight    : ;
+// $menuPadding       : ($menuHeight - $menuItemHeight) / 2; // Calclate padding size automatically
+
+//----------------------------------------------------------------------------
+// comments
+//----------------------------------------------------------------------------
+$avatarSize     : 48px;
+$avatarMargin   : 10px;
+$commentMargin  : $avatarSize + $avatarMargin;

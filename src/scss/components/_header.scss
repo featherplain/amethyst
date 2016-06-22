@@ -1,0 +1,202 @@
+@charset "utf-8";
+
+/* -------------------------------------------------------------- */
+/* header
+/* -------------------------------------------------------------- */
+// specific variables and mixin
+$navButtonSize: 50px;
+
+@mixin navPos($top, $right, $position: absolute) {
+  position: $position;
+  top: $top;
+  right: $right;
+}
+
+/**
+ * l-header
+ */
+.l-header {
+  width: auto;
+  height: auto;
+  &__inner {
+    @include grid-row();
+    position: relative;
+  }
+}
+/**
+ * site brand
+ */
+.sitebrand {
+  &__title {
+    float: left;
+    max-width: 80%;
+    margin: 0;
+    padding: 14px 36px 14px 14px;
+    font-weight: bold;
+    font-size: rem-calc(16);
+    a {
+      display: block;
+      color: $colorBase;
+      line-height: 1.2;
+      &:hover {
+        color: $colorLink;
+      }
+    }
+  }
+  &__description {
+    display: none;
+  }
+}
+/**
+ * navigation
+ */
+.gnav {
+  &__search {
+    @include navPos($top: 0, $right: $navButtonSize);
+    margin-bottom: 0;
+  }
+  // toggle button global navigation
+  &__trigger {
+    display: inline-block;
+    float: right;
+    width: $navButtonSize;
+    height: $navButtonSize;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background-color: $colorBase;
+    border-radius: 0;
+    box-shadow: none;
+    outline: 0;
+    &:before {
+      @include genericon('\f419');
+      margin: 16px auto;
+      color: #ffffff;
+    }
+    &:hover,
+    &:focus {
+      outline: 0;
+      background-color: lighten($colorBase, 8%);
+    }
+  }
+  // toggle sub menu
+  &__arrowdown {
+    @include navPos($top: 0, $right: 0);
+    display: block;
+    width: $navButtonSize;
+    height: $navButtonSize;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    &:before {
+      @include genericon('\f431', 28px);
+      text-align: center;
+      margin: 11px auto;
+      color: #ffffff;
+    }
+    &:hover,
+    &:focus {
+      outline: 0;
+      background-color: lighten($colorBase, 8%);
+    }
+  }
+  &__list {
+    @extend %clearfix;
+    @include navPos($top: $navButtonSize, $right: 0);
+    display: none;
+    width: 100%;
+    margin: 0;
+    background-color: $colorBase;
+    z-index: 9999;
+    &--active {
+      display: block;
+    }
+    >li {
+      &:first-child {
+        border-top: none;
+      }
+    }
+    li {
+      position: relative;
+      border-top: 1px dotted $colorSub;
+      a {
+        display: block;
+        padding: 13px $navButtonSize 13px 13px;
+        color: #ffffff;
+        font-weight: normal;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+      }
+    }
+  }
+}
+// child menu
+.sub-menu {
+  display: none;
+  background-color: lighten($colorBase, 16%);
+}
+
+/**
+ * search form on header
+ */
+.gnav {
+  .searchbar {
+    &__form {
+      margin-bottom: 0;
+    }
+    &__field {
+      width: $navButtonSize;
+      height: $navButtonSize;
+      margin-bottom: 0;
+      padding-left: 42px;
+      border: none;
+      box-shadow: none;
+      cursor: pointer;
+      background-color: darken($colorBg, 5%);
+      background-image: url($filePath + 'icon_search.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
+      transition: width .3s ease-out, background .3s ease-out;
+      &:focus  {
+        width: 240px;
+        padding-left: 30px;
+        background-position: 6px center;
+        cursor: text;
+      }
+      @include breakpoint(retina) {
+        background-image: url($filePath + 'icon_search_2x.png');
+        &:focus {
+          background-image: url($filePath + 'icon_search_2x.png');
+        }
+      }
+    }
+    &__submit {
+      display: none !important;
+    }
+  }
+}
+/**
+ * media queries
+ */
+@include breakpoint(medium) {
+  .sitebrand {
+    &__title {
+      padding: 10px 20px 10px 14px;
+      font-size: rem-calc(24);
+    }
+    &__description {
+      display: block;
+      float: left;
+      margin: 14px 0 12px 0;
+      font-size: rem-calc(14);
+    }
+  }
+  .gnav {
+    &__list {
+      width: 40%;
+    }
+  }
+}

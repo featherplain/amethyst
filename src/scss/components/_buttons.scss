@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+/* -------------------------------------------------------------- */
+/* buttons
+/* -------------------------------------------------------------- */
+.btn {
+  @include btnBase($colorBtn, rem-calc(16));
+}
+.btn-full {
+  @include btnBase($colorBtn, rem-calc(16), true);
+}

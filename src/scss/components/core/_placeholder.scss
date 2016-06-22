@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+//*--------------------------------------------------*/
+// table
+//*--------------------------------------------------*/
+%table{
+  display: table;
+  vertical-align: middle;
+  >*{
+    display: table-row;
+    vertical-align: middle;
+    >*{
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
+//*--------------------------------------------------*/
+// clearfix
+//*--------------------------------------------------*/
+%clearfix{
+  &:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: ".";
+    font-size: 0;
+  }
+}
