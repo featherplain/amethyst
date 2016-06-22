@@ -15,8 +15,7 @@ cache:
 
 before_script:
   - nvm install 6
-  - npm install
-  - composer install
+  - npm run setup
   # - bash ./.bin/wp_test.sh
 
 script:
