@@ -112,11 +112,21 @@ add_filter( 'body_class', 'amethyst_body_classes' );
  *
  * @global int $content_width
  */
-function amethyst_content_width() {
+// function amethyst_content_width() {
 	// $GLOBALS['content_width'] = apply_filters( 'amethyst_content_width', 774 );
 	// $content_width = apply_filters( 'amethyst_content_width', 774 );
-	global $content_width;
-	if ( !isset( $content_width ) ) $content_width = 774;
+	// global $content_width;
+	// if ( !isset( $content_width ) ) $content_width = 774;
+// }
+// add_action( 'after_setup_theme', 'amethyst_content_width', 0 );
+function amethyst_content_width() {
+	$amethyst_content_width = 774;
+	/**
+	 * Filter content width
+	 *
+	 * @param integer $amethyst_content_width Default content width.
+	 */
+	$GLOBALS['content_width'] = (int) apply_filters( 'amethyst_content_width', $amethyst_content_width );
 }
 add_action( 'after_setup_theme', 'amethyst_content_width', 0 );
 
