@@ -18,6 +18,7 @@ Simple WordPress Theme based on Foundation. See details at [readme.txt](readme.t
 
 - Node.js
 - npm
+- Composer
 
 ## Setup your project
 
