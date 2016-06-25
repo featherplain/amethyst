@@ -19,7 +19,7 @@
         ],
         "test": [
             "php vendor/bin/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php",
-            "phpmd ./**/*.php text ./phpmd.ruleset.xml"
+            "phpmd template-parts,inc text phpmd.ruleset.xml --suffixes php"
         ]
     }
 }
