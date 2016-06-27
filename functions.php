@@ -140,7 +140,7 @@ add_filter( 'get_search_form', 'amethyst_search_form' );
 /*
  * Register excerpt length.
  */
-function custom_excerpt_length( $length ) {
+function custom_excerpt_length() {
 	return 30;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );

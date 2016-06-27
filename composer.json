@@ -7,7 +7,8 @@
     ],
     "require-dev": {
         "squizlabs/php_codesniffer": "2.*",
-        "wp-coding-standards/wpcs": "2014-12-11"
+        "wp-coding-standards/wpcs": "2014-12-11",
+        "phpmd/phpmd": "@stable"
     },
     "scripts" :{
         "post-install-cmd": [
@@ -17,7 +18,8 @@
             "php vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs/"
         ],
         "test": [
-            "php vendor/bin/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php"
+            "php vendor/bin/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php",
+            "phpmd template-parts,inc,404.php,archive.php,comments.php,footer.php,functions.php,header.php,index.php,page.php,search.php,sidebar.php,single.php text phpmd.ruleset.xml"
         ]
     }
 }
