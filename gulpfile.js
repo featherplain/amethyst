@@ -6,7 +6,8 @@ var gulp           = require('gulp'),
     $              = require('gulp-load-plugins')({ pattern: ['gulp-*', 'gulp.*'], replaceString: /\bgulp[\-.]/}),
     argv           = require('yargs').argv,
     browserSync    = require('browser-sync'),
-    runSequence    = require('run-sequence')
+    runSequence    = require('run-sequence'),
+    conf           = require('./config')
 ;
 
 //---------------------------------------------------------------------------
@@ -15,7 +16,7 @@ var gulp           = require('gulp'),
 
 var paths = {
   'root'           : './',
-  'vhost'          : 'amethyst.dev',
+  'vhost'          : conf.vhost,
   'port'           : 3000,
 // html
   'htmlPath'       : 'src/html/',

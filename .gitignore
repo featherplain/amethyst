@@ -48,5 +48,6 @@ logs
 results
 build
 maps
+config.js
 
 /vendor/
