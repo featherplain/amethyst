@@ -40,6 +40,10 @@ var nodeSassConf = {
   outputStyle    : 'expanded'
 };
 
+var sassLintConf = {
+  configFile: '.sass-lint.yml'
+};
+
 //---------------------------------------------------------------------------
 // Initializing bower_components
 //---------------------------------------------------------------------------
@@ -198,3 +202,13 @@ gulp.task('default', [
   // 'sprite-svg',
   'watch'
 ]);
+
+//---------------------------------------------------------------------------
+// Test Tasks
+//---------------------------------------------------------------------------
+gulp.task('test:sass', function () {
+  return gulp.src('src/scss/**/*.scss')
+    .pipe($.sassLint())
+    .pipe($.sassLint.format())
+    .pipe($.sassLint.failOnError())
+});
