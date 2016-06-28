@@ -166,7 +166,6 @@ rules:
     - 0
     - properties: []
   variable-name-format:
-    - 1
+    - 0
     - allow-leading-underscore: true
-      convention: camelcase
   zero-unit: 1
