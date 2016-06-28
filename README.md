@@ -32,12 +32,13 @@ Simple WordPress Theme based on Foundation. See details at [readme.txt](readme.t
         $ cd path/to/directory && npm run setup
 
 
-1. To run gulp tasks with proxy mode, Create config file named `config.js`. and write following code.You can set hostname. Default is `amethyst.dev`.
-        ```
-        module.exports = {
-            vhost: 'amethyst.dev'
-        };
-        ```
+1. To run gulp tasks with proxy mode, Create config file named `config.js`. and write following code.You can set hostname.
+
+       ```javascript
+       module.exports = {
+         vhost: 'amethyst.dev'
+       };
+       ```
 
 
 1. Run gulp. You don't need to install gulp globally.
