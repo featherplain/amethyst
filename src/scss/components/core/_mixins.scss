@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset 'utf-8';
 
 //*--------------------------------------------------*/
 // layout
@@ -16,25 +16,25 @@
 // hasPseudoClass
 // @param $name
 //*--------------------------------------------------*/
-@mixin hasPseudoClass($loc:false, $position: absolute) {
+@mixin hasPseudoClass($loc: false, $position: absolute) {
   position: relative;
   @if $loc == before {
-    &:before{
+    &:before {
       display: block;
-      content: "";
+      content: '';
       position: $position;
     }
   } @else if $loc == after {
-    &:after{
+    &:after {
       display: block;
-      content: "";
+      content: '';
       position: $position;
     }
   } @else {
     &:before,
-    &:after{
+    &:after {
       display: block;
-      content: "";
+      content: '';
       position: $position;
     }
   }
@@ -82,7 +82,7 @@
 
 // use genericon
 // http://genericons.com/
-@mixin genericon($content:'\f100', $fontsize: 16px, $valaign: text-bottom, $position: static, $display: inline-block, $line-height: 1) {
+@mixin genericon($content: '\f100', $fontsize: 16px, $valaign: text-bottom, $position: static, $display: inline-block, $line-height: 1) {
   position: $position;
   display: $display;
   content: $content;
@@ -93,7 +93,7 @@
 }
 
 // use font awesome
-@mixin fa($content:'\f19a', $fontsize: 16px, $valign: text-bottom, $position: static, $display: inline-block, $line-height: 1) {
+@mixin fa($content: '\f19a', $fontsize: 16px, $valign: text-bottom, $position: static, $display: inline-block, $line-height: 1) {
   display: $display;
   content: $content;
   font-family: FontAwesome;
@@ -157,7 +157,7 @@
 @mixin btnBase($color, $fontSize, $fullWidth: false) {
   display: inline-block;
   margin: 1rem 0;
-  padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
+  padding: .875rem 1.75rem .9375rem;
   text-align: center;
   background-color: $color;
   border: none;

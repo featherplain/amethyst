@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset 'utf-8';
 
 /* -------------------------------------------------------------- */
 /* layout
@@ -51,7 +51,7 @@ body {
   font-size: rem-calc(14);
   font-weight: normal;
   line-height: 1;
-  letter-spacing: 0.6px;
+  letter-spacing: .6px;
   text-transform: uppercase;
   @include breakpoint(medium) {
     padding: 0 14px;

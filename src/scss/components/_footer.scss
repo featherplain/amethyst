@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset 'utf-8';
 
 /* -------------------------------------------------------------- */
 /* footer
@@ -17,8 +17,8 @@
 .siteinfo {
   background-color: darken($colorBase, 4%);
   &__inner {
-    @include grid-row();
     @extend %clearfix;
+    @include grid-row();
     padding: 20px 0;
     font-size: rem-calc(12);
     letter-spacing: 1.6px;

@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset 'utf-8';
 
 /* -------------------------------------------------------------- */
 /* post
@@ -6,7 +6,7 @@
 
 .post {
   &__header {
-    margin: 0 0 20px 0;
+    margin: 0 0 20px;
   }
   &__link {
     display: block;
@@ -20,14 +20,14 @@
   }
   &__title {
     margin: 0;
-    padding: 0 0 5px 0;
+    padding: 0 0 5px;
     font-size: rem-calc(20);
     font-weight: bold;
     border-bottom: $borderSolid;
     &--archive {
       font-size: rem-calc(16);
       line-height: 1.4;
-      transition: 0.3s;
+      transition: .3s;
     }
     &--page {
       border-bottom: none;
@@ -75,7 +75,7 @@
   color: $colorBase;
   font-size: rem-calc(12);
   font-weight: 400;
-  transition: 0.3s;
+  transition: .3s;
   &:first-child {
     margin-left: 0;
   }
@@ -152,7 +152,7 @@
 @include breakpoint(large) {
   .post {
     &__header {
-      margin: 0 0 40px 0;
+      margin: 0 0 40px;
     }
     &__title {
       font-size: rem-calc(32);

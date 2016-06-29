@@ -526,7 +526,7 @@ h6 > a:hover {
 a {
   color: #e80c7a;
   text-decoration: none;
-  transition: 0.3s;
+  transition: .3s;
 }
 
 a:focus {
@@ -551,13 +551,13 @@ p {
 ::-moz-selection {
   background: transparent;
   background-color: #0c7ae8;
-  color: #fff;
+  color: #ffffff;
 }
 
 ::selection {
   background: transparent;
   background-color: #0c7ae8;
-  color: #fff;
+  color: #ffffff;
 }
 
 /**
@@ -611,7 +611,7 @@ embed,
 iframe,
 object {
   max-width: 100%;
-  line-height: 1.0;
+  line-height: 1;
   border: 0;
 }
 
@@ -916,12 +916,12 @@ select[multiple] {
  * buttons
  */
 button,
-input[type="button"],
-input[type="submit"],
-input[type="reset"] {
+input[type='button'],
+input[type='submit'],
+input[type='reset'] {
   display: inline-block;
   margin: 1rem 0;
-  padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
+  padding: .875rem 1.75rem .9375rem;
   text-align: center;
   background-color: #e80c7a;
   border: none;
@@ -934,32 +934,32 @@ input[type="reset"] {
 }
 
 button:focus,
-input[type="button"]:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus {
+input[type='button']:focus,
+input[type='submit']:focus,
+input[type='reset']:focus {
   outline: 0;
 }
 
 button:link, button:visited,
-input[type="button"]:link,
-input[type="button"]:visited,
-input[type="submit"]:link,
-input[type="submit"]:visited,
-input[type="reset"]:link,
-input[type="reset"]:visited {
+input[type='button']:link,
+input[type='button']:visited,
+input[type='submit']:link,
+input[type='submit']:visited,
+input[type='reset']:link,
+input[type='reset']:visited {
   color: #ffffff;
 }
 
 button:hover, button:active, button:focus,
-input[type="button"]:hover,
-input[type="button"]:active,
-input[type="button"]:focus,
-input[type="submit"]:hover,
-input[type="submit"]:active,
-input[type="submit"]:focus,
-input[type="reset"]:hover,
-input[type="reset"]:active,
-input[type="reset"]:focus {
+input[type='button']:hover,
+input[type='button']:active,
+input[type='button']:focus,
+input[type='submit']:hover,
+input[type='submit']:active,
+input[type='submit']:focus,
+input[type='reset']:hover,
+input[type='reset']:active,
+input[type='reset']:focus {
   background-color: #c10a66;
   color: #ffffff;
   outline: 0;
@@ -979,7 +979,7 @@ input[type="reset"]:focus {
 .btn {
   display: inline-block;
   margin: 1rem 0;
-  padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
+  padding: .875rem 1.75rem .9375rem;
   text-align: center;
   background-color: #e80c7a;
   border: none;
@@ -1008,7 +1008,7 @@ input[type="reset"]:focus {
 .btn-full {
   display: inline-block;
   margin: 1rem 0;
-  padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
+  padding: .875rem 1.75rem .9375rem;
   text-align: center;
   background-color: #e80c7a;
   border: none;
@@ -1035,12 +1035,14 @@ input[type="reset"]:focus {
   text-decoration: none;
 }
 
-p, dl, ul, ol, blockquote, pre {
+p, dl, ul,
+ol, blockquote, pre {
   margin: 14px 0 24px 0;
 }
 
 @media screen and (min-width: 48em) {
-  p, dl, ul, ol, blockquote, pre {
+  p, dl, ul,
+  ol, blockquote, pre {
     margin: 24px 0 34px 0;
   }
 }
@@ -1056,14 +1058,14 @@ p, dl, ul, ol, blockquote, pre {
   max-width: 100%;
 }
 
-.wp-caption img[class*="wp-image-"] {
+.wp-caption img[class*='wp-image-'] {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
 .wp-caption-text {
-  margin: 0.8075em 0;
+  margin: .8075em 0;
   text-align: center;
   font-size: 0.75rem;
 }
@@ -1272,11 +1274,13 @@ dl dd {
   margin-left: 14px;
 }
 
-ul, ol {
+ul,
+ol {
   margin-left: 16px;
 }
 
-ul li, ol li {
+ul li,
+ol li {
   margin: 8px;
   font-size: 0.875rem;
   line-height: 1.4;
@@ -1364,7 +1368,7 @@ ins {
 
 table {
   border: 1px solid #dedede;
-  background-color: #fff;
+  background-color: #ffffff;
   text-align: left;
   font-size: 0.875rem;
 }

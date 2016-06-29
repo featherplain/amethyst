@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset 'utf-8';
 
 /* -------------------------------------------------------------- */
 /* widgets
@@ -67,7 +67,7 @@
 .widget {
   // search
   &_search {
-    input[type="submit"] {
+    input[type='submit'] {
       display: none;
     }
   }

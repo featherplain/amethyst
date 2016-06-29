@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset 'utf-8';
 
 /* -------------------------------------------------------------- */
 /* header
@@ -174,7 +174,7 @@ $navButtonSize: 50px;
       }
     }
     &__submit {
-      display: none !important;
+      display: none;
     }
   }
 }
@@ -190,7 +190,7 @@ $navButtonSize: 50px;
     &__description {
       display: block;
       float: left;
-      margin: 14px 0 12px 0;
+      margin: 14px 0 12px;
       font-size: rem-calc(14);
     }
   }
