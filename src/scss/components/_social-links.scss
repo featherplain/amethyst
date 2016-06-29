@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset 'utf-8';
 
 /* -------------------------------------------------------------- */
 /* social-links
@@ -20,86 +20,86 @@
     display: inline-block;
     border: $borderSolid;
     border-radius: 50%;
-    color: #fff;
+    color: #ffffff;
     padding: 6px;
     line-height: 1;
     letter-spacing: 0;
     vertical-align: middle;
     &:hover {
-      background-color: #fff;
+      background-color: #ffffff;
       color: $colorBase;
     }
-    &[href*="facebook.com"] {
+    &[href*='facebook.com'] {
       &:before {
         @include genericon($content: '\f203', $fontsize: 18px);
       }
     }
-    &[href*="twitter.com"] {
+    &[href*='twitter.com'] {
       &:before {
         @include genericon($content: '\f202', $fontsize: 18px);
       }
     }
-    &[href*="github.com"] {
+    &[href*='github.com'] {
       &:before {
         @include genericon($content: '\f200', $fontsize: 18px);
       }
     }
-    &[href*="wordpress.org"] {
+    &[href*='wordpress.org'] {
       &:before {
         @include genericon($content: '\f205', $fontsize: 18px);
       }
     }
-    &[href*="flickr.com"] {
+    &[href*='flickr.com'] {
       &:before {
         @include genericon($content: '\f211', $fontsize: 18px);
       }
     }
-    &[href*="instagram.com"] {
+    &[href*='instagram.com'] {
       &:before {
         @include genericon($content: '\f215', $fontsize: 18px);
       }
     }
-    &[href*="codepen.io"] {
+    &[href*='codepen.io'] {
       &:before {
         @include genericon($content: '\f216', $fontsize: 18px);
       }
     }
-    &[href*="linkedin.com"] {
+    &[href*='linkedin.com'] {
       &:before {
         @include genericon($content: '\f207', $fontsize: 18px);
       }
     }
-    &[href*="dribbble.com"] {
+    &[href*='dribbble.com'] {
       &:before {
         @include genericon($content: '\f201', $fontsize: 18px);
       }
     }
-    &[href*="foursquare.com"] {
+    &[href*='foursquare.com'] {
       &:before {
         @include genericon($content: '\f226', $fontsize: 18px);
       }
     }
-    &[href*="pinterest.com"] {
+    &[href*='pinterest.com'] {
       &:before {
         @include genericon($content: '\f209', $fontsize: 18px);
       }
     }
-    &[href*="tumblr.com"] {
+    &[href*='tumblr.com'] {
       &:before {
         @include genericon($content: '\f214', $fontsize: 18px);
       }
     }
-    &[href*="vimeo.com"] {
+    &[href*='vimeo.com'] {
       &:before {
         @include genericon($content: '\f212', $fontsize: 18px);
       }
     }
-    &[href*="youtube.com"] {
+    &[href*='youtube.com'] {
       &:before {
         @include genericon($content: '\f213', $fontsize: 18px);
       }
     }
-    &[href*="plus.google.com"] {
+    &[href*='plus.google.com'] {
       &:before {
         @include genericon($content: '\f206', $fontsize: 18px);
       }

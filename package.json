@@ -10,7 +10,7 @@
     "gulp-server": "gulp default --mode server",
     "foundation-init": "npm install; gulp init",
     "gulp-zip": "gulp zip:amethyst",
-    "test": "composer test"
+    "test": "composer test && gulp test:sass"
   },
   "author": "Megumi Hano",
   "license": "GPLv2",
@@ -29,6 +29,7 @@
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.1",
+    "gulp-sass-lint": "^1.2.0",
     "gulp-shell": "^0.5.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-svg-sprite": "^1.3.1",

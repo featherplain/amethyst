@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset 'utf-8';
 // load Foundation
 @include foundation-global-styles;
 /* -------------------------------------------------------------- */
@@ -34,7 +34,7 @@ h6 {
 a {
   color: $colorLink;
   text-decoration: none;
-  transition: 0.3s;
+  transition: .3s;
   &:focus {
     outline: thin dotted;
   }
@@ -57,7 +57,7 @@ p {
 ::selection {
   background: transparent;
   background-color: $colorSelection;
-  color: #fff;
+  color: #ffffff;
 }
 
 /**
@@ -72,7 +72,7 @@ ol {
 }
 dl {
   margin-bottom: 2em;
-  &:last-child{
+  &:last-child {
     margin-bottom: 0;
   }
   dt {
@@ -81,7 +81,7 @@ dl {
   }
   dd {
     margin-bottom: 1em;
-    &:last-child{
+    &:last-child {
       margin-bottom: 0;
     }
   }
@@ -104,10 +104,10 @@ embed,
 iframe,
 object {
   max-width: 100%;
-  line-height: 1.0;
+  line-height: 1;
   border: 0;
 }
-svg:not(:root){
+svg:not(:root) {
   overflow: hidden;
 }
 

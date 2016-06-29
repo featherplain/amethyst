@@ -1,18 +1,21 @@
-@charset "utf-8";
+@charset 'utf-8';
 
 /* -------------------------------------------------------------- */
 /* comments
 /* -------------------------------------------------------------- */
 
+%commentsTitle {
+  margin: 20px 0;
+  font-size: rem-calc(22);
+  font-weight: bold;
+}
 /**
  * comments
  */
 .comments {
   margin: $m40;
   &__title {
-    margin: 20px 0;
-    font-size: rem-calc(22);
-    font-weight: bold;
+    @extend %commentsTitle;
   }
 }
 /**
@@ -24,8 +27,8 @@
     margin-left: 20px;
   }
   &-awaiting-moderation {
-    margin-left: $commentMargin;
     @include alertBox(4px, $colorYellowLighten, $colorYellow, $colorBase, 12);
+    margin-left: $commentMargin;
   }
   &-body {
     padding: $m20;
@@ -60,7 +63,7 @@
     font-size: rem-calc(14);
   }
   &-reply-title {
-    @extend .comments__title;
+    @extend %commentsTitle;
   }
   &-respond {
     margin: $m40;
