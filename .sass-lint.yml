@@ -31,7 +31,7 @@ rules:
     - filename-extension: false
       leading-underscore: false
   empty-line-between-blocks:
-    - 1
+    - 0
     - ignore-single-line-rulesets: false
   extends-before-declarations: 1
   extends-before-mixins: 1
@@ -42,9 +42,8 @@ rules:
   force-element-nesting: 0
   force-pseudo-nesting: 0
   function-name-format:
-    - 1
+    - 0
     - allow-leading-underscore: true
-      convention: camelcase
   hex-length:
     - 1
     - style: long
@@ -61,9 +60,8 @@ rules:
     - 1
     - include: false
   mixin-name-format:
-    - 1
+    - 0
     - allow-leading-underscore: true
-      convention: camelcase
   mixins-before-declarations: 1
   nesting-depth:
     - 0
@@ -74,7 +72,7 @@ rules:
   no-duplicate-properties: 1
   no-empty-rulesets: 1
   no-extends: 0
-  no-ids: 2
+  no-ids: 0
   no-important: 2
   no-invalid-hex: 1
   no-mergeable-selectors: 0
@@ -89,16 +87,13 @@ rules:
   no-trailing-zero: 1
   no-transition-all: 0
   no-url-protocols: 0
-  no-vendor-prefixes:
-    - 1
-    - additional-identifiers: []
-      excluded-identifiers: []
+  no-vendor-prefixes: 0
   placeholder-in-extend: 1
   placeholder-name-format:
     - 1
     - convention: camelcase
   property-sort-order:
-    - 1
+    - 0
     - ignore-custom-properties: false
   property-units:
     - 1
@@ -156,7 +151,7 @@ rules:
   space-before-brace:
     - 1
     - include: true
-  space-before-colon: 1
+  space-before-colon: 0
   space-between-parens:
     - 1
     - include: false
