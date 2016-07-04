@@ -212,3 +212,9 @@ gulp.task('test:sass', function () {
     .pipe($.sassLint.format())
     .pipe($.sassLint.failOnError())
 });
+
+gulp.task('test:jshint', function () {
+  return gulp.src(['src/js/**/*.js'])
+    .pipe($.jshint())
+    .pipe($.jshint.reporter('default'));
+});
