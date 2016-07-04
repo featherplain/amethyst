@@ -216,5 +216,5 @@ gulp.task('test:sass', function () {
 gulp.task('test:jshint', function () {
   return gulp.src(['src/js/**/*.js'])
     .pipe($.jshint())
-    .pipe($.jshint.reporter('default'));
+    .pipe($.jshint.reporter('jshint-stylish'));
 });
