@@ -46,7 +46,7 @@ if ( post_password_required() ) {
 		<ul class="comments__list">
 			<?php
 				wp_list_comments( array(
-					'avatar_size' => '48px',
+					'avatar_size' => 48,
 					'style'       => 'ul',
 					'short_ping'  => true,
 				) );
