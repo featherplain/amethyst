@@ -108,21 +108,10 @@ add_filter( 'body_class', 'amethyst_body_classes' );
 
 /*
  * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
  */
-// function amethyst_content_width() {
-// 	$GLOBALS['content_width'] = apply_filters( 'amethyst_content_width', 774 );
-// 	if ( !isset( $content_width ) ) $content_width = 774;
-// }
-// add_action( 'after_setup_theme', 'amethyst_content_width', 0 );
-function amethyst_content_width() {
-	if ( ! isset( $content_width ) ) {
-		$content_width = 774;
-	}
+if ( ! isset( $content_width ) ) {
+	$content_width = 774;
 }
-add_action( 'after_setup_theme', 'amethyst_content_width', 0 );
 
 /*
  * Register search form.
