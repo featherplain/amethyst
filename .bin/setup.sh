@@ -1,5 +1,7 @@
 #!/bin/bash
-read -p "Set your hostname (default:amethyst.dev): " domain
+if [ "$TRAVIS_BRANCH" == "" ]; then
+  read -p "Set your hostname (default:amethyst.dev): " domain
+fi
 
 if [ "${domain}" = "" ]; then
   domain="amethyst.dev"
