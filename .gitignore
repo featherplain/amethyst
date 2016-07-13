@@ -49,4 +49,6 @@ results
 build
 maps
 
+# For composer
+composer.lock
 /vendor/
