@@ -5,7 +5,7 @@
   "uri": "https://github.com/featherplain/amethyst",
   "main": "gulpfile.js",
   "scripts": {
-    "setup": "npm install && composer install",
+    "setup": "bash ./.bin/setup.sh",
     "gulp": "gulp",
     "gulp-server": "gulp default --mode server",
     "foundation-init": "npm install; gulp init",

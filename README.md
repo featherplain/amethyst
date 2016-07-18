@@ -26,13 +26,14 @@ Simple WordPress Theme based on Foundation. See details at [readme.txt](readme.t
 1. Make WordPress environment.
 
 
-1. Install some dependencies.
+1. Install some dependencies, and set your hostname.Default is `amethyst.dev`.
 
 
         $ cd path/to/directory && npm run setup
+        Set your website's domain (default=amethyst.dev):
 
 
-1. To run gulp tasks with proxy mode, Set hostname on line 18 in gulpfile.js. Default is `amethyst.dev`.
+1. To run gulp tasks with proxy mode, you can update hostname in `config.js`. This configuration file is NOT tracked by git.
 
 
         'vhost'          : 'amethyst.dev'

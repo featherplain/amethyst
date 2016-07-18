@@ -48,6 +48,7 @@ logs
 results
 build
 maps
+config.js
 
 # For composer
 composer.lock
