@@ -22,7 +22,13 @@ script:
   - ls -al style.css
   - npm test
 
-after_success: bash ./.bin/deploy.sh
+deploy:
+  provider: script
+  script: .bin/deploy.sh
+  skip_cleanup: true
+  on:
+    branch: master
+    php: 7
 
 env:
   global:
