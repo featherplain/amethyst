@@ -177,10 +177,6 @@ function amethyst_scripts() {
 	wp_enqueue_script( 'amethyst-js-foundation', get_template_directory_uri() . '/assets/js/foundation.min.js', array( 'jquery' ), true );
 	wp_enqueue_script( 'amethyst-js-script', get_template_directory_uri() . '/assets/js/script.min.js', array( 'jquery' ), true );
 
-	// Load the html5 shiv.
-	wp_enqueue_script( 'amethyst-html5', get_template_directory_uri() . '/assets/js/html5shiv.min.js', array(), '3.7.3' );
-	wp_script_add_data( 'amethyst-html5', 'conditional', 'lt IE 9' );
-
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
