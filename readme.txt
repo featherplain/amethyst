@@ -37,10 +37,6 @@ Foundation
 License: MIT
 Source: http://foundation.zurb.com/sites.html
 
-HTML5 Shiv
-License: MIT/GPL2 License
-Source: https://github.com/aFarkas/html5shiv
-
 Genericons
 License: GPLv2
 Source: http://genericons.com/
