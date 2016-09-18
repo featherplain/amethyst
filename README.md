@@ -100,13 +100,6 @@ You'd like to autoprefix specific browsers, edit gulpfile.js below these lines.
   - Code License: MIT License
 - Source: [https://fortawesome.github.io/Font-Awesome/](https://fortawesome.github.io/Font-Awesome/)
 
-### HTML5 Shiv
-
-    src/js/html5shiv.js
-
-- License: MIT/GPL2 License
-- Source: [https://github.com/aFarkas/html5shiv](https://github.com/aFarkas/html5shiv)
-
 
 ## License
 
